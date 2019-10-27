@@ -1,0 +1,194 @@
+\section{Progressive Web App}
+
+%\subsection{Charakteristiken einer \ac{pwa}}
+
+Der Software Entwickler und Author Majid Hajian charakterisiert PWAs mit 8 Eigenschaften. Die wichtigsten dieser Charakteristika werden im Folgenden zusammenfassend erläutert:
+
+
+\begin{description}
+  \item [Installierbarkeit]
+  Die Anwendung muss installierbar sein und wie eine native App vom Startbildschirm gestartet werden können.
+  \item [Ähnlichkeit mit nativer App] 
+  Die PWA soll, wie eine native App, auf die Hardware des Mobilgeräts zugreifen können (beispielsweise die Nutzung Bluetooth-Chips). Außerdem unterscheidet sich das User Interface der PWA nicht zur nativen App. 
+  \item [Offline-Verwendung] 
+  Die PWA soll unabhängig von Netzwerkverbindung sein. Sie ist nach dem "offline-first design" konzipiert.
+  Die Google-Chrome Dokumentation für Cloud-Entwickler beschreibt Offline First Apps als Webanwendung, deren Dateien (JavaScript, HTML, CSS etc.) bereits heruntergeladen sind. Daten werden temporär über eine Browser-Schnittstelle gespeichert und bei Bedarf synchronisiert. Außerdem kann die Anwendung auf eine unterbrochene Netzwerkverbindungen reagieren \cite{GoogleOfflineApps}.
+  Die PWA ist demnach eine Webanwendung, die sowohl online, als auch offline nutzbar ist.
+
+  \item [Mobiloptimiert]  
+  Die PWA ist für die (meist leistungsschwache) Mobilhardware konzipiert und funktioniert hierauf ohne Performanceprobleme. Hajian legt besonders auf das schnelle Laden beim Start der Anwendung wert.
+  \item [Informierung des Nutzers] 
+  Wie native Apps, kann die PWA den Nutzer über Push-Nachrichten informieren oder zu Interaktion auffordern.
+\end{description}
+
+\cite[S. 1f.]{Hajian2019}
+
+Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dokumentation der PWA von Google.
+Im Vergleich zu Hijian ist diese etwas spezifischer und erwähnt beispielsweise die Kontrolle des Anwendungscaches durch einen JavaScript Service Worker, um die Abhängikeit von einer Netzwerkverbindung aufzuheben.
+\cite{GooglePWAOverview}
+
+\subsection{Installation einer PWA}
+
+\begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.2]{img/a2hs-infobar-cropped.png}
+        \caption{Browserdialog zur Installation einer PWA \cite{PWAAddToHomeScreenPrompt}}
+        \label{fig:pwainstallationprompt}
+\end{figure}
+
+
+Die Aufforderung zur Installation einer PWA kann entweder über den Browser (siehe Abbildung \ref{fig:pwainstallationprompt}) erfolgen oder über ein Element der Website, dass ein Event erzeugt, wie beispielsweise ein Button oder ein Dialog. 
+
+Für Mobilgeräte generiert der Browser dann eine WebAPK, welche auf dem Gerät installiert wird. Auf Desktopgeräte startet die PWA in einem verschlankten Browserfenster ohne Suchleiste und Bedienelemente. \cite{GooglePWAInstallation}
+
+
+\subsection{Manifest Datei}
+
+Um die PWA auf einem Gerät installieren zu können, muss es eine web-app-manifest Datei zur Verfügung gestellt werden. Diese ist ein JSON file, welche als Konfigurationsdatei der installierten Anwendung dient. \cite{GooglePWAManifest}
+
+\begin{listing}[H]
+    \inputminted{json}{sourcecode/manifest_sample.json}
+    \caption{Manifestdatei einer PWA}
+      \label{sourcecode:manifest_sample}
+\end{listing}
+
+%\begin{figure}[h]
+%%        \centering
+ %       \includegraphics[scale=0.6]{img/sample_manifest.png}
+ %       \caption{Manifestdatei einer PWA}
+ %       \label{fig:manifest_sample}
+        %https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
+%\end{figure}
+
+Abbildung \ref{sourcecode:manifest_sample} zeigt den Inhalt einer Manifest-Datei. Neben diversen Icons werden auch Name, Farbschema und Anzeigeeinstellungen festgelegt.
+Die Manifest-Datei wird im HTML der Webanwendung eingebunden, siehe Abbildung \ref{sourcecode:manifest_include}. 
+Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (wenige Zeilen langer) JSON-Datei macht die gesamte Webanwendung für den Nutzer installierbar. Es wird kein App-Store, nutzerverwalteter Dateidownload oder Installer benötigt. 
+
+\begin{listing}[H]
+    \inputminted{xml}{sourcecode/include_manifest.html}
+    \caption{Einbinden der Manifestdatei}
+      \label{sourcecode:manifest_include}
+              %https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
+\end{listing}
+
+%\begin{figure}[h]
+%        \centering
+%%        \includegraphics[scale=0.7]{img/include_manifest.png}
+ %%       \caption{Einfache Einbindung des Manifests}
+  %      \label{sourcecode:manifest_include}
+        %https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
+%\end{figure}
+
+\subsection{Unterstütze Plattformen von PWA}
+Apples Mobilbetriebssystem iOS unterstützt einige Features der PWA noch nicht. Die Versionen zeigen aber eine stetig voranschreitende Integration der , erweitert den Funktionsumfang in den neusten Versionen von iOS
+% https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7
+
+
+
+% Source: https://developers.google.com/web/progressive-web-apps/desktop
+Die Nutzung von PWAs ist nicht ausschließlich auf Smartphones begrenzt. Wie normale Desktopprogramme können Desktop PWAs in einem eigenen Fenster gestartet werden. Der normale Nutzer erkennt auch hier den Unterschied zwischen einer nativen Desktopanwendung und einer Desktop PWA nicht. Stark vereinfacht beschrieben, sind Desktop PWAs Browserfenster ohne Tabs und Adressleiste. Durch die Nutzung von Service Workern, welche die Webanwendung cachen, sind auch Desktop PWAs nicht zwangläufig an eine Netzwerkverbindung gebunden.
+
+Grundsätzlich können Desktop PWAs auf jedem Betriebssystem installiert werden, auf dem Google Chrome (Version größer 73) installiert werden kann: Windows, Mac, Linux und Chrome OS.
+\cite{GooglePWADesktop}
+
+\subsection{Service Worker}
+
+Damit die PWA trotz fehlender Netzwerkverbindung funktioniert wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, so dass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
+
+Ein Service Worker ist ein von der UI seperiertat laufendes Hintergrundscript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Scripte, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das senden von Push-Notifications zuständig. \cite[S. 24]{BeginningPWA}
+
+\begin{figure}[h]
+        \includegraphics[width=\linewidth]{img/ServiceWorker-8a0968f1b295f1ff.png}
+        \centering
+        \caption{Konzept des Service Workers \cite{ServiceWorkerDiagramm}}
+        \label{fig:serviceWorker}
+\end{figure}
+
+
+Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mitterweile auch Safari unsterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits voll, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
+
+\subsection{Node.js}
+
+
+
+%NodeJSWebsiteAbout
+Node.js ist eine open-source JavaScript Laufzeitumgebung für die Entwicklung skalierbarer Webanwendungen 
+\cite{NodeJSWebsiteAbout}.
+Selbst baut Node.js auf der V8-Engine auf, einer Laufzeitumgebung, die auch von Google Chrome genutzt wird 
+%NodeJSRecepies
+\cite[S. 1]{NodeJSRecepies}.
+% PracitalNodeJS
+Wegen zeitsparenden Features, wie automatischem Typecasting oder der Tatsache, dass Node.js alle Daten als Objekt behandelt, erfreut sich Node.js großer Beliebtheit 
+\cite[S. 12]{PracitalNodeJS}.
+Die Kombination mit dem Package Manager npm ermöglicht die einfache Installation und Nutzung von Modulen, um die Funktionalität der Plattform zu erweitern. 
+\cite[S. 9]{NodeJSRecepies}.
+
+
+\subsection{Angular}
+
+Angular ist ein open-source Type-Script basiertes Framework zur Entwicklung von Webanwendungen, welches Node.js nutzt.
+
+
+%https://octoverse.github.com/projects
+Mit über Achttausend Mitwirkenden Entwicklern (Angular CLI) beziehungsweise über Siebentausend Mitwirkender (Angular Framework) belegt das Angular Command Line Interface und das Angular Framework die Plätze 4 und 6 der größten Projekte auf Github. 
+% https://octoverse.github.com/projects
+\cite{OctoverseGitHubStatistics}
+
+Das Framework arbeitet auf Basis von Komponenten. Ein Eingabefeld, Seite oder eine Liste werden in Angular als solche Komponenten seperat betrachtet. Auch in der Dateistruktur werden Komponenten stark getrennt. Jede Komponente besitzt beispielsweise ein eigenes CSS (oder SCSS) und HTML-File. Eine Komponente für eine Seite kann so auch eine oder sogar mehrere Listenkomponenten einbinden. Durch die Wiederverwendung von Code-Fragmenten in Komponenten wird der Programmcode sehr übersichtlich und strukturiert.
+
+\begin{figure}[h]
+        \includegraphics[width=\linewidth]{img/Angular_MVC.JPG}
+        \centering
+        \caption{MVC Konzept von Angular \cite[S. 35, Abbildung 3-4]{ProAngular}}
+        \label{fig:angularmvc}
+\end{figure}
+
+Eine Angular Anwendung ist in drei Einheiten gegliedert:\\
+
+\textbf{Model}\\ 
+Enthält Logik für die Verwaltung von Daten, beispielsweise das Erstellen, Speichern oder Modifizieren. Dies kann über die Kommunikation mit einem Webserve via REST-API erfolgen. Das Model enhält keine Logik, um mit dem Nutzer zu interagieren.\\
+
+\textbf{Component}\\
+Enthält Logik für das Aktualisieren der Daten im Model aufgrund Nutzerinteraktion. \\
+
+\textbf{Template}\\ 
+Enthält Logik und Markup, um dem Nutzer Daten anzeigen zu können.
+
+\cite{ProAngular}
+
+\section{native Apps}
+
+\subsection{iOS}
+
+\subsection{Android}
+
+\textbf{Entwicklung}
+
+%Android apps are written in Java and use various Java application program interfaces (APIs).
+%Because you’ll want to write your own apps, but may be unfamiliar with the Java language and these
+%APIs, this book teaches you about Java as a first step into Android app development. It provides you
+%with Java language fundamentals and Java APIs that are useful when developing apps.
+
+Native Android Anwendungen werden in der Regel in Java entwickelt. Durch die Nutzung der zahlreichen APIs wird aus einem Java Programm eine native Android App.
+\cite[S. 1]{JavaForAndroid}
+Mittlerweile wird die teilweise veraltete Java-Syntax graduell durch die modernere Programmiersprache Kotlin abgelöst.
+\cite{KotlinAndroid}
+
+
+%Kotlin is a free and open source project under the Apache 2.0 license
+%https://developer.android.com/kotlin
+
+%https://kotlinlang.org/docs/reference/android-overview.html
+
+Meist werden Android Apps mithilfe der Entwicklungsumgebung Android Studio entwickelt, welches auf der IntelliJ IDE von JetBrains aufbaut, aber von Google weiterentwickelt wird. Die IDE bietet Entwicklern unter anderem einen visuellen Layout Editor und eine Vielzahl von Android Emulatoren zum Testen der Apps auf verschiedenen Android Versionen und unterschiedlicher Hardware. Dafür wird jedoch performante Hardware zum Entwickeln benötigt: 8 Gigabyte Arbeitsspeicher oder mehr ist die Empfehlung der Herausgeber. \cite{AndroidStudio}
+
+\textbf{Vertrieb}
+
+Die meisten Apps beziehen Nutzer über den Google Play Store, einem Onlineshop für kostenlose und kostenpflichtige Android Anwendungen. 
+Updates werden ebenfalls über den Play Store installiert. Alternativ kann ein Nutzer eine App in Form einer \texttt{.apk}-Datei installieren. Dieser Weg bleibt jedoch aufgrund der Umständlichkeit und unbekannten Sicherheitsprüfung der App weitestgehend ungenutzt.
+
+\subsection{Grundlegendes}
+
+
+\subsection{Installation einer nativen App}
+\textbf{Android}\\
