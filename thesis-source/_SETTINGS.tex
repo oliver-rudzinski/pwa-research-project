@@ -17,12 +17,11 @@
 
 
 % Language and general symbol preferences
-\usepackage[ngerman]{babel}
+\usepackage[ngerman, english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{soul}					% hyphening, etc.
 \usepackage[super]{nth}				% superscript "n-th" (counting, etc.)
 \usepackage{enumitem}
-
 
 % Page preferences
 \usepackage[a4paper]{geometry}				
@@ -51,7 +50,7 @@
 \automark{chapter}					% Header right	(Chapter)
 \ohead{\rightmark}
 \ifoot{DHBW Stuttgart}				% Footer left	(School)
-\cfoot{Stefan Goldschmidt\\Oliver Rudzinski}				% Footer center	(Author)
+\cfoot{Goldschmidt, Rudzinski}		% Footer center	(Author)
 \ofoot[\pagemark]{\pagemark}			% Footer right	(Page mark)
 
 %===============================================================
@@ -129,5 +128,5 @@
 \usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
 
 % Listing package for source code
-%\renewcommand{\listingscaption}{Query}
-%\renewcommand{\listoflistingscaption}{List of Queries}
+\renewcommand{\listingscaption}{Quellcode-Ausschnitt}
+\renewcommand{\listoflistingscaption}{Quellcodeverzeichnis}

@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[1] Config.pm:307> INFO - Logfile is '/Users/oliver/Library/Mobile Documents/com~apple~CloudDocs/B.Sc. Computer Science/Theses/Studienarbeit/pwa-research-project/thesis-source/root.blg'
+[40] biber-darwin:315> INFO - === Sun Oct 27, 2019, 17:03:12
+[61] Biber.pm:371> INFO - Reading '/Users/oliver/Library/Mobile Documents/com~apple~CloudDocs/B.Sc. Computer Science/Theses/Studienarbeit/pwa-research-project/thesis-source/root.bcf'
+[160] Biber.pm:889> INFO - Found 21 citekeys in bib section 0
+[173] Biber.pm:4093> INFO - Processing section 0
+[184] Biber.pm:4254> INFO - Looking for bibtex format file 'studienarbeit_pwa.bib' for section 0
+[187] bibtex.pm:1523> INFO - LaTeX decoding ...
+[208] bibtex.pm:1340> INFO - Found BibTeX data source 'studienarbeit_pwa.bib'
+[239] Utils.pm:193> WARN - month field 'Jun' in entry 'ServiceWorkerDiagramm' is not an integer - this will probably not sort properly.
+[275] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[275] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[275] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[275] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[290] bbl.pm:636> INFO - Writing '/Users/oliver/Library/Mobile Documents/com~apple~CloudDocs/B.Sc. Computer Science/Theses/Studienarbeit/pwa-research-project/thesis-source/root.bbl' with encoding 'UTF-8'
+[296] bbl.pm:739> INFO - Output to /Users/oliver/Library/Mobile Documents/com~apple~CloudDocs/B.Sc. Computer Science/Theses/Studienarbeit/pwa-research-project/thesis-source/root.bbl
+[296] Biber.pm:110> INFO - WARNINGS: 1

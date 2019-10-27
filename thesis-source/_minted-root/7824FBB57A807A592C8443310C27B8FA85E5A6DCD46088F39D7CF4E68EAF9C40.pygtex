@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{\PYGZob{}}
+  \PYG{n+nt}{\PYGZdq{}short\PYGZus{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Maps\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Google Maps\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}icons\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}src\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}/images/icons\PYGZhy{}192.png\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}type\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}image/png\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}sizes\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}192x192\PYGZdq{}}
+    \PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZob{}}
+      \PYG{n+nt}{\PYGZdq{}src\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}/images/icons\PYGZhy{}512.png\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}type\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}image/png\PYGZdq{}}\PYG{p}{,}
+      \PYG{n+nt}{\PYGZdq{}sizes\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}512x512\PYGZdq{}}
+    \PYG{p}{\PYGZcb{}}
+  \PYG{p}{],}
+  \PYG{n+nt}{\PYGZdq{}start\PYGZus{}url\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}/maps/?source=pwa\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}background\PYGZus{}color\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}3367D6\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}display\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}standalone\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}scope\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}/maps/\PYGZdq{}}\PYG{p}{,}
+  \PYG{n+nt}{\PYGZdq{}theme\PYGZus{}color\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}3367D6\PYGZdq{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
