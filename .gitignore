@@ -21,3 +21,6 @@ thesis-source/_minted-root
 *.toc
 *.synctex.gz
 *.lof
+*.lol
+*.run.xml
+*.synctex
