@@ -1,6 +1,5 @@
 
 thesis-source/root.aux
-thesis-source/root.aux
 thesis-source/root.toc
 thesis-source/root.synctex.gz
 thesis-source/root.pdf
@@ -8,8 +7,6 @@ thesis-source/root.lot
 thesis-source/root.log
 thesis-source/root.blg
 thesis-source/root.bbl
-thesis-source/root.aux
-thesis-source/root.aux
 thesis-source/root.bcf
 thesis-source/root.lof
 thesis-source/root.log
@@ -19,3 +16,8 @@ thesis-source/root.synctex.gz
 thesis-source/root.toc
 thesis-source/_minted-root
 *.pygtex
+*.aux
+*.out
+*.toc
+*.synctex.gz
+*.lof
