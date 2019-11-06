@@ -1,11 +1,9 @@
 <!-- HIGHLIGHT BUTTON -->
-<button>
-  <i class="fa fa-star" aria-hidden="true"> </i>
-</button>
+<input type="checkbox" class="star" [(ngModel)]="item.important" (change)="updateTodoItem()" />
 
 <!-- CHECKBOX -->
 <div class="pretty p-svg p-curve">
-  <input type="checkbox" />
+  <input type="checkbox" [(ngModel)]="item.done" (change)="updateTodoItem()"/>
   <div class="state p-success">
     <!-- svg path -->
     <svg class="svg svg-icon" viewBox="0 0 20 20">
@@ -16,10 +14,10 @@
 </div>
 
 <!-- TEXT INPUT -->
-<input type="text" [value]="item.description"/>
+<input type="text"  [(ngModel)]="item.description" (keyup)="updateTodoItem()"/>
 
 <!-- X BUTTON -->
 <button (click)="deleteTodo()">
-  <i class="fa fa-times" aria-hidden="true"> </i>
+  &#9587;
 </button>
 

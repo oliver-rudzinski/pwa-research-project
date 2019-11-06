@@ -22,4 +22,9 @@ export class TodoItemComponent implements OnInit {
     this.todoService.deleteTodoItem(this.item.id);
   }
 
+  updateTodoItem(){
+    console.log(this.item.description)
+    this.todoService.updateTodoItem(this.item)
+  }
+
 }
