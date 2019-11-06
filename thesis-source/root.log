@@ -1,42 +1,74 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.7.18)  27 OCT 2019 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.29)  6 NOV 2019 16:03
 entering extended mode
- \write18 enabled.
- file:line:error style messages enabled.
- %&-line parsing enabled.
-**root.tex
-(./root.tex
-LaTeX2e <2018-12-01>
-(./_SETTINGS.tex (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrreprt.cls
-Document Class: scrreprt 2019/02/01 v3.26b KOMA-Script document class (report)
-(/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2019/02/01 v3.26b KOMA-Script package (KOMA-Script-independent basics and keyval usage)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/keyval.sty
+**./root.tex
+(root.tex
+LaTeX2e <2019-10-01> patch level 1
+(_SETTINGS.tex
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+reprt.cls"
+Document Class: scrreprt 2019/10/12 v3.27 KOMA-Script document class (report)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+kbase.sty"
+Package: scrkbase 2019/10/12 v3.27 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+base.sty"
+Package: scrbase 2019/10/12 v3.27 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval
+.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlfile.sty
-Package: scrlfile 2019/02/01 v3.26b KOMA-Script package (loading files)
-))) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/tocbasic.sty
-Package: tocbasic 2019/02/01 v3.26b KOMA-Script package (handling toc-files)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+lfile.sty"
+Package: scrlfile 2019/10/12 v3.27 KOMA-Script package (loading files)
+)))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\toc
+basic.sty"
+Package: tocbasic 2019/10/12 v3.27 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip41
 \scr@dte@tocline@numbox=\box27
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 136.
-Class scrreprt Info: You've used standard option `abstracton'.
-(scrreprt)           This is correct!
-(scrreprt)           Internally I'm using `abstract=true'.
-(scrreprt)           If you'd like to set the option with \KOMAoptions,
-(scrreprt)           you'd have to use `abstract=true' there
-(scrreprt)           instead of `abstracton', too.
+(tocbasic)             for `toc' on input line 137.
+
+
+Class scrreprt Warning: You've used obsolete option `abstracton'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `abstract=true,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `abstracton' by `abstract=true'.
+
+Class scrreprt Info: Switching compatibility level to `first'.
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
 Class scrreprt Info: File `scrsize11pt.clo' used instead of
-(scrreprt)           file `scrsize11.clo' to setup font sizes on input line 2373.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
-File: scrsize11pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (11pt)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/typearea.sty
-Package: typearea 2019/02/01 v3.26b KOMA-Script package (type area)
+(scrreprt)           file `scrsize11.clo' to setup font sizes on input line 241
+7.
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+size11pt.clo"
+File: scrsize11pt.clo 2019/10/12 v3.27 KOMA-Script font size class option (11pt
+)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\typ
+earea.sty"
+Package: typearea 2019/10/12 v3.27 KOMA-Script package (type area)
 \ta@bcor=\skip42
 \ta@div=\count80
 \ta@hblk=\skip43
@@ -59,7 +91,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 46.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 1715.
+(typearea)              on input line 1716.
 )
 \c@part=\count81
 \c@chapter=\count82
@@ -70,76 +102,106 @@ Package typearea Info: These are the values describing the layout:
 \c@subparagraph=\count87
 \scr@dte@chapter@maxnumwidth=\skip47
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\chapter on input line 5305.
+(scrreprt)           for `\chapter on input line 5525.
 \scr@dte@section@maxnumwidth=\skip48
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\section on input line 5315.
+(scrreprt)           for `\section on input line 5535.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\section on input line 5315.
+(scrreprt)           for `\section on input line 5535.
 \scr@dte@part@maxnumwidth=\skip49
 Class scrreprt Info: using compatibility default `afterindent=true'
-(scrreprt)           for `\part on input line 5324.
+(scrreprt)           for `\part on input line 5544.
 \scr@dte@subsection@maxnumwidth=\skip50
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsection on input line 5334.
+(scrreprt)           for `\subsection on input line 5554.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsection on input line 5334.
+(scrreprt)           for `\subsection on input line 5554.
 \scr@dte@subsubsection@maxnumwidth=\skip51
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subsubsection on input line 5344.
+(scrreprt)           for `\subsubsection on input line 5564.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subsubsection on input line 5344.
+(scrreprt)           for `\subsubsection on input line 5564.
 \scr@dte@paragraph@maxnumwidth=\skip52
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\paragraph on input line 5354.
+(scrreprt)           for `\paragraph on input line 5574.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\paragraph on input line 5354.
+(scrreprt)           for `\paragraph on input line 5574.
 \scr@dte@subparagraph@maxnumwidth=\skip53
 Class scrreprt Info: using compatibility default `runin=bysign'
-(scrreprt)           for `\subparagraph on input line 5364.
+(scrreprt)           for `\subparagraph on input line 5584.
 Class scrreprt Info: using compatibility default `afterindent=bysign'
-(scrreprt)           for `\subparagraph on input line 5364.
+(scrreprt)           for `\subparagraph on input line 5584.
 \abovecaptionskip=\skip54
 \belowcaptionskip=\skip55
 \c@pti@nb@sid@b@x=\box28
 Package tocbasic Info: omitting babel extension for `lof'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 6613.
+(tocbasic)             for `lof' on input line 6808.
 \scr@dte@figure@maxnumwidth=\skip56
 \c@figure=\count88
 Package tocbasic Info: omitting babel extension for `lot'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 6630.
+(tocbasic)             for `lot' on input line 6825.
 \scr@dte@table@maxnumwidth=\skip57
 \c@table=\count89
-Class scrreprt Info: Redefining `\numberline' on input line 6799.
+Class scrreprt Info: Using old \@makefntext due to compatibility level
+(scrreprt)           less than 3.22 on input line 6981.
+Class scrreprt Info: Redefining `\numberline' on input line 6994.
 \bibindent=\dimen102
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2019/05/04 3.31 The Babel package
- (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2019/05/04 3.31 Babel switching mechanism
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthography)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthography)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2019/05/04 3.31 Babel common definitions
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.s
+ty"
+Package: babel 2019/10/15 3.35 The Babel package
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\switch.
+def"
+File: switch.def 2019/10/15 3.35 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/arabi\bblopts.c
+fg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-german\ng
+erman.ldf"
+Language: ngerman 2018/12/08 v2.11 German support for babel (post-1996 orthogra
+phy)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-german\ng
+ermanb.ldf"
+Language: ngermanb 2018/12/08 v2.11 German support for babel (post-1996 orthogr
+aphy)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.d
+ef"
+File: babel.def 2019/10/15 3.35 Babel common definitions
 \babel@savecnt=\count90
 \U@D=\dimen103
- (/usr/local/texlive/2019/texmf-dist/tex/generic/babel/txtbabel.def)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabe
+l.def")
 \bbl@dirlevel=\count91
 )
 Package babel Info: Making " an active character on input line 121.
-)) (/usr/local/texlive/2019/texmf-dist/tex/generic/babel-english/english.ldf
+))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/babel-english\e
+nglish.ldf"
 Language: english 2017/06/06 v3.3r English support from the babel system
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/inputenc.sty
+))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.s
+ty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/soul/soul.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/soul\soul.sty"
 Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@word=\toks17
 \SOUL@lasttoken=\toks18
@@ -150,24 +212,36 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen104
 \SOUL@uldp=\dimen105
 \SOUL@ulht=\dimen106
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/genmisc/nth.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/genmisc\nth.s
+ty"
 Package: nth 2002/02/27
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/enumitem/enumitem.sty
-Package: enumitem 2019/02/04 v3.8 Customized lists
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/enumitem\enumit
+em.sty"
+Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip59
 \enit@outerparindent=\dimen107
 \enit@toks=\toks22
 \enit@inbox=\box29
 \enit@count@id=\count92
 \enitdp@description=\count93
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/geometry/geometry.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geomet
+ry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpd
+f.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvt
+ex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxet
+ex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count94
@@ -182,64 +256,106 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen114
 \Gm@layoutvoffset=\dimen115
 \Gm@dimlist=\toks23
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/courier-scaled/couriers.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geomet
+ry.cfg"))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/courier-scaled\
+couriers.sty"
 Package: couriers 2004/07/10 Scaled Courier (HS) 
 )
-Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input line 37.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2019/02/01 v3.26b KOMA-Script font size class option (12pt)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/setspace/setspace.sty
+Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
+ine 37.
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+size12pt.clo"
+File: scrsize12pt.clo 2019/10/12 v3.27 KOMA-Script font size class option (12pt
+)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/setspace\setspa
+ce.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-Package: scrlayer-scrpage 2019/02/01 v3.26b KOMA-Script package (end user interface for scrlayer)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/koma-script/scrlayer.sty
-Package: scrlayer 2019/02/01 v3.26b KOMA-Script package (defining layers and page styles)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+layer-scrpage.sty"
+Package: scrlayer-scrpage 2019/10/12 v3.27 KOMA-Script package (end user interf
+ace for scrlayer)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/koma-script\scr
+layer.sty"
+Package: scrlayer 2019/10/12 v3.27 KOMA-Script package (defining layers and pag
+e styles)
 Package scrlayer Info: Using already defined \footheight
 (scrlayer)             hoping, that this is a length and
 (scrlayer)             not only a macro on input line 109.
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2083.
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 208
+3.
 )
 Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
-(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1241.
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1244.
 Package scrlayer-scrpage Info: deactivating warning for font element
-(scrlayer-scrpage)             `pagefoot' on input line 1268.
+(scrlayer-scrpage)             `pagefoot' on input line 1271.
 )
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 
 1: chapter
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblat
+ex.sty"
+Package: biblatex 2019/08/31 v3.13a programmable bibliographies (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdft
+excmds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infw
+arerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\iflu
+atex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxc
+mds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolb
+ox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count97
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvopti
+ons.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvse
+tkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etex
+cmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-))) (/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.sty
+)))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.s
+ty"
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count98
- (/usr/local/texlive/2019/texmf-dist/tex/latex/logreq/logreq.def
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.d
+ef"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
+"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+) ("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -294,13 +410,16 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibhang=\skip67
 \blx@bcfin=\read1
 \blx@bcfout=\write3
+\blx@langwohyphens=\language82
 \c@mincomprange=\count140
 \c@maxcomprange=\count141
 \c@mincompwidth=\count142
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-dm
+.def"
+File: blx-dm.def 2019/08/31 v3.13a biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
@@ -390,50 +509,72 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip81
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-co
+mpat.def"
+File: blx-compat.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblat
+ex.def"
+File: biblatex.def 2019/08/31 v3.13a biblatex compatibility (PK/MW)
 \c@textcitecount=\count277
 \c@textcitetotal=\count278
 \c@textcitemaxnames=\count279
-\c@biburlnumpenalty=\count280
-\c@biburlucpenalty=\count281
-\c@biburllcpenalty=\count282
-\c@smartand=\count283
+\c@biburlbigbreakpenalty=\count280
+\c@biburlbreakpenalty=\count281
+\c@biburlnumpenalty=\count282
+\c@biburlucpenalty=\count283
+\c@biburllcpenalty=\count284
+\biburlbigskip=\muskip11
+\biburlnumskip=\muskip12
+\biburlucskip=\muskip13
+\biburllcskip=\muskip14
+\c@smartand=\count285
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex-ieee/ieee.bbx
-File: ieee.bbx 2018/08/20 v1.3 biblatex bibliography style
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex-ieee\i
+eee.bbx"
+File: ieee.bbx 2019/06/19 v1.3a biblatex bibliography style
 Package biblatex Info: Trying to load bibliography style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.bbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/numeric-comp.bbx
-File: numeric-comp.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\nu
+meric-comp.bbx"
+File: numeric-comp.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\nu
+meric.bbx"
+File: numeric.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count284
-\c@bbx:relatedtotal=\count285
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\st
+andard.bbx"
+File: standard.bbx 2019/08/31 v3.13a biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count286
+\c@bbx:relatedtotal=\count287
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex-ieee/ieee.cbx
-File: ieee.cbx 2018/08/20 v1.3 biblatex citation style
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex-ieee\i
+eee.cbx"
+File: ieee.cbx 2019/06/19 v1.3a biblatex citation style
 Package biblatex Info: Trying to load citation style 'numeric-comp'...
 Package biblatex Info: ... file 'numeric-comp.cbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/cbx/numeric-comp.cbx
-File: numeric-comp.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count286
-\c@cbx@tempcntb=\count287
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\nu
+meric-comp.cbx"
+File: numeric-comp.cbx 2019/08/31 v3.13a biblatex citation style (PK/MW)
+\c@cbx@tempcnta=\count288
+\c@cbx@tempcntb=\count289
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -451,7 +592,9 @@ Package biblatex Info: Redefining '\cites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/biblatex.cfg
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblat
+ex.cfg"
 File: biblatex.cfg 
 ))
 
@@ -475,7 +618,9 @@ Class scrreprt Warning: Usage of package `tocloft' together
 (scrreprt)              Nevertheless, using requested
 (scrreprt)              package `tocloft' on input line 66.
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/tocloft/tocloft.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\tocloft
+.sty"
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip82
@@ -507,15 +652,17 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \cftbeforefigskip=\skip108
 \cftfigindent=\skip109
 \cftfignumwidth=\skip110
-\c@lofdepth=\count288
-\c@lotdepth=\count289
+\c@lofdepth=\count290
+\c@lotdepth=\count291
 \cftbeforelottitleskip=\skip111
 \cftafterlottitleskip=\skip112
 \cftbeforetabskip=\skip113
 \cfttabindent=\skip114
 \cfttabnumwidth=\skip115
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/array.sty
-Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty
+"
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \col@sep=\dimen116
 \ar@mcellbox=\box30
 \extrarowheight=\dimen117
@@ -523,44 +670,70 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \extratabsurround=\skip116
 \backup@length=\skip117
 \ar@cellbox=\box31
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2019/01/01 v2.4 Span multiple rows of a table
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/multirow\multir
+ow.sty"
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
 \multirow@colwidth=\skip118
-\multirow@cntb=\count290
+\multirow@cntb=\count292
 \multirow@dima=\skip119
 \bigstrutjot=\dimen118
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/acronym/acronym.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/acronym\acronym
+.sty"
 Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/bigfoot/suffix.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bigfoot\suffix.
+sty"
 Package: suffix 2006/07/15 1.5a Variant command support
-) (/usr/local/texlive/2019/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2019/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count291
-\decimalpart=\count292
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xstring\xstring
+.sty"
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xstring\xstri
+ng.tex"
+\integerpart=\count293
+\decimalpart=\count294
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
 \AC@clearlist=\toks25
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphicx.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics/trig.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphi
+cs.sty"
+Package: graphics 2019/10/08 v1.3c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.s
+ty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\gr
+aphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-def/pdftex.def
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pd
+ftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen119
 \Gin@req@width=\dimen120
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/subfig/subfig.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.s
+ty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
- (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+.sty"
+Package: caption 2019/09/01 v3.3d Customizing captions (AR)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption
+3.sty"
+Package: caption3 2019/09/01 v1.8d caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen121
 \captionmargin@=\dimen122
@@ -571,25 +744,32 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@hangindent=\dimen127
 )
 Package caption Info: KOMA-Script document class.
-\c@caption@flags=\count293
-\c@ContinuedFloat=\count294
+\c@caption@flags=\count295
+\c@ContinuedFloat=\count296
 )
-\c@KVtest=\count295
+\c@KVtest=\count297
 \sf@farskip=\skip120
 \sf@captopadj=\dimen128
 \sf@capskip=\skip121
 \sf@nearskip=\skip122
-\c@subfigure=\count296
-\c@subfigure@save=\count297
-\c@subtable=\count298
-\c@subtable@save=\count299
+\c@subfigure=\count298
+\c@subfigure@save=\count299
+\c@subtable=\count300
+\c@subtable@save=\count301
 \sf@top=\skip123
 \sf@bottom=\skip124
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hyperr
+ef.sty"
+Package: hyperref 2019/09/28 v7.00a Hypertext links for LaTeX
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobs
+ub-hyperref.sty"
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\hobs
+ub-generic.sty"
 Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -603,7 +783,8 @@ Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 Package hobsub Info: Skipping package `pdftexcmds' (already loaded).
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -615,74 +796,96 @@ Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/auxhook.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\auxhoo
+k.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen129
-\Hy@linkcounter=\count300
-\Hy@pagecounter=\count301
- (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+\Hy@linkcounter=\count302
+\Hy@pagecounter=\count303
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\pd1enc
+.def"
+File: pd1enc.def 2019/09/28 v7.00a Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count302
- (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+\Hy@SavedSpaceFactor=\count304
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\hyperr
+ef.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `draft' set `false' on input line 4393.
-Package hyperref Info: Hyper figures OFF on input line 4519.
-Package hyperref Info: Link nesting OFF on input line 4524.
-Package hyperref Info: Hyper index ON on input line 4527.
-Package hyperref Info: Plain pages OFF on input line 4534.
-Package hyperref Info: Backreferencing OFF on input line 4539.
+Package hyperref Info: Option `draft' set `false' on input line 4414.
+Package hyperref Info: Hyper figures OFF on input line 4540.
+Package hyperref Info: Link nesting OFF on input line 4545.
+Package hyperref Info: Hyper index ON on input line 4548.
+Package hyperref Info: Plain pages OFF on input line 4555.
+Package hyperref Info: Backreferencing OFF on input line 4560.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count303
-LaTeX Info: Redefining \url on input line 5125.
+Package hyperref Info: Bookmarks ON on input line 4793.
+\c@Hy@tempcnt=\count305
+LaTeX Info: Redefining \url on input line 5152.
 \XeTeXLinkMargin=\dimen130
-\Fld@menulength=\count304
+\Fld@menulength=\count306
 \Field@Width=\dimen131
 \Fld@charsize=\dimen132
-Package hyperref Info: Hyper figures OFF on input line 6380.
-Package hyperref Info: Link nesting OFF on input line 6385.
-Package hyperref Info: Hyper index ON on input line 6388.
-Package hyperref Info: backreferencing OFF on input line 6395.
-Package hyperref Info: Link coloring OFF on input line 6400.
-Package hyperref Info: Link coloring with OCG OFF on input line 6405.
-Package hyperref Info: PDF/A mode OFF on input line 6410.
-LaTeX Info: Redefining \ref on input line 6450.
-LaTeX Info: Redefining \pageref on input line 6454.
-\Hy@abspage=\count305
-\c@Item=\count306
-\c@Hfootnote=\count307
+Package hyperref Info: Hyper figures OFF on input line 6423.
+Package hyperref Info: Link nesting OFF on input line 6428.
+Package hyperref Info: Hyper index ON on input line 6431.
+Package hyperref Info: backreferencing OFF on input line 6438.
+Package hyperref Info: Link coloring OFF on input line 6443.
+Package hyperref Info: Link coloring with OCG OFF on input line 6448.
+Package hyperref Info: PDF/A mode OFF on input line 6453.
+LaTeX Info: Redefining \ref on input line 6493.
+LaTeX Info: Redefining \pageref on input line 6497.
+\Hy@abspage=\count307
+\c@Item=\count308
+\c@Hfootnote=\count309
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2018/11/30 v6.88e Hyperref driver for pdfTeX
-\Fld@listcount=\count308
-\c@bookmark@seq@number=\count309
- (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\hpdfte
+x.def"
+File: hpdftex.def 2019/09/28 v7.00a Hyperref driver for pdfTeX
+\Fld@listcount=\count310
+\c@bookmark@seq@number=\count311
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\rerunf
+ilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
 )
 \Hy@SectionHShift=\skip125
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/minted/minted.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/minted\minted.s
+ty"
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
- (/usr/local/texlive/2019/texmf-dist/tex/latex/fvextra/fvextra.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fvextra\fvextra
+.sty"
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
- (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2019/01/15
- Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
-\FV@CodeLineNo=\count310
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyvrb\fancyv
+rb.sty"
+Package: fancyvrb 2019/10/22
+ Style option: `fancyvrb' v3.3 <2019/10/22> (tvz)
+\FV@CodeLineNo=\count312
 \FV@InFile=\read2
 \FV@TabBox=\box32
-\c@FancyVerbLine=\count311
-\FV@StepNumber=\count312
+\c@FancyVerbLine=\count313
+\FV@StepNumber=\count314
 \FV@OutFile=\write4
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/upquote\upquote
+.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\textcomp.s
+ty"
 Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
 Package textcomp Info: Sub-encoding information:
 (textcomp)               5 = only ISO-Adobe without \textcurrency
@@ -696,13 +899,16 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
 Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.def
+"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
-(/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
-File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1enc.dfu
+"
+File: ts1enc.dfu 2019/07/11 v1.2j UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00A4 (decimal 164)
@@ -772,6 +978,8 @@ File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
    defining Unicode char U+25E6 (decimal 9702)
    defining Unicode char U+25EF (decimal 9711)
    defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+27E8 (decimal 10216)
+   defining Unicode char U+27E9 (decimal 10217)
    defining Unicode char U+FEFF (decimal 65279)
 ))
 LaTeX Info: Redefining \oldstylenums on input line 334.
@@ -799,6 +1007,7 @@ Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
 Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
 Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
 Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+
 Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
 Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
 Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
@@ -836,81 +1045,88 @@ Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
 Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
 Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
 Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/lineno/lineno.sty
+))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lineno\lineno.s
+ty"
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count313
+\linenopenalty=\count315
 \output=\toks26
-\linenoprevgraf=\count314
+\linenoprevgraf=\count316
 \linenumbersep=\dimen133
 \linenumberwidth=\dimen134
-\c@linenumber=\count315
-\c@pagewiselinenumber=\count316
-\c@LN@truepage=\count317
-\c@internallinenumber=\count318
-\c@internallinenumbers=\count319
+\c@linenumber=\count317
+\c@pagewiselinenumber=\count318
+\c@LN@truepage=\count319
+\c@internallinenumber=\count320
+\c@internallinenumbers=\count321
 \quotelinenumbersep=\dimen135
 \bframerule=\dimen136
 \bframesep=\dimen137
 \bframebox=\box33
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count320
-\c@FV@TrueTabCounter=\count321
+\c@FV@TrueTabGroupLevel=\count322
+\c@FV@TrueTabCounter=\count323
 \FV@TabBox@Group=\box34
 \FV@TmpLength=\skip126
-\c@FV@HighlightLinesStart=\count322
-\c@FV@HighlightLinesStop=\count323
-\FV@LoopCount=\count324
+\c@FV@HighlightLinesStart=\count324
+\c@FV@HighlightLinesStop=\count325
+\FV@LoopCount=\count326
 \FV@NCharsBox=\box35
 \FV@BreakIndent=\dimen138
-\FV@BreakIndentNChars=\count325
+\FV@BreakIndentNChars=\count327
 \FV@BreakSymbolSepLeft=\dimen139
-\FV@BreakSymbolSepLeftNChars=\count326
+\FV@BreakSymbolSepLeftNChars=\count328
 \FV@BreakSymbolSepRight=\dimen140
-\FV@BreakSymbolSepRightNChars=\count327
+\FV@BreakSymbolSepRightNChars=\count329
 \FV@BreakSymbolIndentLeft=\dimen141
-\FV@BreakSymbolIndentLeftNChars=\count328
+\FV@BreakSymbolIndentLeftNChars=\count330
 \FV@BreakSymbolIndentRight=\dimen142
-\FV@BreakSymbolIndentRightNChars=\count329
-\c@FancyVerbLineBreakLast=\count330
+\FV@BreakSymbolIndentRightNChars=\count331
+\c@FancyVerbLineBreakLast=\count332
 \FV@LineBox=\box36
 \FV@LineIndentBox=\box37
 \FV@LineWidth=\dimen143
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/calc.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count331
-\calc@Bcount=\count332
+\calc@Acount=\count333
+\calc@Bcount=\count334
 \calc@Adimen=\dimen144
 \calc@Bdimen=\dimen145
 \calc@Askip=\skip127
 \calc@Bskip=\skip128
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count333
+\calc@Ccount=\count335
 \calc@Cskip=\skip129
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/shellesc.sty
-Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 67.
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/catchfile.sty
-Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
-runsystem(uname -s > "root.w18")...executed.
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\shellesc.
+sty"
+Package: shellesc 2016/06/07 v0.02b unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 70.
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifplatform\ifpl
+atform.sty"
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
 
- (./root.w18)
-runsystem(rm -- "root.w18")...executed.
-
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/framed/framed.sty
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\catc
+hfile.sty"
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/framed\framed.s
+ty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip130
 \fb@frw=\dimen146
 \fb@frh=\dimen147
 \FrameRule=\dimen148
 \FrameSep=\dimen149
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\float.sty
+"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count334
+\c@float@type=\count336
 \float@exts=\toks27
 \float@box=\box38
 \@float@everytoks=\toks28
@@ -919,52 +1135,88 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \minted@appexistsfile=\read3
 \minted@bgbox=\box40
 \minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count335
-\c@minted@pygmentizecounter=\count336
+\c@minted@FancyVerbLineTemp=\count337
+\c@minted@pygmentizecounter=\count338
 \@float@every@listing=\toks29
-\c@listing=\count337
+\c@listing=\count339
 )
-runsystem(mkdir -p _minted-root)...executed.
+runsystem(if not exist _minted-root mkdir _minted-root)...executed.
 
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/fontenc.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.st
+y"
 Package: fontenc 2018/08/11 v2.0j Standard LaTeX package
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1enc.def
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1enc.def"
 File: t1enc.def 2018/08/11 v2.0j Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/inconsolata/inconsolata.sty
-Package: inconsolata 2017/01/04 v1.112
- `inconsolata-zi4' v1.112, 2017/01/04 Text macros for Inconsolata (msharpe) (/usr/local/texlive/2019/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+))
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\inc
+onsolata.sty"
+Package: inconsolata 2019/05/17 v1.12
+
+`inconsolata-zi4' v1.12, 2019/05/17 Text macros for Inconsolata (msharpe)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval
+.sty"
 Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
- (/usr/local/texlive/2019/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2019/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyv
+al.tex"
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvut
+ils.tex"
 \XKV@toks=\toks30
 \XKV@tempa@toks=\toks31
 )
-\XKV@depth=\count338
+\XKV@depth=\count340
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\zifour@ocount=\count339
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/standalone/standalone.sty
-Package: standalone 2018/03/26 v1.3a Package to include TeX sub-files with preambles
- (/usr/local/texlive/2019/texmf-dist/tex/latex/currfile/currfile.sty
-Package: currfile 2015/04/23 v0.7c Provides the file path elements of the current input file
- (/usr/local/texlive/2019/texmf-dist/tex/latex/filehook/filehook.sty
-Package: filehook 2011/10/12 v0.5d Hooks for input files
- (/usr/local/texlive/2019/texmf-dist/tex/latex/filehook/filehook-scrlfile.sty
+\zifour@ocount=\count341
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/standalone\stan
+dalone.sty"
+Package: standalone 2018/03/26 v1.3a Package to include TeX sub-files with prea
+mbles
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/currfile\currfi
+le.sty"
+Package: currfile 2015/04/23 v0.7c Provides the file path elements of the curre
+nt input file
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/filehook\fileho
+ok.sty"
+Package: filehook 2019/10/03 v0.6 Hooks for input files
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/filehook\fileho
+ok-scrlfile.sty"
 Package: filehook-scrlfile 2011/01/03 v0.1 filehook patch for scrlfile package
-Package filehook Info: Package 'scrlfile' detected and compensated for on input line 102.
+Package filehook Info: Package 'scrlfile' detected and compensated for on input
+ line 101.
 ))
-\c@currfiledepth=\count340
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/gincltex/gincltex.sty (/usr/local/texlive/2019/texmf-dist/tex/latex/svn-prov/svn-prov.sty
+\c@currfiledepth=\count342
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/gincltex\ginclt
+ex.sty"
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/svn-prov\svn-pr
+ov.sty"
 Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
 )
 Package: gincltex 2011/09/04 v0.3 Include external LaTeX files like graphics
- (/usr/local/texlive/2019/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjus
+tbox.sty"
 Package: adjustbox 2019/01/04 v1.2 Adjusting TeX boxes (trim, clip, ...)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/adjustbox/trimclip.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjca
+lc.sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\trimc
+lip.sty"
 Package: trimclip 2018/04/08 v1.1 Trim and clip general TeX material
- (/usr/local/texlive/2019/texmf-dist/tex/latex/collectbox/collectbox.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/collectbox\coll
+ectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box41
 )
@@ -973,7 +1225,9 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@urx=\dimen152
 \tc@ury=\dimen153
 Package trimclip Info: Using driver 'tc-pdftex.def'.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\tc-pd
+ftex.def"
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen154
@@ -984,46 +1238,64 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen159
 \adjbox@pdepth=\dimen160
 \adjbox@ptotalheight=\dimen161
- (/usr/local/texlive/2019/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\ifodd
+page.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count341
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/varwidth/varwidth.sty
+\c@checkoddpage=\count343
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/varwidth\varwid
+th.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box42
-\sift@deathcycles=\count342
+\sift@deathcycles=\count344
 \@vwid@loff=\dimen162
 \@vwid@roff=\dimen163
 ))
 \gincltex@box=\box43
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/filemod/filemod-expmin.sty
-Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times (expandable; minimal)
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/filemod\filemod
+-expmin.sty"
+Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times
+ (expandable; minimal)
 ))
-(/usr/local/texlive/2019/texmf-dist/tex/latex/pict2e/pict2e.sty
-Package: pict2e 2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/pict2e/pict2e.cfg
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pict2e\pict2e.s
+ty"
+Package: pict2e 2019/08/20 v0.3c Improved picture commands (HjG,RN,JT)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pict2e\pict2e.c
+fg"
 File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
 )
 Package pict2e Info: Driver file: pdftex.def on input line 119.
 Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pict2e\p2e-pdft
+ex.def"
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks32
 \@arclen=\dimen164
 \@arcrad=\dimen165
 \@tempdimd=\dimen166
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/xcolor/xcolor.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.s
+ty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\co
+lor.cfg"
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/colortbl/colortbl.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/colortbl\colort
+bl.sty"
 Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
 \everycr=\toks33
 \minrowclearance=\skip131
 )
-\rownum=\count343
+\rownum=\count345
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
 Package xcolor Info: Model `RGB' extended on input line 1364.
@@ -1034,49 +1306,55 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ))
-
-Package biblatex Warning: File 'english-ieee.lbx' not found!
-(biblatex)                Ignoring mapping 'english' -> 'english-ieee'.
-
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\en
+glish.lbx"
+File: english.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 )
-
-Package biblatex Warning: File 'ngerman-ieee.lbx' not found!
-(biblatex)                Ignoring mapping 'ngerman' -> 'ngerman-ieee'.
-
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
-File: ngerman.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 
-
-Package biblatex Warning: File 'german-ieee.lbx' not found!
-(biblatex)                Ignoring mapping 'german' -> 'german-ieee'.
-
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\ng
+erman.lbx"
+File: ngerman.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
-(/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\ge
+rman.lbx"
+File: german.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\ge
+rman.lbx"
+File: german.lbx 2019/08/31 v3.13a biblatex localization (PK/MW)
 ))
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count344
-\@quotereset=\count345
-runsystem(which pygmentize && touch root.aex)...executed.
+\@quotelevel=\count346
+\@quotereset=\count347
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ro
+ot.aex <nul: /p x=^%~$PATH:i>> root.aex)...executed.
 
-runsystem(rm root.aex)...executed.
+runsystem(del root.aex)...executed.
 
-(./root.aux)
+(root.aux
+
+LaTeX Warning: Label `fig:dimensions' multiply defined.
+
+
+LaTeX Warning: Label `fig:dimensions' multiply defined.
+
+
+LaTeX Warning: Label `fig:dimensions' multiply defined.
+
+)
 \openout1 = `root.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
@@ -1094,11 +1372,16 @@ LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 11.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+1.
+ ("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ts1cmr.fd
+"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 11.
+Package scrbase Info: activating english \contentsname on input line 11.
+Package scrbase Info: activating english \listfigurename on input line 11.
+Package scrbase Info: activating english \listtablename on input line 11.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1150,35 +1433,45 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `root.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
+
+Package biblatex Warning: File 'root.bbl' is wrong format version - expected 3.
+1.
+
 Package biblatex Info: ... file 'root.bbl' found.
-(./root.bbl)
+(root.bbl)
 Package biblatex Info: Reference section=0 on input line 11.
 Package biblatex Info: Reference segment=0 on input line 11.
- (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\sup
+p-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
+\scratchcounter=\count348
 \scratchdimen=\dimen167
 \scratchbox=\box44
-\nofMPsegments=\count347
-\nofMParguments=\count348
+\nofMPsegments=\count349
+\nofMParguments=\count350
 \everyMPshowfont=\toks34
-\MPscratchCnt=\count349
+\MPscratchCnt=\count351
 \MPscratchDim=\dimen168
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
+\MPnumerator=\count352
+\makeMPintoPDFobject=\count353
 \everyMPtoPDFconversion=\toks35
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+)
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstop
+df-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
- (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext
+.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-))
+)
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: float package is loaded.
@@ -1186,17 +1479,21 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box45
 Package hyperref Info: Link coloring OFF on input line 11.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
- (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\namere
+f.sty"
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\gett
+itlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count352
+\c@section@level=\count354
 )
 LaTeX Info: Redefining \ref on input line 11.
 LaTeX Info: Redefining \pageref on input line 11.
 LaTeX Info: Redefining \nameref on input line 11.
- (./root.out) (./root.out)
+ (root.out) (root.out)
 \@outlinefile=\write6
 \openout6 = `root.out'.
 
@@ -1205,17 +1502,29 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           because of handling of possible bookmark level gaps.
 (scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
-(scrreprt)           you can avoid this message with `\usepackage{bookmark}'
+(scrreprt)           you can avoid this message adding:
+(scrreprt)             \usepackage{bookmark}
 (scrreprt)           before \begin{document} on input line 11.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/bookmark.sty
-Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
- (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
-File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\bookma
+rk.sty"
+Package: bookmark 2019/06/04 v1.27 PDF bookmarks (HO)
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\bkm-pd
+ftex.def"
+File: bkm-pdftex.def 2019/06/04 v1.27 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
-(auxhook)             because the main .aux file is already opened on input line 164.
-\BKM@id=\count353
-)) (./__TITLE.tex
-<img/logo_dhbw.png, id=4, 2007.5pt x 838.13126pt>
+(auxhook)             because the main .aux file is already opened on input lin
+e 164.
+\BKM@id=\count355
+))
+
+Package filehook Warning: Macro \InputIfFileExists got redefined after 'filehoo
+k' was loaded.
+Certain file hooks might now be dysfunctional! on input line 11.
+
+(__TITLE.tex
+<img/logo_dhbw.png, id=3, 2007.5pt x 838.13126pt>
 File: img/logo_dhbw.png Graphic file (type png)
 <use img/logo_dhbw.png>
 Package pdftex.def Info: img/logo_dhbw.png  used on input line 2.
@@ -1226,8 +1535,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 2.
-LaTeX Font Info:    Try loading font information for T1+zi4 on input line 32.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/inconsolata/t1zi4.fd
+LaTeX Font Info:    Trying to load font information for T1+zi4 on input line 32
+.
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/inconsolata\t1z
+i4.fd"
 File: t1zi4.fd 2018/01/14 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
@@ -1235,11 +1547,14 @@ LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 ) [1
 
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/logo_dhbw.png>]
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 25.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/t1cmss.fd
+{C:/Users/goldschs/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./img/lo
+go_dhbw.png>]
+LaTeX Font Info:    Trying to load font information for T1+cmss on input line 2
+5.
+
+("C:\Users\goldschs\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\t1cmss.fd"
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) (./front-matter/1_Erklaerung.tex
+) (front-matter/1_Erklaerung.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
@@ -1247,13 +1562,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--10
 ) [2
 
 
-] (./front-matter/2_Zusammenfassung.tex) [3
+] (front-matter/2_Zusammenfassung.tex) [3
 
 
 
-
-
-] (./root.toc
+] (root.toc
 Package acronym Info: Label `acro:ui' newly defined as it shall be overridden
 although it is yet undefined on input line 59.
 )
@@ -1269,7 +1582,8 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=17.99445pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 35.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 3
+5.
 
 
 Overfull \vbox (5.99445pt too high) has occurred while \output is active []
@@ -1284,19 +1598,20 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{17.99445pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 35.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 35
+.
 
 [4
 
-] (./front-matter/3_Abkuerzungen.tex) [5
+] (front-matter/3_Abkuerzungen.tex) [5
 
-] (./root.lof)
+] (root.lof)
 \tf@lof=\write8
 \openout8 = `root.lof'.
 
  [6
 
-] (./root.lot)
+] (root.lot)
 \tf@lot=\write9
 \openout9 = `root.lot'.
 
@@ -1313,6 +1628,7 @@ Class scrreprt Warning: \float@listhead detected!
 (scrreprt)              avoid this warning, if you are using a
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@listhead interface  on input line 43.
+
 
 [7
 
@@ -1333,7 +1649,7 @@ Class scrreprt Warning: \float@addtolists detected!
 (scrreprt)              a package that still implements the
 (scrreprt)              deprecated \float@addtolist interface .
 
-(./root.lol)
+(root.lol)
 \tf@lol=\write10
 \openout10 = `root.lol'.
 
@@ -1341,31 +1657,35 @@ Class scrreprt Warning: \float@addtolists detected!
 
 ]
 chapter 1.
-(./main-matter/1_Einleitung.tex
+(main-matter/1_Einleitung.tex
 Package acronym Info: Label `acro:pwa' newly defined as it shall be overridden
 although it is yet undefined on input line 16.
  [1
 
 ]
 
-LaTeX Warning: Reference `fig:marketshare' on page 2 undefined on input line 72.
+LaTeX Warning: Reference `fig:marketshare' on page 2 undefined on input line 72
+.
 
 ) [2]
 chapter 2.
-(./main-matter/2_Grundlagen.tex
+(main-matter/2_Grundlagen.tex
 Overfull \hbox (40.9192pt too wide) in paragraph at lines 26--29
-[]\T1/cmr/m/n/12 Diese Cha-rak-te-ris-ti-ken de-cken sich mit der Be-schrei-bung durch die Entwickler-Dokumentation
+[]\T1/cmr/m/n/12 Diese Cha-rak-te-ris-ti-ken de-cken sich mit der Be-schrei-bun
+g durch die Entwickler-Dokumentation
  []
 
 [3
 
 ]
-<img/a2hs-infobar-cropped.png, id=180, 1445.4pt x 381.425pt>
+<img/a2hs-infobar-cropped.png, id=190, 1445.4pt x 381.425pt>
 File: img/a2hs-infobar-cropped.png Graphic file (type png)
 <use img/a2hs-infobar-cropped.png>
 Package pdftex.def Info: img/a2hs-infobar-cropped.png  used on input line 34.
 (pdftex.def)             Requested size: 289.07487pt x 76.28365pt.
- (./_minted-root/default-pyg-prefix.pygstyle) (./_minted-root/manni.pygstyle) (./_minted-root/7824FBB57A807A592C8443310C27B8FA85E5A6DCD46088F39D7CF4E68EAF9C40.pygtex
+ (_minted-root/default-pyg-prefix.pygstyle) (_minted-root/manni.pygstyle)
+(_minted-root/57A6D080F739D754507FD3FE14E70DF385E5A6DCD46088F39D7CF4E68EAF9C40.
+pygtex
 LaTeX Font Info:    Font shape `T1/zi4/m/n' will be
 (Font)              scaled to size 10.0pt on input line 1.
 LaTeX Font Info:    Font shape `T1/zi4/bx/n' in size <10> not available
@@ -1373,15 +1693,19 @@ LaTeX Font Info:    Font shape `T1/zi4/bx/n' in size <10> not available
 LaTeX Font Info:    Font shape `T1/zi4/b/n' will be
 (Font)              scaled to size 10.0pt on input line 3.
 )
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on input line 51.
- [4 <./img/a2hs-infobar-cropped.png>] (./_minted-root/1B3F1BA70D5ABF0F24B7813AF4DDBC77A0C1C44E175A2C5588C8DB2B3B7EDB70.pygtex) [5]
-<img/ServiceWorker-8a0968f1b295f1ff.png, id=210, 454.8192pt x 235.1184pt>
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 51.
+ [4 <./img/a2hs-infobar-cropped.png>]
+(_minted-root/1B3F1BA70D5ABF0F24B7813AF4DDBC77A0C1C44E175A2C5588C8DB2B3B7EDB70.
+pygtex) [5]
+<img/ServiceWorker-8a0968f1b295f1ff.png, id=220, 454.8192pt x 235.1184pt>
 File: img/ServiceWorker-8a0968f1b295f1ff.png Graphic file (type png)
 <use img/ServiceWorker-8a0968f1b295f1ff.png>
-Package pdftex.def Info: img/ServiceWorker-8a0968f1b295f1ff.png  used on input line 101.
+Package pdftex.def Info: img/ServiceWorker-8a0968f1b295f1ff.png  used on input 
+line 101.
 (pdftex.def)             Requested size: 432.48181pt x 223.57285pt.
  [6 <./img/ServiceWorker-8a0968f1b295f1ff.png>]
-<img/Angular_MVC.JPG, id=226, 900.36375pt x 145.14224pt>
+<img/Angular_MVC.JPG, id=236, 900.36375pt x 145.14224pt>
 File: img/Angular_MVC.JPG Graphic file (type jpg)
 <use img/Angular_MVC.JPG>
 Package pdftex.def Info: img/Angular_MVC.JPG  used on input line 140.
@@ -1408,7 +1732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--57
 
 [9]
 chapter 3.
-(./main-matter/3_Architektur.tex [10
+(main-matter/3_Architektur.tex [10
 
 ]
 Overfull \hbox (6.222pt too wide) in paragraph at lines 14--15
@@ -1426,6 +1750,7 @@ Overfull \hbox (6.86075pt too wide) in paragraph at lines 20--21
  []
 
 Package acronym Info: Label `acro:crud' newly defined as it shall be overridden
+
 although it is yet undefined on input line 30.
 
 Overfull \hbox (1.40512pt too wide) in paragraph at lines 30--31
@@ -1442,13 +1767,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--43
 
  []
 
-<img/sketch_insert.png, id=284, 577.55775pt x 240.29774pt>
+<img/sketch_insert.png, id=294, 577.55775pt x 240.29774pt>
 File: img/sketch_insert.png Graphic file (type png)
 <use img/sketch_insert.png>
 Package pdftex.def Info: img/sketch_insert.png  used on input line 55.
 (pdftex.def)             Requested size: 432.48181pt x 179.94418pt.
 [13]
-<img/Wireframe_dimensions.jpg, id=290, 636.3775pt x 936.49875pt>
+<img/Wireframe_dimensions.jpg, id=299, 636.3775pt x 936.49875pt>
 File: img/Wireframe_dimensions.jpg Graphic file (type jpg)
 <use img/Wireframe_dimensions.jpg>
 Package pdftex.def Info: img/Wireframe_dimensions.jpg  used on input line 63.
@@ -1457,7 +1782,7 @@ Package pdftex.def Info: img/Wireframe_dimensions.jpg  used on input line 63.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<img/wireframe.png, id=292, 301.125pt x 532.389pt>
+<img/wireframe.png, id=301, 301.125pt x 532.389pt>
 File: img/wireframe.png Graphic file (type png)
 <use img/wireframe.png>
 Package pdftex.def Info: img/wireframe.png  used on input line 109.
@@ -1467,55 +1792,80 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [14 <./img/sketch_insert.png>]
 Overfull \hbox (1.82716pt too wide) in paragraph at lines 136--137
-[]\T1/cmr/m/n/12 Das To-do hat links ne-ben dem Ein-ga-be-feld ei-ne Check-box. Bis zum "check"durch
+[]\T1/cmr/m/n/12 Das To-do hat links ne-ben dem Ein-ga-be-feld ei-ne Check-box.
+ Bis zum "check"durch
  []
 
 [15]) [16] [17 <./img/Wireframe_dimensions.jpg>] [18 <./img/wireframe.png>]
 chapter 4.
-(./main-matter/4_Framework.tex) [19
+(main-matter/4_Framework.tex) [19
 
 ]
 chapter 5.
-(./main-matter/5_Implementierung_nativ.tex [20
+(main-matter/5_Implementierung_nativ.tex [20
 
-]) (./main-matter/5_Implementierung_pwa.tex [21])
-Overfull \hbox (11.23323pt too wide) in paragraph at lines 9--70
-\T1/cmr/m/n/12 https://medium.com/poka-techblog/turn-your-angular-app-into-a-pwa-in-4-easy-steps-
+])
+(main-matter/5_Implementierung_pwa.tex [21]
+Overfull \hbox (11.23323pt too wide) in paragraph at lines 10--11
+\T1/cmr/m/n/12 https://medium.com/poka-techblog/turn-your-angular-app-into-a-pw
+a-in-4-easy-steps-
  []
 
-[22]
+<img/add_pwa_to_desktop.jpg, id=342, 259.7203pt x 60.225pt>
+File: img/add_pwa_to_desktop.jpg Graphic file (type jpg)
+<use img/add_pwa_to_desktop.jpg>
+Package pdftex.def Info: img/add_pwa_to_desktop.jpg  used on input line 14.
+(pdftex.def)             Requested size: 129.85983pt x 30.11241pt.
+<img/add_to_desktop_2.PNG, id=343, 246.9225pt x 151.767pt>
+File: img/add_to_desktop_2.PNG Graphic file (type png)
+<use img/add_to_desktop_2.PNG>
+Package pdftex.def Info: img/add_to_desktop_2.PNG  used on input line 21.
+(pdftex.def)             Requested size: 123.46094pt x 75.8833pt.
+<img/berechtigungen_zulassen.PNG, id=344, 283.0575pt x 113.82526pt>
+File: img/berechtigungen_zulassen.PNG Graphic file (type png)
+<use img/berechtigungen_zulassen.PNG>
+Package pdftex.def Info: img/berechtigungen_zulassen.PNG  used on input line 28
+.
+(pdftex.def)             Requested size: 141.5284pt x 56.91248pt.
+) [22 <./img/add_pwa_to_desktop.jpg> <./img/add_to_desktop_2.PNG> <./img/berech
+tigungen_zulassen.PNG>]
 chapter 6.
-(./main-matter/6_Evaluation.tex [23
+(main-matter/6_Evaluation.tex [23
 
 ])
 chapter 7.
-(./main-matter/7_Reflexion.tex [24
+(main-matter/7_Reflexion.tex [24
 
 ])
 chapter without number
 
 Overfull \hbox (10.00456pt too wide) in paragraph at lines 87--87
-\T1/zi4/m/n/12 statista . com / statistics / 330695 / number -[] of -[] smartphone -[] users -[] worldwide/$[]\T1/cmr/m/n/12 . 
+\T1/zi4/m/n/12 statista . com / statistics / 330695 / number -[] of -[] smartph
+one -[] users -[] worldwide/$[]\T1/cmr/m/n/12 . 
  []
 
 
 Overfull \hbox (10.13458pt too wide) in paragraph at lines 87--87
-[]\T1/cmr/m/it/12 Development of the world po-pu-la-ti-on un-til 2050\T1/cmr/m/n/12 . Adres-se: []$\T1/zi4/m/n/12 https : / / www . statista .
+[]\T1/cmr/m/it/12 Development of the world po-pu-la-ti-on un-til 2050\T1/cmr/m/
+n/12 . Adres-se: []$\T1/zi4/m/n/12 https : / / www . statista .
  []
 
 
 Overfull \hbox (1.14787pt too wide) in paragraph at lines 87--87
-[]\T1/cmr/m/it/12 Mobile web-si-tes by net re-ach in ger-ma-ny 2019\T1/cmr/m/n/12 . Adres-se: []$\T1/zi4/m/n/12 https : / / www . statista .
+[]\T1/cmr/m/it/12 Mobile web-si-tes by net re-ach in ger-ma-ny 2019\T1/cmr/m/n/
+12 . Adres-se: []$\T1/zi4/m/n/12 https : / / www . statista .
  []
 
 
 Overfull \hbox (7.74149pt too wide) in paragraph at lines 87--87
-\T1/zi4/m/n/12 statista . com / statistics / 263517 / market -[] share -[] held -[] by -[] mobile -[] internet -[]
+\T1/zi4/m/n/12 statista . com / statistics / 263517 / market -[] share -[] held
+ -[] by -[] mobile -[] internet -[]
  []
 
 
 Overfull \hbox (14.15257pt too wide) in paragraph at lines 87--87
-[]\T1/cmr/m/n/12 Google, \T1/cmr/m/it/12 Pro-gres-si-ve Web Ap-ps | Goo-gle De-vel-opers\T1/cmr/m/n/12 . Adres-se: []$\T1/zi4/m/n/12 https : / / developers .
+[]\T1/cmr/m/n/12 Google, \T1/cmr/m/it/12 Pro-gres-si-ve Web Ap-ps | Goo-gle De-
+vel-opers\T1/cmr/m/n/12 . Adres-se: []$\T1/zi4/m/n/12 https : / / developers .
  []
 
 [1
@@ -1523,13 +1873,14 @@ Overfull \hbox (14.15257pt too wide) in paragraph at lines 87--87
 
 ]
 Overfull \hbox (4.33261pt too wide) in paragraph at lines 87--87
-[]\T1/cmr/m/it/12 Kotlin and an-dro-id : An-dro-id de-vel-opers\T1/cmr/m/n/12 . Adres-se: []$\T1/zi4/m/n/12 https : / / developer . android .
+[]\T1/cmr/m/it/12 Kotlin and an-dro-id : An-dro-id de-vel-opers\T1/cmr/m/n/12 .
+ Adres-se: []$\T1/zi4/m/n/12 https : / / developer . android .
  []
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 88.
 [2]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 88.
- (./root.aux)
+ (root.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 88.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 88.
 Package rerunfilecheck Info: File `root.out' has not changed.
@@ -1538,23 +1889,42 @@ Package rerunfilecheck Info: File `root.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package logreq Info: Writing requests to 'root.run.xml'.
 \openout1 = `root.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25146 strings out of 492616
- 473779 string characters out of 6129481
- 1134942 words of memory out of 5000000
- 28471 multiletter control sequences out of 15000+600000
- 18806 words of font info for 43 fonts, out of 8000000 for 9000
+ 26175 strings out of 492453
+ 510479 string characters out of 3118674
+ 1183549 words of memory out of 3000000
+ 29923 multiletter control sequences out of 15000+200000
+ 18833 words of font info for 43 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 61i,19n,80p,9105b,2777s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/inconsolata/i4-t1-0.enc}</usr/local/texlive/2019/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4b.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfxc1200.pfb>
-Output written on root.pdf (34 pages, 644703 bytes).
+ 61i,19n,88p,10087b,2794s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\goldschs\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
+00\eccc1200.pk> <C:\Users\goldschs\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
+appen/ec/dpi600\tcrm1200.pk>{C:/Users/goldschs/AppData/Local/Programs/MiKTeX 2.
+9/fonts/enc/dvips/inconsolata/i4-t1-0.enc} <C:\Users\goldschs\AppData\Local\MiK
+TeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0600.pk> <C:\Users\goldschs\AppD
+ata\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\
+goldschs\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecsx1200.p
+k> <C:\Users\goldschs\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ecsl1200.pk> <C:\Users\goldschs\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jkn
+appen/ec/dpi600\ecbx1728.pk> <C:\Users\goldschs\AppData\Local\MiKTeX\2.9\fonts/
+pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\goldschs\AppData\Local\MiKT
+eX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecxc1200.pk> <C:\Users\goldschs\AppDa
+ta\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\g
+oldschs\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk
+> <C:\Users\goldschs\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ecbx2488.pk><C:/Users/goldschs/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
+public/inconsolata/Inconsolata-zi4b.pfb><C:/Users/goldschs/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb>
+Output written on root.pdf (34 pages, 666704 bytes).
 PDF statistics:
- 541 PDF objects out of 1000 (max. 8388607)
- 473 compressed objects within 5 object streams
- 118 named destinations out of 1000 (max. 500000)
- 228 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1027 PDF objects out of 1200 (max. 8388607)
+ 128 named destinations out of 1000 (max. 500000)
+ 243 words of extra memory for PDF output out of 10000 (max. 10000000)
 
