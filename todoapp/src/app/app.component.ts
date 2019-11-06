@@ -12,7 +12,7 @@ export class AppComponent {
   title = 'todoapp';
   items: Observable<TodoItem[]>;
 
-  constructor(private todoService: TodoService) {
+  constructor(public todoService: TodoService) {
     this.items = this.todoService.getTodoItems();
   }
 }

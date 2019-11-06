@@ -12,11 +12,11 @@ import {FormsModule} from "@angular/forms";
   declarations: [
     AppComponent,
     TodoItemComponent,
-    TodoInputComponent
+    TodoInputComponent,
   ],
   imports: [
     BrowserModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
+    ServiceWorkerModule.register('ngsw-worker.js' /*{enabled: environment.production}*/),
     FormsModule
   ],
   providers: [],
