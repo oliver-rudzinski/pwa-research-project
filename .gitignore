@@ -18,3 +18,4 @@ thesis-source/root.pdf
 thesis-source/root.synctex.gz
 thesis-source/root.toc
 ./thesis-source/_minted-root/
+*.pygtex
