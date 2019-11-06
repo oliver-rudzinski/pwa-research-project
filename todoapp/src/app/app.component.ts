@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {TodoService} from "./todo.service";
+import {Observable} from "rxjs";
+import {TodoItem} from "./todoItem";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'todoapp';
+  items: Observable<TodoItem[]>;
+
+  constructor(private todoService: TodoService) {
+    this.items = this.todoService.getTodoItems();
+  }
 }

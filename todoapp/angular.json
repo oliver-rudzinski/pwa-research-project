@@ -29,6 +29,9 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
+              "node_modules/normalize.css/normalize.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/pretty-checkbox/dist/pretty-checkbox.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -62,7 +65,7 @@
                   "maximumError": "10kb"
                 }
               ],
-              "serviceWorker": true,
+              "serviceWorker": true,ng
               "ngswConfigPath": "ngsw-config.json"
             }
           }

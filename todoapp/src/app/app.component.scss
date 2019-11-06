@@ -1,0 +1,17 @@
+$background-color: #9c9c9c;
+
+#wrapper {
+  border:1px solid blue;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  position: relative;
+  padding: 4px 0 32px;
+}
+ app-todo-input{
+   border: 1px solid green;
+   align-self: flex-end;
+   align-content: center;
+   width: 100%;
+ }

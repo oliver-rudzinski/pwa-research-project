@@ -1,0 +1,24 @@
+:host {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 4px;
+  height: 40px;
+}
+
+input[type=text]{
+  flex-grow: 1;
+  margin:0;
+  padding:0;
+  border:1px solid black;
+
+}
+
+button{
+  width: 10vw;
+  margin-left:4px;
+}
