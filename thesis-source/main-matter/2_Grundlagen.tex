@@ -1,30 +1,54 @@
+\section{Begrifflichkeiten}
+In der Praxis sind viele, in dieser Arbeit häufig verwendete, Begriffe unterschiedlich belegt. Aus diesem Grund soll im Folgenden eindeutig klargestellt werden, was mit den verwendeten Begriffen tatsächlich gemeint ist.
+
+\begin{description}
+	\item [App (plural: Apps)]
+		In dieser Arbeit werden Programme die speziell für Smartphones entwickelt wurden als Apps bezeichnet. Implizit wird hiermit auch die Plattform auf Android oder iOS eingrenzt. Der Begriff App zeichnet sich in dieser Arbeit dadurch aus, dass die damit gemeinte Anwendung für den Nutzer sehr einfach zu installieren ist. In der Regel beziehen Nutzer Apps aus einem Shop des Hersteller beispielsweise Apples AppStore und starten diese über ein Icon auf dem Startbildschirm des Betriebssystems.
+		
+	\item [Webseite, Webanwendung und Web App]
+		Der Begriff Webseite wird in dieser Arbeit für HTML-basierte Inhalte verwendet, die der*die Nutzer*in über den Browser abruft.
+		
+		Die Webanwendung unterscheidet sich dahingehen, dass sie dynamisch auf den Nutzer reagiert und seine Eingaben auswertet und gegebenenfalls den angezeigten Inhalt ändert oder nachlädt. Speziell werden JavaScript basierte Anwendungen in dieser Arbeit als Webanwendung oder Web App bezeichnet. Web App und Webanwendung werden synonym verwendet.
+		
+		Eine Webseite kann, aber muss keine Webanwendung oder Web App sein.
+	
+	\item [Progressive Web App]
+		Eine Progressive Web App ist eine Webseite und speziell eine Webanwendung oder Web App, welche dynamisch auf den Nutzer reagiert.
+		In dieser Arbeit werden Webanwendungen, welche lokal auf einem Gerät installiert werden können als \acf{pwa} bezeichnet. Die PWA kann als Webanwendung oder Web App bezeichnet werden, welche die Kriterien aus Kapitel \ref{chap:pwa} erfüllt.
+			
+	\item [native App]
+		Diese Arbeit beschäftigt sich mit einer modernen Methode Mobilanwendungen zu programmieren: der PWA. Im Unterschied dazu ist eine native App in Java oder Swift geschrieben und ist damit stark plattformabhängig. Nativ implementiere Apps sind entweder für iOS oder Android entwickelt worden, nicht aber für mehrere Plattformen.
+	
+\end{description}
+
 \section{Progressive Web App}
+\label{chap:pwa}
 
 %\subsection{Charakteristiken einer \ac{pwa}}
+Zu Beginn dieses Unterkapitels soll die bereits erwähnte \acf{pwa} erklärt werden. Anschließend folgen die verwendeten Frameworks für die Entwicklung der PWA. Ein Überblick über diese ist essenziell für das Verständnis von Kapitel \ref{chap:implementierung}, in welchem die Implementierungsschritte betrachtet werden.
 
-Der Software Entwickler und Author Majid Hajian charakterisiert PWAs mit 8 Eigenschaften. Die wichtigsten dieser Charakteristika werden im Folgenden zusammenfassend erläutert:
+Eine Progressive Web App ist ein nächster Schritt nach der Dynamisierung statischer HTML-Seiten durch JavaScript und Frontendframeworks. Der Software Entwickler und Author Majid Hajian charakterisiert PWAs mit acht Eigenschaften. Die wichtigsten dieser Charakteristika werden im Folgenden zusammenfassend erläutert:
 
 
 \begin{description}
   \item [Installierbarkeit]
-  Die Anwendung muss installierbar sein und wie eine native App vom Startbildschirm gestartet werden können.
-  \item [Ähnlichkeit mit nativer App] 
-  Die PWA soll, wie eine native App, auf die Hardware des Mobilgeräts zugreifen können (beispielsweise die Nutzung Bluetooth-Chips). Außerdem unterscheidet sich das User Interface der PWA nicht zur nativen App. 
+	  Der*die Nutzer*in einer Webanwendung kann diese lokal auf seinem Gerät installieren. Sie kann anschließend, wie eine native App, vom Startbildschirm gestartet werden. Um die Webanwendung zu Nutzen muss ein*e Nutzer*in keinen Zwischenschritt mehr über den Browser tätigen.
+  
+  \item [Ähnlichkeit mit einer nativ implementierten App]  
+ 	 Klassischerweise werden Android-Apps in Java und iOS Apps in Swift programmiert. Die PWA soll, wie eine native App, auf die Hardware des Mobilgeräts zugreifen können (beispielsweise die Nutzung Bluetooth-Chips). Außerdem unterscheidet sich das User Interface der PWA nicht maßgeblich von der nativen App. 
+  
   \item [Offline-Verwendung] 
-  Die PWA soll unabhängig von Netzwerkverbindung sein. Sie ist nach dem "offline-first design" konzipiert.
-  Die Google-Chrome Dokumentation für Cloud-Entwickler beschreibt Offline First Apps als Webanwendung, deren Dateien (JavaScript, HTML, CSS etc.) bereits heruntergeladen sind. Daten werden temporär über eine Browser-Schnittstelle gespeichert und bei Bedarf synchronisiert. Außerdem kann die Anwendung auf eine unterbrochene Netzwerkverbindungen reagieren \cite{GoogleOfflineApps}.
-  Die PWA ist demnach eine Webanwendung, die sowohl online, als auch offline nutzbar ist.
+  	Die PWA soll unabhängig von Netzwerkverbindung funktionieren. Sie ist nach dem "offline-first-design" konzipiert. Die Google-Chrome Dokumentation für Cloud-Entwickler beschreibt Offline First Apps als Webanwendung, deren Dateien (JavaScript, HTML, CSS etc.) bereits heruntergeladen sind. Daten werden temporär über eine Browser-Schnittstelle gespeichert und bei Bedarf synchronisiert. Außerdem kann die Anwendung auf eine unterbrochene Netzwerkverbindungen reagieren \cite{GoogleOfflineApps}. Die PWA ist demnach eine Webanwendung, die sowohl online, als auch offline nutzbar ist.
 
   \item [Mobiloptimiert]  
-  Die PWA ist für die (meist leistungsschwache) Mobilhardware konzipiert und funktioniert hierauf ohne Performanceprobleme. Hajian legt besonders auf das schnelle Laden beim Start der Anwendung wert.
-  \item [Informierung des Nutzers] 
-  Wie native Apps, kann die PWA den Nutzer über Push-Nachrichten informieren oder zu Interaktion auffordern.
+  	Die PWA ist für die (meist leistungsschwache) Mobilhardware konzipiert und funktioniert hierauf ohne Performanceprobleme. Hajian legt besonders auf das schnelle Laden beim Start der Anwendung wert.
+  	
+  \item [Informierung des*der Nutzers*in] 
+  	Wie native Apps, kann die PWA den Nutzer über Push-Nachrichten informieren oder zu Interaktion auffordern.
 \end{description}
 
 \cite[S. 1f.]{Hajian2019}
-
-Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dokumentation der PWA von Google.
-Im Vergleich zu Hijian ist diese etwas spezifischer und erwähnt beispielsweise die Kontrolle des Anwendungscaches durch einen JavaScript Service Worker, um die Abhängikeit von einer Netzwerkverbindung aufzuheben.
+Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dokumentation der PWA von Google. Im Vergleich zu Hijian ist diese etwas spezifischer und erwähnt beispielsweise die Kontrolle des Anwendungscaches durch einen JavaScript Service Worker (siehe Kapitel \ref{chap:service_worker}), um die Abhängikeit von einer Netzwerkverbindung aufzuheben.
 \cite{GooglePWAOverview}
 
 \subsection{Installation einer PWA}
@@ -92,6 +116,7 @@ Grundsätzlich können Desktop PWAs auf jedem Betriebssystem installiert werden,
 \cite{GooglePWADesktop}
 
 \subsection{Service Worker}
+\label{chap:service_worker}
 
 Damit die PWA trotz fehlender Netzwerkverbindung funktioniert wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, so dass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
 
