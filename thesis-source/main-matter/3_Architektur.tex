@@ -119,7 +119,7 @@ Um die Anpassungsmöglichkeiten von nativen Apps und PWA zu evaluieren, werden i
 
 
 \section{Komponenten}
-\begin{itemize}
+\begin{description}
     \item \textbf{App Container}\\
     Das unterste UI-Element der Anwendung wird im Folgenden als App Container bezeichnet, da es aufgrund der verschiedenen Technologien keine einheitliche Bezeichnung dafür gibt. Der App Container ist bei der PWA das \texttt{body} Element des HTML und bei der nativen iOS App ein \texttt{View} Element.
     
@@ -142,7 +142,7 @@ Um die Anpassungsmöglichkeiten von nativen Apps und PWA zu evaluieren, werden i
     Da bereits die Todoliste aus einzelnen Eingabefeldern besteht, muss diese während der Eingabe eines neuen Elements nur um ein neues leeres Listenelement erweitert werden.
     
     \textbf{Besonderes:} Es werden keine leeren Todos eingefügt. Ein Todo muss mindestens ein Zeichen enthalten.
-\end{itemize}
+\end{description}
 
 \section{Designentscheidungen PWA}
 Seit 2014 bis heute ist JavaScript die häufigste Sprache auf GitHub. Das stärker typisierte TypeScript gehört zu den am schnellsten wachsenden Sprachen \cite{OctoverseGitHubStatistics}. Um diese Arbeit zukunftsgewandt zu evaluieren, werden deshalb das bereits beschriebene Angular-Framework verwendet, dass TypeScript (transpilierter zu JavaScript) und die Node.js Laufzeitumgebung nutzt. Nicht zuletzt ist auch der Große Beitrag von Google (als Mobilgerätehersteller und Betriebssystementwickler von Android) zum Angular-Projekt ein Grund, die PWA in Form einer Angular Anwendung zu realisieren.

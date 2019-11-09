@@ -1,45 +1,75 @@
-\begin{table}
+\begin{table}[h]
     \centering
-    \begin{tabular}{ |c|| c|c| c| c| c| c| c|}
+    \begin{tabularx}{\textwidth}{|l||c|c|c|c|c|c|}
         \hline
-        Kriterium && - - & - & neutral & + &++& Gesamtanteil \\
+        Kriterium & - - & - & neutral & + &++& Gesamtanteil \\
         \hline
-    
-        \multirow{2}{*}{Plattformabhängikeit} &Android& 0 & 1 & 2 & 3 & 4 & 15\%\\
-        & Desktop &0 & 1 & 2 & 3 & 4 & 15\%\\
+    		\multicolumn{7}{c}{Anwendung}\\
+    	\hline
+        Plattformabhängikeit & 0 & 1 & 2 & 3 & 4 & 10\%\\
+        Installation  		& 0 & 1 & 2 & 3 & 4 & 5\%\\
+        Speicherzugriff		& 0 & 1 & 2 & 3 & 4 & 5\%\\        
+        Speicherbedarf 		& 0 & 1 & 2 & 3 & 4 & 5\%\\
+        Aktualisierbarkeit 	& 0 & 1 & 2 & 3 & 4 & 5\%\\
+        Konsistenz des Designs 	& 0 & 1 & 2 & 3 & 4 & 10\%\\
+
+		\hline
+			\multicolumn{7}{c}{Entwicklung}\\
+		\hline
+		Bibliotheken	& 0 & 1 & 2 & 3 & 4 & 10\%\\
+		Umsetzung	& 0 & 1 & 2 & 3 & 4 & 20\%\\
+		Testbarkeit	& 0 & 1 & 2 & 3 & 4 & 10\%\\
+
         \hline
-        Dateizugriff && 0 & 1 & 2 & 3 & 4 & 15\%\\
-  %      Internetzugriff && 0 & 1 & 2 & 3 & 4 & 15\%\\
-        Installation  && 0 & 1 & 2 & 3 & 4 & 15\%\\
-        Speicherbedarf && 0 & 1 & 2 & 3 & 4 & 15\%\\
-        Aktualisierbarkeit  && 0 & 1 & 2 & 3 & 4 & 15\%\\
-        Berechtigungen  && 0 & 1 & 2 & 3 & 4 & 15\%\\
+        	\multicolumn{7}{c}{Nutzung}\\
         \hline
+        Verständlichkeit	& 0 & 1 & 2 & 3 & 4 & 10\%\\
         \hline
-        Summe && 0 & 1 & 2 & 3 & 4 & 100\\
+        
         \hline
-    \end{tabular}
+        Summe 				& 0 & 1 & 2 & 3 & 4 & 100\%\\
+        \hline
+
+
+    \end{tabularx}
     \caption{Punktekatalog für Kriterien} \label{tab:punktekatalog}
 \end{table}
 
 \textbf{Erläuterung:}
-\begin{itemize}
-    \item \textbf{Plattformabhängigkeit} \\
-    Wie viele Plattformen beziehungsweise Betriebssysteme werden unterstützt?
-    Ist die Nutzung auf Smartphone begrenzt oder kann die Anwendung auch auf einem Tablet oder Desktop installiert werden?
-    \item \textbf{Dateizugriff}\\
-    Können Daten einfach zwischengespeichert und wieder ausgelesen werden? 
-   %   \item \textbf{Internetzugriff}\\
-%    Wie hoch ist der Aufwand, um beispielsweise eine  einfach HTTP Anfrage an eine API auszuführen?
-    \item \textbf{Installation}\\
-    Wie kompliziert ist die Installation der Anwendung für den Nutzer?\\
-    Wie kompliziert ist die zur Verfügungstellung durch die Entwickler?
-        \item \textbf{Speicherbedarf}\\
-Der Speicherplatz auf einem Smartphone ist deutlich kleiner, als bei einem Desktop-Computer. Wie hoch ist der Speicherbedarf für eine Anwendung?
-\item \textbf{Aktualisierbarkeit}\\
-Kann der Nutzer Updates verhindern? Muss der Nutzer Updates aktiv zustimmen? Wie kompliziert ist es für Entwickler Updates auszurollen?
+Grundsätzlich gibt es einen Punktabzug, wenn der*die Nutzer*in grundlegenden Funktionen explizit zustimmen muss. Das Idealbild ist eine sofort nutzbare Anwendung, die ohne weitere Zwischenschritte den kompletten Funktionsumfang besitzt.
+\begin{description}
+    \item [Plattformabhängigkeit]    	
+    	Wie viele Plattformen beziehungsweise Betriebssysteme werden unterstützt?
+    	Ist die Nutzung auf Smartphone begrenzt oder kann die Anwendung auch auf einem Tablet oder Desktop installiert werden?
+    	
+    \item [Installation]    
+    	Die App sollte ohne mehrere Zwischenschritte nutzbar sein. Ist die Installation zu kompliziert, führt dies zu Punktabzug.
+    	
+    	Es fließt mit ein, wie viel Aufwand betrieben werden muss, um die App einem Publikum zur Verfügung zu stellen. Dieser Aufwand ist idealerweise gering und im Interesse des*der Entwicklers*in.
+    
+    \item [Speicherzugriff]    
+    	Anwendungen müssen Daten speichern können, um dem Nutzer einen Mehrwert zu bieten. Die Größe der zu speichernden Daten ist bei diesem Vergleich auf Kilobyte zu begrenzt. Gibt es die Möglichkeit Dateien abzulegen ist dies positiv zu werten. 
+    	Können Daten nur temporär und nicht persistent gespeichert werden, führt dies zu starkem Punktabzug. Idealerweise können Daten in gängigen Formaten (beispielsweise JSON, CSV, XML oder Plaintext) gespeichert werden. Muss der*die Nutzer*in dem Speichern von Daten aktiv zustimmen, stört dies die Nutzungserfahrung und ist daher negativ zu werten.      
+    
+    \item [Speicherbedarf]
+		Der Speicherplatz eine Smartphones ist deutlich kleiner, als der eines Desktop-Computers. Bestenfalls ist die Anwendung nur wenige Megabyte groß und kann so schnell über eine mobile Datenverbindung installiert und upgedated werden.
+		Hoher Speicherverbrauch führt zu Punktabzug, wohingegen geringer Speicherverbrauch positiv bewertet wird. Der Verbrauch ist unter den einzelnen Plattformen relativ zu bewerten.
+		
+	\item [Aktualisierbarkeit]
+		Idealerweise kann die Installation von Updates vom Entwickler*in kontrolliert werden. Schnelle Updatezyklen sind wünschenswert, da in der Praxis dadurch schnell Sicherheitslücken und Bugs behoben werden können. Wenn ein Nutzer sich aktiv gegen Updates weigern kann, oder diese manuell installieren muss könnte dies zu Kompatibilitätsproblemen mit Webschnittstellen oder Sicherheitsproblemen führen und führt deshalb zu Punktabzug.
+		
+		Der Aufwand der betrieben werden muss, um Updates einzubringen wird mitevaluiert. Je schneller Updates flächendeckend auf den Geräten der Nutzer*innen landen, desto höher die Punktzahl.
 
-        \item \textbf{Konsistenz des Designs}\\
-Auf verschiedenen Geräten
-\end{itemize}
+    \item [Konsistenz des Designs]
+    	Idealerweise sieht die Anwendung auf verschiedenen Geräten identisch aus. Grundsätzlich wird erwartet, dass Schriften, Farben und Größenverhältnisse auf unterschiedlichen Geräten und gegebenenfalls unterschiedlichen Browsern ein konsistentes Bild ergeben.
+    	Eine skalierende Nutzeroberfläche ist wünschenswert. Anzeigefehler, wie beispielsweise überlappende Objekte, fehlerhafte Elemente oder fehlende Schriftarten führen zu Punktabzug. Auch der Aufwand welcher betrieben werden muss, um das Nutzerinterface skalierbar zu gestalten fließt in die Bewertung mit ein.
+    	
+    \item[Verständlichkeit für den*die Nutzer*in] Dem*der Nutzer*in sollte zu jedem Zeitpunkt klar sein, wie die Anwendung installiert, gestartet und deinstalliert werden kann. Ist dies nicht gewährleistet werden Punkte abgezogen.
+    
+    \item[Bibliotheken]    
+    	
+    \item[Umsetzung]          	
+    	
+    \item[Testbarkeit]  
+\end{description}
 
