@@ -17,6 +17,9 @@ In der Praxis sind viele, in dieser Arbeit häufig verwendete, Begriffe untersch
 		In dieser Arbeit werden Webanwendungen, welche lokal auf einem Gerät installiert werden können als \acf{pwa} bezeichnet. Die PWA kann als Webanwendung oder Web App bezeichnet werden, welche die Kriterien aus Kapitel \ref{chap:pwa} erfüllt.
 		
 		Im Unterschied zur nativen App kann die selbe PWA sowohl auf Smartphones, als auch auf eine Desktopgerät (Notebook, Desktop Computer etc.) installiert werden.
+		
+	\item [Desktop PWA]
+		Mit Desktop PWA ist hier explizit eine Progressive Web App gemeint, welche auf einem Desktopgerät installiert wird.
 			
 	\item [native App]
 		Diese Arbeit beschäftigt sich mit einer modernen Methode Mobilanwendungen zu programmieren: der PWA. Im Unterschied dazu ist eine native App in Java oder Swift geschrieben und ist damit stark plattformabhängig. Nativ implementiere Apps sind entweder für iOS oder Android entwickelt worden, nicht aber für mehrere Plattformen.
@@ -107,17 +110,6 @@ Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (we
         %https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
 %\end{figure}
 
-\subsection{Unterstütze Plattformen von PWA}
-Apples Mobilbetriebssystem iOS unterstützt einige Features der PWA noch nicht. Die Versionen zeigen aber eine stetig voranschreitende Integration der , erweitert den Funktionsumfang in den neusten Versionen von iOS
-% https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7
-
-
-
-% Source: https://developers.google.com/web/progressive-web-apps/desktop
-Die Nutzung von PWAs ist nicht ausschließlich auf Smartphones begrenzt. Wie normale Desktopprogramme können Desktop PWAs in einem eigenen Fenster gestartet werden. Der normale Nutzer erkennt auch hier den Unterschied zwischen einer nativen Desktopanwendung und einer Desktop PWA nicht. Stark vereinfacht beschrieben, sind Desktop PWAs Browserfenster ohne Tabs und Adressleiste. Durch die Nutzung von Service Workern, welche die Webanwendung cachen, sind auch Desktop PWAs nicht zwangläufig an eine Netzwerkverbindung gebunden.
-
-Grundsätzlich können Desktop PWAs auf jedem Betriebssystem installiert werden, auf dem Google Chrome (Version größer 73) installiert werden kann: Windows, Mac, Linux und Chrome OS.
-\cite{GooglePWADesktop}
 
 \subsection{Service Worker}
 \label{chap:service_worker}
@@ -136,9 +128,28 @@ Ein Service Worker ist ein von der UI seperiertat laufendes Hintergrundscript de
 
 Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mitterweile auch Safari unsterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits voll, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
 
+
+\subsection{Unterstütze Plattformen von PWA}
+Das Projekt \textit{CanIUse} aggregiert Daten zu Webstandards des w3 Konsortiums und Browserdokumentationen. Es wird als Quelle für die Unterstützung von Features durch aktuelle Browser herangezogen.
+
+Apples mobiler Browser Safari unterstützt eines der wichtigsten Features der PWA noch nicht vollständig: das Web App Manifest. Allerdings wird der Service Worker vollständig unterstützt \cite{CanIUseWebManifest}. Wann und ob Safari die Unterstützung für das Manifest implementiert ist unklar und bleibt abzuwarten. Die aktuelle Teilunterstützung zeigt jedoch, dass sich Apple nicht grundsätzlich gegen die PWA weigert.
+
+ %Die Versionen zeigen aber eine stetig voranschreitende Integration der, erweitert den Funktionsumfang in den neusten Versionen von iOS. 
+
+% https://medium.com/@firt/progressive-web-apps-on-ios-are-here-d00430dee3a7
+
+
+
+% Source: https://developers.google.com/web/progressive-web-apps/desktop
+Die Nutzung von PWAs ist nicht ausschließlich auf Smartphones begrenzt. Wie normale Desktopprogramme werden Desktop PWAs in einem eigenen Fenster gestartet. 
+Der Unterschied zwischen den Bedienelementen nativer Desktopanwendungen und Desktop PWAs ist ausschließlich farblicher Natur. Stark vereinfacht beschrieben, sind Desktop PWAs Browserfenster ohne Tabs und Adressleiste. Durch die Nutzung von Service Workern, welche die Webanwendung cachen, sind auch Desktop PWAs nicht an eine Netzwerkverbindung gebunden.
+
+Grundsätzlich können Desktop PWAs auf jedem Betriebssystem installiert werden, auf dem Google Chrome (Version größer 73) installiert werden kann: Windows, Mac, Linux und Chrome OS.
+\cite{GooglePWADesktop}
+
+
+
 \subsection{Node.js}
-
-
 
 %NodeJSWebsiteAbout
 Node.js ist eine open-source JavaScript Laufzeitumgebung für die Entwicklung skalierbarer Webanwendungen 
