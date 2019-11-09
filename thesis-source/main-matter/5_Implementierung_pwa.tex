@@ -37,7 +37,20 @@ Außerdem unterstützt die CLI verschiedene Stylesheetformate (siehe Abbildung \
 
 
 \subsection{Angular}
-https://www.sitepoint.com/angular-2-tutorial/
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{img/pwa_datenfluss_eingabe.png}
+	\centering
+	\caption{Datenfluss bei Änderung eines Todo Eintrages}
+	\label{fig:pwa_datenfluss_eingabe}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{img/pwa_datenfluss_erstellen.png}
+	\centering
+	\caption{Datenfluss bei Erstellung eines Todo Eintrages}
+	\label{fig:pwa_datenfluss_erstellen}
+\end{figure}
 
 
 \subsection{Hosting der App}
@@ -79,23 +92,80 @@ Nach dem Aufrufen der URL mit dem mobilen Browser, erscheint eine Meldung zum In
 	\label{fig:dialog_install_pwa_mobile}
 		\vspace{-10pt}
 \end{wrapfigure} 
-Etwas versteckt in der Suchleiste von Chrome, kann der Nutzer die PWA als Desktopanwendung installieren (siehe \ref{fig:dialog_install_pwa_mobile}).
+In der Suchleiste von Chrome, kann der Nutzer die PWA als Desktopanwendung installieren (siehe \ref{fig:dialog_install_pwa_mobile}).
 \begin{wrapfigure}{L}{0.5\textwidth}
 		\vspace{-10pt}
 	\includegraphics[width=0.48\textwidth]{img/berechtigungen_zulassen.PNG}
 	\centering
-	\caption{Größen}
+	\caption{Dialog für Benachrichtigungen}
 	\label{fig:pwa_benachrichtigungen_zulassen}
 		\vspace{-10pt}
 \end{wrapfigure}
-Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim erhalten der ersten Nachricht die Benachrichtigungen über einen Dialog aktivieren.
+Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim erhalten der ersten Nachricht die Benachrichtigungen über einen Dialog aktivieren (siehe \ref{fig:pwa_benachrichtigungen_zulassen}).
+
+\subsection{Prüfung der Browserunterstützung}
+Für Webanwendungen ist es üblich, diese mit verschiedenen Browsern zu testen. Um das Kriterium der Plattformabhängigkeit detailliert evaluieren zu können, erscheint es ebenfalls sinnvoll, die Installation der PWA sowohl auf dem Desktop, als auch auf Android und iOS Smartphones zu testen.
+
+\textbf{Anmerkung:}\\
+Zum Testen der Datenpersistenz werden Todo-Einträge angelegt und anschließend der Browser neugestartet.
+Alle Browser werden mit Standardeinstellungen ausgeführt. Es werden keine Browsercaches, Cookies oder ähnliches manuell gelöscht.
+
+\textbf{Desktop:}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{|l||C|C|C|C|}
+		\hline
+		Browser & Anwendung lauffähig & Persistente Daten & PWA installierbar & Benachrichtigungen \\
+		\hline			
+		Chrome 78 (64-bit) & Ja & Ja & Ja & Ja \\
+		Firefox 70 (64-bit) & Ja & Ja & Nein & Ja \\
+		Microsoft Edge 41 & Ja & Ja & Nein & Nein \\
+		Internet Explorer 11 & Ja & Ja & Nein & Nein\\
+		Safari X & & & & \\
+		\hline
+	\end{tabularx}
+	\caption{Browserunterstützung Desktop} \label{tab:browser_desktop}
+\end{table}
+
+\textbf{Anmerkung:}\\
+Microsoft Edge und Internet Explorer zeigen den Button zum Priorisieren nicht an. Dieser enthält ein Unicodezeichen eines Sterns.
+
+Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzeigen, zeigt jedoch anschließend keine Benachrichtigungen an. Internet Explorer wirft den JavaScript Fehler \texttt{'Notification' is undefined}, Notifications sind nicht implementiert. 
+
+\textbf{Smartphone:}
+
+\begin{table}[H]
+	\centering
+	\begin{tabularx}{\textwidth}{|l||C|C|C|C|}
+		\hline
+		Browser & Anwendung lauffähig & Persistenz & PWA installierbar & Benachrichtigungen \\
+		\hline
+		\multicolumn{5}{|c|}{Android}\\
+		\hline	
+		Chrome 78 & Ja & Ja & Ja & Ja\\
+		Firefox 68 & Ja & Ja & Ja & Ja\\
+		Microsoft Edge 41 & Ja & Ja & Nein & Ja\\
+		Opera 54 & Ja & Ja & Nein & Ja\\
+		\hline
+			\multicolumn{5}{|c|}{iOS}\\
+			\hline
+			Chrome & & & &\\
+			Safari 13 & & & & \\
+		\hline
+	\end{tabularx}
+	\caption{Browserunterstützung Smartphones} \label{tab:browser_smartphones}
+\end{table}
+
+\textbf{Anmerkung:}\\
+Verweigert der Nutzer die Benachrichtigungen einer Webseite, ist es meist umständlich die Berechtigung für Benachrichtigungen einer Website zurückzusetzen. Beim Browser Opera muss der Nutzer dann beispielsweise durch fünf Menüs nacheinander navigieren, um die deaktivierten Benachrichtigungen wieder zu aktivieren.
 
 \subsection{Update der Anwendung}
 
+Um das Updateverhalten zu evaluieren, ist es interessant, den Updateprozess einer Webanwendung beziehungsweise PWA zu betrachten. Um Änderungen an die Nutzer zu verteilen, muss ein Entwickler*in einen neuen Production Build auf dem Server bereitstellen. Im Falle diese Projekts werden Änderungen unter Nutzung der Firebase CLI auf den Server übertragen.
+In der Praxis werden die Änderungen in der installierte PWA nicht sofort sichtbar, wohingegen die Webanwendung beim nächsten Refresh der Seite aktualisiert wird. Dies hängt mit dem Caching der Ressourcen der PWA zusammen. Der Service Worker lädt cachbare Dateien entweder beim Start oder nachträglich während die PWA läuft in den lokalen Cache des Geräts.
 
-Der Todoanwendung 
-
-Nach einigen Registrierungsschritten wird in der Firebase Console ()ein Projekt 
+Um dieses Verhalten zu Testen wurde ein Update mit einer auffälligen Hintergrundfarbe auf dem Server bereitgestellt. In der Desktop-PWA war die Änderung erst nach einem Systemneustart zu sehen, wohingegen sich die PWA unter Android nach einigen Stunden automatisch aktualisierte.
 
 
 
