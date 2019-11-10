@@ -8,13 +8,13 @@ Schritte der Implementierung
 \end{enumerate}
 
 \subsection{Einrichten der Projektumgebung}
-Für die Entwicklung der PWA wird die Entwicklungsumgebung Webstorm von JetBrains gewählt, da sie die viele Routineaufgaben selbstständig beziehungsweise mit geringem Aufwand ausführt. 
+Für die Entwicklung der PWA wird die Entwicklungsumgebung Webstorm von JetBrains gewählt, da sie die viele Routineaufgaben selbstständig beziehungsweise mit geringem Aufwand ausführt.
 
 Wie für die Entwicklung der meisten modernen Webanwendungen ist die Installation der Node.js Laufzeitumgebung notwendig. Mit dem integrierten Paketmanager npm lassen sich Bibliotheken leicht zum Projekt hinzufügen.
 Um die Angular Anwendung automatisiert zu erstellen, ist zuerst die Installation des Angular \acf{cli} erforderlich. Mit dem Konsolenbefehl \texttt{npm install -g @angular/cli} wird npm aufgefordert, die neuste Version der Angular CLI global auf dem System zu installieren.
 
 
-Mit dem Befehl \texttt{ng new todoapp} wird die Angular CLI (in der Konsole als \texttt{ng} abgekürzt) dazu gebracht, ein Angularprojekt inklusive nötiger Dateistrukturen zu erstellen. 
+Mit dem Befehl \texttt{ng new todoapp} wird die Angular CLI (in der Konsole als \texttt{ng} abgekürzt) dazu gebracht, ein Angularprojekt inklusive nötiger Dateistrukturen zu erstellen.
 \begin{wrapfigure}{r}{0.6\textwidth}
 	\vspace{-10pt}
 	\includegraphics[width=0.58\textwidth]{img/angular_cli_css.PNG}
@@ -26,17 +26,31 @@ Die CLI bietet dem Nutzer einige Optionen bei der Erstellung an, die jedoch in d
 Außerdem unterstützt die CLI verschiedene Stylesheetformate (siehe Abbildung \ref{fig:stylesheet_formate_cli}). Das ist für Entwickler*innen sehr praktisch, wenn sie einen dieser CSS-Dialekte beherschen. Die Arbeit mit Variablen in Stylesheets bevorzugt wird, werden in diesem Projekt SCSS Dateien verwendet.
 
 
-\begin{wrapfigure}{r}{0.3\textwidth}
-	\vspace{-10pt}
-	\includegraphics[width=0.28\textwidth]{img/file_tree_pwa.PNG}
-	\caption{Dateistruktur des Projekts}
-\label{fig:dialog_install_pwa_desktop}
-	\vspace{-10pt}
+\subsection{Angular}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\includegraphics[width=0.48\textwidth]{img/pwa_dateistruktur.png}
+	\centering
+	\caption{Dateistruktur der Angularanwendung}
+	\label{fig:pwa_dateistruktur}
 \end{wrapfigure}
 
+Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte Angular-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt. 
 
+\begin{description}
+	\item[Stammkomponente] Zunächst befinden sich im \texttt{app} Verzeichnis eine HTML-, eine Stylsheet- und eine TypeScript-Datei der \texttt{app-component}: die Stammkomponente. Sie wirkt als Container um die Todo-Elemente und das Inputfeld.
+	
+	\item[Todo-item] Es ist sinnvoll jedes Listenelement in einer mehrfach instanziierten Komponente zu repräsentieren. Dies kapselt die Daten des Listenelements und die Kommunikation mit dem Todo-service von anderen Listenelementen ab. Jedes Listenelement besitzt genau ein Objekt der Klasse \texttt{TodoItem} 
+	
+	Alle anderen genutzen Komponenten werden in der
+\end{description}
 
-\subsection{Angular}
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{img/pwa_components.png}
+	\centering
+	\caption{Interaktion des Todo-service mit den Komponenten}
+	\label{fig:pwa_todo_service}
+\end{figure}
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{img/pwa_datenfluss_eingabe.png}
@@ -61,15 +75,15 @@ Googles stellt eine schnelle und elegante Lösung zum Hosten einer Webanwendung 
 Das dem Firebase CLI können automatisiert Konfigurationsdateien für das Firebase Hosting angelegt werden. Die Schritte dazu sind ebenfalls trivial:
 \begin{enumerate}
 	\item \textbf{Anmeldung: \\}
-	Das CLI muss mit einem Google-Konto verknüpft werden. Dazu beim Login über das CLI ein Browserfenster mit einem Google-Login Dialog.
+	      Das CLI muss mit einem Google-Konto verknüpft werden. Dazu beim Login über das CLI ein Browserfenster mit einem Google-Login Dialog.
 	\item \textbf{Initialisierung: \\}
-	Die Initialisierung über das CLI legt unter anderem eine JSON-Datei zur Konfiguration des Deployments an. Hier werden Dateipfade, wie beispielsweise die Start-URL oder Dateien die deployed werden sollen, gespeichert.
+	      Die Initialisierung über das CLI legt unter anderem eine JSON-Datei zur Konfiguration des Deployments an. Hier werden Dateipfade, wie beispielsweise die Start-URL oder Dateien die deployed werden sollen, gespeichert.
 	\item \textbf{Deployment: \\}
-	Über die Angular CLI wird ein sogenannter Production-Build erstellt. Dies ist eine gepackte Version der Webanwendung für den Produktivbetrieb.
-	Anschließend kann die gepackte Anwendung mit \texttt{firebase deploy} auf einem von Googles Servern bereitgestellt werden.
+	      Über die Angular CLI wird ein sogenannter Production-Build erstellt. Dies ist eine gepackte Version der Webanwendung für den Produktivbetrieb.
+	      Anschließend kann die gepackte Anwendung mit \texttt{firebase deploy} auf einem von Googles Servern bereitgestellt werden.
 \end{enumerate}
 
-Die Anwendung läuft jetzt mit einer validen HTTPS-Verbindung und kann von Nutzern installiert werden. 
+Die Anwendung läuft jetzt mit einer validen HTTPS-Verbindung und kann von Nutzern installiert werden.
 
 Das Hosting mit Firebase löst gleichzeitig ein weitere Problem: das Testen der Anwendung auf einem Smartphone. Die von Firebase bereitgestellte URL kann jetzt einfach im mobilen Chromebrowser aufgerufen und installiert werden.
 
@@ -84,22 +98,22 @@ Nach dem Aufrufen der URL mit dem mobilen Browser, erscheint eine Meldung zum In
 	\label{fig:dialog_install_pwa_mobile}
 \end{figure}
 
-\textbf{Desktop:} 
+\textbf{Desktop:}
 \begin{wrapfigure}{r}{0.5\textwidth}
-		\vspace{-10pt}
+	\vspace{-10pt}
 	\includegraphics[width=0.48\textwidth]{img/add_to_desktop_2.PNG}
 	\caption{Browserdialog zum Installieren der PWA als Desktop App}
 	\label{fig:dialog_install_pwa_mobile}
-		\vspace{-10pt}
-\end{wrapfigure} 
+	\vspace{-10pt}
+\end{wrapfigure}
 In der Suchleiste von Chrome, kann der Nutzer die PWA als Desktopanwendung installieren (siehe \ref{fig:dialog_install_pwa_mobile}).
 \begin{wrapfigure}{L}{0.5\textwidth}
-		\vspace{-10pt}
+	\vspace{-10pt}
 	\includegraphics[width=0.48\textwidth]{img/berechtigungen_zulassen.PNG}
 	\centering
 	\caption{Dialog für Benachrichtigungen}
 	\label{fig:pwa_benachrichtigungen_zulassen}
-		\vspace{-10pt}
+	\vspace{-10pt}
 \end{wrapfigure}
 Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim erhalten der ersten Nachricht die Benachrichtigungen über einen Dialog aktivieren (siehe \ref{fig:pwa_benachrichtigungen_zulassen}).
 
@@ -116,13 +130,13 @@ Alle Browser werden mit Standardeinstellungen ausgeführt. Es werden keine Brows
 	\centering
 	\begin{tabularx}{\textwidth}{|l||C|C|C|C|}
 		\hline
-		Browser & Anwendung lauffähig & Persistente Daten & PWA installierbar & Benachrichtigungen \\
-		\hline			
-		Chrome 78 (64-bit) & Ja & Ja & Ja & Ja \\
-		Firefox 70 (64-bit) & Ja & Ja & Nein & Ja \\
-		Microsoft Edge 41 & Ja & Ja & Nein & Nein \\
-		Internet Explorer 11 & Ja & Ja & Nein & Nein\\
-		Safari 13 & Ja & Ja & Nein & Nein \\
+		Browser              & Anwendung lauffähig & Persistente Daten & PWA installierbar & Benachrichtigungen \\
+		\hline
+		Chrome 78 (64-bit)   & Ja                  & Ja                & Ja                & Ja                 \\
+		Firefox 70 (64-bit)  & Ja                  & Ja                & Nein              & Ja                 \\
+		Microsoft Edge 41    & Ja                  & Ja                & Nein              & Nein               \\
+		Internet Explorer 11 & Ja                  & Ja                & Nein              & Nein               \\
+		Safari 13            & Ja                  & Ja                & Nein              & Nein               \\
 		\hline
 	\end{tabularx}
 	\caption{Browserunterstützung Desktop} \label{tab:browser_desktop}
@@ -131,7 +145,7 @@ Alle Browser werden mit Standardeinstellungen ausgeführt. Es werden keine Brows
 \textbf{Anmerkung:}\\
 Microsoft Edge und Internet Explorer zeigen den Button zum Priorisieren nicht an. Dieser enthält ein Unicodezeichen eines Sterns.
 
-Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzeigen, zeigt jedoch anschließend keine Benachrichtigungen an. Internet Explorer wirft den JavaScript Fehler \texttt{'Notification' is undefined}, Notifications sind nicht implementiert. 
+Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzeigen, zeigt jedoch anschließend keine Benachrichtigungen an. Internet Explorer wirft den JavaScript Fehler \texttt{'Notification' is undefined}, Notifications sind nicht implementiert.
 
 \textbf{Smartphone:}
 
@@ -139,19 +153,19 @@ Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzei
 	\centering
 	\begin{tabularx}{\textwidth}{|l||C|C|C|C|}
 		\hline
-		Browser & Anwendung lauffähig & Persistenz & PWA installierbar & Benachrichtigungen \\
+		Browser           & Anwendung lauffähig & Persistenz & PWA installierbar & Benachrichtigungen \\
 		\hline
-		\multicolumn{5}{|c|}{Android}\\
-		\hline	
-		Chrome 78 & Ja & Ja & Ja & Ja\\
-		Firefox 68 & Ja & Ja & Ja & Ja\\
-		Microsoft Edge 41 & Ja & Ja & Nein & Ja\\
-		Opera 54 & Ja & Ja & Nein & Ja\\
+		\multicolumn{5}{|c|}{Android}                                                                 \\
 		\hline
-			\multicolumn{5}{|c|}{iOS} \\
-			\hline
-			Chrome & Ja & Ja & Nein & Nein \\
-			Safari 13 & Ja & Ja & Nein & Nein \\
+		Chrome 78         & Ja                  & Ja         & Ja                & Ja                 \\
+		Firefox 68        & Ja                  & Ja         & Ja                & Ja                 \\
+		Microsoft Edge 41 & Ja                  & Ja         & Nein              & Ja                 \\
+		Opera 54          & Ja                  & Ja         & Nein              & Ja                 \\
+		\hline
+		\multicolumn{5}{|c|}{iOS}                                                                     \\
+		\hline
+		Chrome            & Ja                  & Ja         & Nein              & Nein               \\
+		Safari 13         & Ja                  & Ja         & Nein              & Nein               \\
 		\hline
 	\end{tabularx}
 	\caption{Browserunterstützung Smartphones} \label{tab:browser_smartphones}

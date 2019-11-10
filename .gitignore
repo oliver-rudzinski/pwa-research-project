@@ -24,3 +24,5 @@ thesis-source/_minted-root
 *.lol
 *.run.xml
 *.synctex
+*.bak*
+thesis-source/indent.log
