@@ -28,19 +28,38 @@ Außerdem unterstützt die CLI verschiedene Stylesheetformate (siehe Abbildung \
 
 \subsection{Angular}
 
-\begin{wrapfigure}{r}{0.5\textwidth}
-	\includegraphics[width=0.48\textwidth]{img/pwa_dateistruktur.png}
+\subsubsection{Klasse TodoItem zur Datenspeicherung}
+
+Die Komponenten tauschen untereinander Daten aus. Damit diese einer einheitlichen Struktur folgen, wird eine Klasse \texttt{TodoItem} erstellt, die einen Todo-Eintrag repräsentiert. Objekte dieser Klasse können jetzt einfach zwischen Komponenten ausgetauscht und modifiziert werden.
+
+\begin{listing}[h]
+	\inputminted{TypeScript}{sourcecode/pwa_todoitem_klasse.js}
+	\caption{TodoItem-Klasse zur Datenspeicherung}
+	\label{sourcecode:todoitem_klasse}
+\end{listing}
+
+Wie im Ausschnitt \ref{sourcecode:todoitem_klasse} zu sehen, hat ein Todo-Element eine Aufgabenbeschreibung (Zeile 2), zwei boolsche Werte, die speichern, ob das Element als wichtig oder abgeschlossen markiert worden ist (Zeile 4 und 5) und eine eindeutige ID (Zeile 2). Die ID hilft später ein bestimmtes Todo-Element zu modifizieren.
+
+
+
+
+
+\subsubsection{Dateistruktur und Komponenten der Angularanwendung}
+Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte Angular-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt.
+
+\begin{figure}[H]
+	\includegraphics[width=0.6\textwidth]{img/pwa_dateistruktur.png}
 	\centering
 	\caption{Dateistruktur der Angularanwendung}
 	\label{fig:pwa_dateistruktur}
-\end{wrapfigure}
-
-Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte Angular-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt. 
+\end{figure}
 
 \begin{description}
-	\item[Stammkomponente] Zunächst befinden sich im \texttt{app} Verzeichnis eine HTML-, eine Stylsheet- und eine TypeScript-Datei der \texttt{app-component}: die Stammkomponente. Sie wirkt als Container um die Todo-Elemente und das Inputfeld.
+	\item[Stammkomponente] Zunächst befinden sich im \texttt{app} Verzeichnis eine HTML-, eine Stylesheet- und eine TypeScript-Datei der \texttt{app-component}: die Stammkomponente. Sie dient als Container (siehe Begrifflichkeiten in Kapitel \ref{chap:grundlagen}) um die Todo-Elemente und das Inputfeld.
 	
-	\item[Todo-item] Es ist sinnvoll jedes Listenelement in einer mehrfach instanziierten Komponente zu repräsentieren. Dies kapselt die Daten des Listenelements und die Kommunikation mit dem Todo-service von anderen Listenelementen ab. Jedes Listenelement besitzt genau ein Objekt der Klasse \texttt{TodoItem} 
+	\item[Todo-item] Es ist sinnvoll jedes Listenelement in einer mehrfach instanziierten Komponente zu repräsentieren. Dies kapselt die Daten des Listenelements und die Kommunikation mit dem Todo-service von anderen Listenelementen ab. 
+	
+	Jedes Listenelement besitzt genau ein Objekt der Klasse \texttt{TodoItem}.
 	
 	Alle anderen genutzen Komponenten werden in der
 \end{description}
