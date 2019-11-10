@@ -131,8 +131,17 @@
 
 % to use colored circles to show hex color
 \usepackage{pict2e}  % to allow any radius
-\usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+\usepackage[table,usenames,dvipsnames]{xcolor}% http://ctan.org/pkg/xcolor
 
 % Listing package for source code
 \renewcommand{\listingscaption}{Quellcode-Ausschnitt}
 \renewcommand{\listoflistingscaption}{Quellcodeverzeichnis}
+
+% tables
+\usepackage{tcolorbox}
+\usepackage{array}
+\usepackage{colortbl}
+\tcbuselibrary{skins}
+\tcbset{tab2/.style={enhanced,fonttitle=\bfseries,fontupper=\normalsize\sffamily,
+		colback=yellow!10!white,colframe=red!50!black,colbacktitle=Salmon!40!white,
+		coltitle=black,center title}}
