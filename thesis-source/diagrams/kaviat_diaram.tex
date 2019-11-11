@@ -1,0 +1,46 @@
+%	Plattformabhängikeit   & 0   & 1 & 2       & 3 & 4  & 10\%         \\
+%Installation           & 0   & 1 & 2       & 3 & 4  & 5\%          \\
+%Speicherzugriff        & 0   & 1 & 2       & 3 & 4  & 5\%          \\
+%Speicherbedarf         & 0   & 1 & 2       & 3 & 4  & 5\%          \\
+%Aktualisierbarkeit     & 0   & 1 & 2       & 3 & 4  & 5\%          \\
+%Konsistenz des Designs & 0   & 1 & 2       & 3 & 4  & 5\%         \\
+%Bibliotheken           & 0   & 1 & 2       & 3 & 4  & 10\%         \\
+%Umsetzung              & 0   & 1 & 2       & 3 & 4  & 20\%         \\
+%Testbarkeit            & 0   & 1 & 2       & 3 & 4  & 10\%         \\
+%Vorausgesetzte Entwicklungserfahrung    & 0   & 1 & 2       & 3 & 4  & 10\%         \\
+%Verständlichkeit       & 0   & 1 & 2       & 3 & 4  & 10\%         \\
+%
+\begin{figure}[h]
+
+	\begin{tikzpicture}
+	
+		% Diagram setup
+		\tkzKiviatDiagram[scale=1.0,label distance=.5cm,
+		radial  = 5,
+		gap     = 1,  
+		lattice = 5]{
+			Installation,
+			Speicherzugriff,
+			Speicherbedarf Variables,
+			Aktualisierbarkeit,
+			Konsistenz des Designs,
+			Bibliotheken,
+			Umsetzung,
+			Testbarkeit,
+			Vorausgesetzte Entwicklungserfahrung,
+			Verständlichkeit
+		}
+		
+		% native App
+		\tkzKiviatLine[thick,color=blue,mark=ball,
+		fill=blue!20,opacity=.5](2,5,4,2,2,1,3,4,5,2,1)
+		
+		% PWA
+		\tkzKiviatLine[thick,color=darkgray,mark=ball,
+		fill=green!20,opacity=.5](4,2,2,1,3,4,5,2,1,3,4)
+		
+		\tkzKiviatGrad[prefix=,unity=1,suffix=](1)  
+	
+	\end{tikzpicture}
+	\caption{Spinnennetzdiagram}
+\end{figure}
