@@ -130,6 +130,8 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 \subsection{Hinzufügen der Manifestdatei}
 Um dem Projekt ein Manifest und einen Service Worker hinzuzufügen, kann wieder die Angular CLI verwendet werden. \texttt{ng add @angular/pwa} erzeugt die entsprechenden Dateien automatisch, fügt eine manifest.json hinzu und bindet diese in die index.html Datei des Projekts ein.
 
+Es ist festzuhalten, dass das hinzufügen der PWA-Funktionalität keinen nennenswerten Aufwand mit sich bringt, wenn das Ziel ausschließlich die Installation der Webapp ist.
+
 \subsection{Hosting der App}
 Damit die PWA als solche installiert werden kann muss sie bestimmte Kriterien erfüllen (siehe Kapitel \ref{chap:grundlagen}). Darunter ist die Notwendigkeit der Bereitstellung über HTTPS. Dies gestaltet sich in der Praxis als schwierig, da der Angular Entwicklungsserver zwar auf HTTPS konfiguriert werden kann, jedoch selbstsignierte SSL Zertifikate nicht aktzeptiert werden: Die PWA kann nicht installiert werden. Für die Entwicklung ist das natürlich problematisch, so dass eine Lösung für dieses Problem gefunden werden muss.
 
