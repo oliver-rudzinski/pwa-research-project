@@ -1,2 +1,81 @@
 \newpage
 \section{Implementierung nativ}
+
+Die Entwicklung der nativen Mobilanwendung wird im Folgenden exemplarisch anhand einer \textit{iOS}-Applikation dargestellt. Diese werden ausschließlich auf Mobilgeräten vom U.S.-amerikanischen Hersteller \textit{Apple, Inc.} ausgeführt, funktionieren also auf diversen \textit{iPhone}-, \textit{iPod touch}- und in gewisser Hinsicht auch auf \textit{iPad}-Geräten. Letztere sind wegen der im September 2019 in Kraft getretenen Einführung des sog. \textit{iPadOS} nicht mehr auf reine iOS-Anwendungen ausgelegt, sondern nutzen diese lediglich in Form einer Vergrößerung der Kleingeräteanwendung.
+
+Dieses Kapitel stellt im Folgenden den gesamten Entwicklungsprozess der To-Do-Anwendung dar, welche von der Wahl der Programmiersprache und -umgebung bis hin zur Ausführung auf verschiedenen kompatiblen Geräten reicht.
+
+\subsection{Entwicklungsumgebung (\acs{ide})}
+Der in Sektion 2.? angesprochene Standard heutiger iOS-Entwicklung wird auch in der Praxis dieser Untersuchung angewandt. Somit fällt die Wahl der Programmiersprache auf Apple Swift 5 unter der \acs{ide} Xcode 11.
+
+\subsubsection{Vorbereitung der Projektumgebung}
+Bei der Erstellung eines neuen Projektes innerhalb von Xcode wählt der*die Entwickler*in bereits zu Beginn bestimmte Spezifikationen für die zu entwickelnde Anwendung. Da Swift auch für andere Betriebssysteme von Apple zur Anwendungsentwicklung genutzt wird, gehört die Spezifizierung des Anwendungsbereiches (hier: iOS) sowie des grundlegenden Aufbaus der App (hier: \textit{Single View App} zu den Vorbereitungsmaßnahmen der Projektumgebung. Letztere bereiten verschiedene Dateitypen innerhalb der Umgebung vor, bspw. verschiedene Ansichten mit bereits integrierter Navigation, welche bei einer Anwendung mit nur einer Ansicht nicht zu tragen kommen. Im zweiten Schritt der Projektvorbereitung trifft der*die Entwickler*in Entscheidungen über Projektverzeichnis, -namen und -sprache sowie über weitere Projektkomponenten, welche für die Anwendung von Bedarf wären. Im Hinblick auf die To-Do-Anwendung, welche einen persistenten Speicher benötigt, kann hier bereits die Integration der internen Bibliothek \textit{Core Data} hinzugefügt werden.
+
+Alle hier getroffen Schritte können auch manuell bzw. im Nachgang der Projekterstellung angelegt werden. Grundsätzlich sind die Dateien und Quellcodezeilen, welche durch die genannten Vorbereitungsmaßnahmen automatisch generiert werden, unabdingbar für die Realisierung des Projekt und können somit für eine effizientere Arbeit des*der Entwicklers*in sorgen.
+
+Unabhängig von diesen Schritten ist eine Anmeldung des*der Entwicklers*in als \textit{Apple Developer} im Vorhinein von Nöten. Ohne diese könnte die Anwendung zwar programmiert und innerhalb der Entwicklungsumgebung getestet, jedoch nicht auf tatsächlichen iOS-Geräten getestet und zum Download freigegeben werden. Dies hat sowohl sicherheitstechnische als auch wirtschaftliche Gründe, welche hier nicht weiter diskutiert, jedoch für die Evaluation der Entwicklungsfreiheit in Betracht gezogen werden. Letzteres erkennt man vor allem an der Tatsache, dass die Verbreitung von Anwendungen über den offiziellen (sowie einzigen) Apple \textit{App Store} kostenpflichtig ist.
+
+\subsubsection{Struktur des initialen Entwicklungsverzeichnisses}
+Bereits zu Anfang befinden sich bestimmte Dateien im Entwicklungsverzeichnis, welche sich grundsätzlich in jeder iOS-Anwendung benötigt werden. Diese werden im Folgenden beschrieben.
+
+\begin{description}
+	\item[\texttt{AppDelegate.swift}] ist der Eintrittspunkt der App. Dieser ist zuständig für das Verhalten der App, wenn diese (zum ersten Mal) geöffnet, geschlossen oder in den Hintergrund gerückt (d.\ h. inaktiv gesetzt) wird. Diese Datei ist vor allem dann von Interesse, wenn die Anwendung auch außerhalb ihrer Aktivität bestimmte Funktionen ausführt, bspw. also bei Musik-Anwendungen oder Stoppuhren. Aufgrund der automatischen Bereitstellung von Core Data zu Anfang des Projektes ist hier auch das Grundgerüst des \textit{Persistent Service} zu finden.
+	\item[\texttt{SceneDelegate.swift}] ähnelt dem \texttt{AppDelegate} sehr, bezieht sich jedoch auf das Verhalten der Ansicht(-en) der Anwendung. Diese wird benötigt, da seit iOS-Version 13 auch mehrere offene Instanzen derselben App möglich sind, welche jedoch immer den aktuellsten Zustand darstellen sollen, unabhängig von der gerade aktiv laufenden Instanz. In Form einer Analogie aus der Web-Entwicklung kann man den \texttt{SceneDelegate} als die oberste Hierarchie der \textit{Front End}-Steuerung bezeichnen, während das \textit{Back End} über den \texttt{AppDelegate} orchestriert wird.
+	\item[\texttt{ViewController.swift}] ist einer von beliebig vielen möglichen Controllern, welche direkte Anbindung zu einer oder mehreren Ansichten hat. Dieser beinhaltet Konfigurationen der verschiedenen Komponenten der Ansicht und spezifiziert auch das Verhalten der Ansicht, wenn auf diese oder von dieser gewechselt wird.
+	\item[\texttt{Main.storyboard}] ist das Gegenstück zu den \texttt{ViewController}. In Form eines sog. \textit{Interface Builders} können verschiedene Ansichten und deren Verknüpfungen via \textit{Drag'n'Drop} erstellt werden. Jede Ansicht wird mit genau einem \texttt{ViewController} versehen, welcher die Steuerung der definierten Elemente übernimmt. Grundsätzlich ist es auch möglich, vollständig ohne Interface Builder auszukommen. Die initiale Konfiguration der Positionen und der weiteren optischen Eigenschaften wird dann ebenfalls über den entsprechenden \texttt{ViewController} gehandhabt, wobei dies einen deutlich höheren Programmieraufwand aufweisen könnte. Neben des \texttt{Main.storyboard} existiert auch ein \texttt{LaunchScreen.storyboard}, welcher beim Laden der Anwendung ausgeführt wird.
+	\item[\texttt{Assets.xcassets}] beinhaltet das App-Logo, welches im Menü des Mobilgerätes angezeigt wird. Dieses muss in fest definierten Größen bereitgestellt werden, wird jedoch an dieser Stelle vernachlässigt. Darüberhinaus können hier auch alle weiteren Grafiken, etc., abgelegt werden, welche innerhalb der App genutzt werden, um für eine ordnungsgemäße Skalierung der Symbole je nach Bildschirmgröße des Endgeräts zu gewährleisten.
+	\item[\texttt{Info.plist}] ist eine allgemeine Konfigurationsdatei. Diese wird u.a. für Berechtigungen genutzt, welche die Anwendung außerhalb ihres eigenen Handlungsspielraums haben soll, bspw. die Nutzung der eingebauten Kameras, des GPS-Standortes des Geräts, die Berechtigung, Benachrichtigungen anzuzeigen, etc.
+	\item[\texttt{to\_do.xcdatamodeld}] stellt die Konfigurationsdatei des Persistent Service dar, welche ebenfalls aufgrund der Inklusion von Core Data generiert wurde.. In dieser werden Entitäten angelegt, mit möglichen Relationen versehen und für die Verwendung innerhalb der App exportiert.
+\end{description} \\\
+
+Grundsätzlich ist es sinnvoll, mit der Gestaltung der visuellen Ansicht zu beginnen, da die erstellten Komponenten im Nachhinein explizit im Quellcode referenziert werden können, um ihnen Funktionalität zu verleihen.
+
+\subsection{Gestaltung des \acl{ui}}
+Initial beinhaltet das \texttt{Main.storyboard} eine Ansicht, welche bereits mit dem automatisch generierten \texttt{ViewController} verknüpft ist. Diese muss nun mit den in Kapitel 3 beschriebenen Komponenten gefüllt werden. Die Listenansicht wird über einen \texttt{UITableView} realisiert. Dieser füllt einen großen Teil der Ansicht aus. Der untere Rand der Ansicht wird mit einem \texttt{UITextField} sowie mit einem \texttt{UIButton} versehen, welcher als \texttt{+}-Symbol konfiguriert wird. Somit ist die hierarchisch höchste Stufe der Ansicht fertiggestellt.
+
+Bislang existiert noch keine Konfiguration der unteren Hierarchiestufe, welche aus den einzelnen Zellen des \texttt{UITableView} besteht. Da diese dem gleichen Aufbau folgen sollen, ist die Definition \textit{einer} \texttt{UITableViewCell} genügend, sodass diese dann für die gesamte Liste verwendet und repliziert werden kann. Diese Zelle beinhaltet erneut ein \texttt{UITextField}, sowie drei \texttt{UIButton}s, welche jeweils mit einem Kreuz-, Häkchen-, und Stern-Symbol konfiguriert werden.
+
+Die Farbgebung der einzelnen Buttons wird nach Maßgabe der Farb-Definition aus Sektion 3.3.1 als \textit{Tint} der Buttons festgelegt.
+
+Das finale \ac{ui} der To-Do-Anwendung, wie es im Interface Builder dargestellt wird, kann dem folgenden Screenshot entnommen werden.
+
+\begin{figure}[h!]
+	\centering
+	\caption{\ac{ui} im Interface Builder von Xcode}
+\end{figure} \\\
+
+An dieser Stelle scheint es intuitiv, die Ansicht nun zu testen. Da bislang jedoch noch keinerlei Funktionalität implementiert ist, ist es nun wichtig, Zellen erstellen zu können. Für Testzwecke könnte eine provisorische Funktionsweise entwickelt werden, welche die Zelleninformationen zunächst im Arbeitsspeicher der Anwendung speichert. Da dies jedoch im Nachhinein zu großen Abänderungen des Quellcode-Aufbaus führen kann, werden zunächst der Persistent Service und die \ac{crud}-Funktionen definiert, welche dann direkt über den \texttt{ViewController} an das \ac{ui} angebunden werden. 
+
+\subsection{Entwicklung des Persistent Service}
+Wie eingangs erwähnt geschieht die Konfiguration des Datenmodells des Persistent Service über die Konfigurationsdatei \texttt{to\_do.xcdatamodeld}. Dort kann eine neue Entität \texttt{ToDo} angelegt werden, welche die in Kapitel 3 beschriebenen Attribute (\texttt{id}, \texttt{text}, \texttt{done} und \texttt{priority}) in Form ihrer spezifizierten Datentypen beinhaltet. Da keine Beziehungen zu anderen Entitäten von Bedarf sind, kann diese Entität nun als sog. \texttt{NSManagedObject} exportiert werden. Dieses ermöglicht die Nutzung der Entität als Objekt im Quellcode und stellt notwendige Funktionen für die spätere \ac{crud}-Funktionalität bereit.
+
+Die notwendigen Komponenten des Persistent Service liegen im \texttt{AppDelegate} bereit. In diesem wird davon ausgegangen, dass mehrere Instanzen eines solchen Services genutzt werden. Da es sich im Fall der To-Do-Anwendung jedoch um einen global gleich genutzten Speicher handelt, spricht nichts dagegen, die Komponenten in eine statische Klasse \texttt{Storage} auszulagern. In dieser Klasse werden nun auch Funktionen für die verschiedenen \ac{crud}-Operationen angelegt. Auf Basis der bereits vorhandenen Funktion \texttt{saveContext()} wird die Nicht-Flüchtigkeit dieser \ac{crud}-Operationen gewährleistet.
+
+\subsubsection{\texttt{createToDo(...)}: Anlegen von To-Do-Elementen}
+Der Aufbau der Funktion, welche für das Anlegen der To-Do-Elemente innerhalb des Persistent Service zuständig ist, wird hinsichtlich des zugrunde liegenden Quellcode-Ausschnitts beschrieben.
+
+
+\begin{listing}[H]
+	\inputminted{Swift}{sourcecode/ios_createToDo.swift}	
+	\caption{Funktion zur Erstellung von To-Do-Elementen (Swift)}
+\end{listing}
+
+Es werden die Entitätsinformationen aus der Konfiguration der Datei \texttt{to\_do.xcdatamodeld} entnommen (Z. 2), sodass ein neues Objekt nach dieser Entität erstellt und dem Speicher zugeordnet werden kann (Z. 3). Daraufhin werden die initialen Werte der einzelnen Attribute gesetzt (Z. 6--9), wobei der beschreibende Text hier direkt aus dem Funktionsparameter entnommen wird. Zuletzt wird der Kontext (vereinfacht also der Speicher) aktualisiert und das neue Objekt wird in Form einer sog. \textit{Completion} zurückgegeben (Z. 1, Z. 13). Dieses kann in einer sog. \textit{Callback}-Funktion verwendet werden, welche nach erfolgreichem Durchlaufen der Ausgangsfunktion ausgeführt wird.
+
+\subsubsection{\texttt{loadToDos(...)}: Laden von To-Do-Elementen aus dem Speicher}
+Der Aufbau der Funktion, welche für das Laden der To-Do-Elemente aus dem Persistent Service zuständig ist, wird hinsichtlich des zugrunde liegenden Quellcode-Ausschnitts beschrieben.
+
+\begin{listing}[H]
+	\inputminted{Swift}{sourcecode/ios_loadToDos.swift}	
+	\caption{Funktion zum Laden von To-Do-Elementen (Swift)}
+\end{listing}
+
+Zunächst wird der Datenabgriff vorbereitet, welcher auf die zuvor exportierte Klasse der \texttt{ToDo}-Entität zugreift (Z. 2). Auf Basis dieser Anfrage (Z. 5) wird ein Array vom Datentyp \texttt{ToDo} im gleicher Completion-Form wie zuvor zurückgegeben (Z. 6). Da dieser Vorgang \textit{Exceptions} schmeißen kann, muss dieser Vorgang entsprechend kontrolliert (d.\ h. mit \textit{Error Handling} versehen) ablaufen.
+
+\subsubsection{Bearbeiten von Attributswerten von To-Do-Elementen}
+Da das \ac{ui} mehrere Bedienelemete für das Bearbeiten eines Eintrags aufweist (d.\ h. das Ändern des Textes, der Priorität sowie des Status über Abschluss der Aufgabe), müssen entsprechend viele Funktionen für das Bearbeiten dieser Eigenschaften angelegt werden. In jeder der Funktionen wird das zu bearbeitende To-Do-Objekt mitgegeben und das zu ändernde Attribut wird mit dem neuen, ebenfalls mitgegebenen, Wert überschrieben. Das abschließende Ausführen von \texttt{saveContext()} sorgt für die Konsistenz des Objekts.
+
+\subsection{\texttt{deleteToDo(...)}: Löschen von To-Do-Elementen}
+Das mitgegebene To-Do-Objekt wird über die Kontext-Löschfunktion entfernt und der Stand des Kontext mit \texttt{saveContext()} gespeichert.
+
+\section{Verknüpfung des \ac{ui} mit den \ac{crud}-Funktionen}
