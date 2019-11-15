@@ -1,12 +1,5 @@
 \newpage
 \section{Implementierung PWA}
-Schritte der Implementierung
-\begin{enumerate}
-	\item Einrichten der Entwicklungsumgebung
-	\item Initialisierung des Projekts
-	\item Installation der Pakete
-\end{enumerate}
-
 \subsection{Einrichten der Projektumgebung}
 Für die Entwicklung der PWA wird die Entwicklungsumgebung Webstorm von JetBrains gewählt, da sie die viele Routineaufgaben selbstständig beziehungsweise mit geringem Aufwand ausführt.
 
@@ -112,7 +105,13 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 	
 	Um modifizierte Daten auch in der Datenquelle zu speichern, wird das modifizierte \texttt{TodoItem} bei jeder Änderung dem \texttt{todoService} übergeben.
 	
+	
+	
 \end{description}
+
+\subsubsection{Kommunikation der Komponenten mit dem \texttt{todoService}}
+
+
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{img/pwa_components.png}
@@ -129,8 +128,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 %\end{figure}
 
 \subsection{Hinzufügen der Manifestdatei}
-https://medium.com/poka-techblog/turn-your-angular-app-into-a-pwa-in-4-easy-steps-543510a9b626
-
+Um dem Projekt ein Manifest und einen Service Worker hinzuzufügen, kann wieder die Angular CLI verwendet werden. \texttt{ng add @angular/pwa} erzeugt die entsprechenden Dateien automatisch, fügt eine manifest.json hinzu und bindet diese in die index.html Datei des Projekts ein.
 
 \subsection{Hosting der App}
 Damit die PWA als solche installiert werden kann muss sie bestimmte Kriterien erfüllen (siehe Kapitel \ref{chap:grundlagen}). Darunter ist die Notwendigkeit der Bereitstellung über HTTPS. Dies gestaltet sich in der Praxis als schwierig, da der Angular Entwicklungsserver zwar auf HTTPS konfiguriert werden kann, jedoch selbstsignierte SSL Zertifikate nicht aktzeptiert werden: Die PWA kann nicht installiert werden. Für die Entwicklung ist das natürlich problematisch, so dass eine Lösung für dieses Problem gefunden werden muss.
