@@ -33,142 +33,105 @@ Nichtsdestotrotz ist die Spezifizierung der in Sektion 3.1.1 eingangs definierte
     \item[Definition einer Hierarchie fÃ¼r Aufgaben] Eine hierarchische Struktur der Daten soll ermÃ¶glichen, bestimmte Aufgaben seitens der Anwendung anders zu behandeln als andere. Durch das Setzen eines sog. \textit{Flags} kÃ¶nnen die Aufgaben entsprechend der Hierarchiestruktur bestimmte ZustÃ¤nde Ã¼bergeben bekommen, konkret eine hervorgehobene optische Darstellung innerhalb der \ac{ui} sowie die PrÃ¤sentation an Anfang der Liste (Eingriff in die Sortierung der Aufgaben)
 \end{description}
 
-Streng genommen sind funktionale Anforderungen sehr granulÃ¤r zu definieren. Da es sich hier jedoch um eine wissenschaftliche Arbeit handelt, und nicht um eine Entwicklerdokumentation, wird auf kleinste Genauigkeiten verzichtet. Viel eher soll die nÃ¤chste Sektion die genaue, weiterhin plattformunabhÃ¤ngige Umsetzung dieser Anforderungen erlÃ¤utern, welche als MaÃŸgabe fÃ¼r die spÃ¤tere Entwicklung der Applikation dienen soll. \\\
 
-Unabhängig von der Plattform wird zunächst ein allgemeines, während der individuellen Entwicklungsphase zu spezifizierendes Grundgerüst der Funktionalität definiert. Bei einer To-Do-Applikation besteht dieses grundsätzlich aus zwei Komponenten. Die idealisierte \textit{Datenbank} ermöglicht persistente Speicherung der angelegten To-Do-Einträge. Diese ist mit verschiedenen \ac{crud}-Funktionen direkt an das \ac{ui} angebunden und ermöglicht somit die Manipulation der Einträge.
+Streng genommen sind funktionale Anforderungen sehr granular zu definieren. Da es sich hier jedoch um eine wissenschaftliche Arbeit handelt, und nicht um eine Entwicklerdokumentation, wird auf kleinste Genauigkeiten verzichtet. Viel eher soll die nÃ¤chste Sektion die genaue, weiterhin plattformunabhÃ¤ngige Umsetzung dieser Anforderungen erÃ¤utern, welche als MaÃŸgabe fÃ¼r die spÃ¤tere Entwicklung der Applikation dienen soll. \\\
+
+UnabhÃ¤ngig von der Plattform wird zunÃ¤chst ein allgemeines, wÃ¤hrend der individuellen Entwicklungsphase zu spezifizierendes GrundgerÃ¼st der FunktionalitÃ¤t definiert. Bei einer To-Do-Applikation besteht dieses grundsÃ¤tzlich aus zwei Komponenten. Die idealisierte \textit{Datenbank} ermÃ¶glicht persistente Speicherung der angelegten To-Do-EintrÃ¤ge. Diese ist mit verschiedenen \ac{crud}-Funktionen direkt an das \ac{ui} angebunden und ermÃ¶glicht somit die Manipulation der EintrÃ¤ge.
 
 \section{Speicherung der Daten}
-Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do-Einträge) einem bestimmten Schema folgen. Konkret bedeutet dies folgende Attribute für die \texit{Entität} \texttt{ToDo}:
+Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do-EintrÃ¤ge) einem bestimmten Schema folgen. Konkret bedeutet dies folgende Attribute fÃ¼r die \texit{EntitÃ¤t} \texttt{ToDo}:
 
 % TODO Tabellarische Darstellung der Attribute
 \begin{itemize}
 	\item[\texttt{id}] (alpha-)numerische Zeichenfolge, welche einen Eintrag eindeutig erkennbar macht (String)
 	\item[\texttt{text}] anzuzeigender Text, welcher den eigentlichen Eintrag darstellt und beschreibt (String)
-	\item[\texttt{done}] Status über die Erledigung des entsprechenden Eintrages (Bool'scher Wert)
-	\item[\texttt{priority}] Status über die Priorität des entsprechenden Eintrages (Bool'scher Wert)
+	\item[\texttt{done}] Status Ã¼ber die Erledigung des entsprechenden Eintrages (Bool'scher Wert)
+	\item[\texttt{priority}] Status Ã¼ber die PrioritÃ¤t des entsprechenden Eintrages (Bool'scher Wert)
 \end{description}
 
-% TODO Beispiel der idealisierten Datenbankeinträge
-Unabhängig von der individuellen Architektur der jeweiligen Apps folgt dieses triviale Schema dem Konzept relationaler Datenbanken und könnte somit in einer einfachen Tabelle dargestellt werden.
+% TODO Beispiel der idealisierten DatenbankeintrÃ¤ge
+UnabhÃ¤ngig von der individuellen Architektur der jeweiligen Apps folgt dieses triviale Schema dem Konzept relationaler Datenbanken und kÃ¶nnte somit in einer einfachen Tabelle dargestellt werden.
 
-Um auf die Datenbank zugreifen zu können, muss diese mit entsprechenden Funktionen ausgestattet werden. Neben dem bloßen Erstellen von Einträgen, müssen diese abgegriffen (engl. \textit{fetch}) sowie bearbeitet und gelöscht werden können. Die beiden letztgenanten Funktionen haben bei Ausführung nur Einfluss auf einen durch den*die Nutzer*in ausgewählten Eintrag. Somit müssen diese Funktionen das \textit{Objekt} des entsprechenden Eintrages übergeben bekommen. Weiterhin gliedert sich die Bearbeitung von Einträgen in drei Teilfunktionen auf, nämlich dem Ändern des \texttt{done}- oder \texttt{priority}-Attributes sowie dem Ändern des beschreibenden Textes des Eintrags.
+Um auf die Datenbank zugreifen zu kÃ¶nnen, muss diese mit entsprechenden Funktionen ausgestattet werden. Neben dem bloÃŸen Erstellen von EintrÃ¤gen, mÃ¼ssen diese abgegriffen (engl. \textit{fetch}) sowie bearbeitet und gelÃ¶scht werden kÃ¶nnen. Die beiden letztgenanten Funktionen haben bei AusfÃ¼hrung nur Einfluss auf einen durch den*die Nutzer*in ausgewÃ¤hlten Eintrag. Somit mÃ¼ssen diese Funktionen das \textit{Objekt} des entsprechenden Eintrages Ã¼bergeben bekommen. Weiterhin gliedert sich die Bearbeitung von EintrÃ¤gen in drei Teilfunktionen auf, nÃ¤mlich dem Ã„ndern des \texttt{done}- oder \texttt{priority}-Attributes sowie dem Ã„ndern des beschreibenden Textes des Eintrags.
 
-Da die Ausführung sowie Umsetzung dieser Operationen mit der \ac{ui} Hand in Hand geht, wird die Definition dieser vorgezogen.
+Da die AusfÃ¼hrung sowie Umsetzung dieser Operationen mit der \ac{ui} Hand in Hand geht, wird die Definition dieser vorgezogen.
 
-\section{Benutzeroberfläche (\ac{ui})}
-Die Benutzeroberfläche einer solch einfachen To-Do-Anwendung besteht aus lediglich einer Ansicht. Diese Ansicht lässt sich hierarchisch definieren. Die oberste Ebene dieser Hierarchie bildet der hier sog. \textit{App-Container}. Anders als in aufwändigeren Applikationen kann dieser hier mit der Ansicht gleichgesetzt werden, da keine weiteren Ansichten existieren. Dieser Container beherbergt eine Listenansicht, welche für die Darstellung und Interaktion mit den bereits vorhandenen Einträgen zuständig ist. Für das Erstellen der Einträge steht ein separates Text(eingabe)feld zur Verfügung, sowie ein \textit{Button} zur Bestätigung der Eingabe.
+\section{BenutzeroberflÃ¤che (\ac{ui})}
+Die BenutzeroberflÃ¤che einer solch einfachen To-Do-Anwendung besteht aus lediglich einer Ansicht. Diese Ansicht lÃ¤sst sich hierarchisch definieren. Die oberste Ebene dieser Hierarchie bildet der hier sog. \textit{App-Container}. Anders als in aufwÃ¤ndigeren Applikationen kann dieser hier mit der Ansicht gleichgesetzt werden, da keine weiteren Ansichten existieren. Dieser Container beherbergt eine Listenansicht, welche fÃ¼r die Darstellung und Interaktion mit den bereits vorhandenen EintrÃ¤gen zustÃ¤ndig ist. FÃ¼r das Erstellen der EintrÃ¤ge steht ein separates Text(eingabe)feld zur VerfÃ¼gung, sowie ein \textit{Button} zur BestÃ¤tigung der Eingabe.
 
-Die Listenansicht besteht nun aus mehreren Listeneinträgen (im Folgenden \texttt{Zellen} genannt). Eine Zelle ist für die Darstellung und Interaktion für genau einen To-Do-Eintrag zuständig. Um dies zu ermöglichen, besitzt jede Zelle, neben eines Textfeldes zum Anzeigen des To-Do-Textes, weitere Buttons zum Setzen der Priorität und des Status sowie zum Löschen des Eintrages. Während der Button, welcher für das Entfernen des Eintrages verwendet wird (dargestellt durch ein Kreuz, statischer optischer Natur ist (d.\ h., er ändert nach einem Tippen sein Aussehen nicht), untermalen die Buttons der To-Do-Zustände die gewählten Einstellungen durch ihr Aussehen. Der Button für Priorisierung, welcher durch ein Sternsymbol dargestellt wird, ist bei aktiver Priorisierung gefüllt. Ist dies nicht der Fall, so ist lediglich der Umriss des Symbols zu erkennen. Gleiches gilt für den Button, welcher anzeigt, ob der Eintrag bereits erledigt ist, dargestellt durch ein Häkchen inmitten eines Kreises.
+Die Listenansicht besteht nun aus mehreren ListeneintrÃ¤gen (im Folgenden \texttt{Zellen} genannt). Eine Zelle ist fÃ¼r die Darstellung und Interaktion fÃ¼r genau einen To-Do-Eintrag zustÃ¤ndig. Um dies zu ermÃ¶glichen, besitzt jede Zelle, neben eines Textfeldes zum Anzeigen des To-Do-Textes, weitere Buttons zum Setzen der PrioritÃ¤t und des Status sowie zum LÃ¶schen des Eintrages. WÃ¤hrend der Button, welcher fÃ¼r das Entfernen des Eintrages verwendet wird (dargestellt durch ein Kreuz, statischer optischer Natur ist (d.\ h., er Ã¤ndert nach einem Tippen sein Aussehen nicht), untermalen die Buttons der To-Do-ZustÃ¤nde die gewÃ¤hlten Einstellungen durch ihr Aussehen. Der Button fÃ¼r Priorisierung, welcher durch ein Sternsymbol dargestellt wird, ist bei aktiver Priorisierung gefÃ¼llt. Ist dies nicht der Fall, so ist lediglich der Umriss des Symbols zu erkennen. Gleiches gilt fÃ¼r den Button, welcher anzeigt, ob der Eintrag bereits erledigt ist, dargestellt durch ein HÃ¤kchen inmitten eines Kreises.
 
-Die beschriebenen, visuellen Eigenschaften lassen sich nun in einem sog. \textit{Wireframe} zusammenfassen, welches gleichzeitig die optische Grundlage der Entwicklung darstellen wird. Dies ist vor allem aufgrund der unterschiedlichen Entwicklungsplattformen von Relevanz, da das Einhalten bestimmter Standards der entsprechenden Plattformen dafür sorgen könnte, dass der letztendliche Vergleich beider Applikationen hohe Differenzen aufweist.
+Die beschriebenen, visuellen Eigenschaften lassen sich nun in einem sog. \textit{Wireframe} zusammenfassen, welches gleichzeitig die optische Grundlage der Entwicklung darstellen wird. Dies ist vor allem aufgrund der unterschiedlichen Entwicklungsplattformen von Relevanz, da das Einhalten bestimmter Standards der entsprechenden Plattformen dafÃ¼r sorgen kÃ¶nnte, dass der letztendliche Vergleich beider Applikationen hohe Differenzen aufweist.
 
 \begin{figure}[h!]
-        \includegraphics[scale=0.5]{img/wireframe.png}
-        \centering
-        \caption{Wireframe}
-        \label{fig:wireframe}
+	\includegraphics[scale=0.5]{img/wireframe.png}
+	\centering
+	\caption{Wireframe}
+	\label{fig:wireframe}
 \end{figure}
 
-Eine Besonderheit in der Darstellung lässt sich innerhalb der priorisierten Elemente finden. Um diese weiter hervorzuheben, werden diese an den Anfang der Liste gesetzt. Es entstehen somit zwei Teillisten, welche sich jedoch in derselben Listenansicht befinden. Wird nun ein zuvor nicht-priorisierter Einträg priorisiert, so wechselt dieser seine Position ans Ende der Liste mit den bereits priorisierten Einträgen (bzw. wird oberhalb der ersten nicht-priorisierten Elements platziert). Alle Einträge zwischen der alten und der neuen Position des gerade betrachteten Eintrags werden um eine Listenposition nach unten verschoben. Bei Entfernen der Priorisierung wird das entsprechende Element nun nicht an seine ursprüngliche Position vor der Priorisierung, sondern an den Anfang der nicht-priorisierten Liste verschoben. Entfernt man also bspw. die Priorisierung der letzten Elements in der priorisierten Liste, ändert sich die Reihenfolge nicht. Dieses Verhalten kann vereinfacht in der untenstehenden Abbildung dargestellt werden.
+Eine Besonderheit in der Darstellung lÃ¤sst sich innerhalb der priorisierten Elemente finden. Um diese weiter hervorzuheben, werden diese an den Anfang der Liste gesetzt. Es entstehen somit zwei Teillisten, welche sich jedoch in derselben Listenansicht befinden. Wird nun ein zuvor nicht-priorisierter EintrÃ¤g priorisiert, so wechselt dieser seine Position ans Ende der Liste mit den bereits priorisierten EintrÃ¤gen (bzw. wird oberhalb der ersten nicht-priorisierten Elements platziert). Alle EintrÃ¤ge zwischen der alten und der neuen Position des gerade betrachteten Eintrags werden um eine Listenposition nach unten verschoben. Bei Entfernen der Priorisierung wird das entsprechende Element nun nicht an seine ursprÃ¼ngliche Position vor der Priorisierung, sondern an den Anfang der nicht-priorisierten Liste verschoben. Entfernt man also bspw. die Priorisierung der letzten Elements in der priorisierten Liste, Ã¤ndert sich die Reihenfolge nicht. Dieses Verhalten kann vereinfacht in der untenstehenden Abbildung dargestellt werden.
 
-% TODO Verschönerung und Erweiterung der Grafik
+% TODO VerschÃ¶nerung und Erweiterung der Grafik
 \begin{figure}[h!]
-        \includegraphics[width=\linewidth]{img/sketch_insert.png}
-        \centering
-        \caption{Verhalten beim EinfÃ¼gen}
-        \label{fig:inserttodo}
+	\includegraphics[width=\linewidth]{img/sketch_insert.png}
+	\centering
+	\caption{Verhalten beim EinfÃ¼gen}
+	\label{fig:inserttodo}
 \end{figure}
 
-Grundsätzlich werden alle Einträge in der Reihenfolge dargestellt, wie sie angelegt wurden, mit den eben beschriebenen Ausnahmen.
+GrundsÃ¤tzlich werden alle EintrÃ¤ge in der Reihenfolge dargestellt, wie sie angelegt wurden, mit den eben beschriebenen Ausnahmen.
 
 
 \subsection{Farbliche Darstellung}
-Um ebenfalls für farbliche Konsistenz zu sorgen, werden die beschriebenen Elemente auf Basis der folgenden Tabelle in ihrem Erscheinungsbild konfiguriert:
+Um ebenfalls fÃ¼r farbliche Konsistenz zu sorgen, werden die beschriebenen Elemente auf Basis der folgenden Tabelle in ihrem Erscheinungsbild konfiguriert:
 
 \begin{table}[h!]
-  \centering
-    \begin{tabular}{ |c|c|c|}
-     \hline
-    \textbf{Bezeichnung} & \textbf{HEX-Code} & \textbf{Beispiel}\\
-    \hline
-    
-    
-    \hline
-    \multicolumn{3}{|c|}{\textbf{Allgemeines}}\\
-     \hline
-    Hintergrund & \texttt{\#F2F2F2} &\cellcolor[HTML]{F2F2F2}\\
-        \hline
-         Schriftfarbe & \texttt{\#8C8C8C} &\cellcolor[HTML]{8C8C8C}\\
-     \hline
-     
-     
-      \hline
-    \multicolumn{3}{|c|}{\textbf{Bedienelemente}}\\
-     \hline
-      Hintergrund fÃ¼r inaktive Bedienelemente & \texttt{\#CECECE} &\cellcolor[HTML]{CECECE}\\
-     \hline
-    Checkbox (checked) Hintergrund & \texttt{\#1A66FF} &\cellcolor[HTML]{1A66FF}\\
-    \hline
-     Schriftfarbe der Checkbox (checked) & \texttt{\#FFFFFF} &\cellcolor[HTML]{FFFFFF}\\
-     \hline
-    \end{tabular}
-  \caption{Farbtabelle} \label{tab:farbtabelle}
+	\centering
+	\begin{tabular}{ |c|c|c|}
+		\hline
+		\textbf{Bezeichnung} & \textbf{HEX-Code} & \textbf{Beispiel}\\
+		\hline
+		
+		
+		\hline
+		\multicolumn{3}{|c|}{\textbf{Allgemeines}}\\
+		\hline
+		Hintergrund & \texttt{\#F2F2F2} &\cellcolor[HTML]{F2F2F2}\\
+		\hline
+		Schriftfarbe & \texttt{\#8C8C8C} &\cellcolor[HTML]{8C8C8C}\\
+		\hline
+		
+		
+		\hline
+		\multicolumn{3}{|c|}{\textbf{Bedienelemente}}\\
+		\hline
+		Hintergrund fÃ¼r inaktive Bedienelemente & \texttt{\#CECECE} &\cellcolor[HTML]{CECECE}\\
+		\hline
+		Checkbox (checked) Hintergrund & \texttt{\#1A66FF} &\cellcolor[HTML]{1A66FF}\\
+		\hline
+		Schriftfarbe der Checkbox (checked) & \texttt{\#FFFFFF} &\cellcolor[HTML]{FFFFFF}\\
+		\hline
+	\end{tabular}
+	\caption{Farbtabelle} \label{tab:farbtabelle}
 \end{table}
 
 
-% Spaß mit Activity-Diagrammen!
+% SpaÃŸ mit Activity-Diagrammen!
 \section{Nutzungszyklus}
-Der*die Nutzer*in öffnet die Anwendung. Beim Laden der Ansicht wird eine Datenbank-Funktion ausgeführt, um bereits existierende Einträge zu laden und ihre entsprechenden Beschreibungen samt weiteren Attributen in die einzelnen Zellen der Listenansicht zu laden. 
+Der*die Nutzer*in Ã¶ffnet die Anwendung. Beim Laden der Ansicht wird eine Datenbank-Funktion ausgefÃ¼hrt, um bereits existierende EintrÃ¤ge zu laden und ihre entsprechenden Beschreibungen samt weiteren Attributen in die einzelnen Zellen der Listenansicht zu laden. 
 
-Der*die Nutzer*in möchte einen neuen To-Do-Eintrag erstellen. Dafür wird ein beschreibender Text in das Texteingabefeld am unteren Rand der Ansicht geschrieben. Um einen neuen Eintrag zu erstellen, wird ein beschreibender Text in das Texteingabefeld am unteren Rand der Ansicht geschrieben. Mit der Bestätigung über den \texttt{+}-Button wird ein neuer Eintrag in die Datenbank aufgefordert, wobei das \texttt{text}-Attribut mit dem zuvor gewählten Text aus dem Eingabefeld gefüllt wird. Die Zeichenfolge der \texttt{id} wird automatisch und zufallsbasiert generiert, \texttt{done} sowie \texttt{priority} standardmäßig auf \texttt{false} gesetzt. Der neue Eintrag wird unter den bereits vorhandenen Einträgen angefügt. Stern- sowie Häkchensymbol werden lediglich über ihre Kontur kenntlich gemacht.
+Der*die Nutzer*in mÃ¶chte einen neuen To-Do-Eintrag erstellen. DafÃ¼r wird ein beschreibender Text in das Texteingabefeld am unteren Rand der Ansicht geschrieben. Um einen neuen Eintrag zu erstellen, wird ein beschreibender Text in das Texteingabefeld am unteren Rand der Ansicht geschrieben. Mit der BestÃ¤tigung Ã¼ber den \texttt{+}-Button wird ein neuer Eintrag in die Datenbank aufgefordert, wobei das \texttt{text}-Attribut mit dem zuvor gewÃ¤hlten Text aus dem Eingabefeld gefÃ¼llt wird. Die Zeichenfolge der \texttt{id} wird automatisch und zufallsbasiert generiert, \texttt{done} sowie \texttt{priority} standardmÃ¤ÃŸig auf \texttt{false} gesetzt. Der neue Eintrag wird unter den bereits vorhandenen EintrÃ¤gen angefÃ¼gt. Stern- sowie HÃ¤kchensymbol werden lediglich Ã¼ber ihre Kontur kenntlich gemacht.
 
-Der*die Nutzer*in möchte den Test eines Eintrages ändern. Durch direktes Tippen auf den dargestellten Text in einer Zelle wird dies ermöglicht. Es erscheint ein Cursor, welcher ebenfalls Tastatur- und Berührgesten innerhalb dieses Feldes ermöglicht. Nach bestätigter Änderung über das Verlassen des Textfeldes (d.\ h. dem Tippen auf eine andere Stelle innerhalb der Ansicht) wird erneut eine Datenbank-Funktion ausgeführt. Diese bekommt das \texttt{ToDo}-Objekt übergeben und ersetzt den bestehenden Inhalt des \texttt{text}-Attributes mit dem nun geänderten.
+Der*die Nutzer*in mÃ¶chte den Test eines Eintrages Ã¤ndern. Durch direktes Tippen auf den dargestellten Text in einer Zelle wird dies ermÃ¶glicht. Es erscheint ein Cursor, welcher ebenfalls Tastatur- und BerÃ¼hrgesten innerhalb dieses Feldes ermÃ¶glicht. Nach bestÃ¤tigter Ã„nderung Ã¼ber das Verlassen des Textfeldes (d.\ h. dem Tippen auf eine andere Stelle innerhalb der Ansicht) wird erneut eine Datenbank-Funktion ausgefÃ¼hrt. Diese bekommt das \texttt{ToDo}-Objekt Ã¼bergeben und ersetzt den bestehenden Inhalt des \texttt{text}-Attributes mit dem nun geÃ¤nderten.
 
-Der*die Nutzer*in möchte den zuvor erstellten Eintrag priorisieren. Tippt diese*r auf das Stern-Symbol, wird dieses mit der zuvor definierten Farbe gefüllt. Gleichzeitig bewegt sich das priorisierte Element an das Ende der Teilliste mit priorisierten Einträgen. Eine Datenbank-Funktion wird aufgerufen, welche den \texttt{priority}-Wert des übergebenen Objekts von \texttt{false} auf \texttt{true} setzt.
+Der*die Nutzer*in mÃ¶chte den zuvor erstellten Eintrag priorisieren. Tippt diese*r auf das Stern-Symbol, wird dieses mit der zuvor definierten Farbe gefÃ¼llt. Gleichzeitig bewegt sich das priorisierte Element an das Ende der Teilliste mit priorisierten EintrÃ¤gen. Eine Datenbank-Funktion wird aufgerufen, welche den \texttt{priority}-Wert des Ã¼bergebenen Objekts von \texttt{false} auf \texttt{true} setzt.
 
-Der*die Nutzer*in möchte den zuvor priorisierten Eintrag als abgeschlossen markieren. Tippt diese*r auf das Häkchen-Symbol wird dieses mit der zuvor definierten Farbe gefüllt. Eine Datenbank-Funktion wird aufgerufen, welche den \texttt{done}-Wert des übergebenen Objekts von \texttt{false} auf \texttt{true} setzt.
+Der*die Nutzer*in mÃ¶chte den zuvor priorisierten Eintrag als abgeschlossen markieren. Tippt diese*r auf das HÃ¤kchen-Symbol wird dieses mit der zuvor definierten Farbe gefÃ¼llt. Eine Datenbank-Funktion wird aufgerufen, welche den \texttt{done}-Wert des Ã¼bergebenen Objekts von \texttt{false} auf \texttt{true} setzt.
 
-Der*die Nutzer*in möchte den zuvor als abgeschlossenen Eintrag aus der Liste der priorisierten Einträge entfernen. Tippt diese*r auf das Stern-Symbol, wird dessen Füllung entfernt. Gleichzeitig bewegt sich das Element an den Anfang der Teilliste mit nicht-priorisierten Einträgen. Die zuvor ausgeführte Datenbank-Funktion wird erneut aufgerufen, welche den \texttt{priority}-Wert des übergebenen Objekts von \texttt{true} nun wieder auf \texttt{false} setzt.
+Der*die Nutzer*in mÃ¶chte den zuvor als abgeschlossenen Eintrag aus der Liste der priorisierten EintrÃ¤ge entfernen. Tippt diese*r auf das Stern-Symbol, wird dessen FÃ¼llung entfernt. Gleichzeitig bewegt sich das Element an den Anfang der Teilliste mit nicht-priorisierten EintrÃ¤gen. Die zuvor ausgefÃ¼hrte Datenbank-Funktion wird erneut aufgerufen, welche den \texttt{priority}-Wert des Ã¼bergebenen Objekts von \texttt{true} nun wieder auf \texttt{false} setzt.
 
-Der*die Nutzer*in möchte den Eintrag abschließend entfernen. Tipps diese*r auf das Kreuz-Symbol, wird der Eintrag aus der Liste entfernt. Die Elemente unterhalb des gelöschten Eintrags verschieben sich um jeweils eine Position nach oben. Eine Datenbank-Funktion wird aufgerufen, welche das übergebene Objekt des Eintrages aus der Datenbank entfernt.
+Der*die Nutzer*in mÃ¶chte den Eintrag abschlieÃŸend entfernen. Tipps diese*r auf das Kreuz-Symbol, wird der Eintrag aus der Liste entfernt. Die Elemente unterhalb des gelÃ¶schten Eintrags verschieben sich um jeweils eine Position nach oben. Eine Datenbank-Funktion wird aufgerufen, welche das Ã¼bergebene Objekt des Eintrages aus der Datenbank entfernt.
 
-%===================================================================================
-%  DEPRECATED / DISCUSSION REQ
-%===================================================================================
 
-%\section{Komponenten}
-%\begin{description}
-%    \item \textbf{App Container}\\
-%    Das unterste UI-Element der Anwendung wird im Folgenden als App Container bezeichnet, da es aufgrund der verschiedenen Technologien keine einheitliche Bezeichnung dafÃ¼r gibt. Der App Container ist bei der PWA das \texttt{body} Element des HTML und bei der nativen iOS App ein \texttt{View} Element.
-%    
-%    \textbf{Besonderes:} Ist der Inhalt des App Containers grÃ¶ÃŸer, als der Bildschirm, wird in vertikale Richtung gescrollt. Es gibt kein horizontales Scrolling, stattdessen mÃ¼ssen sich alle anderen Elemente automatisch anpassen.
-%
-%    \item \textbf{Todoliste}\\
-%    Der Kern der Anwendung ist eine Liste, die einzelne Todos enthÃ¤lt. Neue Todos werden stets unten an die Liste angefÃ¼gt.
-%    
-%    \textbf{Besonderes:} Es gibt genau eine Todoliste. Sie kann nicht gelÃ¶scht werden und enthÃ¤lt mindestens ein (leeres) Todo.
-%    
-%    \item \textbf{Todo (Listeneintrag)}\\
-%    Ein Todo ist ein Listenelement der Todoliste. Dieses besteht aus einem editierbaren Textfeld. Seitlich des Textfelds befinden sich Buttons zum Entfernen des Eintrags und zum Markieren des Eintrags als "wichtig".
-%    
-%    Das Todo hat links neben dem Eingabefeld eine Checkbox. Bis zum "check" durch den Nutzer ist die Checkbox nicht markiert.
-%    
-%    \textbf{Besonderes:} Wenn der Inhalt eines bestehenden Todos gelÃ¶scht wird, bleibt es bestehen und wird nicht automatisch entfernt.
-%    
-%    \item \textbf{EingabemÃ¶glichkeit}\\
-%    Damit der Nutzer neue Todos eintragen kann, wird ein Eingabefeld benÃ¶tigt. Das Eingabefeld ist idealerweise in die Todoliste integriert. FÃ¼r den Nutzer soll stets ein Eingabefeld unter der Todoliste sichtbar sein.
-%    Da bereits die Todoliste aus einzelnen Eingabefeldern besteht, muss diese wÃ¤hrend der Eingabe eines neuen Elements nur um ein neues leeres Listenelement erweitert werden.
-%    
-%    \textbf{Besonderes:} Es werden keine leeren Todos eingefÃ¼gt. Ein Todo muss mindestens ein Zeichen enthalten.
-%\end{description}
-%
-%\section{Designentscheidungen PWA}
-%Seit 2014 bis heute ist JavaScript die hÃ¤ufigste Sprache auf GitHub. Das stÃ¤rker typisierte TypeScript gehÃ¶rt zu den am schnellsten wachsenden Sprachen \cite{OctoverseGitHubStatistics}. Um diese Arbeit zukunftsgewandt zu evaluieren, werden deshalb das bereits beschriebene Angular-Framework verwendet, dass TypeScript (transpilierter zu JavaScript) und die Node.js Laufzeitumgebung nutzt. Nicht zuletzt ist auch der GroÃŸe Beitrag von Google (als MobilgerÃ¤tehersteller und Betriebssystementwickler von Android) zum Angular-Projekt ein Grund, die PWA in Form einer Angular Anwendung zu realisieren.
-
-%\subsection{GrÃ¶ÃŸen}
-%\begin{figure}[h]
-%        \includegraphics[scale=0.5]{img/Wireframe_dimensions.jpg}
-%        \centering
-%        \caption{GrÃ¶ÃŸen}
-%        \label{fig:dimensions}
 %\end{figure}
