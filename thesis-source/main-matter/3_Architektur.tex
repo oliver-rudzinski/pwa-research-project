@@ -39,7 +39,7 @@ Streng genommen sind funktionale Anforderungen sehr granular zu definieren. Da e
 Unabhängig von der Plattform wird zunächst ein allgemeines, während der individuellen Entwicklungsphase zu spezifizierendes Grundgerüst der Funktionalität definiert. Bei einer To-Do-Applikation besteht dieses grundsätzlich aus zwei Komponenten. Die idealisierte \textit{Datenbank} ermöglicht persistente Speicherung der angelegten To-Do-Einträge. Diese ist mit verschiedenen \ac{crud}-Funktionen direkt an das \ac{ui} angebunden und ermöglicht somit die Manipulation der Einträge.
 
 \section{Speicherung der Daten}
-Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do-Einträge) einem bestimmten Schema folgen. Konkret bedeutet dies folgende Attribute für die \texit{Entität} \texttt{ToDo}:
+Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do-Einträge) einem bestimmten Schema folgen. Konkret bedeutet dies folgende Attribute für die Entität \texttt{ToDo}:
 
 % TODO Tabellarische Darstellung der Attribute
 \begin{itemize}
@@ -47,7 +47,7 @@ Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do
 	\item[\texttt{text}] anzuzeigender Text, welcher den eigentlichen Eintrag darstellt und beschreibt (String)
 	\item[\texttt{done}] Status über die Erledigung des entsprechenden Eintrages (Bool'scher Wert)
 	\item[\texttt{priority}] Status über die Priorität des entsprechenden Eintrages (Bool'scher Wert)
-\end{description}
+\end{itemize}
 
 % TODO Beispiel der idealisierten Datenbankeinträge
 Unabhängig von der individuellen Architektur der jeweiligen Apps folgt dieses triviale Schema dem Konzept relationaler Datenbanken und könnte somit in einer einfachen Tabelle dargestellt werden.
