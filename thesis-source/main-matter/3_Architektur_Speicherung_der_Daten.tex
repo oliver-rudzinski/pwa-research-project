@@ -1,0 +1,16 @@
+Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do-Einträge) einem bestimmten Schema folgen. Konkret bedeutet dies folgende Attribute für die Entität \texttt{ToDo}:
+
+% TODO Tabellarische Darstellung der Attribute
+\begin{itemize}
+	\item[\texttt{id}] (alpha-)numerische Zeichenfolge, welche einen Eintrag eindeutig erkennbar macht (String)
+	\item[\texttt{text}] anzuzeigender Text, welcher den eigentlichen Eintrag darstellt und beschreibt (String)
+	\item[\texttt{done}] Status über die Erledigung des entsprechenden Eintrages (Bool'scher Wert)
+	\item[\texttt{priority}] Status über die Priorität des entsprechenden Eintrages (Bool'scher Wert)
+\end{itemize}
+
+% TODO Beispiel der idealisierten Datenbankeinträge
+Unabhängig von der individuellen Architektur der jeweiligen Apps folgt dieses triviale Schema dem Konzept relationaler Datenbanken und könnte somit in einer einfachen Tabelle dargestellt werden.
+
+Um auf die Datenbank zugreifen zu können, muss diese mit entsprechenden Funktionen ausgestattet werden. Neben dem bloßen Erstellen von Einträgen, müssen diese abgegriffen (engl. \textit{fetch}) sowie bearbeitet und gelöscht werden können. Die beiden letztgenanten Funktionen haben bei Ausführung nur Einfluss auf einen durch den*die Nutzer*in ausgewählten Eintrag. Somit müssen diese Funktionen das \textit{Objekt} des entsprechenden Eintrages übergeben bekommen. Weiterhin gliedert sich die Bearbeitung von Einträgen in drei Teilfunktionen auf, nämlich dem Ändern des \texttt{done}- oder \texttt{priority}-Attributes sowie dem Ändern des beschreibenden Textes des Eintrags.
+
+Da die Ausführung sowie Umsetzung dieser Operationen mit der \ac{ui} Hand in Hand geht, wird die Definition dieser vorgezogen.

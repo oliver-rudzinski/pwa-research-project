@@ -1,5 +1,3 @@
-\subsection{Installation einer nativen App}
-
 \subsection{Apple iOS}
 
 iOS ist ein Betriebssystem, welches vom US-amerikanischen Technologiekonzern \textit{Apple, Inc.} im Rahmen des erstmalig vorgestellten \textit{iPhones} im Jahre 2007, damals noch unter dem Namen \textit{iPhone OS}, in Umlauf gebracht wurde. Stand heute läuft dieses Betriebssystem ausschließlich auf den Mobilgeräte des genannten Herstellers. Neben dem iPhone nutzt auch das Multimedia-Gerät \textit{iPod touch} das Betriebssystem iOS. Der Tabletcomputer \textit{iPad} wurde bis September 2019 ebenfalls über iOS betrieben, besitzt jedoch seit der Umstellung ein eigenes, an iOS stark angelehntes Betriebssystem \textit{iPadOS}.
@@ -88,3 +86,33 @@ Wie im vorigen Abschnitt erwähnt werden iOS-Anwendungen im Regelfall über den 
 Der*die iOS-Nutzer*in sucht über den App Store die gewünschte App und lädt diese herunter. Für diesen Prozess ist eine sog. \textit{Apple ID}, also ein Benutzerkonto bei Apple von Nöten. Sollte die gewünschte App kostenpflichtig sein, so müssen Kreditkarten- oder anderweitige, valide Zahlungsdaten dem Konto hinterlegt sein. Der*die Nutzer*in bestätigt den Kauf bzw. erstmaligen Download über das Benutzerkontenpasswort oder eine gerätespezifische Authentifizierungsmethode (bspw. Fingerabdruck-Erkennung via \textit{Touch ID} oder Gesichtserkennung via \textit{Face ID}, sofern vorhanden). Daraufhin startet der Download. Die App kann über ihr korrespondierendes App-Symbol, welches nun auf dem Menü-Bildschirm des Geräts erscheint, geöffnet werden.
 
 Falls die App in einer nun aktuelleren Version vorliegt, wird diese entweder über den App Store automatisch im Hintergrund neu heruntergeladen. Andernfalls kann der*die Nutzerin diesen Schritt auch manuell über den App Store in Kraft setzen.
+
+
+
+\subsection{Android}
+
+\textbf{Entwicklung}
+
+%Android apps are written in Java and use various Java application program interfaces (APIs).
+%Because you’ll want to write your own apps, but may be unfamiliar with the Java language and these
+%APIs, this book teaches you about Java as a first step into Android app development. It provides you
+%with Java language fundamentals and Java APIs that are useful when developing apps.
+
+Native Android Anwendungen werden in der Regel in Java entwickelt. Durch die Nutzung der zahlreichen APIs wird aus einem Java Programm eine native Android App.
+\cite[S. 1]{JavaForAndroid}
+Mittlerweile wird die teilweise veraltete Java-Syntax graduell durch die modernere Programmiersprache Kotlin abgelöst.
+\cite{KotlinAndroid}
+
+
+%Kotlin is a free and open source project under the Apache 2.0 license
+%https://developer.android.com/kotlin
+
+%https://kotlinlang.org/docs/reference/android-overview.html
+
+Meist werden Android Apps mithilfe der Entwicklungsumgebung Android Studio entwickelt, welches auf der IntelliJ IDE von JetBrains aufbaut, aber von Google weiterentwickelt wird. Die IDE bietet Entwicklern unter anderem einen visuellen Layout Editor und eine Vielzahl von Android Emulatoren zum Testen der Apps auf verschiedenen Android Versionen und unterschiedlicher Hardware. Dafür wird jedoch performante Hardware zum Entwickeln benötigt: 8 Gigabyte Arbeitsspeicher oder mehr ist die Empfehlung der Herausgeber. \cite{AndroidStudio}
+
+\textbf{Vertrieb}
+
+Die meisten Apps beziehen Nutzer über den Google Play Store, einem Onlineshop für kostenlose und kostenpflichtige Android Anwendungen. 
+Updates werden ebenfalls über den Play Store installiert. Alternativ kann ein Nutzer eine App in Form einer \texttt{.apk}-Datei installieren. Dieser Weg bleibt jedoch aufgrund der Umständlichkeit und unbekannten Sicherheitsprüfung der App weitestgehend ungenutzt.
+
