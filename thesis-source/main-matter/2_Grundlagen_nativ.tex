@@ -8,14 +8,14 @@ iOS ist ein Betriebssystem, welches vom US-amerikanischen Technologiekonzern \te
 
 In seiner ersten Version stellte iPhone OS noch keinerlei Möglichkeit bereit, Anwendungen von Drittanbietern bereitzustellen sowie zu nutzen. Dies änderte sich bei der Umbenennung des Betriebssystems in iOS im Jahre 2008, welche auch ein Software-Update zur Folge hatte, in welchem diese Eigenschaft nun geboten wurde.
 
-\paragraph{Programmiersprache: Apple \textit{Swift}}
+\paragraph{Programmiersprache: Apple \textit{Swift}}\mbox{}\\
 In der Anfangszeit der Anwendungsentwicklung für iOS wurde die bereits für andere Zwecke entwickelte und vorhandene Programmiersprache \textit{Objective-C} als Standard gewählt. Dies änderte sich im Jahre 2014, als Apple bei seiner jährlichen Entwicklerkonferenz die hauseigene Programmiersprache \textit{Swift} vorstellte, welche Objective-C in der ganzheitlichen Anwendungsenwicklung rund um Apple-Geräte ablösen sollte. In der Anfangszeit von Swift war diese immer noch stark an den Vorgänger Objective-C angelehnt. Über die Zeit sank der Einfluss, jedoch ist Swift weiterhin abwärtskompatibel zu Objective-C, welche wiederum abwärtskompatibel zu C ist.
 
 Bei Swift handelt es sich um eine objekt- und protokoll-orientierte Programmiersprache, welche in Ihren verschiedenen Anwendungsbereichen ihre Zugehörigkeit zu verschiedenen Programmierparadigmen aufweist. Diese stützt sich vor allem auf ihrer Behauptung, möglichst leicht verständlich für einen Menschen zu sein und vermeidet bekannte Probleme anderer, populärer objektorientierter Programmiersprachen, bspw. Dereferenzierung von \texttt{null}\textit{-Pointer-Exceptions}.
 
 Neben der Entwicklung für alle Apple-Plattformen wird Swift unter anderem auch zur Back-End-Entwicklung genutzt. Laut einer Umfrage von \textit{StackOverflow} positioniert sich Swift auf Platz 14 der beliebtesten Programmiersprachen, basierend auf 8,1\% aller Stimmen.
 
-\paragraph{Entwicklungsumgebung: Apple \textit{Xcode}}
+\paragraph{Entwicklungsumgebung: Apple \textit{Xcode}}\mbox{}\\
 \textit{Xcode} ist eine, ebenfalls von Apple entwickelte, sog. integrierte Entwicklungsumgebung (engl. \ac{ide}) und wird primär für die Entwicklung von Anwendungen mit der Programmiersprache Swift eingesetzt. Grundsätzlich ist Xcode, und somit auch die Programmierung mit Swift, Apple \textit{Mac}-Nutzern vorbehalten. Über die Zeit wurden weitere \acp{ide} entwickelt, welche Swift unterstützen, denen jedoch grundlegende, nachfolgend beschriebene Funktionalitäten von Xcode, fehlen. Zu nennen ist hier bspw. die Lösung \textit{AppCode} des Unternehmens \textit{JetBrains}.
 
 Xcode unterstützt neben Swift auch die abwärtskompatiblen Programmiersprachen Objective-C, C, aber auch C++, Python, Ruby, sowie andere. Darüber hinaus bietet Xcode einen sog. \textit{Interface Builder}, mit welchem das Front End über separate Ansichten (sog. \textit{Views}) vorbereitet werden kann. Dabei werden verschiedenste Komponenten bereitgestellt, welche via \textit{Drag'n'Drop} innerhalb der Ansichten platziert und optisch konfiguriert werden können. Auch Beziehungen zwischen den einzelnen Views können bereits hier angelegt werden. Ein Beispiel für die Nutzung des Interface Builders kann dem unten stehenden Screenshot entnommen werden.
@@ -28,7 +28,8 @@ Xcode unterstützt neben Swift auch die abwärtskompatiblen Programmiersprachen 
 % Erklärung des Screenshots
 Die zusammengesetzten Komponenten können, ebenfalls über Drag'n'Drop in den Quellcode referenziert werden, um die Verhaltensweisen dieser programmatisch festzulegen. Ist die App in einem testreifen Zustand, kann diese direkt über Xcode emuliert werden. Es öffnet sich ein sog. \textit{Simulator}, welcher das Zielgerät mit der geöffneten Anwendung darstellt. Das Verhalten und etwaige, daraus resultierende Probleme, können somit erkannt werden, ohne, dass es ein tatsächliches, physikalisches Zielgerät bedarf. Eigenschaften, welche auf die Hardware-Komponenten des Geräts zugreifen (bspw. die eingebauten Kameras, den Bluetooth-Sensor, etc.) können mit Ausnahme des Netzwerkkarte nicht simuliert werden.
 
-\paragraph{Softwaredesign-Muster \textit{Model-View-Controller}} Apple empfiehlt als grundlegendes Prinzip für die App-Entwicklung mit Swift das Muster \textit{\ac{mvc}}, welches im Folgenden aufgeschlüsselt wird.
+\paragraph{Softwaredesign-Muster \textit{Model-View-Controller}}\mbox{}\\ 
+Apple empfiehlt als grundlegendes Prinzip für die App-Entwicklung mit Swift das Muster \textit{\ac{mvc}}, welches im Folgenden aufgeschlüsselt wird.
 
 \begin{description}
 	\item[Model] (dt. \textit{Modell} bezieht sich auf das Datenmodell und die datenbedingte Kommunikation innerhalb der Anwendung. Innerhalb von der iOS-Anwendungsentwicklung finden sich hier Quellcode-Abschnitte für die Kommunikation der App mit einer potentiellen \acs{api}, Code für die Definition und Bereitstellung von persistentem Speicher sowie die Handhabung der dadurch entstehenden Daten. Auch im Quellcode verwendete Konstanten sind dem Modell zuzuschreiben.
@@ -48,7 +49,7 @@ Die Kooperation der einzelnen Komponenten dieses Musters lässt sich anhand der 
 
 Technisch wird dieses Muster durch die Verknüpfung der einzelnen (durch den Interface Builder bereitgestellten oder erstellten) Views mit spezifischen, sog. \textit{View Controllern} realisiert. Durch eine Aktion des*der Nutzers*in auf dem View wird die entsprechende Funktionalität über den View Controller bereitgestellt. Dieser kann dan ebenfalls Funktionen ausführen, welche durch das Modell bereitgestellt werden, falls die Aktion dies bedarf. Die entsprechenden Klassen der View Controller sind Unterklassen der einzelnen, spezifischen Views, welche deren vorgesetzte Basisfunktionalitäten um die gewünschten Funktionen des*der Entwicklers*in erweitern.
 
-\paragraph{Vorbereitung der Projektumgebung}
+\paragraph{Vorbereitung der Projektumgebung}\mbox{}\\
 Bei der Erstellung eines neuen Projektes innerhalb von Xcode wählt der*die Entwickler*in bereits zu Beginn bestimmte Spezifikationen für die zu entwickelnde Anwendung. Da Swift auch für andere Betriebssysteme von Apple zur Anwendungsentwicklung genutzt wird, gehört die Spezifizierung des Anwendungsbereiches (hier: iOS) sowie des grundlegenden Aufbaus der App zu den Vorbereitungsmaßnahmen der Projektumgebung. Dieses Dialogfenster kann aus dem unten stehenden Screenshot entnommen werden.
 
 \begin{figure}
