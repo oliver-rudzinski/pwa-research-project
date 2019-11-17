@@ -16,24 +16,24 @@ Mit dem Befehl \texttt{ng new todoapp} wird die Angular \ac{cli} (in der Konsole
 	\vspace{-10pt}
 \end{wrapfigure}
 Die \ac{cli} bietet dem Nutzer einige Optionen bei der Erstellung an, die jedoch in diesem Projekt nicht zwangsläufig benötigt werden, so kann beispielsweise ein Routing oder Unittesting eingerichtet werden.
-Außerdem unterstützt die \ac{cli} verschiedene Stylesheetformate (siehe Abbildung \ref{fig:stylesheet_formate_cli}). Das ist für Entwickler*innen sehr praktisch, wenn sie einen dieser CSS-Dialekte beherschen. Die Arbeit mit Variablen in Stylesheets bevorzugt wird, werden in diesem Projekt SCSS Dateien verwendet.
+Außerdem unterstützt die \ac{cli} verschiedene Stylesheetformate (siehe Abbildung \ref{fig:stylesheet_formate_cli}). Das ist für Entwickler*innen sehr praktisch, wenn sie einen dieser CSS-Dialekte beherrschen. Die Arbeit mit Variablen in Stylesheets bevorzugt wird, werden in diesem Projekt SCSS Dateien verwendet.
 
 
 \subsection{Umsetzung der Anwendung mit Angular}
 
 Im Folgenden werden die einzelnen Komponenten der \textit{Angular}-Anwendung erläutert. Es wird explizit darauf hingewiesen, dass \textbf{Quellcode-Ausschnitte teilweise stark gekürzt worden sind}, um die Lesbarkeit zu erhöhen.
 
-\subsubsection{Klasse TodoItem zur Datenspeicherung}
+\subsubsection{Klasse \texttt{TodoItem} zur Datenspeicherung}
 
 Die Komponenten tauschen untereinander Daten aus. Damit diese einer einheitlichen Struktur folgen, wird eine Klasse \texttt{TodoItem} erstellt, die einen Todo-Eintrag repräsentiert. Objekte dieser Klasse können jetzt einfach zwischen Komponenten ausgetauscht und modifiziert werden.
 
 \begin{listing}[h]
 	\inputminted{TypeScript}{sourcecode/pwa_todoitem_klasse.js}
-	\caption{TodoItem-Klasse zur Datenspeicherung (gekürzt)}
+	\caption{\texttt{TodoItem}-Klasse zur Datenspeicherung (gekürzt)}
 	\label{sourcecode:todoitem_klasse}
 \end{listing}
 
-Wie im Ausschnitt \ref{sourcecode:todoitem_klasse} zu sehen, hat ein Todo-Element eine Aufgabenbeschreibung (Zeile 2), zwei boolsche Werte, die speichern, ob das Element als wichtig oder abgeschlossen markiert worden ist (Zeile 4 und 5) und eine eindeutige ID (Zeile 2). Die ID hilft später ein bestimmtes Todo-Element zu modifizieren.
+Wie im Ausschnitt \ref{sourcecode:todoitem_klasse} zu sehen, hat ein Todo-Element eine Aufgabenbeschreibung (Zeile 2), zwei boolesche Werte, die speichern, ob das Element als wichtig oder abgeschlossen markiert worden ist (Zeile 4 und 5) und eine eindeutige ID (Zeile 2). Die ID hilft später ein bestimmtes Todo-Element zu modifizieren.
 
 \subsubsection{Erstellund des \texttt{todoService} für die Datenverwaltung}
 Alle Todo-Einträge sollen persistent auf dem Gerät gespeichert werden. Dafür wird ein Angular-Service erstellt: der \texttt{todoService}. Er ist für die \acf{crud} Operationen zuständig.
@@ -44,9 +44,9 @@ Alle Todo-Einträge sollen persistent auf dem Gerät gespeichert werden. Dafür 
 	\label{sourcecode:pwa_todo_service}
 \end{listing}
 
-In Ausschnitt \ref{sourcecode:pwa_todo_service} sind die Kernfunktionen des Services abgebildet. Der Service speichert ein Array von \texttt{TodoItem}-Objekten. Wenn der*die Nutzer*in ein Element hinzufügt, erstellt der Service ein neues Datenobjekt und speichert dieses im Array und dem Browserspeicher (Zeilen 16-18). Die Funktionsweise der übrigen CRUD-Operationen ist analog dazu.
+In Ausschnitt \ref{sourcecode:pwa_todo_service} sind die Kernfunktionen des Services abgebildet. Der Service speichert ein Array von \texttt{TodoItem}-Objekten. Wenn der*die Nutzer*in ein Element hinzufügt, erstellt der Service ein neues Datenobjekt und speichert dieses im Array und dem Browserspeicher (Zeilen 16-18). Die Funktionsweise der übrigen \ac{crud}-Operationen ist analog dazu.
 
-Mit \texttt{localStorage} (Zeilen 8-14) kann auf den Key-Value-Store des Browsers zugegriffen werden. Beim Speichern werden die Todo-Elemente als \ac{json}-Objekt im Store abgelegt und analog dazu geladen. Der Key-Value-Store verliert seine Daten beim schließen der Seite nicht und besitzt kein Ablaufdatum, wie ein Cookie \cite{LocalStorage}.
+Mit \texttt{localStorage} (Zeilen 8-14) kann auf den\textit{ Key-Value-Store} des Browsers zugegriffen werden. Beim Speichern werden die Todo-Elemente als \ac{json}-Objekt im Store abgelegt und analog dazu geladen. Der Key-Value-Store verliert seine Daten beim schließen der Seite nicht und besitzt kein Ablaufdatum, wie ein Cookie \cite{LocalStorage}.
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{img/pwa_datenfluss_erstellen.png}
@@ -55,7 +55,7 @@ Mit \texttt{localStorage} (Zeilen 8-14) kann auf den Key-Value-Store des Browser
 	\label{fig:pwa_datenfluss_erstellen}
 \end{figure}
 
-Abbildung \ref{fig:pwa_datenfluss_erstellen} zeigt den Datenfluss beim Erstellen eines Todo-Eintrags. Die Todo-Beschreibung wird vom Nutzer*in über ein Inputfeld an den Service weitergereicht. Dieser erstellt ein entsprechendes Datenobjekt und reicht es der Stammkomponente weiter, worüber schlussendlich HTML-Code erzeugt werden kann. Gleichzeitig speichert er das neue Element im Browserspeicher ab.
+Abbildung \ref{fig:pwa_datenfluss_erstellen} zeigt den Datenfluss beim Erstellen eines Todo-Eintrags. Die Todo-Beschreibung wird vom Nutzer*in über ein Eingabefeld an den Service weitergereicht. Dieser erstellt ein entsprechendes Datenobjekt und reicht es der Stammkomponente weiter, worüber schlussendlich HTML-Code erzeugt werden kann. Gleichzeitig speichert er das neue Element im Browserspeicher ab.
 
 \subsubsection{Dateistruktur und Komponenten der Angularanwendung}
 Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte \textit{Angular}-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt.
@@ -117,14 +117,14 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 	\label{fig:pwa_todo_service}
 \end{figure}
 
-Abbildung \ref{fig:pwa_todo_service} fasst die Architektur der Angular-Anwendung zusammen. Den zentralen Punkt der Anwendung bildet der Todo-Service. 
+Abbildung \ref{fig:pwa_todo_service} fasst die Architektur der Angular-Anwendung zusammen. Den zentralen Punkt der Anwendung bildet der \texttt{TodoService}. 
 
-Grün dargestellt ist der Datenfluss der gespeicherten Todo-Elemente zwischen der Stammkomponente und dem Todo-Service. Die Stammkomponente erhält ein Array aus \texttt{TodoItem}s und wird von Angular automatisch aktualisiert, wenn dieses sich ändert.
-Die Stammkomponente erstellt für jedes TodoItem eine TodoItem-Komponente (blau dargestellt), die so als Listeneintrag sichtbar wird.
+Grün dargestellt ist der Datenfluss der gespeicherten Todo-Elemente zwischen der Stammkomponente und dem \texttt{TodoService}. Die Stammkomponente erhält ein Array aus \texttt{TodoItem}s und wird von Angular automatisch aktualisiert, wenn dieses sich ändert.
+Die Stammkomponente erstellt für jedes \texttt{TodoItem} eine \texttt{TodoItem}-Komponente (blau dargestellt), die so als Listeneintrag sichtbar wird.
 
-Orange dargestellt ist das Einfügen von Daten durch den*die Nutzer*in im Inputfeld der App. Der Input stellt dem Todo-Service ein neues TodoItem-Objekt bereit.
+Orange dargestellt ist das Einfügen von Daten durch den*die Nutzer*in im Inputfeld der App. Der Input stellt dem \texttt{TodoService} ein neues \texttt{TodoItem}-Objekt bereit.
 
-Rot dargestellt ist das Löschen oder Updaten von Items. Wird der Button zum Entfernen gedrückt, oder ändert sich das gespeicherte \texttt{TodoItem}-Objekt der TodoItem-Komponente, werden die Änderungen dem Todo-Service weitergegeben.
+Rot dargestellt ist das Löschen oder Updaten von Items. Wird der Button zum Entfernen gedrückt, oder ändert sich das gespeicherte \texttt{TodoItem}-Objekt der \texttt{TodoItem}-Komponente, werden die Änderungen dem \texttt{TodoService} weitergegeben.
 Für das Löschen reicht allerdings die einzigartige ID des Objekts aus.
 
 
