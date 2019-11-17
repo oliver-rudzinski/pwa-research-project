@@ -29,7 +29,7 @@ In der Praxis sind viele, in dieser Arbeit häufig verwendete, Begriffe untersch
 	
 \end{description}
 
-\section{Progressive Web App}
+\section{Die Progressive Web App}
 \label{chap:pwa}
 
 %\subsection{Charakteristiken einer \ac{pwa}}
@@ -77,7 +77,7 @@ Zwar bezeichnen Browser die Installation meist nur als \texttt{Zum Startbildschi
 
 \subsection{Manifest Datei für die Konfiguration der \ac{pwa}}
 
-Um die \ac{pwa} auf einem Gerät installieren zu können, muss es eine web-app-manifest Datei zur Verfügung gestellt werden. Diese ist ein JSON file, welche als Konfigurationsdatei der installierten Anwendung dient. \cite{GooglePWAManifest}
+Um die \ac{pwa} auf einem Gerät installieren zu können, muss es eine web-app-manifest Datei zur Verfügung gestellt werden. Diese ist ein \ac{json} file, welche als Konfigurationsdatei der installierten Anwendung dient. \cite{GooglePWAManifest}
 
 \begin{listing}[H]
     \inputminted{json}{sourcecode/manifest_sample.json}
@@ -85,10 +85,10 @@ Um die \ac{pwa} auf einem Gerät installieren zu können, muss es eine web-app-m
       \label{sourcecode:manifest_sample}
 \end{listing}
 
-Abbildung \ref{sourcecode:manifest_sample} zeigt den Inhalt einer Manifest-Datei. Neben diversen Icons (Zeile 4-15) werden auch \textit{Name} (Zeile 3), \textit{Farbschema} (Zeile 20) und \textit{Anzeigeeinstellungen} (Zeile 18) festgelegt.
-Die Manifest-Datei wird im HTML der Webanwendung eingebunden, siehe Abbildung \ref{sourcecode:manifest_include}. 
+Quellcode-Abschnitt \ref{sourcecode:manifest_sample} zeigt den Inhalt einer Manifest-Datei. Neben diversen Icons (Zeile 4-15) werden auch \textit{Name} (Zeile 3), \textit{Farbschema} (Zeile 20) und \textit{Anzeigeeinstellungen} (Zeile 18) festgelegt.
+Die Manifest-Datei wird im HTML der Webanwendung eingebunden, siehe Quellcode-Abschnitt \ref{sourcecode:manifest_include}. 
 
-Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (wenige Zeilen langer) JSON-Datei macht die gesamte Webanwendung installierbar. Es wird kein App-Store, manueller Dateidownload oder Installer benötigt. 
+Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (wenige Zeilen langer) \ac{json}-Datei macht die gesamte Webanwendung installierbar. Es wird kein App-Store, manueller Dateidownload oder Installer benötigt. 
 
 \begin{listing}[H]
     \inputminted{xml}{sourcecode/include_manifest.html}
@@ -111,7 +111,7 @@ Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (we
 
 Damit die \ac{pwa} trotz fehlender Netzwerkverbindung funktioniert wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, so dass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
 
-Ein Service Worker ist ein von der UI seperiertat laufendes Hintergrundscript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Scripte, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das senden von Push-Notifications zuständig. \cite[S. 24]{BeginningPWA}
+Ein Service Worker ist ein von der UI seperiertat laufendes Hintergrundskript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Skripte, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das senden von Push-Notifications zuständig. \cite[S. 24]{BeginningPWA}
 
 \begin{figure}[h]
         \includegraphics[width=\linewidth]{img/ServiceWorker-8a0968f1b295f1ff.png}
@@ -124,7 +124,7 @@ Ein Service Worker ist ein von der UI seperiertat laufendes Hintergrundscript de
 Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mitterweile auch Safari unsterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits voll, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
 
 
-\subsection{Aktuell unterstütze Plattformen von \ac{pwa}}
+\subsection{Plattformen von eine \ac{pwa} aktuell unterstützen}
 Das Projekt \textit{CanIUse} aggregiert Daten zu Webstandards des w3 Konsortiums und Browserdokumentationen. Es wird als Quelle für die Unterstützung von Features durch aktuelle Browser herangezogen.
 
 Apples mobiler Browser Safari unterstützt eines der wichtigsten Features der \ac{pwa} noch nicht vollständig: das Web App Manifest. Allerdings wird der Service Worker vollständig unterstützt \cite{CanIUseWebManifest}. Wann und ob Safari die Unterstützung für das Manifest implementiert ist unklar und bleibt abzuwarten. Die aktuelle Teilunterstützung zeigt jedoch, dass sich Apple nicht grundsätzlich gegen die \ac{pwa} weigert.
@@ -144,7 +144,7 @@ Grundsätzlich können Desktop \ac{pwa}s auf jedem Betriebssystem installiert we
 
 
 
-\subsection{JavaScript Laufzeitumgebung Node.js}
+\subsection{Grundlage der Webanwendung: JavaScript Laufzeitumgebung Node.js}
 
 %NodeJSWebsiteAbout
 Node.js ist eine open-source JavaScript Laufzeitumgebung für die Entwicklung skalierbarer Webanwendungen 
@@ -161,7 +161,7 @@ Die Kombination mit dem Package Manager npm ermöglicht die einfache Installatio
 
 \subsection{Frontend-Framwork Angular für die Entwicklung von Webanwendungen}
 
-Angular ist ein open-source Type-Script basiertes Framework zur Entwicklung von Webanwendungen, welches Node.js nutzt.
+Angular ist ein open-source TypeScript basiertes Framework zur Entwicklung von Webanwendungen, welches Node.js nutzt.
 
 
 %https://octoverse.github.com/projects
@@ -221,9 +221,3 @@ Meist werden Android Apps mithilfe der Entwicklungsumgebung Android Studio entwi
 
 Die meisten Apps beziehen Nutzer über den Google Play Store, einem Onlineshop für kostenlose und kostenpflichtige Android Anwendungen. 
 Updates werden ebenfalls über den Play Store installiert. Alternativ kann ein Nutzer eine App in Form einer \texttt{.apk}-Datei installieren. Dieser Weg bleibt jedoch aufgrund der Umständlichkeit und unbekannten Sicherheitsprüfung der App weitestgehend ungenutzt.
-
-\subsection{Grundlegendes}
-
-
-\subsection{Installation einer nativen App}
-\textbf{Android}\\

@@ -1,10 +1,10 @@
 \newpage
 \section{Implementierung \ac{pwa}}
 \subsection{Einrichten der Projektumgebung}
-Für die Entwicklung der \ac{pwa} wird die Entwicklungsumgebung Webstorm von JetBrains gewählt, da sie die viele Routineaufgaben selbstständig beziehungsweise mit geringem Aufwand ausführt.
+Für die Entwicklung der \ac{pwa} wird die Entwicklungsumgebung \textit{Webstorm} von JetBrains gewählt, da sie die viele Routineaufgaben selbstständig beziehungsweise mit geringem Aufwand ausführt.
 
-Wie für die Entwicklung der meisten modernen Webanwendungen ist die Installation der Node.js Laufzeitumgebung notwendig. Mit dem integrierten Paketmanager npm lassen sich Bibliotheken leicht zum Projekt hinzufügen.
-Um die Angular Anwendung automatisiert zu erstellen, ist zuerst die Installation des Angular \acf{cli} erforderlich. Mit dem Konsolenbefehl \texttt{npm install -g @angular/cli} wird npm aufgefordert, die neuste Version der Angular \ac{cli} global auf dem System zu installieren.
+Wie für die Entwicklung der meisten modernen Webanwendungen ist die Installation der \textit{Node.js} Laufzeitumgebung notwendig. Mit dem integrierten Paketmanager \textit{npm} lassen sich Bibliotheken leicht zum Projekt hinzufügen.
+Um die \textit{Angular} Anwendung automatisiert zu erstellen, ist zuerst die Installation des Angular \acf{cli} erforderlich. Mit dem Konsolenbefehl \texttt{npm install -g @angular/cli} wird npm aufgefordert, die neuste Version der Angular \ac{cli} global auf dem System zu installieren.
 
 
 Mit dem Befehl \texttt{ng new todoapp} wird die Angular \ac{cli} (in der Konsole als \texttt{ng} abgekürzt) dazu gebracht, ein Angularprojekt inklusive nötiger Dateistrukturen zu erstellen.
@@ -21,7 +21,7 @@ Außerdem unterstützt die \ac{cli} verschiedene Stylesheetformate (siehe Abbild
 
 \subsection{Umsetzung der Anwendung mit Angular}
 
-Im Folgenden werden die einzelnen Komponenten der Angular-Anwendung erläutert. Es wird explizit darauf hingewiesen, dass \textbf{Quellcode-Ausschnitte teilweise stark gekürzt worden sind}, um die Lesbarkeit zu erhöhen.
+Im Folgenden werden die einzelnen Komponenten der \textit{Angular}-Anwendung erläutert. Es wird explizit darauf hingewiesen, dass \textbf{Quellcode-Ausschnitte teilweise stark gekürzt worden sind}, um die Lesbarkeit zu erhöhen.
 
 \subsubsection{Klasse TodoItem zur Datenspeicherung}
 
@@ -46,7 +46,7 @@ Alle Todo-Einträge sollen persistent auf dem Gerät gespeichert werden. Dafür 
 
 In Ausschnitt \ref{sourcecode:pwa_todo_service} sind die Kernfunktionen des Services abgebildet. Der Service speichert ein Array von \texttt{TodoItem}-Objekten. Wenn der*die Nutzer*in ein Element hinzufügt, erstellt der Service ein neues Datenobjekt und speichert dieses im Array und dem Browserspeicher (Zeilen 16-18). Die Funktionsweise der übrigen CRUD-Operationen ist analog dazu.
 
-Mit \texttt{localStorage} (Zeilen 8-14) kann auf den Key-Value-Store des Browsers zugegriffen werden. Beim Speichern werden die Todo-Elemente als JSON-Objekt im Store abgelegt und analog dazu geladen. Der Key-Value-Store verliert seine Daten beim schließen der Seite nicht und besitzt kein Ablaufdatum, wie ein Cookie \cite{LocalStorage}.
+Mit \texttt{localStorage} (Zeilen 8-14) kann auf den Key-Value-Store des Browsers zugegriffen werden. Beim Speichern werden die Todo-Elemente als \ac{json}-Objekt im Store abgelegt und analog dazu geladen. Der Key-Value-Store verliert seine Daten beim schließen der Seite nicht und besitzt kein Ablaufdatum, wie ein Cookie \cite{LocalStorage}.
 
 \begin{figure}[h]
 	\includegraphics[width=\textwidth]{img/pwa_datenfluss_erstellen.png}
@@ -58,7 +58,7 @@ Mit \texttt{localStorage} (Zeilen 8-14) kann auf den Key-Value-Store des Browser
 Abbildung \ref{fig:pwa_datenfluss_erstellen} zeigt den Datenfluss beim Erstellen eines Todo-Eintrags. Die Todo-Beschreibung wird vom Nutzer*in über ein Inputfeld an den Service weitergereicht. Dieser erstellt ein entsprechendes Datenobjekt und reicht es der Stammkomponente weiter, worüber schlussendlich HTML-Code erzeugt werden kann. Gleichzeitig speichert er das neue Element im Browserspeicher ab.
 
 \subsubsection{Dateistruktur und Komponenten der Angularanwendung}
-Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte Angular-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt.
+Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte \textit{Angular}-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt.
 
 \begin{figure}[H]
 	\includegraphics[width=0.6\textwidth]{img/pwa_dateistruktur.png}
@@ -137,21 +137,25 @@ Für das Löschen reicht allerdings die einzigartige ID des Objekts aus.
 
 \subsection{Integration einer Manifestdatei}
 
-Die Anwendung funktioniert zwar bereits im Browser, ist bislang aber noch keine Progressive Web App. Um dem Projekt ein Manifest und einen Service Worker hinzuzufügen, kann wieder die Angular \ac{cli} verwendet werden. \texttt{ng add @angular/pwa} erzeugt die entsprechenden Dateien automatisch, fügt eine manifest.json hinzu und bindet diese in die index.html Datei des Projekts ein.
+Die Anwendung funktioniert zwar bereits im Browser, ist bislang aber noch keine Progressive Web App. Um dem Projekt ein \textit{Manifest} und einen \textit{Service Worker} hinzuzufügen, kann wieder die Angular \ac{cli} verwendet werden. \texttt{ng add @angular/pwa} erzeugt die entsprechenden Dateien automatisch, fügt eine manifest.json hinzu und bindet diese in die index.html Datei des Projekts ein.
 
 Es ist festzuhalten, dass das hinzufügen der \ac{pwa}-Funktionalität keinen nennenswerten Aufwand mit sich bringt, wenn das Ziel ausschließlich die Installation der Webapp ist.
 
 \subsection{Hosting der App mit Firebase}
 Damit die \ac{pwa} als solche installiert werden kann muss sie bestimmte Kriterien erfüllen (siehe Kapitel \ref{chap:grundlagen}). Darunter ist die Notwendigkeit der Bereitstellung über \ac{https}. Dies gestaltet sich in der Praxis als schwierig, da der Angular Entwicklungsserver zwar auf \ac{https} konfiguriert werden kann, jedoch selbstsignierte SSL Zertifikate nicht aktzeptiert werden: Die \ac{pwa} kann nicht installiert werden. Für die Entwicklung ist das natürlich problematisch, so dass eine Lösung für dieses Problem gefunden werden muss.
 
-Googles stellt eine schnelle und elegante Lösung zum Hosten einer Webanwendung bereit: Firebase. Über die Firebase Console, eine Webanwendung zur Verwaltung von Firebase Projekten, kann innerhalb weniger Minuten ein Projekt inklusive Hosting erstellt werden.
+Für die spätere Evaluierung ist der hier verwendete Hosting-Anbieter nicht relevant. Es gibt zahlreiche Alternativen, die den Anforderungen an das Hosting der Anwendung gerecht werden. Auf diese soll hier aber nicht weiter eingegangen werden. Da das Projekt jedoch aus angeführten Gründen gehostet werden muss, wird das Hosting stellvertretend mit einem Google-Service erläutert.
+
+Googles stellt eine schnelle und elegante Lösung zum Hosten einer Webanwendung bereit: \textit{Firebase}. Über die Firebase Console, eine Webanwendung zur Verwaltung von Firebase Projekten, kann innerhalb weniger Minuten ein Projekt inklusive Hosting erstellt werden. 
+
+
 
 Das dem Firebase \ac{cli} können automatisiert Konfigurationsdateien für das Firebase Hosting angelegt werden. Die Schritte dazu sind ebenfalls trivial:
 \begin{enumerate}
 	\item \textbf{Anmeldung: \\}
 	      Das \ac{cli} muss mit einem Google-Konto verknüpft werden. Dazu beim Login über das \ac{cli} ein Browserfenster mit einem Google-Login Dialog.
 	\item \textbf{Initialisierung: \\}
-	      Die Initialisierung über das \ac{cli} legt unter anderem eine JSON-Datei zur Konfiguration des Deployments an. Hier werden Dateipfade, wie beispielsweise die Start-URL oder Dateien die deployed werden sollen, gespeichert.
+	      Die Initialisierung über das \ac{cli} legt unter anderem eine \ac{json}-Datei zur Konfiguration des Deployments an. Hier werden Dateipfade, wie beispielsweise die Start-URL oder Dateien die deployed werden sollen, gespeichert.
 	\item \textbf{Deployment: \\}
 	      Über die Angular \ac{cli} wird ein sogenannter Production-Build erstellt. Dies ist eine gepackte Version der Webanwendung für den Produktivbetrieb.
 	      Anschließend kann die gepackte Anwendung mit \texttt{firebase deploy} auf einem von Googles Servern bereitgestellt werden.
@@ -193,7 +197,7 @@ Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim 
 
 \subsection{Update der Anwendung}
 
-Um das Updateverhalten zu evaluieren, ist es interessant, den Updateprozess einer Webanwendung beziehungsweise \ac{pwa} zu betrachten. Um Änderungen an die Nutzer zu verteilen, muss ein*e Entwickler*in einen neuen Production Build auf dem Server bereitstellen. Im Falle dieses Projekts werden Änderungen unter Nutzung der Firebase \ac{cli} auf den Server übertragen.
+Um das Updateverhalten zu evaluieren, ist es interessant, den Updateprozess einer Webanwendung beziehungsweise \ac{pwa} zu betrachten. Um Änderungen an die Nutzer zu verteilen, muss ein*e Entwickler*in einen neuen \textit{Production Build} auf dem Server bereitstellen. Im Falle dieses Projekts werden Änderungen unter Nutzung der Firebase \ac{cli} auf den Server übertragen.
 
 In der Praxis werden die Änderungen in der installierte \ac{pwa} nicht sofort sichtbar, wohingegen die Webanwendung beim nächsten Refresh der Seite aktualisiert wird. Dies hängt mit dem Caching der Ressourcen der \ac{pwa} zusammen. Der Service Worker lädt cachbare Dateien entweder beim Start oder nachträglich während die \ac{pwa} läuft in den lokalen Cache des Geräts.
 

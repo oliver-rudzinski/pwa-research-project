@@ -14,6 +14,7 @@ thesis-source/root.lot
 thesis-source/root.pdf
 thesis-source/root.synctex.gz
 thesis-source/root.toc
+thesis-source/root.synctex(busy)
 thesis-source/_minted-root
 *.pygtex
 *.aux
