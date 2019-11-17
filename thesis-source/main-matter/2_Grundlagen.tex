@@ -16,10 +16,10 @@ In der Praxis sind viele, in dieser Arbeit häufig verwendete, Begriffe untersch
 		Eine Progressive Web App ist eine Webseite und speziell eine Webanwendung oder Web App, welche dynamisch auf den Nutzer reagiert.
 		In dieser Arbeit werden Webanwendungen, welche lokal auf einem Gerät installiert werden können als \acf{pwa} bezeichnet. Die PWA kann als Webanwendung oder Web App bezeichnet werden, welche die Kriterien aus Kapitel \ref{chap:pwa} erfüllt.
 		
-		Im Unterschied zur nativen App kann die selbe PWA sowohl auf Smartphones, als auch auf eine Desktopgerät (Notebook, Desktop Computer etc.) installiert werden.
+		Im Unterschied zur nativen App kann die selbe \ac{pwa} sowohl auf Smartphones, als auch auf eine Desktopgerät (Notebook, Desktop Computer etc.) installiert werden.
 		
-	\item [Desktop PWA]
-		Mit Desktop PWA ist hier explizit eine Progressive Web App gemeint, welche auf einem Desktopgerät installiert wird.
+	\item [Desktop \ac{pwa}]
+		Mit Desktop \ac{pwa} ist hier explizit eine Progressive Web App gemeint, welche auf einem Desktopgerät installiert wird.
 			
 	\item [native App]
 		Diese Arbeit beschäftigt sich mit einer modernen Methode Mobilanwendungen zu programmieren: der \ac{pwa}. Im Unterschied dazu ist eine native App in Java oder Swift geschrieben und ist damit stark plattformabhängig. Nativ implementiere Apps sind entweder für iOS oder Android entwickelt worden, nicht aber für mehrere Plattformen.
@@ -35,7 +35,7 @@ In der Praxis sind viele, in dieser Arbeit häufig verwendete, Begriffe untersch
 %\subsection{Charakteristiken einer \ac{pwa}}
 Zu Beginn dieses Unterkapitels soll die bereits erwähnte \acf{pwa} erklärt werden. Anschließend folgen die verwendeten Frameworks für die Entwicklung der \ac{pwa}. Ein Überblick über diese ist essenziell für das Verständnis von Kapitel \ref{chap:implementierung}, in welchem die Implementierungsschritte betrachtet werden.
 
-Eine Progressive Web App ist ein nächster Schritt nach der Dynamisierung statischer HTML-Seiten durch JavaScript und Frontendframeworks. Der Software Entwickler und Author Majid Hajian charakterisiert \ac{pwa}s mit acht Eigenschaften. Die wichtigsten dieser Charakteristika werden im Folgenden zusammenfassend erläutert:
+Eine Progressive Web App ist ein nächster Schritt nach der Dynamisierung statischer HTML-Seiten durch JavaScript und Frontendframeworks. Der Software Entwickler und Autor Majid Hajian charakterisiert \ac{pwa}s mit acht Eigenschaften. Die wichtigsten dieser Charakteristika werden im Folgenden zusammenfassend erläutert:
 
 
 \begin{description}
@@ -49,14 +49,14 @@ Eine Progressive Web App ist ein nächster Schritt nach der Dynamisierung statis
   	Die \ac{pwa} soll unabhängig von Netzwerkverbindung funktionieren. Sie ist nach dem "offline-first-design" konzipiert. Die Google-Chrome Dokumentation für Cloud-Entwickler beschreibt Offline First Apps als Webanwendung, deren Dateien (JavaScript, HTML, CSS etc.) bereits heruntergeladen sind. Daten werden temporär über eine Browser-Schnittstelle gespeichert und bei Bedarf synchronisiert. Außerdem kann die Anwendung auf eine unterbrochene Netzwerkverbindungen reagieren \cite{GoogleOfflineApps}. Die \ac{pwa} ist demnach eine Webanwendung, die sowohl online, als auch offline nutzbar ist.
 
   \item [Mobiloptimiert]  
-  	Die \ac{pwa} ist für die (meist leistungsschwache) Mobilhardware konzipiert und funktioniert hierauf ohne Performanceprobleme. Hajian legt besonders auf das schnelle Laden beim Start der Anwendung wert.
+  	Die \ac{pwa} ist für die (meist leistungsschwache) Mobilhardware konzipiert und funktioniert hierauf ohne Performanzprobleme. Hajian legt besonders auf das schnelle Laden beim Start der Anwendung wert.
   	
   \item [Informierung des*der Nutzers*in] 
   	Wie native Apps, kann die \ac{pwa} den Nutzer über Push-Nachrichten informieren oder zu Interaktion auffordern.
 \end{description}
 
 \cite[S. 1f.]{Hajian2019}
-Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dokumentation der \ac{pwa} von Google. Im Vergleich zu Hijian ist diese etwas spezifischer und erwähnt beispielsweise die Kontrolle des Anwendungscaches durch einen JavaScript Service Worker (siehe Kapitel \ref{chap:service_worker}), um die Abhängikeit von einer Netzwerkverbindung aufzuheben.
+Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dokumentation der \ac{pwa} von Google. Im Vergleich zu Hijian ist diese etwas spezifischer und erwähnt beispielsweise die Kontrolle des Anwendungscaches durch einen JavaScript Service Worker (siehe Kapitel \ref{chap:service_worker}), um die Abhängigkeit von einer Netzwerkverbindung aufzuheben.
 \cite{GooglePWAOverview}
 
 \subsection{Installation einer Progressive Web App}
@@ -77,7 +77,7 @@ Zwar bezeichnen Browser die Installation meist nur als \texttt{Zum Startbildschi
 
 \subsection{Manifest Datei für die Konfiguration der \ac{pwa}}
 
-Um die \ac{pwa} auf einem Gerät installieren zu können, muss es eine web-app-manifest Datei zur Verfügung gestellt werden. Diese ist ein \ac{json} file, welche als Konfigurationsdatei der installierten Anwendung dient. \cite{GooglePWAManifest}
+Um die \ac{pwa} auf einem Gerät installieren zu können, muss es eine \textit{web-app-manifest} Datei zur Verfügung gestellt werden. Diese ist ein \ac{json} file, welche als Konfigurationsdatei der installierten Anwendung dient. \cite{GooglePWAManifest}
 
 \begin{listing}[H]
     \inputminted{json}{sourcecode/manifest_sample.json}
@@ -111,7 +111,7 @@ Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (we
 
 Damit die \ac{pwa} trotz fehlender Netzwerkverbindung funktioniert wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, so dass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
 
-Ein Service Worker ist ein von der UI seperiertat laufendes Hintergrundskript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Skripte, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das senden von Push-Notifications zuständig. \cite[S. 24]{BeginningPWA}
+Ein Service Worker ist ein von der UI separiert laufendes Hintergrundskript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Skripts, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das senden von Push-Notifications zuständig. \cite[S. 24]{BeginningPWA}
 
 \begin{figure}[h]
         \includegraphics[width=\linewidth]{img/ServiceWorker-8a0968f1b295f1ff.png}
@@ -121,7 +121,7 @@ Ein Service Worker ist ein von der UI seperiertat laufendes Hintergrundskript de
 \end{figure}
 
 
-Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mitterweile auch Safari unsterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits voll, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
+Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mittlerweile auch Safari unterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits voll, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
 
 
 \subsection{Plattformen von eine \ac{pwa} aktuell unterstützen}
@@ -147,15 +147,15 @@ Grundsätzlich können Desktop \ac{pwa}s auf jedem Betriebssystem installiert we
 \subsection{Grundlage der Webanwendung: JavaScript Laufzeitumgebung Node.js}
 
 %NodeJSWebsiteAbout
-Node.js ist eine open-source JavaScript Laufzeitumgebung für die Entwicklung skalierbarer Webanwendungen 
+\textit{Node.js} ist eine open-source JavaScript Laufzeitumgebung für die Entwicklung skalierbarer Webanwendungen 
 \cite{NodeJSWebsiteAbout}.
-Selbst baut Node.js auf der V8-Engine auf, einer Laufzeitumgebung, die auch von Google Chrome genutzt wird 
+Selbst baut Node.js auf der \textit{V8-Engine} auf, einer Laufzeitumgebung, die auch von Google Chrome genutzt wird 
 %NodeJSRecepies
 \cite[S. 1]{NodeJSRecepies}.
 % PracitalNodeJS
 Wegen zeitsparenden Features, wie automatischem Typecasting oder der Tatsache, dass Node.js alle Daten als Objekt behandelt, erfreut sich Node.js großer Beliebtheit 
 \cite[S. 12]{PracitalNodeJS}.
-Die Kombination mit dem Package Manager npm ermöglicht die einfache Installation und Nutzung von Modulen, um die Funktionalität der Plattform zu erweitern. 
+Die Kombination mit dem \textit{Package Manager npm} ermöglicht die einfache Installation und Nutzung von Modulen, um die Funktionalität der Plattform zu erweitern. 
 \cite[S. 9]{NodeJSRecepies}.
 
 
@@ -169,7 +169,7 @@ Mit über Achttausend Mitwirkenden Entwicklern (Angular CLI) beziehungsweise üb
 % https://octoverse.github.com/projects
 \cite{OctoverseGitHubStatistics}
 
-Das Framework arbeitet auf Basis von Komponenten. Ein Eingabefeld, Seite oder eine Liste werden in Angular als solche Komponenten seperat betrachtet. Auch in der Dateistruktur werden Komponenten stark getrennt. Jede Komponente besitzt beispielsweise ein eigenes CSS (oder SCSS) und HTML-File. Eine Komponente für eine Seite kann so auch eine oder sogar mehrere Listenkomponenten einbinden. Durch die Wiederverwendung von Code-Fragmenten in Komponenten wird der Programmcode sehr übersichtlich und strukturiert.
+Das Framework arbeitet auf Basis von Komponenten. Ein Eingabefeld, Seite oder eine Liste werden in Angular als solche Komponenten separat betrachtet. Auch in der Dateistruktur werden Komponenten stark getrennt. Jede Komponente besitzt beispielsweise ein eigenes CSS (oder SCSS) und HTML-File. Eine Komponente für eine Seite kann so auch eine oder sogar mehrere Listenkomponenten einbinden. Durch die Wiederverwendung von Code-Fragmenten in Komponenten wird der Programmcode sehr übersichtlich und strukturiert.
 
 \begin{figure}[h]
         \includegraphics[width=\linewidth]{img/Angular_MVC.JPG}
@@ -181,7 +181,7 @@ Das Framework arbeitet auf Basis von Komponenten. Ein Eingabefeld, Seite oder ei
 Eine Angular Anwendung ist in drei Einheiten gegliedert:\\
 
 \textbf{Model}\\ 
-Enthält Logik für die Verwaltung von Daten, beispielsweise das Erstellen, Speichern oder Modifizieren. Dies kann über die Kommunikation mit einem Webserve via REST-API erfolgen. Das Model enhält keine Logik, um mit dem Nutzer zu interagieren.\\
+Enthält Logik für die Verwaltung von Daten, beispielsweise das Erstellen, Speichern oder Modifizieren. Dies kann über die Kommunikation mit einem Webserver via REST-API erfolgen. Das Model enthält keine Logik, um mit dem Nutzer zu interagieren.\\
 
 \textbf{Component}\\
 Enthält Logik für das Aktualisieren der Daten im Model aufgrund Nutzerinteraktion. \\
