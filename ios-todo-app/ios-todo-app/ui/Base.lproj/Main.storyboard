@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lRD-ME-IhE">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="xlH-SS-WFB" customClass="ToDoCell" customModule="ios_todo_app" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="xlH-SS-WFB" customClass="ToDoCell" customModule="ios_todo_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xlH-SS-WFB" id="LHF-ut-Ur2">
@@ -33,7 +33,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="onEditText:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="uyz-1l-ElG"/>
+                                                        <action selector="editCellText:" destination="xlH-SS-WFB" eventType="editingDidEnd" id="lmV-d0-Aq6"/>
                                                     </connections>
                                                 </textField>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqL-iP-EGK" userLabel="Delete Button">
@@ -41,7 +41,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="xmark" catalog="system"/>
                                                     <connections>
-                                                        <action selector="onRemoveTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2YH-NO-yFc"/>
+                                                        <action selector="removeCell:" destination="xlH-SS-WFB" eventType="touchUpInside" id="15N-xv-5RJ"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-wZ-pNd">
@@ -53,7 +53,7 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="onDone:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fn0-xW-N37"/>
+                                                        <action selector="changeStatus:" destination="xlH-SS-WFB" eventType="touchUpInside" id="Vet-aV-Sg2"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r45-fd-CNZ">
@@ -62,13 +62,13 @@
                                                     <state key="normal" image="star" catalog="system"/>
                                                     <state key="selected" image="star.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="onPrioritize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0nk-QW-uaS"/>
+                                                        <action selector="changePriority:" destination="xlH-SS-WFB" eventType="touchUpInside" id="6Gd-Xh-MHn"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="checkmark" destination="Ucb-wZ-pNd" id="DHA-bx-I51"/>
+                                            <outlet property="checkmark" destination="Ucb-wZ-pNd" id="5aD-4c-EuT"/>
                                             <outlet property="priority" destination="r45-fd-CNZ" id="54S-oz-gq8"/>
                                             <outlet property="toDoTextField" destination="bSA-aW-QPm" id="Hyu-Dq-DfY"/>
                                         </connections>

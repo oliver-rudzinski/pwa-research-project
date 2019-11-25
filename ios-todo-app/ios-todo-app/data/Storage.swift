@@ -71,7 +71,6 @@ class Storage {
         newToDo.priority = false
         
         saveContext()
-        print("[STORAGE] Created To-Do '\(toDoText)' with ID \(String(describing: newToDo.id))")
         completion(newToDo)
     }
     
@@ -81,11 +80,6 @@ class Storage {
         do {
             let toDosFromDisk = try context.fetch(request)
             completion(toDosFromDisk)
-            
-            print("[STORAGE] Loaded to-dos:")
-            for toDo in toDosFromDisk {
-                print("\(String(describing: toDo.id)): '\(String(describing: toDo.text))'")
-            }
         } catch {
             fatalError("[STORAGE/Error]: Could not load to-do entities from disk: \(error)")
         }
@@ -107,10 +101,8 @@ class Storage {
     }
     
     static func removeToDo(toDo: ToDo) {
-        print("[STORAGE: Deleting to-do '\(String(describing: toDo.text))' with ID \(String(describing: toDo.id))]...")
         context.delete(toDo)
         saveContext()
-        print("[STORAGE]: Deleted.")
     }
     
 }

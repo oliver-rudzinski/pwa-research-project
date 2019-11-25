@@ -9,12 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    var toDos = [ToDo]()
-    var currentCellIndexPath = IndexPath()
     
     @IBOutlet weak var toDoTableView: UITableView!
     @IBOutlet weak var toDoTextField: UITextField!
+        
+    var toDos = [ToDo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +41,7 @@ class ViewController: UIViewController {
         })
     }
     
+    
     @IBAction func onAddTap(_ sender: Any) {
         guard let toDoText = toDoTextField.text else { return }
         Storage.createToDo(toDoText: toDoText, completion: { toDo in
@@ -56,75 +56,84 @@ class ViewController: UIViewController {
         
         toDoTextField.text? = ""
     }
-    
-    @IBAction func onRemoveTap(_ sender: UIButton) {
-        let toDo = toDos[sender.tag]
-        let indexPath = IndexPath(row: sender.tag, section: 0)
+
+    func onEditCellText(cell: ToDoCell) {
+        let optIndexPath = toDoTableView.indexPath(for: cell)
+        guard let indexPath = optIndexPath else { return }
+        let row = indexPath.row
         
-        toDos.remove(at: sender.tag)
-        Storage.removeToDo(toDo: toDo)
+        let toDo = toDos[row]
+        let newToDoText = cell.toDoTextField.text
+        toDo.text = newToDoText
         
-        toDoTableView.beginUpdates()
-        toDoTableView.deleteRows(at: [indexPath], with: .automatic)
-        toDoTableView.endUpdates()
-    }
-    
-    @IBAction func onEditText(_ sender: UITextField) {
-        let toDo = toDos[sender.tag]
-        toDo.text = sender.text
-        
-        Storage.editToDoText(toDo: toDo, newToDoText: sender.text)
+        Storage.editToDoText(toDo: toDo, newToDoText: newToDoText)
         toDoTableView.reloadData()
     }
     
-    @IBAction func onDone(_ sender: UIButton) {
-        print(sender.tag)
-        sender.isSelected = !sender.isSelected
+    func onChangeStatus(cell: ToDoCell) {
+        cell.checkmark.isSelected = !cell.checkmark.isSelected
         
-        let toDo = toDos[sender.tag]
-        toDo.done = sender.isSelected
+        let optIndexPath = toDoTableView.indexPath(for: cell)
+        guard let indexPath = optIndexPath else { return }
+        let row = indexPath.row
         
-        Storage.changeStatus(toDo: toDo, done: sender.isSelected)
+        let toDo = toDos[row]
+        toDo.done = cell.checkmark.isSelected
+        
+        Storage.changeStatus(toDo: toDo, done: cell.checkmark.isSelected)
     }
     
-    
-    @IBAction func onPrioritize(_ sender: UIButton) {
-        print("--- \(sender.tag) ---")
-        sender.isSelected = !sender.isSelected
+    func onChangePriority(cell: ToDoCell) {
+        cell.priority.isSelected = !cell.priority.isSelected
         
-        for toDo in toDos {
-            print(toDo.text!)
+        let optIndexPath = toDoTableView.indexPath(for: cell)
+        guard let indexPath = optIndexPath else { return }
+        let row = indexPath.row
+        
+        let toDo = toDos.remove(at: row)
+        toDo.priority = cell.priority.isSelected
+        
+        var newIndex: Int
+        
+        if toDos.firstIndex(where: { !$0.priority }) == nil {
+            if cell.priority.isSelected {
+                newIndex = row
+            } else {
+                newIndex = toDos.count
+            }
+        } else {
+            newIndex = toDos.firstIndex(where: { !$0.priority })!
         }
-        print("-----------")
-        
-        let toDo = toDos.remove(at: sender.tag)
-        
-        for toDo in toDos {
-            print(toDo.text!)
-        }
-        print("-----------")
-        
-        toDo.priority = sender.isSelected
-        guard let newIndex = toDos.firstIndex(where: { !$0.priority }) else { return }
         
         toDos.insert(toDo, at: newIndex)
-        
-        for toDo in toDos {
-            print(toDo.text!)
-        }
-        print("-----------")
-        
-        let oldIndexPath = IndexPath(row: sender.tag, section: 0)
+
+        let oldIndexPath = IndexPath(row: row, section: 0)
         let newIndexPath = IndexPath(row: newIndex, section: 0)
         
         toDoTableView.moveRow(at: oldIndexPath, to: newIndexPath)
-        
-        Storage.changePriority(toDo: toDo, priority: sender.isSelected)
+        Storage.changePriority(toDo: toDo, priority: cell.priority.isSelected)
     }
     
+    func onRemoveCell(cell: ToDoCell) {
+        let optIndexPath = toDoTableView.indexPath(for: cell)
+        guard let indexPath = optIndexPath else { return }
+        let row = indexPath.row
+        
+        let toDo = toDos[row]
+        
+        toDos.remove(at: row)
+        Storage.removeToDo(toDo: toDo)
+
+        toDoTableView.beginUpdates()
+        toDoTableView.deleteRows(at: [indexPath], with: .automatic)
+        toDoTableView.endUpdates()
+        
+    }
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate, ToDoCellDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toDos.count
@@ -133,14 +142,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as! ToDoCell
         
+        cell.delegate = self
         cell.populate(toDo: toDos[indexPath.row])
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        currentCellIndexPath = indexPath
-        print(indexPath)
-    }
-    
 }
