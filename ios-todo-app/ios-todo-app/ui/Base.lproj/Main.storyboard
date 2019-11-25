@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Oliver's To Do App-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_todo_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,7 +93,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zTE-C1-1ek"/>
+                    <navigationItem key="navigationItem" title="Oliver's To Do App" id="zTE-C1-1ek"/>
                     <connections>
                         <outlet property="toDoTableView" destination="EJV-KZ-qI8" id="Za0-Ju-hxP"/>
                         <outlet property="toDoTextField" destination="rwH-Te-EuB" id="MIs-cb-4FH"/>
