@@ -195,11 +195,11 @@ Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim 
 
 \subsection{Update der Anwendung}
 
-Um das Updateverhalten zu evaluieren, ist es interessant, den Updateprozess einer Webanwendung beziehungsweise \ac{pwa} zu betrachten. Um Änderungen an die Nutzer zu verteilen, muss ein*e Entwickler*in einen neuen \textit{Production Build} auf dem Server bereitstellen. Im Falle dieses Projekts werden Änderungen unter Nutzung der Firebase \ac{cli} auf den Server übertragen.
+Um das Updateverhalten zu evaluieren, ist es interessant, den Updateprozess einer Webanwendung beziehungsweise \ac{pwa} zu betrachten. Um Änderungen an die Nutzer zu verteilen, muss ein Entwickler einen neuen \textit{Production Build} auf dem Server bereitstellen. Im Falle dieses Projekts werden Änderungen unter Nutzung der Firebase \ac{cli} auf den Server übertragen.
 
 In der Praxis werden die Änderungen in der installierte \ac{pwa} nicht sofort sichtbar, wohingegen die Webanwendung beim nächsten Refresh der Seite aktualisiert wird. Dies hängt mit dem Caching der Ressourcen der \ac{pwa} zusammen. Der Service Worker lädt cachbare Dateien entweder beim Start oder nachträglich während die \ac{pwa} läuft in den lokalen Cache des Geräts.
 
-Um dieses Verhalten zu Testen wurde ein Update mit einer auffälligen Hintergrundfarbe auf dem Server bereitgestellt. In der Desktop-\ac{pwa} war die Änderung erst nach einem Systemneustart zu sehen, wohingegen sich die \ac{pwa} unter Android nach einigen Stunden automatisch aktualisiert hatte. Dabei gab es jeweils keine Benachrichtigung zur Aktualisierung für den*die Nutzer*in.
+Um dieses Verhalten zu Testen wurde ein Update mit einer auffälligen Hintergrundfarbe auf dem Server bereitgestellt. In der Desktop-\ac{pwa} war die Änderung erst nach einem Systemneustart zu sehen, wohingegen sich die \ac{pwa} unter Android nach einigen Stunden automatisch aktualisiert hatte. Dabei gab es jeweils keine Benachrichtigung zur Aktualisierung für den Nutzer.
 
 
 
