@@ -45,19 +45,19 @@ Die Kooperation der einzelnen Komponenten dieses Musters lässt sich anhand der 
 
 % Erklärung MVC-Grafik
 
-Technisch wird dieses Muster durch die Verknüpfung der einzelnen (durch den Interface Builder bereitgestellten oder erstellten) Views mit spezifischen, sog. \textit{View Controllern} realisiert. Durch eine Aktion des*der Nutzers*in auf dem View wird die entsprechende Funktionalität über den View Controller bereitgestellt. Dieser kann dan ebenfalls Funktionen ausführen, welche durch das Modell bereitgestellt werden, falls die Aktion dies bedarf. Die entsprechenden Klassen der View Controller sind Unterklassen der einzelnen, spezifischen Views, welche deren vorgesetzte Basisfunktionalitäten um die gewünschten Funktionen des*der Entwicklers*in erweitern.
+Technisch wird dieses Muster durch die Verknüpfung der einzelnen (durch den Interface Builder bereitgestellten oder erstellten) Views mit spezifischen, sog. \textit{View Controllern} realisiert. Durch eine Aktion des Nutzers auf dem View wird die entsprechende Funktionalität über den View Controller bereitgestellt. Dieser kann dan ebenfalls Funktionen ausführen, welche durch das Modell bereitgestellt werden, falls die Aktion dies bedarf. Die entsprechenden Klassen der View Controller sind Unterklassen der einzelnen, spezifischen Views, welche deren vorgesetzte Basisfunktionalitäten um die gewünschten Funktionen des Entwicklers erweitern.
 
 \paragraph{Vorbereitung der Projektumgebung}\mbox{}\\
-Bei der Erstellung eines neuen Projektes innerhalb von Xcode wählt der*die Entwickler*in bereits zu Beginn bestimmte Spezifikationen für die zu entwickelnde Anwendung. Da Swift auch für andere Betriebssysteme von Apple zur Anwendungsentwicklung genutzt wird, gehört die Spezifizierung des Anwendungsbereiches (hier: iOS) sowie des grundlegenden Aufbaus der App zu den Vorbereitungsmaßnahmen der Projektumgebung. Dieses Dialogfenster kann aus dem unten stehenden Screenshot entnommen werden.
+Bei der Erstellung eines neuen Projektes innerhalb von Xcode wählt der Entwickler bereits zu Beginn bestimmte Spezifikationen für die zu entwickelnde Anwendung. Da Swift auch für andere Betriebssysteme von Apple zur Anwendungsentwicklung genutzt wird, gehört die Spezifizierung des Anwendungsbereiches (hier: iOS) sowie des grundlegenden Aufbaus der App zu den Vorbereitungsmaßnahmen der Projektumgebung. Dieses Dialogfenster kann aus dem unten stehenden Screenshot entnommen werden.
 
 \begin{figure}
 	\centering
 	\caption{Dialogfenster zum Anlegen eines neuen Projektes (Xcode)}
 \end{figure}
 
-Letztere bereiten verschiedene Dateitypen innerhalb der Umgebung vor, bspw. verschiedene Ansichten mit bereits integrierter Navigation, welche bei einer Anwendung mit nur einer Ansicht nicht zu tragen kommen. Im zweiten Schritt der Projektvorbereitung trifft der*die Entwickler*in Entscheidungen über Projektverzeichnis, -namen und -sprache sowie über weitere Projektkomponenten, welche für die Anwendung von Bedarf wären.
+Letztere bereiten verschiedene Dateitypen innerhalb der Umgebung vor, bspw. verschiedene Ansichten mit bereits integrierter Navigation, welche bei einer Anwendung mit nur einer Ansicht nicht zu tragen kommen. Im zweiten Schritt der Projektvorbereitung trifft der Entwickler Entscheidungen über Projektverzeichnis, -namen und -sprache sowie über weitere Projektkomponenten, welche für die Anwendung von Bedarf wären.
 
-Alle hier getroffen Schritte können auch manuell bzw. im Nachgang der Projekterstellung angelegt werden. Grundsätzlich sind die Dateien und Quellcodezeilen, welche durch die genannten Vorbereitungsmaßnahmen automatisch generiert werden, unabdingbar für die Realisierung des Projekt und können somit für eine effizientere Arbeit des*der Entwicklers*in sorgen.
+Alle hier getroffen Schritte können auch manuell bzw. im Nachgang der Projekterstellung angelegt werden. Grundsätzlich sind die Dateien und Quellcodezeilen, welche durch die genannten Vorbereitungsmaßnahmen automatisch generiert werden, unabdingbar für die Realisierung des Projekt und können somit für eine effizientere Arbeit des Entwicklers sorgen.
 
 \paragraph{Struktur des initialen Entwicklungsverzeichnisses}
 Bereits zu Anfang befinden sich bestimmte Dateien im Entwicklungsverzeichnis, welche sich grundsätzlich in jeder iOS-Anwendung benötigt werden. Diese werden im Folgenden beschrieben.
@@ -75,7 +75,7 @@ Bereits zu Anfang befinden sich bestimmte Dateien im Entwicklungsverzeichnis, we
 \subsubsection{Vertrieb von iOS-Appliaktionen}
 Der mit iOS 2.0 (Nachfolger von iPhone OS) ins Leben gerufene Apple \textit{App Store} ist die einzige offizielle Bezugsstelle für iOS-Applikationen. Somit ist es auch der am meisten verwendete Marktplatz, in welchem Entwickler und Unternehmen ihre Anwendung kostenlos sowie kostenpflichtig zum Download anbieten.
 
-Zunächst ist die Anmeldung des*der Entwicklers*in als \textit{Apple Developer} im Vorhinein von Nöten. Ohne diese könnte die Anwendung zwar programmiert und innerhalb der Entwicklungsumgebung getestet, jedoch nicht auf tatsächlichen iOS-Geräten getestet und zum Download freigegeben werden. Dies hat sowohl sicherheitstechnische als auch wirtschaftliche Gründe, welche hier nicht weiter diskutiert, jedoch für die Evaluation der Entwicklungsfreiheit in Betracht gezogen werden. Letzteres erkennt man vor allem an der Tatsache, dass die Verbreitung von Anwendungen über den \textit{App Store} kostenpflichtig ist.
+Zunächst ist die Anmeldung des Entwicklers als \textit{Apple Developer} im Vorhinein von Nöten. Ohne diese könnte die Anwendung zwar programmiert und innerhalb der Entwicklungsumgebung getestet, jedoch nicht auf tatsächlichen iOS-Geräten getestet und zum Download freigegeben werden. Dies hat sowohl sicherheitstechnische als auch wirtschaftliche Gründe, welche hier nicht weiter diskutiert, jedoch für die Evaluation der Entwicklungsfreiheit in Betracht gezogen werden. Letzteres erkennt man vor allem an der Tatsache, dass die Verbreitung von Anwendungen über den \textit{App Store} kostenpflichtig ist.
 
 % Evtl. Quelle für die App-Publikation (iOS) finden und zitieren
 Der genaue Prozess der Publikation von iOS-Applikationen kann im Rahmen dieser Arbeit nicht nachvollzogen werden, da keine Möglichkeit der tatsächlichen Bereitstellung der zu entwickelnden Beispielanwendung vorliegt.
@@ -83,9 +83,9 @@ Der genaue Prozess der Publikation von iOS-Applikationen kann im Rahmen dieser A
 \subsubsection{Nutzung von iOS-Applikationen}
 Wie im vorigen Abschnitt erwähnt werden iOS-Anwendungen im Regelfall über den App Store bezogen. Auf weitere, inoffizielle und teils nonkonforme Praktiken wie das sog. \textit{Jailbraking} des Gerätes, um auch nicht-authorisierte Anwendungen herunterladen und nutzen zu können, wird hier nicht eingegangen.
 
-Der*die iOS-Nutzer*in sucht über den App Store die gewünschte App und lädt diese herunter. Für diesen Prozess ist eine sog. \textit{Apple ID}, also ein Benutzerkonto bei Apple von Nöten. Sollte die gewünschte App kostenpflichtig sein, so müssen Kreditkarten- oder anderweitige, valide Zahlungsdaten dem Konto hinterlegt sein. Der*die Nutzer*in bestätigt den Kauf bzw. erstmaligen Download über das Benutzerkontenpasswort oder eine gerätespezifische Authentifizierungsmethode (bspw. Fingerabdruck-Erkennung via \textit{Touch ID} oder Gesichtserkennung via \textit{Face ID}, sofern vorhanden). Daraufhin startet der Download. Die App kann über ihr korrespondierendes App-Symbol, welches nun auf dem Menü-Bildschirm des Geräts erscheint, geöffnet werden.
+Der iOS-Nutzer sucht über den App Store die gewünschte App und lädt diese herunter. Für diesen Prozess ist eine sog. \textit{Apple ID}, also ein Benutzerkonto bei Apple von Nöten. Sollte die gewünschte App kostenpflichtig sein, so müssen Kreditkarten- oder anderweitige, valide Zahlungsdaten dem Konto hinterlegt sein. Der Nutzer bestätigt den Kauf bzw. erstmaligen Download über das Benutzerkontenpasswort oder eine gerätespezifische Authentifizierungsmethode (bspw. Fingerabdruck-Erkennung via \textit{Touch ID} oder Gesichtserkennung via \textit{Face ID}, sofern vorhanden). Daraufhin startet der Download. Die App kann über ihr korrespondierendes App-Symbol, welches nun auf dem Menü-Bildschirm des Geräts erscheint, geöffnet werden.
 
-Falls die App in einer nun aktuelleren Version vorliegt, wird diese entweder über den App Store automatisch im Hintergrund neu heruntergeladen. Andernfalls kann der*die Nutzerin diesen Schritt auch manuell über den App Store in Kraft setzen.
+Falls die App in einer nun aktuelleren Version vorliegt, wird diese entweder über den App Store automatisch im Hintergrund neu heruntergeladen. Andernfalls kann der Nutzer diesen Schritt auch manuell über den App Store in Kraft setzen.
 
 
 
