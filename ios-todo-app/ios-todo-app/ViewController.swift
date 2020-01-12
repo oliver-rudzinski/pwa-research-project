@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var toDoTableView: UITableView!
     @IBOutlet weak var toDoTextField: UITextField!
-        
+    
     var toDos = [ToDo]()
     
     override func viewDidLoad() {
@@ -22,6 +23,7 @@ class ViewController: UIViewController {
         toDoTableView.dataSource = self
         
         toDoTableView.tableFooterView = UIView()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +40,8 @@ class ViewController: UIViewController {
                     self.toDos.append(toDo)
                 }
             }
+            
+            setUpNotifications()
         })
     }
     
@@ -55,6 +59,8 @@ class ViewController: UIViewController {
         toDoTableView.endUpdates()
         
         toDoTextField.text? = ""
+        
+        self.view.endEditing(true)
     }
 
     func onEditCellText(cell: ToDoCell) {
@@ -129,6 +135,43 @@ class ViewController: UIViewController {
         toDoTableView.endUpdates()
         
     }
+    
+    func setUpNotifications() {
+        
+        if getUndoneCount() > 0 {
+            let content = getCurrentNotificationContent()
+            let center = UNUserNotificationCenter.current()
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+           
+            let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
+           
+            center.add(request) { (err) in
+                if err != nil { fatalError() }
+           }
+        }
+
+    }
+    
+    func getCurrentNotificationContent() -> UNMutableNotificationContent {
+        
+        let content = UNMutableNotificationContent()
+        let count = getUndoneCount()
+        var todoForm = "todo"
+        
+        if count > 1 {
+            todoForm += "s"
+        }
+
+        content.title = "You have \(count) undone \(todoForm)."
+        
+        return content
+    }
+    
+    func getUndoneCount() -> Int {
+        return toDos.filter({ $0.done == false }).count
+    }
+    
+
 }
 
 
