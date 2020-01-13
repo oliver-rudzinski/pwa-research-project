@@ -1,17 +1,17 @@
-Dieses Unterkapitel erklärt die bereits erwähnte \acf{pwa}. Anschließend folgen die verwendeten Frameworks für die Entwicklung der \ac{pwa}. Ein Überblick über diese ist essenziell für das Verständnis von Kapitel \ref{chap:implementierung}, in welchem die Implementierungsschritte betrachtet werden.
+Dieses Unterkapitel erklärt die bereits erwähnte \acf{pwa} und nennt Kriterien, die von ihr erfüllt werden. Anschließend folgen die verwendeten Frameworks für die Entwicklung der \ac{pwa}. Ein Überblick über diese ist essenziell für das Verständnis von Kapitel \ref{chap:implementierung}, in welchem die Implementierungsschritte betrachtet werden.
 
-Eine Progressive Web App ist ein nächster Schritt nach der Dynamisierung statischer HTML-Seiten durch JavaScript und Frontendframeworks. Der Software Entwickler und Autor Majid Hajian charakterisiert \ac{pwa}s mit acht Eigenschaften. Die wichtigsten dieser Charakteristika werden im Folgenden zusammenfassend erläutert:
+Eine \acf{pwa} ist ein nächster Schritt nach der Dynamisierung statischer HTML-Seiten durch JavaScript und Frontendframeworks. Der Software Entwickler und Autor Majid Hajian charakterisiert \ac{pwa}s mit acht Eigenschaften. Die wichtigsten dieser Charakteristiken werden im Folgenden zusammenfassend erläutert:
 
 
 \begin{description}
   \item [Installierbarkeit]
-	  Der Nutzer einer Webanwendung kann diese lokal auf seinem Gerät installieren. Sie kann anschließend, wie eine native App, vom Startbildschirm gestartet werden. Um die Webanwendung zu Nutzen muss ein Nutzer keinen Zwischenschritt mehr über den Browser tätigen.
+	  Der Nutzer einer Webanwendung kann diese lokal auf seinem Gerät installieren. Sie kann anschließend, wie eine native App, vom Startbildschirm aus gestartet werden. Um die Webanwendung zu Nutzen muss ein Nutzer nun keinen Zwischenschritt mehr über den Browser tätigen.
   
   \item [Ähnlichkeit mit einer nativ implementierten App]  
  	 Klassischerweise werden Android-Apps in Java und iOS Apps in Swift programmiert. Die \ac{pwa} soll, wie eine native App, auf die Hardware des Mobilgeräts zugreifen können (beispielsweise die Nutzung Bluetooth-Chips). Außerdem unterscheidet sich das User Interface der \ac{pwa} nicht maßgeblich von der nativen App. 
   
   \item [Offline-Verwendung] 
-  	Die \ac{pwa} soll unabhängig von Netzwerkverbindung funktionieren. Sie ist nach dem "offline-first-design" konzipiert. Die Google-Chrome Dokumentation für Cloud-Entwickler beschreibt Offline First Apps als Webanwendung, deren Dateien (JavaScript, HTML, CSS etc.) bereits heruntergeladen sind. Daten werden temporär über eine Browser-Schnittstelle gespeichert und bei Bedarf synchronisiert. Außerdem kann die Anwendung auf eine unterbrochene Netzwerkverbindungen reagieren \cite{GoogleOfflineApps}. Die \ac{pwa} ist demnach eine Webanwendung, die sowohl online, als auch offline nutzbar ist.
+  	Die \ac{pwa} soll unabhängig von Netzwerkverbindung funktionieren. Sie ist nach dem \textit{offline-first-design} konzipiert. Die Google-Chrome Dokumentation für Cloud-Entwickler beschreibt \textit{offline-first Apps} als Webanwendung, deren Dateien (JavaScript, HTML, CSS etc.) bereits heruntergeladen sind. Daten werden temporär über eine Browser-Schnittstelle gespeichert und bei Bedarf synchronisiert. Außerdem kann die Anwendung auf eine unterbrochene Netzwerkverbindungen reagieren \cite{GoogleOfflineApps}. Die \ac{pwa} ist demnach eine Webanwendung, die sowohl online, als auch offline nutzbar ist.
 
   \item [Mobiloptimiert]  
   	Die \ac{pwa} ist für die (meist leistungsschwache) Mobilhardware konzipiert und funktioniert hierauf ohne Performanzprobleme. Hajian legt besonders auf das schnelle Laden beim Start der Anwendung wert.
@@ -37,12 +37,12 @@ Diese Arbeit betrachtet die \ac{pwa}, da sie (wie eine native Anwendung) lokal a
 
 Die Aufforderung zur Installation einer \ac{pwa} kann entweder über den Browser (siehe Abbildung \ref{fig:pwainstallationprompt}) erfolgen oder über ein Element der Website, dass ein Event erzeugt, wie beispielsweise ein Button oder ein Dialog. 
 
-Zwar bezeichnen Browser die Installation meist nur als \texttt{Zum Startbildschirm hinzufügen} tatsächlich generiert der Browser aber dann eine WebAPK, welche auf dem Gerät installiert wird. Auf Desktopgeräte startet die \ac{pwa} in einem eignen stark verschlankten Browserfenster ohne Suchleiste und Bedienelemente. \cite{GooglePWAInstallation}
+Zwar bezeichnen Browser die Installation meist nur als \texttt{Zum Startbildschirm hinzufügen}, tatsächlich generiert der Browser aber dann eine WebAPK, welche auf dem Gerät installiert wird. Auf Desktopgeräte startet die \ac{pwa} in einem eignen stark verschlankten Browserfenster ohne Suchleiste und Bedienelemente. \cite{GooglePWAInstallation}
 
 
 \subsection{Manifest Datei für die Konfiguration der \ac{pwa}}
 
-Um die \ac{pwa} auf einem Gerät installieren zu können, muss es eine \textit{web-app-manifest} Datei zur Verfügung gestellt werden. Diese ist ein \ac{json} file, welche als Konfigurationsdatei der installierten Anwendung dient. \cite{GooglePWAManifest}
+Um die \ac{pwa} auf einem Gerät installieren zu können, muss ein \textit{web-app-manifest} zur Verfügung gestellt werden. Dieses ist eine \ac{json} Datei, welche zur Konfigurationsparameter für die Anwendung enthält. \cite{GooglePWAManifest}
 
 \begin{listing}[H]
     \inputminted{json}{sourcecode/manifest_sample.json}
@@ -74,9 +74,9 @@ Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (we
 \subsection{Service Worker für Offline-Funktionalität und Benachrichtigungen}
 \label{chap:service_worker}
 
-Damit die \ac{pwa} trotz fehlender Netzwerkverbindung funktioniert wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, so dass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
+Damit die \ac{pwa} trotz fehlender Netzwerkverbindung funktioniert, wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, so dass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
 
-Ein Service Worker ist ein von der UI separiert laufendes Hintergrundskript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Skripts, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das senden von Push-Notifications zuständig. \cite[S. 24]{BeginningPWA}
+Ein Service Worker ist ein von der UI separiert laufendes Hintergrundskript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Skripts, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das Senden von Pushbenachrichtigungen zuständig. \cite[S. 24]{BeginningPWA}
 
 \begin{figure}[h]
         \includegraphics[width=\linewidth]{img/ServiceWorker-8a0968f1b295f1ff.png}
@@ -86,13 +86,13 @@ Ein Service Worker ist ein von der UI separiert laufendes Hintergrundskript der 
 \end{figure}
 
 
-Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mittlerweile auch Safari unterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits voll, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
+Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mittlerweile auch Safari unterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits vollständig, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
 
 
 \subsection{Plattformen von eine \ac{pwa} aktuell unterstützen}
-Das Projekt \textit{CanIUse} aggregiert Daten zu Webstandards des w3 Konsortiums und Browserdokumentationen. Es wird als Quelle für die Unterstützung von Features durch aktuelle Browser herangezogen.
+Das Projekt \textit{CanIUse} aggregiert Daten zu Webstandards des w3-Konsortiums und Browserdokumentationen. Es wird als Quelle für die Unterstützung von Features durch aktuelle Browser herangezogen.
 
-Apples mobiler Browser Safari unterstützt eines der wichtigsten Features der \ac{pwa} noch nicht vollständig: das Web App Manifest. Allerdings wird der Service Worker vollständig unterstützt \cite{CanIUseWebManifest}. Wann und ob Safari die Unterstützung für das Manifest implementiert ist unklar und bleibt abzuwarten. Die aktuelle Teilunterstützung zeigt jedoch, dass sich Apple nicht grundsätzlich gegen die \ac{pwa} weigert.
+Apples mobiler Browser Safari unterstützt eines der wichtigsten Features der \ac{pwa} noch nicht vollständig: es fehlen Teile des Web App Manifests. Allerdings wird der Service Worker vollständig unterstützt \cite{CanIUseWebManifest}. Wann und ob Safari die Unterstützung für das Manifest implementiert ist unklar und bleibt abzuwarten. Die aktuelle Teilunterstützung zeigt jedoch, dass sich Apple nicht grundsätzlich gegen die \ac{pwa} weigert.
 
  %Die Versionen zeigen aber eine stetig voranschreitende Integration der, erweitert den Funktionsumfang in den neusten Versionen von iOS. 
 
@@ -101,7 +101,7 @@ Apples mobiler Browser Safari unterstützt eines der wichtigsten Features der \a
 
 
 % Source: https://developers.google.com/web/progressive-web-apps/desktop
-Die Nutzung von \ac{pwa}s ist nicht ausschließlich auf Smartphones begrenzt. Wie normale Desktopprogramme werden Desktop \ac{pwa}s in einem eigenen Fenster gestartet. 
+Die Nutzung von \ac{pwa}s ist nicht ausschließlich auf Smartphones begrenzt. Wie \textit{normale} Desktopprogramme werden Desktop \ac{pwa}s in einem eigenen Fenster gestartet. 
 Der Unterschied zwischen den Bedienelementen nativer Desktopanwendungen und Desktop \ac{pwa}s ist ausschließlich farblicher Natur. Stark vereinfacht beschrieben, sind Desktop \ac{pwa}s Browserfenster ohne Tabs und Adressleiste. Durch die Nutzung von Service Workern, welche die Webanwendung cachen, sind auch Desktop \ac{pwa}s nicht an eine Netzwerkverbindung gebunden.
 
 Grundsätzlich können Desktop \ac{pwa}s auf jedem Betriebssystem installiert werden, auf dem Google Chrome (Version größer 73) installiert werden kann: Windows, Mac, Linux und Chrome OS.
@@ -130,7 +130,7 @@ Angular ist ein open-source TypeScript basiertes Framework zur Entwicklung von W
 
 
 %https://octoverse.github.com/projects
-Mit über Achttausend Mitwirkenden Entwicklern (Angular CLI) beziehungsweise über Siebentausend Mitwirkender (Angular Framework) belegt das Angular Command Line Interface und das Angular Framework die Plätze 4 und 6 der größten Projekte auf Github. 
+Mit über Achttausend mitwirkenden Entwicklern (Angular CLI) beziehungsweise über Siebentausend Mitwirkender (Angular Framework) belegt das Angular Command Line Interface und das Angular Framework die Plätze 4 und 6 der größten Projekte auf Github. 
 % https://octoverse.github.com/projects
 \cite{OctoverseGitHubStatistics}
 
