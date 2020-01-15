@@ -10,17 +10,16 @@ Für Webanwendungen ist es üblich, diese mit verschiedenen Browsern zu testen. 
 Zum Testen der Datenpersistenz werden Todo-Einträge angelegt und anschließend der Browser neugestartet.
 Alle Browser werden mit Standardeinstellungen ausgeführt. Es werden keine Browsercaches, Cookies oder ähnliches manuell gelöscht.
 
-\textbf{Desktop:}
-
+\subsubsection{Browserunterstützung Desktop}
 \begin{table}[H]
 	\centering
-	\begin{tabularx}{\textwidth}{|l||C|C|C|C|}
+	\begin{tabularx}{\textwidth}{|l||C|C|C|c|}
 		\hline
 		Browser              & Anwendung lauffähig & Persistente Daten & PWA installierbar & Benachrichtigungen \\
 		\hline
 		Chrome 78 (64-bit)   & Ja                  & Ja                & Ja                & Ja                 \\
 		Firefox 70 (64-bit)  & Ja                  & Ja                & Nein              & Ja                 \\
-		Microsoft Edge 41    & Ja                  & Ja                & Nein              & Nein               \\
+		Edge 41    & Ja                  & Ja                & Nein              & Nein               \\
 		Internet Explorer 11 & Ja                  & Ja                & Nein              & Nein               \\
 		Safari 13            & Ja                  & Ja                & Nein              & Nein               \\
 		\hline
@@ -33,11 +32,11 @@ Microsoft Edge und Internet Explorer zeigen den Button zum Priorisieren nicht an
 
 Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzeigen, zeigt jedoch anschließend keine Benachrichtigungen an. Internet Explorer wirft den JavaScript Fehler \texttt{'Notification' is undefined}, Notifications sind nicht implementiert.
 
-\textbf{Smartphone:}
+\subsubsection{Browserunterstützung Smartphone}
 
 \begin{table}[H]
 	\centering
-	\begin{tabularx}{\textwidth}{|l||C|C|C|C|}
+	\begin{tabularx}{\textwidth}{|l||C|C|C|c|}
 		\hline
 		Browser           & Anwendung lauffähig & Persistenz & PWA installierbar & Benachrichtigungen \\
 		\hline
@@ -45,7 +44,7 @@ Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzei
 		\hline
 		Chrome 78         & Ja                  & Ja         & Ja                & Ja                 \\
 		Firefox 68        & Ja                  & Ja         & Ja                & Ja                 \\
-		Microsoft Edge 41 & Ja                  & Ja         & Nein              & Ja                 \\
+		Edge 41 & Ja                  & Ja         & Nein              & Ja                 \\
 		Opera 54          & Ja                  & Ja         & Nein              & Ja                 \\
 		\hline
 		\multicolumn{5}{|c|}{iOS}                                                                     \\
@@ -55,6 +54,7 @@ Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzei
 		\hline
 	\end{tabularx}
 	\caption{Browserunterstützung Smartphones} \label{tab:browser_smartphones}
+	
 \end{table}
 
 \textbf{Anmerkung:}\\
