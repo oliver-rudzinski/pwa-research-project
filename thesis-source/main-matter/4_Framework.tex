@@ -6,7 +6,7 @@ Das Ergebnis ist die Evaluationsmatrix, welche als Netzdiagramm dargestellt die 
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline 	
-			\textbf{Bewertung} & $--$ & $-$ &  $\circ$ & $+$ & $++$ \\ 
+			\textbf{Bewertung} & $--$ & $-$ & \Circle & $+$ & $++$ \\ 
 		\hline 
 			\textbf{Beschreibung} & schlecht & eher schlecht & neutral & eher gut & gut \\ 
 		\hline 
@@ -24,7 +24,7 @@ Das Ergebnis ist die Evaluationsmatrix, welche als Netzdiagramm dargestellt die 
 		\hline
 		\multicolumn{2}{c}{Anwendung}     \\
 		\hline
-		Plattformabhängikeit   & 10\%         \\
+		Plattformabhängigkeit   & 10\%         \\
 		Installation           & 5\%          \\
 		Speicherzugriff        & 5\%          \\
 		Speicherbedarf         & 5\%          \\
@@ -64,18 +64,17 @@ Grundsätzlich gibt es einen Punktabzug, wenn der Nutzer grundlegenden Funktione
 Die einzelnen Kriterien aus der Evaluationsmatrix werden nun genauer definiert:
 
 \begin{description}
-	\item [Plattformabhängigkeit]
-	      Wie viele Plattformen beziehungsweise Betriebssysteme werden unterstützt?
-	      Ist die Nutzung auf Smartphone begrenzt oder kann die Anwendung auch auf einem Tablet oder Desktop installiert werden?
-
+	\item [Plattformabhängigkeit] 
+		  Unterstützt die Anwendung mehrere Plattformen, also beispielsweise Android und iOS wird dies als gut bewertet. Ist die Anwendung auch auf Desktopcomputern oder Tablets nutzbar, gibt dies ebenfalls eine positive Bewertung.
+		  
 	\item [Installation]
 	      Die App sollte ohne mehrere Zwischenschritte nutzbar sein. Ist die Installation zu kompliziert, führt dies zu Punktabzug.
 
 	      Es fließt mit ein, wie viel Aufwand betrieben werden muss, um die App einem Publikum zur Verfügung zu stellen. Dieser Aufwand ist idealerweise gering und im Interesse des Entwicklers.
 
 	\item [Speicherzugriff]
-	      Anwendungen müssen Daten speichern können, um dem Nutzer einen Mehrwert zu bieten. Die Größe der zu speichernden Daten ist bei diesem Vergleich auf Kilobyte zu begrenzt. Gibt es die Möglichkeit Dateien abzulegen ist dies positiv zu werten.
-	      Können Daten nur temporär und nicht persistent gespeichert werden, führt dies zu starkem Punktabzug. Idealerweise können Daten in gängigen Formaten (beispielsweise JSON, CSV, XML oder Plaintext) gespeichert werden. Muss der Nutzer dem Speichern von Daten aktiv zustimmen, stört dies die Nutzungserfahrung und ist daher negativ zu werten.
+	      Anwendungen müssen Daten speichern können, um dem Nutzer einen Mehrwert zu bieten. Die Größe der zu speichernden Daten ist bei diesem Vergleich auf einige Kilobyte begrenzt. Gibt es die Möglichkeit Dateien abzulegen ist dies positiv zu werten. Idealerweise können Daten in gängigen Formaten (beispielsweise JSON, CSV, XML oder Plaintext) gespeichert werden.
+	      Können Daten nur temporär und nicht persistent gespeichert werden, führt dies zu starkem Punktabzug. Muss der Nutzer dem Speichern von Daten aktiv zustimmen, stört dies die Nutzungserfahrung und ist daher negativ zu werten.
 
 	\item [Speicherbedarf]
 	      Der Speicherplatz eine Smartphones ist deutlich kleiner, als der eines Desktop-Computers. Bestenfalls ist die Anwendung nur wenige Megabyte groß und kann so schnell über eine mobile Datenverbindung installiert und upgedated werden.
