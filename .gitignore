@@ -27,3 +27,4 @@ thesis-source/_minted-root
 *.synctex
 *.bak*
 thesis-source/indent.log
+*.log
