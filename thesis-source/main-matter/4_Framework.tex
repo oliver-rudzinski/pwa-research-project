@@ -1,4 +1,53 @@
-Um die Entwicklungen der Angular \ac{pwa} und der nativen iOS-App zu vergleichen, wird die im Folgenden beschriebene Evaluationsmatrix verwendet. Bei der Evaluation soll auf verschiedene Aspekte der beiden Projekte eingegangen werden. Diese lauten wie folgt:
+\section{Vorgehen bei der Bewertung}
+Um die Entwicklungen der Angular \ac{pwa} und der nativen iOS-App zu vergleichen, wird die im Folgenden beschriebene Evaluationsmatrix (siehe Tabelle \ref{tab:punktekatalog}) verwendet. Einzelne Kriterien werden anhand Tabelle \ref{tab:verrechnungspunkte} bewertet und die Verrechnungspunkte anschließend über alle betrachteten Kriterien aufsummiert.
+
+Das Ergebnis ist die Evaluationsmatrix, welche als Netzdiagramm dargestellt die bewerteten Kriterien einzeln visualisiert und eine Bewertung pro Technologie. In diese fließen die Kriterien einzeln ein und bilden ein Gesamtbild. Die Gewichtung der Kriterien ist ebenfalls in der Evaluationsmatrix dargestellt.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline 	
+			\textbf{Bewertung} & $--$ & $-$ &  $\circ$ & $+$ & $++$ \\ 
+		\hline 
+			\textbf{Beschreibung} & schlecht & eher schlecht & neutral & eher gut & gut \\ 
+		\hline 
+			\textbf{Verrechnungspunkte} & $-2$ & $-1$ & $0$ & $1$ & $2$ \\ 
+		\hline 		
+	\end{tabular} 
+	\caption{Verrechnungspunkte} \label{tab:verrechnungspunkte}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|l|c|}
+		\hline
+		Kriterium              & Gesamtanteil \\
+		\hline
+		\multicolumn{2}{c}{Anwendung}     \\
+		\hline
+		Plattformabhängikeit   & 10\%         \\
+		Installation           & 5\%          \\
+		Speicherzugriff        & 5\%          \\
+		Speicherbedarf         & 5\%          \\
+		Aktualisierbarkeit     & 5\%          \\
+		Konsistenz des Designs & 5\%         \\
+		
+		\hline
+		\multicolumn{2}{c}{Entwicklung}     \\
+		\hline
+		Bibliotheken           & 10\%         \\
+		Umsetzung              & 20\%         \\
+		Testbarkeit            & 10\%         \\
+		Vorausgesetzte Entwicklungserfahrung    & 10\%         \\
+		\hline
+		\hline
+		Summe                  & 100\%        \\
+		\hline
+	\end{tabular}
+	\caption{Evaluationsmatrix} \label{tab:punktekatalog}
+\end{table}
+
+\section{Betrachtete Aspekte der Entwicklung}
+Bei der Evaluation soll auf verschiedene Aspekte der beiden Projekte eingegangen werden. Diese lauten wie folgt:
 \begin{description}
 	\item [Anwendung]
 		Die Kriterien zur Anwendung (bzw. App) beziehen sich auf die Eigenheiten der Apps, darunter die Installation, die Aktualisierung und die Plattformabhängigkeit.
@@ -8,46 +57,12 @@ Um die Entwicklungen der Angular \ac{pwa} und der nativen iOS-App zu vergleichen
 			
 \end{description}
 
-\begin{table}[h]
-	\centering
-	\begin{tabularx}{\textwidth}{|l||c|c|c|c|c|c|}
-		\hline
-		Kriterium              & - - & - & neutral & + & ++ & Gesamtanteil \\
-		\hline
-		\multicolumn{7}{c}{Anwendung}                                      \\
-		\hline
-		Plattformabhängikeit   & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-		Installation           & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-		Speicherzugriff        & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-		Speicherbedarf         & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-		Aktualisierbarkeit     & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-		Konsistenz des Designs & 0   & 1 & 2       & 3 & 4  & 5\%         \\
 
-		\hline
-		\multicolumn{7}{c}{Entwicklung}                                    \\
-		\hline
-		Bibliotheken           & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-		Umsetzung              & 0   & 1 & 2       & 3 & 4  & 20\%         \\
-		Testbarkeit            & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-		Vorausgesetzte Entwicklungserfahrung    & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-
-		\hline
-	%	\multicolumn{7}{c}{Nutzung}                                        \\
-	%	\hline
-	%	Verständlichkeit       & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-	%	\hline
-
-		\hline
-		Summe                  & 0   & 1 & 2       & 3 & 4  & 100\%        \\
-		\hline
-	\end{tabularx}
-	\caption{Punktekatalog für Kriterien} \label{tab:punktekatalog}
-\end{table}
-
-
-
-\textbf{Erläuterung:}
 Grundsätzlich gibt es einen Punktabzug, wenn der Nutzer grundlegenden Funktionen explizit zustimmen muss. Das Idealbild ist eine sofort nutzbare Anwendung, die ohne weitere Zwischenschritte den kompletten Funktionsumfang besitzt.
+
+\section{Betrachtete Kriterien}
+Die einzelnen Kriterien aus der Evaluationsmatrix werden nun genauer definiert:
+
 \begin{description}
 	\item [Plattformabhängigkeit]
 	      Wie viele Plattformen beziehungsweise Betriebssysteme werden unterstützt?
