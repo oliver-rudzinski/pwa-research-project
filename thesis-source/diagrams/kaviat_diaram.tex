@@ -1,36 +1,22 @@
-%	Plattformabhängikeit   & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-%Installation           & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-%Speicherzugriff        & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-%Speicherbedarf         & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-%Aktualisierbarkeit     & 0   & 1 & 2       & 3 & 4  & 5\%          \\
-%Konsistenz des Designs & 0   & 1 & 2       & 3 & 4  & 5\%         \\
-%Bibliotheken           & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-%Umsetzung              & 0   & 1 & 2       & 3 & 4  & 20\%         \\
-%Testbarkeit            & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-%Vorausgesetzte Entwicklungserfahrung    & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-%Verständlichkeit       & 0   & 1 & 2       & 3 & 4  & 10\%         \\
-%
 \begin{figure}[h]
-
 	\begin{tikzpicture}
-	
 		% Diagram setup
 		\tkzKiviatDiagram[scale=1.0,label distance=.5cm,
-		radial  = 4,
-		gap     = 1,  
-		lattice = 4]{
-			Plattformabhängigkeit,
-			Installation,
-			Speicherzugriff,
-			Speicherbedarf,
-			Aktualisierbarkeit,
-			Designs,
-			Bibliotheken,
-			Umsetzung,
-			Testbarkeit,
-			Vorausgesetzte Entwicklungserfahrung,
-			Nutzerfreundlichkeit
-		}
+			radial  = 4,
+			gap     = 1,  
+			lattice = 4]{
+				Plattformabhängigkeit,
+				Installation,
+				Speicherzugriff,
+				Speicherbedarf,
+				Aktualisierbarkeit,
+				Design,
+				Bibliotheken,
+				Umsetzung,
+				Testbarkeit,
+				Vorausgesetzte Entwicklungserfahrung,
+				Nutzerfreundlichkeit
+			}
 		
 		% native App
 		\tkzKiviatLine[thick,color=blue,mark=ball,
@@ -38,26 +24,23 @@
 		
 		% PWA
 		\tkzKiviatLine[thick,color=green,mark=ball,
-		fill=green!20,opacity=.5](3,2,3,4,4,1,4,4,4,1,2)
-		
-	%	\tkzKiviatGrad[prefix=,unity=1,suffix=](0)  
-	\foreach \X [count=\Y]in {$--$, $-$, $\circ$, $+$, $++$}
-	\node[anchor=north,rotate=0] at (\Y-1,0) {\X};
+		fill=green!20,opacity=.5](3,2,3,4,4,1,4,4,4,1,2)		
 
-	
+		% Legende -- - + ++
+		\foreach \X [count=\Y]in {$--$, $-$, $\circ$, $+$, $++$}
+		\node[anchor=north,rotate=0] at (\Y-1,0) {\X};
+
 	\end{tikzpicture}
 	
-	\begin{tikzpicture}
-	%\draw[draw=black!20] (-0.1,-0.2) rectangle ++(15,0.5);
-	
-	\draw [thick, green] (0,0.5) -- (0.5,0.5); 
-	\node at (3.3,0.5) {\acf{pwa}};
-	
-	\draw [thick, blue] (0,0) -- (0.5,0); 
-	\node at (2.25,0) {native App (iOS)};
-	
-
-		\end{tikzpicture}
+	\begin{tikzpicture}	
+		% Legende PWA
+		\draw [thick, green] (0,0.5) -- (0.5,0.5); 
+		\node at (3.3,0.5) {\acf{pwa}};
+		
+		% Legende iOS
+		\draw [thick, blue] (0,0) -- (0.5,0); 
+		\node at (2.25,0) {native App (iOS)};	
+	\end{tikzpicture}
 	
 	\caption{Spinnennetzdiagram: Kriterienvergleich \acs{pwa} und native App}
 \end{figure}
