@@ -3,14 +3,14 @@
 
 Um das Kriterium der Plattformabhängigkeit bewerten zu können müssen die tatsächlich unterstützten Plattformen für die \ac{pwa} zuerst geprüft werden.
 
-\subsection{Browserunterstützung der \acs{pwa}}
+\subsubsection{Browserunterstützung der \acs{pwa}}
 Für Webanwendungen ist es üblich, diese mit verschiedenen Browsern zu testen. Um das Kriterium der Plattformabhängigkeit detailliert evaluieren zu können, erscheint es ebenfalls sinnvoll, die Installation der PWA sowohl auf dem Desktop, als auch auf Android und iOS Smartphones zu testen.
 
 \textbf{Anmerkung:}\\
 Zum Testen der Datenpersistenz werden Todo-Einträge angelegt und anschließend der Browser neugestartet.
 Alle Browser werden mit Standardeinstellungen ausgeführt. Es werden keine Browsercaches, Cookies oder ähnliches manuell gelöscht.
 
-\subsubsection{Browserunterstützung Desktop}
+\paragraph{Browserunterstützung Desktop}
 \begin{table}[H]
 	\centering
 	\begin{tabularx}{\textwidth}{|l||C|C|C|c|}
@@ -32,7 +32,7 @@ Microsoft Edge und Internet Explorer zeigen den Button zum Priorisieren nicht an
 
 Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzeigen, zeigt jedoch anschließend keine Benachrichtigungen an. Internet Explorer wirft den JavaScript Fehler \texttt{'Notification' is undefined}, Notifications sind nicht implementiert.
 
-\subsubsection{Browserunterstützung Smartphone}
+\paragraph{Browserunterstützung Smartphone}
 
 \begin{table}[H]
 	\centering
@@ -60,9 +60,9 @@ Microsoft Edge möchte die Zustimmung des Nutzers, um Benachrichtigungen anzuzei
 \textbf{Anmerkung:}\\
 Verweigert der Nutzer die Benachrichtigungen einer Webseite, ist es meist umständlich die Berechtigung für Benachrichtigungen einer Website zurückzusetzen. Beim Browser Opera muss der Nutzer dann beispielsweise durch fünf Menüs nacheinander navigieren, um die deaktivierten Benachrichtigungen wieder zu aktivieren.
 
-\subsection{Bewertung \ac{pwa}}
+\subsubsection{Bewertung \ac{pwa}}
 Die Praxis zeigt, dass die Webanwendung zwar plattformübergreifend auf iOS, Android und Desktop funktioniert, aber nur Android Nutzer von der Installierbarkeit der \ac{pwa} profitieren.
 Hier soll ein Vergleich zur nativen iOS App geschlossen werden. Beide unterstützen die Installation auf einer mobilen Plattform, die \ac{pwa} bietet jedoch auch die Nutzung im Web für iOS Geräte und eine installierbare Anwendung für Desktopgeräte und ist damit in diesem Kriterium der nativen App überlegen. Das Kriterium wird mit gut, aber nicht mit sehr gut bewertet, da die \ac{pwa} nicht auf Apple Mobilgeräten installiert werden kann.
 
-\subsection{Bewertung native App}
+\subsubsection{Bewertung native App}
 Die iOS-Anwendung findet in einem geringen Rahmen Anwendung. Somit kann diese nur auf einem relativ geringen Anteil der führenden Mobilgeräte verwendet werden. Anders als bei der \ac{pwa} kann auch keine limitierte Nutzung gewährleistet werden. An dieser Stelle greift auch kein Argument, welches sich auf die Exemplarität der nativen Entwicklung bezieht. Für die Nutzung verschiedener Plattformen in ihrer nativen Form müsste eine App mehrmals entwickelt werden. Diese Erkenntnis würde auch bei der Umsetzung der Beispielanwendung unter Android greifen, mit der Ausnahme, dass Android-Apps untereinenander eine deutlich höhere Geräteunabhängigkeit aufweisen, da Android von einer Vielzahl Smartphoneherstellern unterstützt wird, während iOS nur unter der eigenen Marke zur Anwendung kommt. Es existieren zwar Frameworks, welche die plattformübergreifende Entwicklung von Apps und deren native Bereitstellung in den entsprechenden Bezugspunkten erlauben (bspw. das JavaScript-Framework ReactJS), jedoch entfällt dieses aus dem Betrachtungsrahmen dieser Arbeit. Außerdem müssten auch dort Änderungen vollzogen werden, die sich in den Unterschieden der Benutzeroberflächen der einzelnen Betriebssysteme begründen. Das Kriterium wird hier mit eher schlecht bewertet. Die Bewertung schlecht kommt nicht zum Einsatz, da die Apps in ihrem Ökosystem trotzdem ausnahmslos geräteübergreifend funktionieren.

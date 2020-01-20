@@ -25,7 +25,7 @@ Im Folgenden werden die einzelnen Komponenten der \textit{Angular}-Anwendung erl
 
 Die Komponenten tauschen untereinander Daten aus. Damit diese einer einheitlichen Struktur folgen, wird eine Klasse \texttt{TodoItem} erstellt, die einen Todo-Eintrag repräsentiert. Objekte dieser Klasse können jetzt einfach zwischen Komponenten ausgetauscht und modifiziert werden.
 
-\begin{listing}[h]
+\begin{listing}[h!]
 	\inputminted{TypeScript}{sourcecode/pwa_todoitem_klasse.js}
 	\caption{\texttt{TodoItem}-Klasse zur Datenspeicherung (gekürzt)}
 	\label{sourcecode:todoitem_klasse}
@@ -36,7 +36,7 @@ Wie im Ausschnitt \ref{sourcecode:todoitem_klasse} zu sehen, hat ein Todo-Elemen
 \subsubsection{Erstellund des \texttt{todoService} für die Datenverwaltung}
 Alle Todo-Einträge sollen persistent auf dem Gerät gespeichert werden. Dafür wird ein Angular-Service erstellt: der \texttt{todoService}. Er ist für die \acf{crud} Operationen zuständig.
 
-\begin{listing}[h]
+\begin{listing}[h!]
 	\inputminted{TypeScript}{sourcecode/pwa_todo_service.ts}
 	\caption{Klasse \texttt{TodoService} (gekürzt)}
 	\label{sourcecode:pwa_todo_service}
@@ -46,7 +46,7 @@ In Ausschnitt \ref{sourcecode:pwa_todo_service} sind die Kernfunktionen des Serv
 
 Mit \texttt{localStorage} (Zeilen 8-14) kann auf den\textit{ Key-Value-Store} des Browsers zugegriffen werden. Beim Speichern werden die Todo-Elemente als \ac{json}-Objekt im Store abgelegt und analog dazu geladen. Der Key-Value-Store verliert seine Daten beim schließen der Seite nicht und besitzt kein Ablaufdatum, wie ein Cookie \cite{LocalStorage}.
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics[width=\textwidth]{img/pwa_datenfluss_erstellen.png}
 	\centering
 	\caption{Datenfluss bei Erstellung eines Todo Eintrages}
@@ -58,7 +58,7 @@ Abbildung \ref{fig:pwa_datenfluss_erstellen} zeigt den Datenfluss beim Erstellen
 \subsubsection{Dateistruktur und Komponenten der Angularanwendung}
 Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte \textit{Angular}-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt.
 
-\begin{figure}[H]
+\begin{figure}[h!]
 	\includegraphics[width=0.6\textwidth]{img/pwa_dateistruktur.png}
 	\centering
 	\caption{Dateistruktur der Angularanwendung}
