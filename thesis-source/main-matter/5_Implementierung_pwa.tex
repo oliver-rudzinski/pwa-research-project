@@ -70,7 +70,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 	
 
 		
-	\begin{listing}[h]
+	\begin{listing}[h!]
 		\inputminted{text}{sourcecode/pwa_app_component.html}
 		\caption{HTML Template der \texttt{app-component} (gekürzt)}
 		\label{sourcecode:pwa_app_component_html}
@@ -83,7 +83,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 	\item[Todo-item] 
 	Das \texttt{todo-item} ist ein einzelnes Elemente der Todo-Liste. Es enthält einen Button zum priorisieren, eine Checkbox zum abhaken des Elements, eine Textbox und einen Button zum Löschen (siehe Abbildung \ref{fig:pwa_todo_item_screenshot}).
 	
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\includegraphics[width=0.6\textwidth]{img/pwa_todo_item.PNG}
 		\centering
 		\caption{Gerenderte \texttt{todo-item}-Komponente}
@@ -93,7 +93,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 	
 	Es ist sinnvoll jedes Listenelement in einer mehrfach instanziierten Komponente zu repräsentieren. Dies kapselt die Daten des Listenelements und die Kommunikation mit dem \texttt{todoService} von anderen Listenelementen ab. Wie bereits erwähnt bekommt jede \texttt{todo-item}-Komponente genau ein Objekt der Klasse \texttt{TodoItem} übergeben.
 	
-	\begin{listing}[h]
+	\begin{listing}[h!]
 		\inputminted{text}{sourcecode/pwa_todo_item.html}
 		\caption{HTML Template der \texttt{todo-item} (gekürzt)}
 		\label{sourcecode:pwa_todo_item_html}
@@ -108,7 +108,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 \end{description}
 
 \subsubsection{Kommunikation der Komponenten mit dem \texttt{todoService}}
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics[width=\textwidth]{img/pwa_components.png}
 	\centering
 	\caption{Interaktion des Todo-service mit den Komponenten}

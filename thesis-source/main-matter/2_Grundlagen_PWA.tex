@@ -28,7 +28,7 @@ Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dok
 
 Diese Arbeit betrachtet die \ac{pwa}, da sie (wie eine native Anwendung) lokal auf einem Gerät installiert werden kann. Es ist dafür kein zentraler Shop nötig: die Installation wird über den Browser gestartet.
 
-\begin{figure}[H]
+\begin{figure}[h!]
         \centering
         \includegraphics[width=0.6\linewidth]{img/Wireframe_install_pwa.jpg}
         \caption{Browserdialog zur Installation einer \ac{pwa} \cite{PWAAddToHomeScreenPrompt}}
@@ -44,7 +44,7 @@ Zwar bezeichnen Browser die Installation meist nur als \texttt{Zum Startbildschi
 
 Um die \ac{pwa} auf einem Gerät installieren zu können, muss ein \textit{web-app-manifest} zur Verfügung gestellt werden. Dieses ist eine \ac{json} Datei, welche zur Konfigurationsparameter für die Anwendung enthält. \cite{GooglePWAManifest}
 
-\begin{listing}[H]
+\begin{listing}[h!]
     \inputminted{json}{sourcecode/manifest_sample.json}
     \caption{Manifestdatei einer \ac{pwa}}
       \label{sourcecode:manifest_sample}
@@ -78,7 +78,7 @@ Damit die \ac{pwa} trotz fehlender Netzwerkverbindung funktioniert, wird ein bes
 
 Ein Service Worker ist ein von der UI separiert laufendes Hintergrundskript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Skripts, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das Senden von Pushbenachrichtigungen zuständig. \cite[S. 24]{BeginningPWA}
 
-\begin{figure}[h]
+\begin{figure}[h!]
         \includegraphics[width=\linewidth]{img/ServiceWorker-8a0968f1b295f1ff.png}
         \centering
         \caption{Konzept des Service Workers \cite{ServiceWorkerDiagramm}}
@@ -136,7 +136,7 @@ Mit über Achttausend mitwirkenden Entwicklern (Angular CLI) beziehungsweise üb
 
 Das Framework arbeitet auf Basis von Komponenten. Ein Eingabefeld, Seite oder eine Liste werden in Angular als solche Komponenten separat betrachtet. Auch in der Dateistruktur werden Komponenten stark getrennt. Jede Komponente besitzt beispielsweise ein eigenes CSS (oder SCSS) und HTML-File. Eine Komponente für eine Seite kann so auch eine oder sogar mehrere Listenkomponenten einbinden. Durch die Wiederverwendung von Code-Fragmenten in Komponenten wird der Programmcode sehr übersichtlich und strukturiert.
 
-\begin{figure}[h]
+\begin{figure}[h!]
         \includegraphics[width=\linewidth]{img/Angular_MVC.JPG}
         \centering
         \caption{MVC Konzept von Angular \cite[S. 35, Abbildung 3-4]{ProAngular}}
