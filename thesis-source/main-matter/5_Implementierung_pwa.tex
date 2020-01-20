@@ -6,13 +6,14 @@ Um die \textit{Angular} Anwendung automatisiert zu erstellen, ist zuerst die Ins
 
 
 Mit dem Befehl \texttt{ng new todoapp} wird die Angular \ac{cli} (in der Konsole als \texttt{ng} abgekürzt) dazu gebracht, ein Angularprojekt inklusive nötiger Dateistrukturen zu erstellen.
-\begin{wrapfigure}{r}{0.6\textwidth}
-	\vspace{-10pt}
+
+\begin{figure}[h!]
+	\centering
 	\includegraphics[width=0.58\textwidth]{img/angular_cli_css.PNG}
 	\caption{Stylesheetformate beim Erstellen der Angularanwendung}
 	\label{fig:stylesheet_formate_cli}
-	\vspace{-10pt}
-\end{wrapfigure}
+\end{figure}
+
 Die \ac{cli} bietet dem Nutzer einige Optionen bei der Erstellung an, die jedoch in diesem Projekt nicht zwangsläufig benötigt werden, so kann beispielsweise ein Routing oder Unittesting eingerichtet werden.
 Außerdem unterstützt die \ac{cli} verschiedene Stylesheetformate (siehe Abbildung \ref{fig:stylesheet_formate_cli}). Das ist für Entwickler sehr praktisch, wenn sie einen dieser CSS-Dialekte beherrschen. Die Arbeit mit Variablen in Stylesheets bevorzugt wird, werden in diesem Projekt SCSS Dateien verwendet.
 
@@ -125,6 +126,12 @@ Orange dargestellt ist das Einfügen von Daten durch den Nutzer im Inputfeld der
 Rot dargestellt ist das Löschen oder Updaten von Items. Wird der Button zum Entfernen gedrückt, oder ändert sich das gespeicherte \texttt{TodoItem}-Objekt der \texttt{TodoItem}-Komponente, werden die Änderungen dem \texttt{TodoService} weitergegeben.
 Für das Löschen reicht allerdings die einzigartige ID des Objekts aus.
 
+\subsubsection{Gestaltung des \acl{ui}}
+Das Styling des von Angular erzeugten HTML-Codes wird erfolgt mittels CSS. In den bereits erwähnten CSS-Dateien wird den einzelnen Elementen ein Style hinzugefügt.
+Erwähnenswert ist dabei, dass alle Anforderungen im Code einzeln beschrieben werden müssen, d.h. Schriftart, Position, Farbe etc. sind einzeln zu deklarieren.
+
+Mit der Nutzung der CSS Eigenschaft Flexbox lassen sich Elemente responsiv gestalten. Die Nutzung eines CSS oder UI-Framworks würde diese Aufgabe in einem größeren Projekt erleichtern. Mit bekannten Frameworks wie beispielsweise Material-UI lassen sich Elemente dem Material Design Prinzip anpassen (vgl. \ref{MaterialUI}), dass auf ähnliche Weise auch bei Android genutzt wird. Hierzu existieren eine Vielzahl von Frameworks mit eigenen Designphilosophien, auf die in dieser Arbeit nicht weiter eingegangen wird.
+
 \subsubsection{Umsetzung der Benachrichtigung über unerledigte Aufgaben}
 Die definierten Anforderungen geben an, dass der Nutzer an seine Aufgaben erinnert werden soll. In der Praxis stellt sich jedoch heraus, dass die Web-Pushbenachrichtigungen über den Browser zwar sehr gut mit Webanwendungen funktionieren, aber nicht mit \ac{pwa}s ohne Internetverbindung. Mit einem Server, der zu einem bestimmten Zeitpunkt eine Nachricht an die Webanwendung schickt, ist die Umsetzung möglich, allerdings nur bei bestehender Internetverbindung. Die Anforderung wird deshalb als \textit{nicht umsetzbar} betrachtet, da das Kriterium der Offline-Verfügbarkeit nicht umgesetzt werden kann.
 
@@ -170,7 +177,7 @@ Das Hosting mit Firebase löst gleichzeitig ein weitere Problem: das Testen der 
 \textbf{Smartphones:}\\
 Nach dem Aufrufen der URL mit dem mobilen Browser, erscheint eine Meldung zum Installieren der \ac{pwa} (siehe \ref{fig:dialog_install_pwa_mobile}).
 
-\begin{figure}[h]
+\begin{figure}[h!]
 	\includegraphics[scale=0.5]{img/pwa_add_to_homescreen.png}
 	\centering
 	\caption{Browserdialog zum Installieren der \ac{pwa} als Windows Desktop App}
@@ -178,22 +185,20 @@ Nach dem Aufrufen der URL mit dem mobilen Browser, erscheint eine Meldung zum In
 \end{figure}
 
 \textbf{Desktop:}
-\begin{wrapfigure}{r}{0.5\textwidth}
-	\vspace{-10pt}
+\begin{figure}[h!]
+	\centering
 	\includegraphics[width=0.48\textwidth]{img/add_to_desktop_2.PNG}
 	\caption{Browserdialog zum Installieren der \ac{pwa} als Desktop App}
 	\label{fig:dialog_install_pwa_desktop}
-	\vspace{-10pt}
-\end{wrapfigure}
+\end{figure}
 In der Suchleiste von Chrome, kann der Nutzer die \ac{pwa} als Desktopanwendung installieren (siehe \ref{fig:dialog_install_pwa_desktop}).
-\begin{wrapfigure}{L}{0.5\textwidth}
-	\vspace{-10pt}
+
+\begin{figure}[h!]	
 	\includegraphics[width=0.48\textwidth]{img/berechtigungen_zulassen.PNG}
 	\centering
 	\caption{Dialog für Benachrichtigungen}
 	\label{fig:pwa_benachrichtigungen_zulassen}
-	\vspace{-10pt}
-\end{wrapfigure}
+\end{figure}
 Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim erhalten der ersten Nachricht die Benachrichtigungen über einen Dialog aktivieren (siehe \ref{fig:pwa_benachrichtigungen_zulassen}).
 
 \subsection{Update der Anwendung}

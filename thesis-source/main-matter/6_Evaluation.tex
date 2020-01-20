@@ -38,6 +38,41 @@ Es ist wichtig zu beachten, dass die exemplarische Entwicklung der nativen App i
 %\input{main-matter/6_Verstaendlichkeit}
 
 \section{Gesamtbetrachtung}
+Für die Gesamtbetrachtung werden die Ergebnisse zur besseren Übersicht erneut in der Evaluationsmatrix (Tabelle \ref{tab:evaluationsmatrix_ausgefüllt}) dargestellt. In der gewichteten Summe erhält die \ac{pwa} 0,55 Verrechnungspunkte. Das entspricht einer Wertung zwischen neutral (\Circle) und eher gut ($+$). Die native App erhält in der gewichteten Summe 1,1 Verrechnungspunkte, was einer eher guten Wertung entspricht ($+$).
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		Kriterium              & Gesamtanteil & \ac{pwa} & native App\\
+		
+		\hline
+		\multicolumn{4}{c}{Anwendung}         \\
+		\hline
+		Plattformabhängigkeit   & 10\%         & $+$ & $-$\\
+		Installation           & 5\%          & \Circle & $++$ \\
+		Speicherzugriff        & 5\%          & $+$&$++$ \\
+		Speicherbedarf         & 5\%          & $++$& $+$\\
+		Aktualisierbarkeit     & 5\%          & $++$&$+$ \\
+		Konsistenz des Designs & 5\%         & $-$& $+$\\
+		
+		\hline
+		\multicolumn{4}{c}{Entwicklung}      \\
+		\hline
+		Bibliotheken           & 10\%         &$++$ &$+$ \\
+		Umsetzung              & 20\%         &$+$ &$++$ \\
+		Testbarkeit            & 10\%         & $++$& \Circle\\
+		Vorausgesetzte Entwicklungserfahrung    & 10\%         &$-$ &$+$ \\
+		\hline
+		\hline
+		Gesamt                  & 100\%        & 0,55 (\Circle/$+$) & 1,1 ($+$)\\
+		\hline
+	\end{tabular}
+	\caption{Ergebnisse in der Evaluationsmatrix} \label{tab:evaluationsmatrix_ausgefüllt}
+\end{table}
+
+Die einzelnen Kriterien werden im Netzdiagramm (Abbildung \ref{fig:netzdiagramm}) visualisiert. Bei der Wertung ist zu beachten, dass die einzelnen Kriterien zwar gewichtet einfließen, jedoch gibt es unterschiedliche Interpretationsweisen für die einzelnen Kriterien. Diese Arbeit befindet sich dabei meist auf dem Standpunkt des Entwicklers und gewichtet die Anforderungen der Nutzer entsprechend geringer. Andere Forschungsansätze würden bei anderen Forschungsschwerpunkten zu abweichenden Interpretationen und Ergebnissen führen.
+\input{diagrams/kaviat_diaram.tex}
 
 \section{Fazit}
 
@@ -49,5 +84,3 @@ Möglicherweise würde man einen lukrativen Markt, den Verkauf von Software/Apps
 Für Entwickler jedenfalls wäre dies erfreulich, da im Hinblick auf die schnelle Ausbreitung von JavaScript im Webbereich quasi für jedes Problem bereits eine Lösung existiert. Nicht zuletzt kommuniziert fast jede native App sowieso mit dem Internet, um dynamisch Daten zu laden und zu speichern. Ein Webentwickler könnte mit einer \ac{pwa} eine App entwickeln, ohne Spezialist für eine Plattform zu sein. Unter Verwendung von Node.js könnten App, Website und Webservices alle in der gleichen Sprache, JavaScript, entwickelt werden.
 
 Bezieht man sich bei der Reflexion ausschließlich auf Anwendungen im Web, würden die meisten Webseiten von den Caching-Möglichkeiten der \ac{pwa} profitieren, Ladezeiten verkürzen können und dem Nutzer ein flüssigeres Gesamterlebnis bieten. Es ist davon auszugehen, dass sich das positiv auf die Kundeninteraktionen mit der Website auswirkt.
-
-\input{diagrams/kaviat_diaram.tex}
