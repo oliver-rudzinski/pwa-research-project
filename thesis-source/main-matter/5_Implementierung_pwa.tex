@@ -18,11 +18,11 @@ Die \ac{cli} bietet dem Nutzer einige Optionen bei der Erstellung an, die jedoch
 Außerdem unterstützt die \ac{cli} verschiedene Stylesheetformate (siehe Abbildung \ref{fig:stylesheet_formate_cli}). Das ist für Entwickler sehr praktisch, wenn sie einen dieser CSS-Dialekte beherrschen. Die Arbeit mit Variablen in Stylesheets bevorzugt wird, werden in diesem Projekt SCSS Dateien verwendet.
 
 
-\subsection{Umsetzung der Anwendung mit Angular}
+\subsection{Aufbau der Anwendung mit Angular}
 
 Im Folgenden werden die einzelnen Komponenten der \textit{Angular}-Anwendung erläutert. Es wird explizit darauf hingewiesen, dass \textbf{Quellcode-Ausschnitte teilweise stark gekürzt worden sind}, um die Lesbarkeit zu erhöhen.
 
-\subsubsection{Klasse \texttt{TodoItem} zur Datenspeicherung}
+\subsubsection{Bereitstellen der Klasse \texttt{TodoItem} zur Datenspeicherung}
 
 Die Komponenten tauschen untereinander Daten aus. Damit diese einer einheitlichen Struktur folgen, wird eine Klasse \texttt{TodoItem} erstellt, die einen Todo-Eintrag repräsentiert. Objekte dieser Klasse können jetzt einfach zwischen Komponenten ausgetauscht und modifiziert werden.
 
@@ -34,7 +34,7 @@ Die Komponenten tauschen untereinander Daten aus. Damit diese einer einheitliche
 
 Wie im Ausschnitt \ref{sourcecode:todoitem_klasse} zu sehen, hat ein Todo-Element eine Aufgabenbeschreibung (Zeile 2), zwei boolesche Werte, die speichern, ob das Element als wichtig oder abgeschlossen markiert worden ist (Zeile 4 und 5) und eine eindeutige ID (Zeile 2). Die ID hilft später ein bestimmtes Todo-Element zu modifizieren.
 
-\subsubsection{Erstellund des \texttt{todoService} für die Datenverwaltung}
+\subsubsection{Implementierung des \texttt{todoService} für die Datenverwaltung}
 Alle Todo-Einträge sollen persistent auf dem Gerät gespeichert werden. Dafür wird ein Angular-Service erstellt: der \texttt{todoService}. Er ist für die \acf{crud} Operationen zuständig.
 
 \begin{listing}[h!]
@@ -56,7 +56,7 @@ Mit \texttt{localStorage} (Zeilen 8-14) kann auf den\textit{ Key-Value-Store} de
 
 Abbildung \ref{fig:pwa_datenfluss_erstellen} zeigt den Datenfluss beim Erstellen eines Todo-Eintrags. Die Todo-Beschreibung wird vom Nutzer über ein Eingabefeld an den Service weitergereicht. Dieser erstellt ein entsprechendes Datenobjekt und reicht es der Stammkomponente weiter, worüber schlussendlich HTML-Code erzeugt werden kann. Gleichzeitig speichert er das neue Element im Browserspeicher ab.
 
-\subsubsection{Dateistruktur und Komponenten der Angularanwendung}
+\subsubsection{Beschreibung der Dateistruktur und Komponenten der Angularanwendung}
 Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt worden ist, wird im Folgenden detaillierter auf das erstellte \textit{Angular}-Projekt eingegangen. Angular, welches stark komponentenorientiert aufgebaut ist, zeigt sich auch in seiner Dateistruktur stark komponentenbezogen. In Abbildung \ref{fig:pwa_dateistruktur} sind die wichtigsten Dateien in einem Diagramm dargestellt.
 
 \begin{figure}[h!]
@@ -72,7 +72,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 
 		
 	\begin{listing}[h!]
-		\inputminted{text}{sourcecode/pwa_app_component.html}
+		\inputminted{ng2}{sourcecode/pwa_app_component.html}
 		\caption{HTML Template der \texttt{app-component} (gekürzt)}
 		\label{sourcecode:pwa_app_component_html}
 	\end{listing}
@@ -95,7 +95,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 	Es ist sinnvoll jedes Listenelement in einer mehrfach instanziierten Komponente zu repräsentieren. Dies kapselt die Daten des Listenelements und die Kommunikation mit dem \texttt{todoService} von anderen Listenelementen ab. Wie bereits erwähnt bekommt jede \texttt{todo-item}-Komponente genau ein Objekt der Klasse \texttt{TodoItem} übergeben.
 	
 	\begin{listing}[h!]
-		\inputminted{text}{sourcecode/pwa_todo_item.html}
+		\inputminted{ng2}{sourcecode/pwa_todo_item.html}
 		\caption{HTML Template der \texttt{todo-item} (gekürzt)}
 		\label{sourcecode:pwa_todo_item_html}
 	\end{listing}
