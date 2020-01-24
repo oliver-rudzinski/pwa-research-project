@@ -24,13 +24,13 @@ Eine \acf{pwa} ist ein nächster Schritt nach der Dynamisierung statischer HTML-
 Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dokumentation der \ac{pwa} von Google. Im Vergleich zu Hijian ist diese etwas spezifischer und erwähnt beispielsweise die Kontrolle des Anwendungscaches durch einen JavaScript Service Worker (siehe Kapitel \ref{chap:service_worker}), um die Abhängigkeit von einer Netzwerkverbindung aufzuheben.
 \cite{GooglePWAOverview}
 
-\subsection{Installation einer Progressive Web App}
+\subsection{Installation einer \acf{pwa}}
 
 Diese Arbeit betrachtet die \ac{pwa}, da sie (wie eine native Anwendung) lokal auf einem Gerät installiert werden kann. Es ist dafür kein zentraler Shop nötig: die Installation wird über den Browser gestartet.
 
 \begin{figure}[h!]
         \centering
-        \includegraphics[width=0.6\linewidth]{img/Wireframe_install_pwa.jpg}
+        \includegraphics[width=0.5\linewidth]{img/Wireframe_install_pwa.png}
         \caption{Browserdialog zur Installation einer \ac{pwa} \cite{PWAAddToHomeScreenPrompt}}
         \label{fig:pwainstallationprompt}
 \end{figure}
@@ -89,7 +89,7 @@ Ein Service Worker ist ein von der UI separiert laufendes Hintergrundskript der 
 Alle verbreiteten Desktopbrowser wie Chrome, Firefox, Opera, Edge und mittlerweile auch Safari unterstützen das Service Worker Konzept. Der Mobile Chromebrowser unter Android unterstützt Service Worker bereits vollständig, während Safari unter iOS noch an diesem Feature arbeitet. \cite[S. 9]{BeginningPWA}
 
 
-\subsection{Plattformen von eine \ac{pwa} aktuell unterstützen}
+\subsection{Plattformen welche \ac{pwa} aktuell unterstützen}
 Das Projekt \textit{CanIUse} aggregiert Daten zu Webstandards des w3-Konsortiums und Browserdokumentationen. Es wird als Quelle für die Unterstützung von Features durch aktuelle Browser herangezogen.
 
 Apples mobiler Browser Safari unterstützt eines der wichtigsten Features der \ac{pwa} noch nicht vollständig: es fehlen Teile des Web App Manifests. Allerdings wird der Service Worker vollständig unterstützt \cite{CanIUseWebManifest}. Wann und ob Safari die Unterstützung für das Manifest implementiert ist unklar und bleibt abzuwarten. Die aktuelle Teilunterstützung zeigt jedoch, dass sich Apple nicht grundsätzlich gegen die \ac{pwa} weigert.
