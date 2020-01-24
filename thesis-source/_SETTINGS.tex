@@ -130,12 +130,23 @@
 	linenos
 }
 
+\setminted[ng2]{
+	autogobble,
+	baselinestretch=1,
+	breaklines,
+	frame=lines,
+	fontsize=\footnotesize,
+	framesep=3mm,
+	linenos
+}
+
+
 \usemintedstyle{manni}	
 \usepackage[T1]{fontenc}
 \usepackage{inconsolata}			
 	
 % Misc
-\setcounter{tocdepth}{1}				% Remove sub-sections from TOC
+\setcounter{tocdepth}{3}				% Remove sub-sections from TOC
 \setcounter{lofdepth}{2}
 		% to make images being floatable by text
 \usepackage{float} 			
