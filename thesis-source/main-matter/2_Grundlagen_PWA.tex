@@ -17,7 +17,7 @@ Eine \acf{pwa} ist ein nächster Schritt nach der Dynamisierung statischer HTML-
   	Die \ac{pwa} ist für die (meist leistungsschwache) Mobilhardware konzipiert und funktioniert hierauf ohne Performanzprobleme. Hajian legt besonders auf das schnelle Laden beim Start der Anwendung wert.
   	
   \item [Informierung des Nutzers] 
-  	Wie native Apps, kann die \ac{pwa} den Nutzer über Push-Nachrichten informieren oder zu Interaktion auffordern.
+  	Wie native Apps kann die \ac{pwa} den Nutzer über Push-Nachrichten informieren oder zu Interaktion auffordern.
 \end{description}
 
 \cite[S. 1f.]{Hajian2019}
@@ -26,7 +26,7 @@ Diese Charakteristiken decken sich mit der Beschreibung durch die Entwickler-Dok
 
 \subsection{Installation einer \acf{pwa}}
 
-Diese Arbeit betrachtet die \ac{pwa}, da sie (wie eine native Anwendung) lokal auf einem Gerät installiert werden kann. Es ist dafür kein zentraler Shop nötig: die Installation wird über den Browser gestartet.
+Diese Arbeit betrachtet die \ac{pwa}, da sie (wie eine native Anwendung) lokal auf einem Gerät installiert werden kann. Es ist dafür kein zentraler Shop nötig: Die Installation wird über den Browser gestartet.
 
 \begin{figure}[h!]
         \centering
@@ -40,9 +40,9 @@ Die Aufforderung zur Installation einer \ac{pwa} kann entweder über den Browser
 Zwar bezeichnen Browser die Installation meist nur als \texttt{Zum Startbildschirm hinzufügen}, tatsächlich generiert der Browser aber dann eine WebAPK, welche auf dem Gerät installiert wird. Auf Desktopgeräte startet die \ac{pwa} in einem eignen stark verschlankten Browserfenster ohne Suchleiste und Bedienelemente. \cite{GooglePWAInstallation}
 
 
-\subsection{Manifest Datei für die Konfiguration der \ac{pwa}}
+\subsection{Manifestdatei für die Konfiguration der \ac{pwa}}
 
-Um die \ac{pwa} auf einem Gerät installieren zu können, muss ein \textit{web-app-manifest} zur Verfügung gestellt werden. Dieses ist eine \ac{json} Datei, welche zur Konfigurationsparameter für die Anwendung enthält. \cite{GooglePWAManifest}
+Um die \ac{pwa} auf einem Gerät installieren zu können, muss ein \textit{web-app-manifest} zur Verfügung gestellt werden. Dieses ist eine \ac{json} Datei, welche Konfigurationsparameter für die Anwendung enthält. \cite{GooglePWAManifest}
 
 \begin{listing}[h!]
     \inputminted{json}{sourcecode/manifest_sample.json}
@@ -50,8 +50,8 @@ Um die \ac{pwa} auf einem Gerät installieren zu können, muss ein \textit{web-a
       \label{sourcecode:manifest_sample}
 \end{listing}
 
-Quellcode-Abschnitt \ref{sourcecode:manifest_sample} zeigt den Inhalt einer Manifest-Datei. Neben diversen Icons (Zeile 4-15) werden auch \textit{Name} (Zeile 3), \textit{Farbschema} (Zeile 20) und \textit{Anzeigeeinstellungen} (Zeile 18) festgelegt.
-Die Manifest-Datei wird im HTML der Webanwendung eingebunden, siehe Quellcode-Abschnitt \ref{sourcecode:manifest_include}. 
+Quellcode-Abschnitt \ref{sourcecode:manifest_sample} zeigt den Inhalt einer Manifestdatei. Neben diversen Icons (Zeile 4-15) werden auch \textit{Name} (Zeile 3), \textit{Farbschema} (Zeile 20) und \textit{Anzeigeeinstellungen} (Zeile 18) festgelegt.
+Die Manifestdatei wird im HTML der Webanwendung eingebunden, siehe Quellcode-Abschnitt \ref{sourcecode:manifest_include}. 
 
 Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (wenige Zeilen langer) \ac{json}-Datei macht die gesamte Webanwendung installierbar. Es wird kein App-Store, manueller Dateidownload oder Installer benötigt. 
 
@@ -62,19 +62,10 @@ Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (we
               %https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
 \end{listing}
 
-%\begin{figure}[h]
-%        \centering
-%%        \includegraphics[scale=0.7]{img/include_manifest.png}
- %%       \caption{Einfache Einbindung des Manifests}
-  %      \label{sourcecode:manifest_include}
-        %https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
-%\end{figure}
-
-
 \subsection{Service Worker für Offline-Funktionalität und Benachrichtigungen}
 \label{chap:service_worker}
 
-Damit die \ac{pwa} trotz fehlender Netzwerkverbindung funktioniert, wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, so dass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
+Damit die \ac{pwa} trotz fehlender Netzwerkverbindung funktioniert, wird ein besonderer Mechanismus benötigt: der Service Worker. Mit ihm können Abhängigkeiten der App lokal gecached werden, sodass die Anwendung auch bei schlechter oder gar fehlender Netzwerkverbindung funktioniert. \cite[S. 7]{BeginningPWA}
 
 Ein Service Worker ist ein von der UI separiert laufendes Hintergrundskript der Webanwendung, siehe Abbildung \ref{fig:serviceWorker}. Er wird genutzt um Bilder, Skripts, Styles oder ganze Seiten zu cachen. Bei bestehender Netzwerkverbindung führt er nötige Synchronisierungen durch. Nicht zuletzt ist er auch für das Senden von Pushbenachrichtigungen zuständig. \cite[S. 24]{BeginningPWA}
 
@@ -130,7 +121,7 @@ Angular ist ein open-source TypeScript basiertes Framework zur Entwicklung von W
 
 
 %https://octoverse.github.com/projects
-Mit über Achttausend mitwirkenden Entwicklern (Angular CLI) beziehungsweise über Siebentausend Mitwirkender (Angular Framework) belegt das Angular Command Line Interface und das Angular Framework die Plätze 4 und 6 der größten Projekte auf Github. 
+Mit über 8000 mitwirkenden Entwicklern (Angular CLI) beziehungsweise über 7000 Mitwirkender (Angular Framework) belegt das Angular Command Line Interface und das Angular Framework die Plätze 4 und 6 der größten Projekte auf GitHub. 
 % https://octoverse.github.com/projects
 \cite{OctoverseGitHubStatistics}
 
