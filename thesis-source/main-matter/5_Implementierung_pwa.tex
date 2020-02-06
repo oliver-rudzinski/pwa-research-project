@@ -130,7 +130,7 @@ Für das Löschen reicht allerdings die einzigartige ID des Objekts aus.
 Das Styling des von Angular erzeugten HTML-Codes wird erfolgt mittels CSS. In den bereits erwähnten CSS-Dateien wird den einzelnen Elementen ein Style hinzugefügt.
 Erwähnenswert ist dabei, dass alle Anforderungen im Code einzeln beschrieben werden müssen, d.h. Schriftart, Position, Farbe etc. sind einzeln zu deklarieren.
 
-Mit der Nutzung der CSS Eigenschaft Flexbox lassen sich Elemente responsiv gestalten. Die Nutzung eines CSS oder UI-Framworks würde diese Aufgabe in einem größeren Projekt erleichtern. Mit bekannten Frameworks wie beispielsweise Material-UI lassen sich Elemente dem Material Design Prinzip anpassen (vgl. \cite{MaterialUI}), dass auf ähnliche Weise auch bei Android genutzt wird. Hierzu existieren eine Vielzahl von Frameworks mit eigenen Designphilosophien, auf die in dieser Arbeit nicht weiter eingegangen wird.
+Mit der Nutzung der CSS Eigenschaft Flexbox lassen sich Elemente responsiv gestalten. Die Nutzung eines CSS oder UI-Frameworks würde diese Aufgabe in einem größeren Projekt erleichtern. Mit bekannten Frameworks wie beispielsweise Material-UI lassen sich Elemente dem Material Design Prinzip anpassen (vgl. \cite{MaterialUI}), dass auf ähnliche Weise auch bei Android genutzt wird. Hierzu existieren eine Vielzahl von Frameworks mit eigenen Designphilosophien, auf die in dieser Arbeit nicht weiter eingegangen wird.
 
 \begin{figure}[h!]
 	\centering
@@ -139,26 +139,19 @@ Mit der Nutzung der CSS Eigenschaft Flexbox lassen sich Elemente responsiv gesta
 	\label{fig:pwa_mit_tastatur}
 \end{figure}
 
-Abbildung \ref{fig:pwa_mit_tastatur} zeigt einen Screenshot der \ac{pwa}, nachdem diese auf dem Gerät installiert wurde. Tipps der Nutzer in das Eingabefeld, öffnet sich die Tastatur und das \ac{ui} passt sich an die neuen Größenverhältnisse an.
+Abbildung \ref{fig:pwa_mit_tastatur} zeigt einen Screenshot der \ac{pwa}, nachdem diese auf dem Gerät installiert wurde. Tippt der Nutzer in das Eingabefeld, öffnet sich die Tastatur und das \ac{ui} passt sich an die neuen Größenverhältnisse an.
 \subsubsection{Umsetzung der Benachrichtigung über unerledigte Aufgaben}
-Die definierten Anforderungen geben an, dass der Nutzer an seine Aufgaben erinnert werden soll. In der Praxis stellt sich jedoch heraus, dass die Web-Pushbenachrichtigungen über den Browser zwar sehr gut mit Webanwendungen funktionieren, aber nicht mit \ac{pwa}s ohne Internetverbindung. Mit einem Server, der zu einem bestimmten Zeitpunkt eine Nachricht an die Webanwendung schickt, ist die Umsetzung möglich, allerdings nur bei bestehender Internetverbindung. Die Anforderung wird deshalb als \textit{nicht umsetzbar} betrachtet, da das Kriterium der Offline-Verfügbarkeit nicht umgesetzt werden kann.
+Die definierten Anforderungen geben an, dass der Nutzer an seine Aufgaben erinnert werden soll. In der Praxis stellt sich jedoch heraus, dass die Web-Push-Benachrichtigungen über den Browser zwar sehr gut mit Webanwendungen funktionieren, aber nicht mit \ac{pwa}s ohne Internetverbindung. Mit einem Server, der zu einem bestimmten Zeitpunkt eine Nachricht an die Webanwendung schickt, ist die Umsetzung möglich, allerdings nur bei bestehender Internetverbindung. Die Anforderung wird deshalb als \textit{nicht umsetzbar} betrachtet, da das Kriterium der Offline-Verfügbarkeit nicht umgesetzt werden kann.
 
-
-%\begin{figure}[h]
-%	\includegraphics[width=\textwidth]{img/pwa_datenfluss_eingabe.png}
-%	\centering
-%	\caption{Datenfluss bei Änderung eines Todo Eintrages}
-%	\label{fig:pwa_datenfluss_eingabe}
-%\end{figure}
 
 \subsection{Integration einer Manifestdatei}
 
 Die Anwendung funktioniert zwar bereits im Browser, ist bislang aber noch keine Progressive Web App. Um dem Projekt ein \textit{Manifest} und einen \textit{Service Worker} hinzuzufügen, kann wieder die Angular \ac{cli} verwendet werden. \texttt{ng add @angular/pwa} erzeugt die entsprechenden Dateien automatisch, fügt eine manifest.json hinzu und bindet diese in die index.html Datei des Projekts ein.
 
-Es ist festzuhalten, dass das hinzufügen der \ac{pwa}-Funktionalität keinen nennenswerten Aufwand mit sich bringt, wenn das Ziel ausschließlich die Installation der Webapp ist.
+Es ist festzuhalten, dass das Hinzufügen der \ac{pwa}-Funktionalität keinen nennenswerten Aufwand mit sich bringt, wenn das Ziel ausschließlich die Installation der Webapp ist.
 
 \subsection{Hosting der App mit Firebase}
-Damit die \ac{pwa} als solche installiert werden kann muss sie bestimmte Kriterien erfüllen (siehe Kapitel \ref{chap:grundlagen}). Darunter ist die Notwendigkeit der Bereitstellung über \ac{https}. Dies gestaltet sich in der Praxis als schwierig, da der Angular Entwicklungsserver zwar auf \ac{https} konfiguriert werden kann, jedoch selbstsignierte SSL Zertifikate nicht aktzeptiert werden: Die \ac{pwa} kann nicht installiert werden. Für die Entwicklung ist das natürlich problematisch, so dass eine Lösung für dieses Problem gefunden werden muss.
+Damit die \ac{pwa} als solche installiert werden kann, muss sie bestimmte Kriterien erfüllen (siehe Kapitel \ref{chap:grundlagen}). Darunter ist die Notwendigkeit der Bereitstellung über \ac{https}. Dies gestaltet sich in der Praxis als schwierig, da der Angular Entwicklungsserver zwar auf \ac{https} konfiguriert werden kann, jedoch selbst signierte SSL Zertifikate nicht akzeptiert werden: Die \ac{pwa} kann nicht installiert werden. Für die Entwicklung ist das natürlich problematisch, sodass eine Lösung für dieses Problem gefunden werden muss.
 
 Für die spätere Evaluierung ist der hier verwendete Hosting-Anbieter nicht relevant. Es gibt zahlreiche Alternativen, die den Anforderungen an das Hosting der Anwendung gerecht werden. Auf diese soll hier aber nicht weiter eingegangen werden. Da das Projekt jedoch aus angeführten Gründen gehostet werden muss, wird das Hosting stellvertretend mit einem Google-Service erläutert.
 
@@ -166,12 +159,12 @@ Googles stellt eine schnelle und elegante Lösung zum Hosten einer Webanwendung 
 
 
 
-Das dem Firebase \ac{cli} können automatisiert Konfigurationsdateien für das Firebase Hosting angelegt werden. Die Schritte dazu sind ebenfalls trivial:
+Mit der Firebase-\ac{cli} können automatisiert Konfigurationsdateien für das Firebase Hosting angelegt werden. Die Schritte dazu sind ebenfalls trivial:
 \begin{enumerate}
 	\item \textbf{Anmeldung: \\}
 	      Das \ac{cli} muss mit einem Google-Konto verknüpft werden. Dazu beim Login über das \ac{cli} ein Browserfenster mit einem Google-Login Dialog.
 	\item \textbf{Initialisierung: \\}
-	      Die Initialisierung über das \ac{cli} legt unter anderem eine \ac{json}-Datei zur Konfiguration des Deployments an. Hier werden Dateipfade, wie beispielsweise die Start-URL oder Dateien die deployed werden sollen, gespeichert.
+	      Die Initialisierung über die \ac{cli} legt unter anderem eine \ac{json}-Datei zur Konfiguration des Deployments an. Hier werden Dateipfade, wie beispielsweise die Start-URL oder Dateien die deployed werden sollen, gespeichert.
 	\item \textbf{Deployment: \\}
 	      Über die Angular \ac{cli} wird ein sogenannter Production-Build erstellt. Dies ist eine gepackte Version der Webanwendung für den Produktivbetrieb.
 	      Anschließend kann die gepackte Anwendung mit \texttt{firebase deploy} auf einem von Googles Servern bereitgestellt werden.
@@ -183,7 +176,7 @@ Das Hosting mit Firebase löst gleichzeitig ein weitere Problem: das Testen der 
 
 \subsection{Installation der Anwendung auf Smartphone und Desktop}
 \textbf{Smartphones:}\\
-Nach dem Aufrufen der URL mit dem mobilen Browser, erscheint eine Meldung zum Installieren der \ac{pwa} (siehe \ref{fig:dialog_install_pwa_mobile}).
+Nach dem Aufrufen der URL mit dem mobilen Browser erscheint eine Meldung zum Installieren der \ac{pwa} (siehe \ref{fig:dialog_install_pwa_mobile}).
 
 \begin{figure}[h!]
 	\includegraphics[scale=0.5]{img/pwa_add_to_homescreen.png}
@@ -207,7 +200,7 @@ In der Suchleiste von Chrome, kann der Nutzer die \ac{pwa} als Desktopanwendung 
 	\caption{Dialog für Benachrichtigungen}
 	\label{fig:pwa_benachrichtigungen_zulassen}
 \end{figure}
-Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim erhalten der ersten Nachricht die Benachrichtigungen über einen Dialog aktivieren (siehe \ref{fig:pwa_benachrichtigungen_zulassen}).
+Damit dem Nutzer Benachrichtigungen tatsächlich angezeigt werden, muss er beim Erhalten der ersten Nachricht die Benachrichtigungen über einen Dialog aktivieren (siehe \ref{fig:pwa_benachrichtigungen_zulassen}).
 
 \subsection{Update der Anwendung}
 
