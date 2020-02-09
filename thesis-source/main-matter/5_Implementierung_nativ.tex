@@ -2,11 +2,11 @@ Die Entwicklung der nativen Mobilanwendung wird im Folgenden exemplarisch anhand
 
 Dieses Kapitel stellt im Folgenden den gesamten Entwicklungsprozess der To-Do-Anwendung dar, welche von der Wahl der Programmiersprache und -umgebung bis hin zur Ausführung auf verschiedenen kompatiblen Geräten reicht.
 
-Der in Sektion 2.? angesprochene Standard heutiger iOS-Entwicklung wird auch in der Praxis dieser Untersuchung angewandt. Somit fällt die Wahl der Programmiersprache auf Apple Swift 5 unter der \acs{ide} Xcode 11. Im Hinblick auf die To-Do-Anwendung, welche einen persistenten Speicher benötigt, kann hier bereits die Integration der internen Bibliothek \textit{Core Data} hinzugefügt werden.
+Der in Sektion \ref{chap:apple_ios} angesprochene Standard heutiger iOS-Entwicklung wird auch in der Praxis dieser Untersuchung angewandt. Somit fällt die Wahl der Programmiersprache auf Apple Swift 5 unter der \acs{ide} Xcode 11. Im Hinblick auf die To-Do-Anwendung, welche einen persistenten Speicher benötigt, kann hier bereits die Integration der internen Bibliothek \textit{Core Data} hinzugefügt werden.
 
 Grundsätzlich ist es sinnvoll, mit der Gestaltung der visuellen Ansicht zu beginnen, da die erstellten Komponenten im Nachhinein explizit im Quellcode referenziert werden können, um ihnen Funktionalität zu verleihen.
 
-\subsection{Gestaltung des \acl{ui}}
+\subsection{Gestaltung des \acl{ui}} \label{chap:ios_ui}
 \subsubsection{Einbinden von \ac{ui}-Komponenten}
 Initial beinhaltet das \texttt{Main.storyboard} eine Ansicht, welche bereits mit dem automatisch generierten \texttt{ViewController} verknüpft ist. Diese muss nun mit den in Kapitel 3 beschriebenen Komponenten gefüllt werden. Die Listenansicht wird über einen \texttt{UITableView} realisiert. Dieser füllt einen großen Teil der Ansicht aus. Der untere Rand der Ansicht wird mit einem \texttt{UITextField} sowie mit einem \texttt{UIButton} versehen, welcher als \texttt{+}-Symbol konfiguriert wird. Somit ist die hierarchisch höchste Stufe der Ansicht fertiggestellt.
 
@@ -35,7 +35,7 @@ Die absolute Position einer Komponente innerhalb der Ansicht kann anhand eines K
 
 An dieser Stelle scheint es intuitiv, die Ansicht nun zu testen. Da bislang jedoch noch keinerlei Funktionalität implementiert ist, ist es nun wichtig, Zellen erstellen zu können. Für Testzwecke könnte eine provisorische Funktionsweise entwickelt werden, welche die Zelleninformationen zunächst im Arbeitsspeicher der Anwendung speichert. Da dies jedoch im Nachhinein zu großen Abänderungen des Quellcode-Aufbaus führen kann, werden zunächst der Persistent Service und die \ac{crud}-Funktionen definiert, welche dann direkt über den \texttt{ViewController} an das \ac{ui} angebunden werden.
 
-\subsection{Entwicklung des Persistent Service}
+\subsection{Entwicklung des Persistent Service} \label{chap:ios_persistent_service}
 Wie eingangs erwähnt geschieht die Konfiguration des Datenmodells des Persistent Service über die Konfigurationsdatei \texttt{to\_do.xcdatamodeld}. Dort kann eine neue Entität \texttt{ToDo} angelegt werden, welche die in Kapitel 3 beschriebenen Attribute (\texttt{id}, \texttt{text}, \texttt{done} und \texttt{priority}) in Form ihrer spezifizierten Datentypen beinhaltet. Da keine Beziehungen zu anderen Entitäten von Bedarf sind, kann diese Entität nun als sog. \texttt{NSManagedObject} exportiert werden. Dieses ermöglicht die Nutzung der Entität als Objekt im Quellcode und stellt notwendige Funktionen für die spätere \ac{crud}-Funktionalität bereit.
 
 Die notwendigen Komponenten des Persistent Service liegen im \texttt{AppDelegate} bereit. In diesem wird davon ausgegangen, dass mehrere Instanzen eines solchen Services genutzt werden. Da es sich im Fall der To-Do-Anwendung jedoch um einen global gleich genutzten Speicher handelt, spricht nichts dagegen, die Komponenten in eine statische Klasse \texttt{Storage} auszulagern. In dieser Klasse werden nun auch Funktionen für die verschiedenen \ac{crud}-Operationen angelegt. Auf Basis der bereits vorhandenen Funktion \texttt{saveContext()} wird die Nicht-Flüchtigkeit dieser \ac{crud}-Operationen gewährleistet.
@@ -51,7 +51,7 @@ Der Aufbau der Funktion, welche für das Anlegen der To-Do-Elemente innerhalb de
 
 Es werden die Entitätsinformationen aus der Konfiguration der Datei \texttt{to\_do.xcdatamodeld} entnommen (Z. 2), sodass ein neues Objekt nach dieser Entität erstellt und dem Speicher zugeordnet werden kann (Z. 3). Daraufhin werden die initialen Werte der einzelnen Attribute gesetzt (Z. 6--9), wobei der beschreibende Text hier direkt aus dem Funktionsparameter entnommen wird. Zuletzt wird der Kontext (vereinfacht also der Speicher) aktualisiert und das neue Objekt wird in Form einer sog. \textit{Completion} zurückgegeben (Z. 1, Z. 13). Dieses kann in einer sog. \textit{Callback}-Funktion verwendet werden, welche nach erfolgreichem Durchlaufen der Ausgangsfunktion ausgeführt wird.
 
-\subsubsection{\texttt{loadToDos(...)}: Laden von To-Do-Elementen aus dem Speicher}
+\subsubsection{\texttt{loadToDos(...)}: Laden von To-Do-Elementen aus dem Speicher} \label{chap:ios_load_todos}
 Der Aufbau der Funktion, welche für das Laden der To-Do-Elemente aus dem Persistent Service zuständig ist, wird hinsichtlich des zugrunde liegenden Quellcode-Ausschnitts beschrieben.
 
 \begin{listing}[H]
@@ -68,7 +68,7 @@ Da das \ac{ui} mehrere Bedienelemente für das Bearbeiten eines Eintrags aufweis
 Das mitgegebene To-Do-Objekt wird über die Kontext-Löschfunktion entfernt und der Stand des Kontexts mit \texttt{saveContext()} gespeichert.
 
 \subsection{Entwicklung der \ac{ui}-Funktionalität}
-In Abschnitt 5.1.1 sind die verschiedenen \texttt{UIButton}-Komponenten zum \ac{ui} hinzugefügt worden, besitzen bislang jedoch keinerlei Funktionalität. Durch die in 5.1.2 implementierten \ac{crud}-Funktionen ist es nun möglich, diese mit den \texttt{UIButton}s zu verknüpfen, um diese durch entsprechenden Knopfdruck auszulösen. Eine Ausnahme bildet die Funktion \texttt{loadToDos(...)} (vgl. Abs. 5.1.2.2), welche bei Initialisierung der App aufgerufen wird. Zusätzlich soll eine Folge von Abschlussoperationen durchgeführt werden, welche die Darstellung der Anwendung analog zum Zustand des Speichers korrigiert.
+In Abschnitt \ref{chap:ios_ui} sind die verschiedenen \texttt{UIButton}-Komponenten zum \ac{ui} hinzugefügt worden, besitzen bislang jedoch keinerlei Funktionalität. Durch die in \ref{chap:ios_persistent_service} implementierten \ac{crud}-Funktionen ist es nun möglich, diese mit den \texttt{UIButton}s zu verknüpfen, um diese durch entsprechenden Knopfdruck auszulösen. Eine Ausnahme bildet die Funktion \texttt{loadToDos(...)} (vgl. Abs. \ref{chap:ios_load_todos}), welche bei Initialisierung der App aufgerufen wird. Zusätzlich soll eine Folge von Abschlussoperationen durchgeführt werden, welche die Darstellung der Anwendung analog zum Zustand des Speichers korrigiert.
 
 Im Quellcode wird die Verknüpfung über die Kombination aus sog. \texttt{IBOutlet}-Variablen und \texttt{IBAction}-Funktionen realisiert. Um die statischen Zustände der Komponenten erkennen, editieren und nutzen zu können, werden diese in Form von \texttt{IBOutlet}-Variablen den zuständigen Klassen hinzugefügt. Dies wird sich bei der Initialisierung der Anwendung zunutze gemacht, da so die Zustände der Zellenbuttons anhand der bereits vorhandenen und zu Start der Anwendung geladenen Einträge korrekt gesetzt werden können. Sollen Aktionen, wie vorhin beschrieben, durch die Komponenten ausgelöst werden (bspw., wenn ein Button angetippt wird), nutzt man \texttt{IBAction}-Funktionen, welche immer zu einer bestimmten Komponente gehören, und ihre Anweisungen ausführen, sobald der definierte Aktionszustand erreicht ist.
 

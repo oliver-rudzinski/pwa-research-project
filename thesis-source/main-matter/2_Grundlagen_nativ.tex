@@ -1,6 +1,6 @@
 
 
-\subsection{Apple iOS}
+\subsection{Apple iOS} \label{chap:apple_ios}
 
 iOS ist ein Betriebssystem, welches vom US-amerikanischen Technologiekonzern \textit{Apple, Inc.} im Rahmen des erstmalig vorgestellten \textit{iPhones} im Jahre 2007, damals noch unter dem Namen \textit{iPhone OS}, in Umlauf gebracht wurde. Stand heute läuft dieses Betriebssystem ausschließlich auf den Mobilgeräten des genannten Herstellers. Neben dem iPhone nutzt auch das Multimedia-Gerät \textit{iPod touch} das Betriebssystem iOS. Der Tabletcomputer \textit{iPad} wurde bis September 2019 ebenfalls über iOS betrieben, besitzt jedoch seit der Umstellung ein eigenes, an iOS stark angelehntes Betriebssystem \textit{iPadOS}.
 
@@ -26,7 +26,7 @@ Xcode unterstützt neben Swift auch die abwärtskompatiblen Programmiersprachen 
 \end{figure}
 
 % Erklärung des Screenshots
-Die zusammengesetzten Komponenten können, ebenfalls über Drag'n'Drop in den Quellcode referenziert werden, um die Verhaltensweisen dieser programmatisch festzulegen. Ist die App in einem testreifen Zustand, kann diese direkt über Xcode emuliert werden. Es öffnet sich ein sog. \textit{Simulator}, welcher das Zielgerät mit der geöffneten Anwendung darstellt. Das Verhalten und etwaige, daraus resultierende Probleme, können somit erkannt werden, ohne, dass es ein tatsächliches, physikalisches Zielgerät bedarf. Eigenschaften, welche auf die Hardware-Komponenten des Geräts zugreifen (bspw. die eingebauten Kameras, den Bluetooth-Sensor, etc.) können mit Ausnahme der Netzwerkkarte nicht simuliert werden.
+Die zusammengesetzten Komponenten können, ebenfalls über Drag-and-Drop in den Quellcode referenziert werden, um die Verhaltensweisen dieser programmatisch festzulegen. Ist die App in einem testreifen Zustand, kann diese direkt über Xcode emuliert werden. Es öffnet sich ein sog. \textit{Simulator}, welcher das Zielgerät mit der geöffneten Anwendung darstellt. Das Verhalten und etwaige, daraus resultierende Probleme, können somit erkannt werden, ohne, dass es ein tatsächliches, physikalisches Zielgerät bedarf. Eigenschaften, welche auf die Hardware-Komponenten des Geräts zugreifen (bspw. die eingebauten Kameras, den Bluetooth-Sensor, etc.) können mit Ausnahme der Netzwerkkarte nicht simuliert werden.
 
 \paragraph{Softwaredesign-Muster \textit{Model-View-Controller}}\mbox{}\\ 
 Apple empfiehlt als grundlegendes Prinzip für die App-Entwicklung mit Swift das Muster \textit{\ac{mvc}}, welches im Folgenden aufgeschlüsselt wird.
@@ -34,7 +34,7 @@ Apple empfiehlt als grundlegendes Prinzip für die App-Entwicklung mit Swift das
 \begin{description}
 	\item[Model] (dt. \textit{Modell} bezieht sich auf das Datenmodell und die datenbedingte Kommunikation innerhalb der Anwendung. Innerhalb von der iOS-Anwendungsentwicklung finden sich hier Quellcode-Abschnitte für die Kommunikation der App mit einer potenziellen \acs{api}, Code für die Definition und Bereitstellung von persistentem Speicher sowie die Handhabung der dadurch entstehenden Daten. Auch im Quellcode verwendete Konstanten sind dem Modell zuzuschreiben.
 	\item[View] (dt. \textit{Präsentation}) bezieht sich auf die Frontend-Komponenten der Anwendung. Alle durch den Interface Builder spezifizierten Eigenschaften sind der Präsentation zuzuschreiben, also jegliche Komponenten, frontend-basierte Klassen sowie Animationen.
-	\item[Controller] (dt. \textit{Steuerung}) beinhaltet die spezifische Verhaltenslogik der Anwendung bei Interaktion mit dieser durch den*die Nutzer*in. Vereinfacht formuliert bestimmt dieser, welche Funktionalität zu welcher Zeit auf Basis welches Verhaltens ausgeführt wird. Diese ist ebenfalls für die Kommunikation zwischen dem Modell und der Präsentation zuständig.
+	\item[Controller] (dt. \textit{Steuerung}) beinhaltet die spezifische Verhaltenslogik der Anwendung bei Interaktion mit dieser durch den Nutzer. Vereinfacht formuliert bestimmt dieser, welche Funktionalität zu welcher Zeit auf Basis welches Verhaltens ausgeführt wird. Diese ist ebenfalls für die Kommunikation zwischen dem Modell und der Präsentation zuständig.
 \end{description}
 
 Die Kooperation der einzelnen Komponenten dieses Musters lässt sich anhand der unten stehenden Abbildung erläutern.
@@ -100,7 +100,7 @@ Falls die App in einer nun aktuelleren Version vorliegt, wird diese entweder üb
 %APIs, this book teaches you about Java as a first step into Android app development. It provides you
 %with Java language fundamentals and Java APIs that are useful when developing apps.
 
-Native Android Anwendungen werden in der Regel in Java entwickelt. Durch die Nutzung der zahlreichen APIs wird aus einem Java Programm eine native Android App.
+Native Android Anwendungen werden in Java entwickelt. Durch die Nutzung der zahlreichen APIs wird aus einem Java Programm eine native Android App.
 \cite[S. 1]{JavaForAndroid}
 Mittlerweile wird die teilweise veraltete Java-Syntax graduell durch die modernere Programmiersprache Kotlin abgelöst.
 \cite{KotlinAndroid}
