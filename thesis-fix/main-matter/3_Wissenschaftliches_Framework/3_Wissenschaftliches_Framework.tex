@@ -1,0 +1,124 @@
+%===========================================================================
+%	III. Wissenschaftliches Framework
+%===========================================================================
+
+Die Grundlage für eine adäquate Bewertung der zu entwickelnden mobilen Anwendungen bildet die Definition beidseitig anwendbarer, quantifizierender Kriterien. Die Notwendigkeit hierin begründet sich darin, dass kein allgemein anerkannter Kriterienkatalog für die Pauschalisierung von Softwarequalität existiert. Viel eher benötigen unterschiedliche Projekte mit unterschiedlichen Schwerpunkten eine unterschiedlich definierte Definition der entsprechenden Gesichtspunkte.
+
+Wie zuvor erwähnt wird die Forschungsfrage, ob \acp{pwa} native Apps langfristig ersetzen können, vor allem auf Basis der Umsetzbarkeit in der Entwicklung evaluiert. Umgekehrt könnten ähnliche Fragestellungen anhand wirtschaftlicher Aspekte begründet werden (bspw. Anzahl der benötigten Entwickler, preislicher Rahmen, Profitmöglichkeiten, etc.). Bei der Einfachheit der Beispielanwendung haben solche Aspekte jedoch kaum Bedeutung. Ebenfalls in Betracht gezogen werden muss die Tatsache, dass die Verfasser dieser Studienarbeit keine erfahrenen Entwickler ersetzen, weswegen auch quantifizierende Kriterien wie die Dauer der Entwicklungszeit, etc., keine Anwendung in der zugrunde liegenden Bewertung finden können. Gleiches gilt ebenfalls für die nur empirisch evaluierbaren Punkte der Nutzung seitens der Anwender (z.B. Intuitivität, Benutzerfreundlichkeit, Anspruch der Gestaltung, etc.), da eine solche Studie den Rahmen dieser Arbeit verlassen würde.
+
+Bezüglich der Umsetzung in der Entwicklung lassen sich jedoch mehrere Kriterien aufstellen, die zur Beantwortung (oder zumindest Lenkung) der Forschungsfrage beitragen können. Die Definition der allgemeinen technischen Architektur in Kapitel \ref{chap:architektur} der zu entwickelnden Mobilanwendung geschieht unter Berücksichtigung der Kriterien, um eine neutrale Vergleichbarkeit zu ermöglichen.
+
+\section{Vorgehen bei der Bewertung}
+Um die Entwicklungen der Angular-\ac{pwa} und der nativen iOS-App zu vergleichen, wird die im Folgenden beschriebene Kriteriengewichtung (siehe Tabelle \ref{tab:punktekatalog}) verwendet. Einzelne Kriterien werden anhand Tabelle \ref{tab:verrechnungspunkte} bewertet und die Verrechnungspunkte anschließend über alle betrachteten Kriterien aufsummiert.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline 	
+			\textbf{Bewertung} & $--$ & $-$ & \Circle & $+$ & $++$ \\ 
+		\hline 
+			\textbf{Beschreibung} & schlecht & eher schlecht & neutral & eher gut & gut \\ 
+		\hline 
+			\textbf{Verrechnungspunkte} & $-2$ & $-1$ & $0$ & $1$ & $2$ \\ 
+		\hline 		
+	\end{tabular} 
+	\caption{Verrechnungspunkte} \label{tab:verrechnungspunkte}
+\end{table}
+
+Das Ergebnis ist eine Evaluationsmatrix, welche als Netzdiagramm dargestellt die bewerteten Kriterien einzeln visualisiert und eine Gesamtbewertung pro Technologie liefert. In diese fließen die Kriterien einzeln ein und bilden ein Gesamtbild. Die Gewichtung der Kriterien ist in Tabelle \ref{tab:punktekatalog} dargestellt.
+
+\begin{table}[h!]
+	\centering
+	\begin{tabular}{|l|c|}
+		\hline
+		Kriterium              & Gesamtanteil \\
+		\hline
+		\multicolumn{2}{c}{Anwendung}     \\
+		\hline
+		Plattformabhängigkeit   & 10\%         \\
+		Installation           & 5\%          \\
+		Speicherzugriff        & 5\%          \\
+		Speicherbedarf         & 5\%          \\
+		Aktualisierbarkeit     & 5\%          \\
+		Konsistenz des Designs & 5\%         \\
+		
+		\hline
+		\multicolumn{2}{c}{Entwicklung}     \\
+		\hline
+		Bibliotheken           & 10\%         \\
+		Umsetzung              & 20\%         \\
+		Testbarkeit            & 10\%         \\
+		Vorausgesetzte Entwicklungserfahrung    & 10\%         \\
+		\hline
+		\hline
+		Summe                  & 100\%        \\
+		\hline
+	\end{tabular}
+	\caption{Kriteriengewichtung} \label{tab:punktekatalog}
+\end{table}
+
+\section{Betrachtete Aspekte der Entwicklung}
+Bei der Evaluation soll auf verschiedene Aspekte beider Projekte eingegangen werden. Diese lauten wie folgt:
+\begin{description}
+	\item [Anwendung]
+		Die Kriterien zur Anwendung (bzw. App) beziehen sich auf die Eigenheiten der Apps, darunter die Installation, die Aktualisierung und die Plattformabhängigkeit.
+		
+	\item [Entwicklung]
+		Kriterien der Entwicklung beziehen sich auf die Programmierung und Umsetzung der funktionalen und nicht-funktionalen Anforderungen.
+			
+\end{description}
+
+
+Grundsätzlich gibt es einen Punktabzug, wenn der Nutzer grundlegenden Funktionen explizit zustimmen muss. Das Idealbild ist eine sofort nutzbare Anwendung, die ohne weitere Zwischenschritte den kompletten Funktionsumfang besitzt.
+
+\section{Betrachtete Kriterien}
+Die einzelnen Kriterien aus der Evaluationsmatrix werden nun genauer definiert:
+
+\begin{description}
+	\item [Plattformabhängigkeit] 
+		  Unterstützt die Anwendung mehrere Plattformen, also beispielsweise Android und iOS wird dies als gut bewertet. Ist die Anwendung auch auf Desktop-Computern oder Tablets nutzbar, gibt dies ebenfalls eine positive Bewertung.
+		  
+	\item [Installation]
+	      Die App sollte ohne mehrere Zwischenschritte nutzbar sein. Ist die Installation zu kompliziert, führt dies zu Punktabzug.
+
+	      Es fließt mit ein, wie viel Aufwand betrieben werden muss, um die App einem Publikum zur Verfügung zu stellen. Dieser Aufwand ist idealerweise gering und im Interesse des Entwicklers.
+
+	\item [Speicherzugriff]
+	      Anwendungen müssen Daten speichern können, um dem Nutzer einen Mehrwert zu bieten. Die Größe der zu speichernden Daten ist bei diesem Vergleich auf einige Kilobyte begrenzt. Gibt es die Möglichkeit Dateien abzulegen, ist dies positiv zu werten. Idealerweise können Daten in gängigen Formaten (beispielsweise \acsu{json}, \acsu{csv}, \acsu{xml} oder Plaintext) gespeichert werden.
+	      Können Daten nur temporär und nicht persistent gespeichert werden, führt dies zu starkem Punktabzug. Muss der Nutzer dem Speichern von Daten aktiv zustimmen, stört dies die Nutzungserfahrung und ist daher negativ zu werten.
+
+	\item [Speicherbedarf]
+	      Der Speicherplatz eines Smartphones ist deutlich kleiner, als der eines Desktop-Computers. Bestenfalls ist die Anwendung nur einige Megabyte groß und kann so schnell über eine mobile Datenverbindung installiert und upgedatet werden \cite{AppleMaxAppSize} \cite{GoogleMaxAppSize}. 
+	      Hoher Speicherverbrauch führt zu Punktabzug, wohingegen geringer Speicherverbrauch positiv bewertet wird. Der Verbrauch ist unter den einzelnen Plattformen relativ zu bewerten.
+
+	\item [Aktualisierbarkeit]
+	      Idealerweise kann die Installation von Updates vom Entwickler kontrolliert werden. Schnelle Updatezyklen sind wünschenswert, da in der Praxis dadurch schnell Sicherheitslücken und Bugs behoben werden können. Wenn ein Nutzer sich aktiv gegen Updates weigern kann, oder diese manuell installieren muss, könnte dies für Kompatibilitätsprobleme mit Webschnittstellen oder Sicherheitsprobleme sorgen und führt deshalb zu Punktabzug.
+
+	      Der Aufwand der betrieben werden muss, um Updates einzubringen, wird mitevaluiert. Je schneller Updates flächendeckend auf den Geräten der Nutzer landen, desto höher die Punktzahl.
+
+	\item [Design]
+	      Idealerweise sieht die Anwendung auf verschiedenen Geräten identisch aus. Grundsätzlich wird erwartet, dass Schriften, Farben und Größenverhältnisse auf unterschiedlichen Geräten und gegebenenfalls unterschiedlichen Browsern ein konsistentes Bild ergeben.
+	      Eine skalierende Nutzeroberfläche ist wünschenswert. Anzeigefehler, wie bspw. überlappende Objekte, fehlerhafte Elemente oder fehlende Schriftarten, führen zu Punktabzug. Auch der Aufwand, welcher betrieben werden muss, um das Nutzerinterface skalierbar zu gestalten, fließt in die Bewertung mit ein.
+
+%	\item[Nutzerfreundlichkeit]
+	%      Dem Nutzer sollte zu jedem Zeitpunkt klar sein, wie die Anwendung installiert, gestartet und deinstalliert werden kann. Ist dies nicht gewährleistet werden Punkte abgezogen.
+	      
+	 %     Dieses Kriterium bezieht sich auf die Technologie native App oder \ac{pwa}, nicht jedoch auf Nutzerfreundlichkeit im Sinne der Ergonomie, welche das User Interface aufweist. Diese obliegt vollständig dem Entwickler und ist für diesen Vergleich daher nicht aussagekräftig.
+
+	\item[Bibliotheken]
+		Um den Programmier- und Wartungsaufwand zu minimieren, greifen Entwickler auf Bibliotheken zurück, welche Lösungen für verbreitete Probleme anbieten.
+		 In der Evaluation werden Bibliotheken von Open-Source-Organisationen und ggf. Bibliotheken des Plattformanbieters (bpsw. Apple, Google, Mozilla, etc.) betrachtet. In die Bewertung fließt ein, wie komplex sich der Prozess für Entwickler darstellt, um Bibliotheken zu nutzen und zu installieren. 
+
+	\item[Umsetzbarkeit]
+		Das bewertete Kriterium der Umsetzbarkeit beinhaltet die Komplexität und die Herausforderungen bei der Implementierung der funktionalen und nicht-funktionalen Anforderungen. Sind Anforderungen aufgrund plattformspezifischer Einschränkungen nicht oder nur beschränkt umsetzbar, führt dies zu Punktabzug. Es wird angenommen, dass die Anforderungen mit allen etablierten Technologien für die App-Entwicklung vollständig umgesetzt werden können.
+		
+		Bietet die Plattform im Umkehrschluss einfache und schnelle Mechanismen zur Umsetzung der Anforderungen, fließt dies positiv in die Wertung mit ein.
+		
+	\item[Testbarkeit]
+		Das Testen von Software gehört zu den Grundlagen der Qualitätssicherung. Es wird erwartet, dass es einfache und schnelle Methoden zum Testen der Apps nach einer Änderung im Quellcode gibt.
+	
+	\item[Vorausgesetzte Entwicklungserfahrung]
+		Es soll eingeschätzt werden, wie hoch die Einstiegshürde für die Entwicklung der jeweiligen Technologie ist. Die Anzahl und Komplexität der Tools fließt in die Bewertung mit ein. Es wird angenommen, dass die Entwicklung mit einem einzigen Werkzeug für den Entwickler einfacher ist, als das Bedienen mehrerer komplexerer Entwicklungstools. Gibt es grafische Oberflächen für viele Entwicklungsschritte ist dies positiver zu bewerten, als das Arbeiten mit Skripten und der Kommandozeile.
+		
+\end{description}
+

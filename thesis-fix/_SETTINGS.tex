@@ -1,0 +1,115 @@
+\documentclass[
+%===============================================================
+%	DOCUMENT PREFERENCES
+%===============================================================
+	parskip		=	half,			% remove first-row indent in new paragraph
+	headheight	= 	12pt,			% header height
+	footheight 	= 	16pt,			% footer height
+	headsepline,						% header separator line
+	footsepline,						% footer separator line
+	abstracton,						% Abstract headers
+	headinclude	=	false,		
+	footinclude	=	false,
+	listof		=	totoc,			% List of ... in TOC
+	toc			=	bibliography,	% Bibliography in TOC
+	draft		=	false
+]{scrreprt}
+
+% Language and general symbol preferences
+\usepackage[ngerman, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{soul}					% hyphening, etc.
+\usepackage[super]{nth}				% superscript "n-th" (counting, etc.)
+\usepackage{enumitem}
+\usepackage{wasysym} 				% use additional symbols
+
+% Page preferences
+\usepackage[a4paper]{geometry}				
+\geometry{
+	a4paper,
+	margin		=	2.5cm,
+	foot 		= 	1.0cm
+}
+
+% Font preferences
+\usepackage{couriers}
+\KOMAoptions{fontsize=12pt}			% 12pt font size
+\addtokomafont{disposition}			% Serif font for chapter headings
+	{\rmfamily\bfseries}
+
+\usepackage{setspace}				% 1.5x line spacing	
+\onehalfspacing
+
+% Header & Footer preferences
+\usepackage{scrlayer-scrpage}		% Clear default settings
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+
+\ihead{Studienarbeit (T3101)}		% Header left	(Type)
+\automark{chapter}					% Header right	(Chapter)
+\ohead{\rightmark}
+\ifoot{DHBW Stuttgart}				% Footer left	(School)
+\cfoot{Goldschmidt, Rudzinski}				% Footer center	(Author)
+\ofoot[\pagemark]{\pagemark}			% Footer right	(Page mark)
+
+%===============================================================
+%	ADDITIONAL PREFERENCES
+%===============================================================
+
+% Bibliography preferences
+\usepackage[style=ieee]{biblatex}
+\bibliography{back-matter/literature.bib}
+
+% Management packages
+\usepackage[titles]{tocloft}			% ToC management
+\setlength{\cftbeforechapskip}{5pt}
+\setcounter{secnumdepth}{3}			% Sub-subsection numbering
+\usepackage{array}					% Table management
+\usepackage{multirow}
+\usepackage{acronym}					% Acronym management
+\usepackage{graphicx}				% Figure management
+\usepackage{subfig}
+\usepackage{hyperref}				% Referencing management
+\hypersetup{colorlinks}
+\usepackage{minted}					% Source code management
+\setminted[json]{
+	autogobble,
+	baselinestretch=1,
+	breaklines,
+	frame=lines,
+	fontsize=\footnotesize,
+	framesep=3mm
+}
+\setminted[xml]{
+	autogobble,
+	baselinestretch=1,
+	breaklines,
+	frame=lines,
+	fontsize=\footnotesize,
+	framesep=3mm
+}
+\usemintedstyle{manni}	
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}			
+	% Misc
+\setcounter{tocdepth}{3}				
+\setcounter{lofdepth}{2}
+
+%===============================================================
+%	CUSTOM COMMANDS
+%===============================================================
+
+% Title page image handling
+\newcommand*{\vcenteredhbox}[1]{
+	\begingroup
+	\setbox0=\hbox{#1}\parbox{\wd0}{\box0}
+	\endgroup
+}
+
+% Remove page break on abstract
+\newenvironment{absolutelynopagebreak}
+{\par\nobreak\vfil\penalty0\vfilneg\vtop\bgroup}{\par\xdef\tpd{\the\prevdepth}\egroup\prevdepth=\tpd}
+
+% Listing package for source code
+\renewcommand{\listingscaption}{Quellcode-Ausschnitt}
+\renewcommand{\listoflistingscaption}{Quellcodeverzeichnis}

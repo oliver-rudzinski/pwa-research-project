@@ -1,0 +1,87 @@
+\input{_SETTINGS.tex}
+
+%===========================================================================
+
+\title{Gegenüberstellung der Entwicklung\\nativer Mobilanwendungen und\\Progressive Web Apps (PWAs)} 
+\author{Stefan Goldschmidt\\Oliver Rudzinski}
+\date{08. Juni 2020}
+
+%===========================================================================
+
+\begin{document}
+\makeatletter
+\selectlanguage{ngerman}
+
+%===========================================================================
+%	FRONT MATTER
+%===========================================================================
+
+	\clearpage
+	\input{front-matter/0_Deckblatt}
+	\thispagestyle{empty}
+	
+	\pagenumbering{roman}
+	
+	\clearpage
+	\chapter*{Erklärung}
+		\input{front-matter/1_Erklaerung}
+	\thispagestyle{empty}
+	
+	\clearpage
+	\input{front-matter/2_Zusammenfassung.tex}
+		\addtocontents{toc}{\protect\thispagestyle{empty}}
+	\thispagestyle{empty}
+	
+	{\small\tableofcontents}
+	\thispagestyle{empty}
+	
+	\chapter*{Abkürzungsverzeichnis}
+		\input{front-matter/3_Abkuerzungen.tex}
+		\addcontentsline{toc}{chapter}{Abkürzungsverzeichnis}
+	
+	\listoffigures
+
+	\listoftables
+
+	\listoflistings
+
+%===========================================================================
+%	MAIN MATTER
+%===========================================================================
+
+	\chapter{Einleitung}
+		\pagenumbering{arabic}
+		\label{chap:einleitung}
+		\input{main-matter/1_Einleitung/1_Einleitung}
+	
+	\chapter{Grundlagen}
+		\label{chap:grundlagen}
+		\input{main-matter/2_Grundlagen/2_Grundlagen}
+		
+	\chapter{Wissenschaftliches Framework}
+		\label{chap:wissenschaftliches_framework}
+		\input{main-matter/3_Wissenschaftliches_Framework/3_Wissenschaftliches_Framework}
+		
+	\chapter{Architektur}
+		\label{chap:architektur}
+		\input{main-matter/4_Architektur/4_Architektur}
+		
+	\chapter{Implementierung}
+		\label{chap:implementierung}
+		
+	\chapter{Evaluation}
+		\label{chap:evaluation}
+		
+	\chapter{Reflexion}
+		\label{chap:reflexion}
+
+%===========================================================================
+%	BACK MATTER
+%===========================================================================
+
+	\pagestyle{plain}
+	\clearpage
+	\pagenumbering{alph}
+	\printbibliography
+
+\end{document}
