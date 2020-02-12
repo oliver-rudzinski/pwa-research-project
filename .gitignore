@@ -28,3 +28,11 @@ thesis-source/_minted-root
 *.bak*
 thesis-source/indent.log
 *.log
+thesis-source/.DS_Store
+thesis-fix/T3101_root.bbl
+thesis-fix/T3101_root.bcf
+thesis-fix/T3101_root.blg
+thesis-fix/T3101_root.lot
+thesis-fix/T3101_root.pdf
+thesis-source/.DS_Store
+thesis-source/studienarbeit_pwa.txss
