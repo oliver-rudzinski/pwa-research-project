@@ -12,71 +12,81 @@
 }
 
 
-@book{PracitalNodeJS, place={New York}, title={Practical Node.js Building Real-World Scalable Web Apps}, publisher={Apress}, author={Mardan, Azat}, year={2018}}
+@book{PracitalNodeJS, location={New York}, title={Practical Node.js}, subtitle={Building Real-World Scalable Web Apps}, publisher={Apress}, author={Mardan, Azat}, year={2018}}
 
-@book{NodeJSRecepies, place={Dordrecht}, title={Node A Problem-Solution Approach}, publisher={Springer}, author={Gackenheimer, Cory}, year={2013}, doi={10.10007/978-1-4302-6059-2}}
+@book{NodeJSRecepies, location={Dordrecht}, title={{Node.js Recipes}}, subtitle={{A Problem-Solution Approach}}, publisher={Springer}, author={Gackenheimer, Cory}, year={2013}, doi={10.10007/978-1-4302-6059-2}}
 
-@book{JavaForAndroid, place={Berkeley, CA}, title={Learn Java for Android Development}, publisher={Apress}, author={Friesen, Jeff}, year={2014}}
+@book{JavaForAndroid, location={Berkeley, CA}, title={{Learn Java for Android Development}}, publisher={Apress}, author={Friesen, Jeff}, year={2014}}
 
-@book{BeginningPWA, title={Beginning progressive web app development - creating a native app experienc}, publisher={Apress}, author={Sheppard, Dennis}, year={2017}, doi={10.1007/978-1-4842-3090-9} }
+@book{BeginningPWA, title={{Beginning Progressive Web App Development -- Creating a Native App Experience}}, publisher={Apress}, author={Sheppard, Dennis}, year={2017}, doi={10.1007/978-1-4842-3090-9} }
 
-@book{ProAngular, place={S.L.}, title={Pro Angular 2}, publisher={Springer Verlag}, author={Freeman, Adam}, year={2017}, doi={10.1007/978-1-4842-2307-9}}
+@book{ProAngular, location={S.L.}, title={Pro Angular}, edition = {2}, publisher={Springer Verlag}, author={Freeman, Adam}, year={2017}, doi={10.1007/978-1-4842-2307-9}}
 
 % ------------------------------------------------------------------------------
 % DOCUMENTATIONS
 % ------------------------------------------------------------------------------
 
-@misc{GoogleOfflineApps,
-author = {Google},
-title = {{Offline First - Google Chrome}},
+@manual{GoogleOfflineApps,
+organization = {Google, Inc.},
+titleaddon = {{Google Developer Documentation}},
+title = {{Offline First}},
 url = {https://developer.chrome.com/apps/offline{\_}apps},
 urldate = {2019-10-12}
 }
 
-@misc{GooglePWAOverview,
-author = {Google},
-title = {{Progressive Web Apps | Google Developers}},
+@manual{GooglePWAOverview,
+organization = {{Google, Inc.}},
+title = {{Progressive Web Apps}},
+titleaddon = {{Google Developer Documentation}},
 url = {https://developers.google.com/web/progressive-web-apps},
 urldate = {2019-10-12}
 }
 
-@misc{GooglePWAManifest,
-author = {Gaunt, Matt and Kinlan, Paul},
+@manual{GooglePWAManifest,
 title = {{The Web App Manifest | Web Fundamentals | Google Developers}},
+titleaddon = {{Google Developer Documentation}},
 url = {https://developers.google.com/web/fundamentals/web-app-manifest?hl=en},
-urldate = {2019-10-12}
+urldate = {2019-10-12},
+date = {2019-06-25}
 }
 
-@misc{NodeJSWebsiteAbout, title={About}, url={https://nodejs.org/en/about/}, publisher={OpenJS Foundation}, urldate={2019-10-10}}
+@misc{NodeJSWebsiteAbout, title={{Node.js Developer Documentation}}, url={https://nodejs.org/en/about/}, organization={{OpenJS Foundation}}, urldate={2019-10-10}}
 
 
-@misc{KotlinAndroid, title={Kotlin and Android  :   Android Developers}, url={https://developer.android.com/kotlin}, journal={Android Developers}, urldate={2019-10-10}}
+@manual{KotlinAndroid, title={{Kotlin and Android}}, titleaddon = {{Android Developer Documentation}}, url={https://developer.android.com/kotlin}, organization = {{Google, Inc.}}, urldate={2019-10-10}}
 
 
-@misc{GooglePWADesktop, title={Progressive Web Apps on Desktop}, url={https://developers.google.com/web/progressive-web-apps/desktop}, journal={Google Developers}, publisher={Google}, author={LePage, Pete}, urldate={2020-02-12}}
+@manual{GooglePWADesktop, title={{Progressive Web Apps on Desktop}}, titleaddon = {{Google Developer Documentation}}, url={https://developers.google.com/web/progressive-web-apps/desktop}, organization={{Google, Inc.}}, urldate={2020-02-12}, date={2019-06-04}}
 
-@misc{AndroidStudio, title={Android Studio and SDK tools}, url={https://developer.android.com/studio}, journal={Android Developers}, urldate={2020-02-12}}
+@manual{AndroidStudio, title={{Android Studio and SDK tools}}, titleaddon = {{Android Developer Documentation}}, url={https://developer.android.com/studio}, urldate={2020-02-12}}
 
-@misc{GooglePWAInstallation, title={Add to Home Screen  |  Web Fundamentals  |  Google Developers}, url={https://developers.google.com/web/fundamentals/app-install-banners}, journal={Web Fundamentals}, publisher={Google}, author={LePage, Pete}, urldate={2020-02-12}}
+@manual{GooglePWAInstallation, title={{Add to Home Screen}}, url={https://developers.google.com/web/fundamentals/app-install-banners}, organization={{Google, Inc.}}, titleaddon = {{Google Developer Documentation}}, urldate={2020-02-12}}
 
-@misc{CanIUseWebManifest, title={Can I use... Support tables for HTML5, CSS3, etc}, url={https://caniuse.com/#search=web manifest}, journal={Support tables for HTML5, CSS3, etc}, author={Deveria, Alex}, urldate={2020-02-12}}
+@manual{CanIUseWebManifest, title={{Can I use... Web Manifest}}, url={https://caniuse.com/#search=web manifest}, organization = {{CanIUse.com}}, urldate={2020-02-12}}
 
-@misc{LocalStorage, title={Window.localStorage}, url={https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage}, journal={MDN Web Docs}, publisher={MDC Contributors}, year={2019}, month={8}, urldate={2020-02-12}}
+@manual{LocalStorage, title={{\texttt{Window.localStorage}}}, url={https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage}, organization={Mozilla}, titleaddon={{MDN Web Docs}}, year={2019}, month={8}, urldate={2020-02-12}}
 
-@misc{MozillaHandlingCommonHTMLCSSProblems, title={Handling common HTML and CSS problems}, url={https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS}, journal={MDN Web Docs}, urldate={2020-02-12}}
+@manual{MozillaHandlingCommonHTMLCSSProblems, title={{Handling common HTML and CSS problems}}, url={https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS}, titleaddon={MDN Web Docs}, organization={Mozilla}, urldate={2020-02-12}}
 
-@misc{MaterialUI, title={Angular Material}, url={https://material.angular.io/}, journal={Angular Material}, author={Angular}, urldate={2020-02-12}}
+@manual{MaterialUI, title={{Angular Material}}, url={https://material.angular.io/}, titleaddon={Angular Developer Documentation}, organization={{Google, Inc.}}, urldate={2020-02-12}}
 
-@misc{GoogleMaxAppSize, title={Upload an app - Play Console Help}, url={https://support.google.com/googleplay/android-developer/answer/113469}, journal={Google}, publisher={Google}, urldate={2020-02-12}}
+@manual{GoogleMaxAppSize, title={{Upload an App}}, url={https://support.google.com/googleplay/android-developer/answer/113469}, titleaddon={Google Support Center}, organization={{Google, Inc.}}, urldate={2020-02-12}}
 
-@misc{AppleMaxAppSize, title={Now Accepting Larger Binaries - News}, url={https://developer.apple.com/news/?id=02122015a}, journal={Apple Developer}, author={Apple Inc}, year={2015}, month={2}, urldate={2020-02-12}}
+@article{AppleMaxAppSize, title={{Now Accepting Larger Binaries}}, url={https://developer.apple.com/news/?id=02122015a}, journal={Apple Developer Documentation}, organization={{Apple, Inc.}}, year={2015}, month={2}, urldate={2020-02-12}}
 
 % ------------------------------------------------------------------------------
 % STATISTICS
 % ------------------------------------------------------------------------------
 @misc{StatistaMobileWebsiteNetReach2019, title={Mobile websites by net reach in Germany 2019}, url={https://www.statista.com/statistics/425372/mobile-websites-by-net-reach-germany/}, journal={Statista}, urldate={2020-02-12}}
 
-@misc{StatistaMobileBrowserMarketShare, title={Mobile browser market share worldwide 2012-2019}, url={https://www.statista.com/statistics/263517/market-share-held-by-mobile-internet-browsers-worldwide/}, journal={Statista}, urldate={2020-02-12}}
+@proceedings{StatistaMobileBrowserMarketShare, 
+	title={Mobile browser market share worldwide 2012-2019},
+	url={https://www.statista.com/statistics/263517/market-share-held-by-mobile-internet-browsers-worldwide/},
+	publisher={Statista},
+	organization = {{StatCounter}},
+	date = {2019-09},
+	urldate={2020-02-12}
+}
 
 
 @online{StatistaMarketShareSmartphone,
@@ -88,29 +98,51 @@ urldate = {2019-10-12}
 	urldate = {2019-10-10}
 }
 
-@misc{StatistaSmartphonesWorldwide, title={Number of smartphone users worldwide 2014-2020}, url={https://www.statista.com/statistics/330695/number-of-smartphone-users-worldwide/}, journal={Statista}, urldate={2020-02-12}}
+@proceedings{StatistaSmartphonesWorldwide, 
+	title={Number of smartphone users worldwide 2014-2020}, 
+	url={https://www.statista.com/statistics/330695/number-of-smartphone-users-worldwide/}, 
+	publisher={Statista},
+	organization={{Newzoo}},
+	date = {2019-09},
+	urldate={2020-02-12}
+}
 
-@misc{StatistaWorldPopulation, title={Development of the world population until 2050}, url={https://www.statista.com/statistics/262875/development-of-the-world-population/}, journal={Statista}, urldate={2020-02-12}}
+@proceedings{StatistaWorldPopulation, 
+	title={Development of the world population until 2050},
+	url={https://www.statista.com/statistics/262875/development-of-the-world-population/}, 
+	publisher={Statista},
+	organization={{United Nations}},
+	date={2019-07},
+	urldate={2020-02-12}
+}
 
-@misc{OctoverseGitHubStatistics, title={Projects}, url={https://octoverse.github.com/projects}, journal={The State of the Octoverse}, publisher={GitHub Inc.}, year={2019}, urldate={2020-02-12}}
+@report{OctoverseGitHubStatistics, title={Projects}, url={https://octoverse.github.com/projects}, journal={The State of the Octoverse}, institution={GitHub, Inc.}, year={2019}, urldate={2020-02-12}}
 
 
 @misc{noauthor_stack_nodate,
 	title = {{Developer Survey Results 2019}},
 	organization = {{Stack Overflow}},
 	url = {https://insights.stackoverflow.com/survey/2019/?utm_source=social-share&utm_medium=social&utm_campaign=dev-survey-2019},
+	year = {2019},
 	urldate = {2019-10-10}
 }
 
-@misc{GoogleShowCases, title={Show Cases (2016)  |  Web  |  Google Developers}, url={https://developers.google.com/web/showcase/2016}, journal={Google}, publisher={Google}, urldate={2020-02-12}}
+@manual{GoogleShowCases, 
+	title={{Show Cases}}, 
+	url={https://developers.google.com/web/showcase/2016}, 
+	organization={Google, Inc.}, 
+	urldate={2020-02-12},
+	year = {2016},
+	titleaddon = {{Google Developer Documentation}}
+}
 
 % ------------------------------------------------------------------------------
 % BILDER
 % ------------------------------------------------------------------------------
 
-@misc{ServiceWorkerDiagramm, title={Funktionsweise eines Service Workers}, url={https://www.heise.de/developer/imgs/06/2/2/1/9/1/4/9/ServiceWorker-8a0968f1b295f1ff.png}, journal={Heise}, author={Liebel, Christian}, year={2017}, month={6}, urldate={2020-02-12}}
+@article{ServiceWorkerDiagramm, title={{Funktionsweise eines Service Workers}}, url={https://www.heise.de/developer/imgs/06/2/2/1/9/1/4/9/ServiceWorker-8a0968f1b295f1ff.png}, journaltitle={Heise}, author={Liebel, Christian}, year={2017}, month={6}, urldate={2020-02-12}}
 
-@misc{PWAAddToHomeScreenPrompt, title={The mini-info bar}, url={https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png}, journal={The mini-info bar}, publisher={Google}, author={LePage, Pete}, urldate={2020-02-12}}
+@misc{PWAAddToHomeScreenPrompt, title={{The mini-info bar}}, url={https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png}, organization={{Google, Inc.}}, titleaddon = {{Google Developer Documentation}}, urldate={2020-02-12}}
 
 % Interface Builder
 https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementingACustomControl.html
@@ -121,9 +153,15 @@ https://developer.apple.com/library/archive/referencelibrary/GettingStarted/Deve
 % DUDEN
 %------------
 
-@misc{BegriffApp, title={Duden: App}, url={https://www.duden.de/rechtschreibung/App}, journal={Duden}, publisher={Bibliographisches Institut GmbH}, urldate={2020-02-12}}
+@inreference{BegriffApp, 
+	title={App}, 
+	url={https://www.duden.de/rechtschreibung/App}, 
+	booktitle={Duden}, 
+	publisher={Bibliographisches Institut GmbH}, 
+	urldate={2020-02-12}
+}
 
-@misc{BegriffAppGabler, title={Definition: App}, url={https://www.gabler-banklexikon.de/definition/app-70646/version-336971}, journal={Gabler Banklexikon}, publisher={Springer Fachmedien Wiesbaden GmbH}, author={Moormann, Jürgen}, urldate={2020-02-12}}
+@inbook{BegriffAppGabler, title={{Definition: App}}, url={https://www.gabler-banklexikon.de/definition/app-70646/version-336971}, booktitle={Gabler Banklexikon}, publisher={Springer}, author={Moormann, Jürgen}, urldate={2020-02-12}}
 
 %--------------------
 % OLLI'S STUFF
@@ -131,6 +169,7 @@ https://developer.apple.com/library/archive/referencelibrary/GettingStarted/Deve
 
 @manual{AppleMVC,
 	title			= {{Model-View-Controler}},
+	titleaddon = {{Apple Developer Documentation}},
 	organization 	= {Apple, Inc.},
 	date			= {2018-04-06},
 	url				= {https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html},
@@ -161,6 +200,7 @@ urldate={2020-02-11}
 
 @image{AppleIB,
 title = {{Implement a Custom Control}},
+titleaddon = {{Apple Developer Documentation}},
 organization = {{Apple, Inc.}},
 date = {2016-12-08},
 url = {https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementingACustomControl.html},
@@ -169,6 +209,7 @@ urldate = {2020-02-11}
 
 @manual{ApplePublish,
 	title = {{App Store Review Guidelines}},
+	titleaddon = {{Apple Developer Documentation}},
 	organization = {{Apple, Inc.}},
 	date = {2019-09-12},
 	url = {https://developer.apple.com/app-store/review/guidelines/},
@@ -178,6 +219,7 @@ urldate = {2020-02-11}
 
 @manual{AppleSwift,
 	title = {{Swift}},
+	titleaddon = {{Apple Developer Documentation}},
 	organization = {{Apple, Inc.}},
 	url = {https://developer.apple.com/swift/},
 	urldate = {2020-02-11}
