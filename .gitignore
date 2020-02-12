@@ -36,3 +36,7 @@ thesis-fix/T3101_root.lot
 thesis-fix/T3101_root.pdf
 thesis-source/.DS_Store
 thesis-source/studienarbeit_pwa.txss
+*.bbl
+*.bcf
+*.blg
+*.lot
