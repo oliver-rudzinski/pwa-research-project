@@ -63,7 +63,7 @@ Im gezeigten Schritt der Projektvorbereitung trifft der Entwickler Entscheidunge
 
 Alle hier getroffen Schritte können auch manuell bzw. im Nachgang der Projekterstellung angelegt werden. Grundsätzlich sind die Dateien und Quellcodezeilen, welche durch die genannten Vorbereitungsmaßnahmen automatisch generiert werden, unabdingbar für die Realisierung des Projekt und können somit für eine effizientere Arbeit des Entwicklers sorgen.
 
-\paragraph{Struktur des initialen Entwicklungsverzeichnisses}
+\paragraph{Struktur des initialen Entwicklungsverzeichnisses} \label{par:xcode-files}
 Bereits zu Anfang befinden sich bestimmte Dateien im Entwicklungsverzeichnis, welche sich grundsätzlich in jeder iOS-Anwendung benötigt werden. Diese werden im Folgenden beschrieben.
 
 \begin{description}
@@ -76,10 +76,14 @@ Bereits zu Anfang befinden sich bestimmte Dateien im Entwicklungsverzeichnis, we
 	\item[\texttt{to\_do.xcdatamodeld}] stellt die Konfigurationsdatei des Persistent Service dar, sofern dieser im Dialogfenster aktiviert wurde. In dieser werden Entitäten angelegt, mit möglichen Relationen versehen und für die Verwendung innerhalb der App exportiert.
 \end{description}
 
-\subsubsection{Vertrieb von iOS-Applikationen}
+\subsubsection{Vertrieb von iOS-Applikationen} \label{subsubsec:publish-ios}
 Der mit iOS 2.0 (Nachfolger von iPhone OS) ins Leben gerufene Apple \textit{App Store} ist die einzige offizielle Bezugsstelle für iOS-Applikationen. Somit ist es auch der am meisten verwendete Marktplatz, in welchem Entwickler und Unternehmen ihre Anwendung kostenlos sowie kostenpflichtig zum Download anbieten.
 
 Zunächst ist die Anmeldung des Entwicklers als \textit{Apple Developer} im Vorhinein erforderlich. Ohne diese könnte die Anwendung zwar programmiert und innerhalb der Entwicklungsumgebung getestet, jedoch nicht auf tatsächlichen iOS-Geräten getestet und zum Download freigegeben werden. Dies hat sowohl sicherheitstechnische als auch wirtschaftliche Gründe, welche hier nicht weiter diskutiert, jedoch für die Evaluation der Entwicklungsfreiheit in Betracht gezogen werden. Letzteres erkennt man vor allem an der Tatsache, dass die Verbreitung von Anwendungen über den \textit{App Store} kostenpflichtig ist \cite{ApplePublish}.
+
+Möchte ein Entwickler seine App im Apple App Store veröffentlichen, müssen bestimmte Vorkehrungen getroffen werden. Dazu gehört die Erstellung eines App-Icons, die Bereitstellung eines beschreibenden Textes für die App, wie dieser in der individuellen Seite im App Store dargestellt werden soll, eine definierte Altersbegrenzung, etc. Der Entwickler sendet die App via Xcode-Schnittstelle zur Evaluation aus. Diese wird von Apple getestet, bevor sie im App Store veröffentlicht wird. Auch die Beachtung der Veröffentlichungsrichtlinien von Apple wird an dieser Stelle überprüft \cite{ApplePublish}.
+
+Dieser Prozess wiederholt sich bei jedem Update, welches der Entwickler publiziert. Das Aktualisieren der App auf die neueste Version ist für die Nutzer meist optional, kann vom Entwickler jedoch vorausgesetzt werden; andernfalls kann die App nicht mehr vom Nutzer aufgerufen werden. Dies lässt sich jedoch nur gewährleisten, wenn eine aktive Internetverbindung seitens des Endgerätes des Nutzers vorhanden ist. Verschwindet eine App aus dem App Store, so verbleibt diese auf dem Gerät, bis sie gelöscht wird. Danach kann sie nicht erneut heruntergeladen werden.
 
 % Evtl. Quelle für die App-Publikation (iOS) finden und zitieren
 Der genaue Prozess der Publikation von iOS-Applikationen kann im Rahmen dieser Arbeit nicht nachvollzogen werden, da keine Möglichkeit der tatsächlichen Bereitstellung der zu entwickelnden Beispielanwendung vorliegt.

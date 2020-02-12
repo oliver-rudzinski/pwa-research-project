@@ -2,13 +2,11 @@ Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do
 
 % TODO Tabellarische Darstellung der Attribute
 
-\usepackage{makecell}
-
 \begin{table}[h!]
 \centering
 \begin{tabular}{r|l|l}
 \textbf{Attribut} & \multicolumn{1}{l|}{\textbf{Beschreibung}} & \multicolumn{1}{r}{\textbf{Datentyp}} \\ \hline
-\texttt{id}          & \makecell{(alpha-)numerische Zeichenfolge, welche einen \\ Eintrag eindeutig erkennbar macht}                    & String                                \\
+\texttt{id}          & (alpha-)numerische Zeichenfolge, welche einen Eintrag eindeutig erkennbar macht                    & String                                \\
 \texttt{name}            & anzuzeigender Text, welcher den eigentlichen Eintrag darstellt und beschreibt                   & String                              \\
 \texttt{done}   & Status über die Erledigung des entsprechenden Eintrages                    & Boole'scher Wert \\
 \texttt{priority}   & Status über die Priorität des entsprechenden Eintrages                    & Boole'scher Wert \\                                  

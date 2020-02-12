@@ -66,6 +66,14 @@
 \setcounter{secnumdepth}{3}			% Sub-subsection numbering
 \usepackage{array}					% Table management
 \usepackage{multirow}
+
+\usepackage{tcolorbox}
+\usepackage{colortbl}
+\tcbuselibrary{skins}
+\tcbset{tab2/.style={enhanced,fonttitle=\bfseries,fontupper=\normalsize\sffamily,
+		colback=yellow!10!white,colframe=red!50!black,colbacktitle=Salmon!40!white,
+		coltitle=black,center title}}
+
 \usepackage{acronym}					% Acronym management
 \usepackage{graphicx}				% Figure management
 \usepackage{subfig}
@@ -78,7 +86,8 @@
 	breaklines,
 	frame=lines,
 	fontsize=\footnotesize,
-	framesep=3mm
+	framesep=3mm,
+	linenos
 }
 \setminted[xml]{
 	autogobble,
@@ -86,7 +95,35 @@
 	breaklines,
 	frame=lines,
 	fontsize=\footnotesize,
-	framesep=3mm
+	framesep=3mm,
+	linenos
+}
+\setminted[swift]{
+	autogobble,
+	baselinestretch=1,
+	breaklines,
+	frame=lines,
+	fontsize=\footnotesize,
+	framesep=3mm,
+	linenos
+}
+\setminted[TypeScript]{
+	autogobble,
+	baselinestretch=1,
+	breaklines,
+	frame=lines,
+	fontsize=\footnotesize,
+	framesep=3mm,
+	linenos
+}
+\setminted[ng2]{
+	autogobble,
+	baselinestretch=1,
+	breaklines,
+	frame=lines,
+	fontsize=\footnotesize,
+	framesep=3mm,
+	linenos
 }
 \usemintedstyle{manni}	
 \usepackage[T1]{fontenc}

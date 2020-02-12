@@ -1,0 +1,11 @@
+<!-- PRIORITIZE BUTTON -->
+<input type="checkbox" [(ngModel)]="item.important" (change)="updateTodoItem()"/>
+
+<!-- CHECKBOX -->
+<input type="checkbox" [(ngModel)]="item.done" (change)="updateTodoItem()"/>
+
+<!-- TEXT INPUT -->
+<input type="text" [(ngModel)]="item.description" (keyup)="updateTodoItem()"/>
+
+<!-- DELETE BUTTON -->
+<button (click)="todoService.deleteTodoItem(item.id)">&#9587;</button>
