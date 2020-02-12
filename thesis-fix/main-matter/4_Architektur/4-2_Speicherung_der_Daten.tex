@@ -1,17 +1,19 @@
 Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do-Einträge) einem bestimmten Schema folgen. Konkret werden folgende Attribute für die Entität \texttt{ToDo} festgelegt, welche in Tabelle \ref{tab:entity} dargestellt sind.
 
 % TODO Tabellarische Darstellung der Attribute
+{\setlength{\extrarowheight}{3pt}%
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{r|p{9cm}|l}
-		\textbf{Attribut} & \multicolumn{1}{l|}{\textbf{Beschreibung}} & \multicolumn{1}{r}{\textbf{Datentyp}} \\ \hline
-		\texttt{id}          & (alpha-)numerische Zeichenfolge, welche einen Eintrag eindeutig erkennbar macht                    & String                                \\
+	\begin{tabular}{l|p{9cm}|l}
+		\textbf{Attribut} & \textbf{Beschreibung} & \textbf{Datentyp} \\ \hline 
+		\texttt{id}          & (alpha-)numerische Zeichenfolge, welche einen Eintrag eindeutig erkennbar macht                    & String   \\
 		\texttt{name}            & anzuzeigender Text, welcher den eigentlichen Eintrag darstellt und beschreibt                   & String                              \\
 		\texttt{done}   & Status über die Erledigung des entsprechenden Eintrages                    & Boole'scher Wert \\
 		\texttt{priority}   & Status über die Priorität des entsprechenden Eintrages                    & Boole'scher Wert \\                                  
 	\end{tabular}
 	\caption{Attribute der \texttt{ToDo}-Entität} \label{tab:entity}
 \end{table}
+}
 
 
 % TODO Beispiel der idealisierten Datenbankeinträge
