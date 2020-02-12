@@ -1,0 +1,982 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{StatistaSmartphonesWorldwide}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statista}
+      \field{title}{Number of smartphone users worldwide 2014-2020}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/330695/number-of-smartphone-users-worldwide/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/330695/number-of-smartphone-users-worldwide/
+      \endverb
+    \endentry
+    \entry{StatistaWorldPopulation}{misc}{}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statista}
+      \field{title}{Development of the world population until 2050}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/262875/development-of-the-world-population/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/262875/development-of-the-world-population/
+      \endverb
+    \endentry
+    \entry{StatistaMobileBrowserMarketShare}{misc}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statista}
+      \field{title}{Mobile browser market share worldwide 2012-2019}
+      \verb{urlraw}
+      \verb https://www.statista.com/statistics/263517/market-share-held-by-mobile-internet-browsers-worldwide/
+      \endverb
+      \verb{url}
+      \verb https://www.statista.com/statistics/263517/market-share-held-by-mobile-internet-browsers-worldwide/
+      \endverb
+    \endentry
+    \entry{GoogleShowCases}{misc}{}
+      \list{publisher}{1}{%
+        {Google}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Google}
+      \field{title}{Show Cases (2016) | Web | Google Developers}
+      \verb{urlraw}
+      \verb https://developers.google.com/web/showcase/2016
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/web/showcase/2016
+      \endverb
+    \endentry
+    \entry{BegriffApp}{misc}{}
+      \list{publisher}{1}{%
+        {Bibliographisches Institut GmbH}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Duden}
+      \field{title}{Duden: App}
+      \verb{urlraw}
+      \verb https://www.duden.de/rechtschreibung/App
+      \endverb
+      \verb{url}
+      \verb https://www.duden.de/rechtschreibung/App
+      \endverb
+    \endentry
+    \entry{BegriffAppGabler}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=bbf2f2b3d110edd4c50780925a482d2d}{%
+           family={Moormann},
+           familyi={M\bibinitperiod},
+           given={Jürgen},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Fachmedien Wiesbaden GmbH}%
+      }
+      \strng{namehash}{bbf2f2b3d110edd4c50780925a482d2d}
+      \strng{fullhash}{bbf2f2b3d110edd4c50780925a482d2d}
+      \strng{bibnamehash}{bbf2f2b3d110edd4c50780925a482d2d}
+      \strng{authorbibnamehash}{bbf2f2b3d110edd4c50780925a482d2d}
+      \strng{authornamehash}{bbf2f2b3d110edd4c50780925a482d2d}
+      \strng{authorfullhash}{bbf2f2b3d110edd4c50780925a482d2d}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Gabler Banklexikon}
+      \field{title}{Definition: App}
+      \verb{urlraw}
+      \verb https://www.gabler-banklexikon.de/definition/app-70646/version-336971
+      \endverb
+      \verb{url}
+      \verb https://www.gabler-banklexikon.de/definition/app-70646/version-336971
+      \endverb
+    \endentry
+    \entry{AppleSwift}{manual}{}
+      \list{organization}{1}{%
+        {Apple, Inc.}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{title}{{Swift}}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.apple.com/swift/
+      \endverb
+      \verb{url}
+      \verb https://developer.apple.com/swift/
+      \endverb
+    \endentry
+    \entry{noauthor_stack_nodate}{misc}{}
+      \list{organization}{1}{%
+        {Stack Overflow}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{title}{{Developer Survey Results 2019}}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://insights.stackoverflow.com/survey/2019/?utm_source=social-share&utm_medium=social&utm_campaign=dev-survey-2019
+      \endverb
+      \verb{url}
+      \verb https://insights.stackoverflow.com/survey/2019/?utm_source=social-share&utm_medium=social&utm_campaign=dev-survey-2019
+      \endverb
+    \endentry
+    \entry{AppleIB}{image}{}
+      \list{organization}{1}{%
+        {Apple, Inc.}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{12}
+      \field{title}{{Implement a Custom Control}}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementingACustomControl.html
+      \endverb
+      \verb{url}
+      \verb https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/ImplementingACustomControl.html
+      \endverb
+    \endentry
+    \entry{AppleMVC}{manual}{}
+      \list{organization}{1}{%
+        {Apple, Inc.}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labeltitlesource}{title}
+      \field{day}{6}
+      \field{month}{4}
+      \field{title}{{Model-View-Controler}}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
+      \endverb
+      \verb{url}
+      \verb https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/MVC.html
+      \endverb
+    \endentry
+    \entry{LesevaAdams2016}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=2e7f0d1d6bcdc97698ea6b38a5035e35}{%
+           family={{Leseva Adams, Radoslava and Lesev, Hristo}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berkeley, CA}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{2e7f0d1d6bcdc97698ea6b38a5035e35}
+      \strng{fullhash}{2e7f0d1d6bcdc97698ea6b38a5035e35}
+      \strng{bibnamehash}{2e7f0d1d6bcdc97698ea6b38a5035e35}
+      \strng{authorbibnamehash}{2e7f0d1d6bcdc97698ea6b38a5035e35}
+      \strng{authornamehash}{2e7f0d1d6bcdc97698ea6b38a5035e35}
+      \strng{authorfullhash}{2e7f0d1d6bcdc97698ea6b38a5035e35}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Migrating to Swift from Flash and ActionScript}}
+      \field{isbn}{978-1-4842-1666-8}
+      \field{title}{{Hello, Swift! -- A Tutorial for Building an iOS App}}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{82}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/978-1-4842-1666-8_5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-1-4842-1666-8_5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-1-4842-1666-8_5
+      \endverb
+    \endentry
+    \entry{RayMVC}{image}{}
+      \list{organization}{1}{%
+        {raywenderlich.com}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{day}{15}
+      \field{month}{4}
+      \field{title}{{Model-View-Controller (MVC) in iOS -- A Modern Approach}}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.raywenderlich.com/1000705-model-view-controller-mvc-in-ios-a-modern-approach
+      \endverb
+      \verb{url}
+      \verb https://www.raywenderlich.com/1000705-model-view-controller-mvc-in-ios-a-modern-approach
+      \endverb
+    \endentry
+    \entry{ApplePublish}{manual}{}
+      \list{organization}{1}{%
+        {Apple, Inc.}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{9}
+      \field{title}{{App Store Review Guidelines}}
+      \field{urlday}{11}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.apple.com/app-store/review/guidelines/
+      \endverb
+      \verb{url}
+      \verb https://developer.apple.com/app-store/review/guidelines/
+      \endverb
+    \endentry
+    \entry{JavaForAndroid}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ca1739166682b6db362b062dec0530f2}{%
+           family={Friesen},
+           familyi={F\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{ca1739166682b6db362b062dec0530f2}
+      \strng{fullhash}{ca1739166682b6db362b062dec0530f2}
+      \strng{bibnamehash}{ca1739166682b6db362b062dec0530f2}
+      \strng{authorbibnamehash}{ca1739166682b6db362b062dec0530f2}
+      \strng{authornamehash}{ca1739166682b6db362b062dec0530f2}
+      \strng{authorfullhash}{ca1739166682b6db362b062dec0530f2}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Learn Java for Android Development}
+      \field{year}{2014}
+    \endentry
+    \entry{KotlinAndroid}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Android Developers}
+      \field{title}{Kotlin and Android : Android Developers}
+      \verb{urlraw}
+      \verb https://developer.android.com/kotlin
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/kotlin
+      \endverb
+    \endentry
+    \entry{AndroidStudio}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Android Developers}
+      \field{title}{Android Studio and SDK tools}
+      \verb{urlraw}
+      \verb https://developer.android.com/studio
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/studio
+      \endverb
+    \endentry
+    \entry{GoogleOfflineApps}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Offline First - Google Chrome}}
+      \field{urlday}{12}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.chrome.com/apps/offline{\_}apps
+      \endverb
+      \verb{url}
+      \verb https://developer.chrome.com/apps/offline%7B%5C_%7Dapps
+      \endverb
+    \endentry
+    \entry{Hajian2019}{book}{}
+      \name{author}{1}{}{%
+        {{hash=67e9decac00f5af56bcb7795c941b730}{%
+           family={Hajian},
+           familyi={H\bibinitperiod},
+           given={Majid},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{67e9decac00f5af56bcb7795c941b730}
+      \strng{fullhash}{67e9decac00f5af56bcb7795c941b730}
+      \strng{bibnamehash}{67e9decac00f5af56bcb7795c941b730}
+      \strng{authorbibnamehash}{67e9decac00f5af56bcb7795c941b730}
+      \strng{authornamehash}{67e9decac00f5af56bcb7795c941b730}
+      \strng{authorfullhash}{67e9decac00f5af56bcb7795c941b730}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Progressive Web Apps with Angular}
+      \field{title}{Progressive Web Apps with Angular}
+      \field{year}{2019}
+      \verb{doi}
+      \verb 10.1007/978-1-4842-4448-7
+      \endverb
+    \endentry
+    \entry{GooglePWAOverview}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={Google},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Progressive Web Apps | Google Developers}}
+      \field{urlday}{12}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.google.com/web/progressive-web-apps
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/web/progressive-web-apps
+      \endverb
+    \endentry
+    \entry{PWAAddToHomeScreenPrompt}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=496bca72317153bb4dd6936afe2c40cb}{%
+           family={LePage},
+           familyi={L\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Google}%
+      }
+      \strng{namehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{fullhash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{bibnamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authorbibnamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authornamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authorfullhash}{496bca72317153bb4dd6936afe2c40cb}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The mini-info bar}
+      \field{title}{The mini-info bar}
+      \verb{urlraw}
+      \verb https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png
+      \endverb
+    \endentry
+    \entry{GooglePWAInstallation}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=496bca72317153bb4dd6936afe2c40cb}{%
+           family={LePage},
+           familyi={L\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Google}%
+      }
+      \strng{namehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{fullhash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{bibnamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authorbibnamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authornamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authorfullhash}{496bca72317153bb4dd6936afe2c40cb}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Web Fundamentals}
+      \field{title}{Add to Home Screen | Web Fundamentals | Google Developers}
+      \verb{urlraw}
+      \verb https://developers.google.com/web/fundamentals/app-install-banners
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/web/fundamentals/app-install-banners
+      \endverb
+    \endentry
+    \entry{GooglePWAManifest}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=76a3590dd04dae71a9be2c3d1c84b29f}{%
+           family={Gaunt},
+           familyi={G\bibinitperiod},
+           given={Matt},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d8ab4423a6acef6926d0f389f02b7c6f}{%
+           family={Kinlan},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa6f4c51149972fd4fa6cf7d95d84b01}
+      \strng{fullhash}{aa6f4c51149972fd4fa6cf7d95d84b01}
+      \strng{bibnamehash}{aa6f4c51149972fd4fa6cf7d95d84b01}
+      \strng{authorbibnamehash}{aa6f4c51149972fd4fa6cf7d95d84b01}
+      \strng{authornamehash}{aa6f4c51149972fd4fa6cf7d95d84b01}
+      \strng{authorfullhash}{aa6f4c51149972fd4fa6cf7d95d84b01}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{The Web App Manifest | Web Fundamentals | Google Developers}}
+      \field{urlday}{12}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
+      \endverb
+    \endentry
+    \entry{BeginningPWA}{book}{}
+      \name{author}{1}{}{%
+        {{hash=302ae07c0c882bed5b2dca05df39d331}{%
+           family={Sheppard},
+           familyi={S\bibinitperiod},
+           given={Dennis},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{302ae07c0c882bed5b2dca05df39d331}
+      \strng{fullhash}{302ae07c0c882bed5b2dca05df39d331}
+      \strng{bibnamehash}{302ae07c0c882bed5b2dca05df39d331}
+      \strng{authorbibnamehash}{302ae07c0c882bed5b2dca05df39d331}
+      \strng{authornamehash}{302ae07c0c882bed5b2dca05df39d331}
+      \strng{authorfullhash}{302ae07c0c882bed5b2dca05df39d331}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Beginning progressive web app development - creating a native app experienc}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1007/978-1-4842-3090-9
+      \endverb
+    \endentry
+    \entry{ServiceWorkerDiagramm}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d56d72ffbf9083c21750d52d48fdd3b0}{%
+           family={Liebel},
+           familyi={L\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{d56d72ffbf9083c21750d52d48fdd3b0}
+      \strng{fullhash}{d56d72ffbf9083c21750d52d48fdd3b0}
+      \strng{bibnamehash}{d56d72ffbf9083c21750d52d48fdd3b0}
+      \strng{authorbibnamehash}{d56d72ffbf9083c21750d52d48fdd3b0}
+      \strng{authornamehash}{d56d72ffbf9083c21750d52d48fdd3b0}
+      \strng{authorfullhash}{d56d72ffbf9083c21750d52d48fdd3b0}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Heise}
+      \field{month}{6}
+      \field{title}{Funktionsweise eines Service Workers}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.heise.de/developer/imgs/06/2/2/1/9/1/4/9/ServiceWorker-8a0968f1b295f1ff.png
+      \endverb
+      \verb{url}
+      \verb https://www.heise.de/developer/imgs/06/2/2/1/9/1/4/9/ServiceWorker-8a0968f1b295f1ff.png
+      \endverb
+    \endentry
+    \entry{CanIUseWebManifest}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=218be821569c281650668ed44b18439c}{%
+           family={Deveria},
+           familyi={D\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{218be821569c281650668ed44b18439c}
+      \strng{fullhash}{218be821569c281650668ed44b18439c}
+      \strng{bibnamehash}{218be821569c281650668ed44b18439c}
+      \strng{authorbibnamehash}{218be821569c281650668ed44b18439c}
+      \strng{authornamehash}{218be821569c281650668ed44b18439c}
+      \strng{authorfullhash}{218be821569c281650668ed44b18439c}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Support tables for HTML5, CSS3, etc}
+      \field{title}{Can I use... Support tables for HTML5, CSS3, etc}
+      \verb{urlraw}
+      \verb https://caniuse.com/#search=web manifest
+      \endverb
+      \verb{url}
+      \verb https://caniuse.com/#search=web%20manifest
+      \endverb
+    \endentry
+    \entry{GooglePWADesktop}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=496bca72317153bb4dd6936afe2c40cb}{%
+           family={LePage},
+           familyi={L\bibinitperiod},
+           given={Pete},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Google}%
+      }
+      \strng{namehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{fullhash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{bibnamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authorbibnamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authornamehash}{496bca72317153bb4dd6936afe2c40cb}
+      \strng{authorfullhash}{496bca72317153bb4dd6936afe2c40cb}
+      \field{extraname}{3}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Google}
+      \field{title}{Progressive Web Apps on Desktop | Google Developers}
+      \verb{urlraw}
+      \verb https://developers.google.com/web/progressive-web-apps/desktop
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/web/progressive-web-apps/desktop
+      \endverb
+    \endentry
+    \entry{NodeJSWebsiteAbout}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=804b6bedb1db2b625197202b6c72a6db}{%
+           family={Foundation},
+           familyi={F\bibinitperiod},
+           given={Node.js},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{804b6bedb1db2b625197202b6c72a6db}
+      \strng{fullhash}{804b6bedb1db2b625197202b6c72a6db}
+      \strng{bibnamehash}{804b6bedb1db2b625197202b6c72a6db}
+      \strng{authorbibnamehash}{804b6bedb1db2b625197202b6c72a6db}
+      \strng{authornamehash}{804b6bedb1db2b625197202b6c72a6db}
+      \strng{authorfullhash}{804b6bedb1db2b625197202b6c72a6db}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{About}
+      \verb{urlraw}
+      \verb https://nodejs.org/en/about/
+      \endverb
+      \verb{url}
+      \verb https://nodejs.org/en/about/
+      \endverb
+    \endentry
+    \entry{NodeJSRecepies}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2848f04a7847a6fe08b0163d47b0603b}{%
+           family={Gackenheimer},
+           familyi={G\bibinitperiod},
+           given={Cory},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{2848f04a7847a6fe08b0163d47b0603b}
+      \strng{fullhash}{2848f04a7847a6fe08b0163d47b0603b}
+      \strng{bibnamehash}{2848f04a7847a6fe08b0163d47b0603b}
+      \strng{authorbibnamehash}{2848f04a7847a6fe08b0163d47b0603b}
+      \strng{authornamehash}{2848f04a7847a6fe08b0163d47b0603b}
+      \strng{authorfullhash}{2848f04a7847a6fe08b0163d47b0603b}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Node A Problem-Solution Approach}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.10007/978-1-4302-6059-2
+      \endverb
+    \endentry
+    \entry{PracitalNodeJS}{book}{}
+      \name{author}{1}{}{%
+        {{hash=15e1045706ba0f923763122f975d4964}{%
+           family={Mardan},
+           familyi={M\bibinitperiod},
+           given={Azat},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Apress}%
+      }
+      \strng{namehash}{15e1045706ba0f923763122f975d4964}
+      \strng{fullhash}{15e1045706ba0f923763122f975d4964}
+      \strng{bibnamehash}{15e1045706ba0f923763122f975d4964}
+      \strng{authorbibnamehash}{15e1045706ba0f923763122f975d4964}
+      \strng{authornamehash}{15e1045706ba0f923763122f975d4964}
+      \strng{authorfullhash}{15e1045706ba0f923763122f975d4964}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Practical Node.js Building Real-World Scalable Web Apps}
+      \field{year}{2018}
+    \endentry
+    \entry{OctoverseGitHubStatistics}{misc}{}
+      \list{publisher}{1}{%
+        {GitHub Inc.}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The State of the Octoverse}
+      \field{title}{Projects}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://octoverse.github.com/projects
+      \endverb
+      \verb{url}
+      \verb https://octoverse.github.com/projects
+      \endverb
+    \endentry
+    \entry{ProAngular}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3e85ff35ac9460aa6193899e6707ba4a}{%
+           family={Freeman},
+           familyi={F\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Verlag}%
+      }
+      \strng{namehash}{3e85ff35ac9460aa6193899e6707ba4a}
+      \strng{fullhash}{3e85ff35ac9460aa6193899e6707ba4a}
+      \strng{bibnamehash}{3e85ff35ac9460aa6193899e6707ba4a}
+      \strng{authorbibnamehash}{3e85ff35ac9460aa6193899e6707ba4a}
+      \strng{authornamehash}{3e85ff35ac9460aa6193899e6707ba4a}
+      \strng{authorfullhash}{3e85ff35ac9460aa6193899e6707ba4a}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Pro Angular 2}
+      \field{year}{2017}
+      \verb{doi}
+      \verb 10.1007/978-1-4842-2307-9
+      \endverb
+    \endentry
+    \entry{AppleMaxAppSize}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f508f8ff22f456b2c8cef697136c83a9}{%
+           family={Inc},
+           familyi={I\bibinitperiod},
+           given={Apple},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f508f8ff22f456b2c8cef697136c83a9}
+      \strng{fullhash}{f508f8ff22f456b2c8cef697136c83a9}
+      \strng{bibnamehash}{f508f8ff22f456b2c8cef697136c83a9}
+      \strng{authorbibnamehash}{f508f8ff22f456b2c8cef697136c83a9}
+      \strng{authornamehash}{f508f8ff22f456b2c8cef697136c83a9}
+      \strng{authorfullhash}{f508f8ff22f456b2c8cef697136c83a9}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Apple Developer}
+      \field{month}{2}
+      \field{title}{Now Accepting Larger Binaries - News}
+      \field{year}{2015}
+      \verb{urlraw}
+      \verb https://developer.apple.com/news/?id=02122015a
+      \endverb
+      \verb{url}
+      \verb https://developer.apple.com/news/?id=02122015a
+      \endverb
+    \endentry
+    \entry{GoogleMaxAppSize}{misc}{}
+      \list{publisher}{1}{%
+        {Google}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Google}
+      \field{title}{Upload an app - Play Console Help}
+      \verb{urlraw}
+      \verb https://support.google.com/googleplay/android-developer/answer/113469
+      \endverb
+      \verb{url}
+      \verb https://support.google.com/googleplay/android-developer/answer/113469
+      \endverb
+    \endentry
+    \entry{Garidis}{inbook}{}
+      \name{author}{1}{}{%
+        {{hash=2ba2d400910fd2037bd3760816c77d03}{%
+           family={Garidis},
+           familyi={G\bibinitperiod},
+           given={Konstantin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Stuttgart}%
+      }
+      \list{publisher}{1}{%
+        {Duale Hochschule Baden-Württemberg}%
+      }
+      \strng{namehash}{2ba2d400910fd2037bd3760816c77d03}
+      \strng{fullhash}{2ba2d400910fd2037bd3760816c77d03}
+      \strng{bibnamehash}{2ba2d400910fd2037bd3760816c77d03}
+      \strng{authorbibnamehash}{2ba2d400910fd2037bd3760816c77d03}
+      \strng{authornamehash}{2ba2d400910fd2037bd3760816c77d03}
+      \strng{authorfullhash}{2ba2d400910fd2037bd3760816c77d03}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Software Engineering I (Lecture Slides)}}
+      \field{title}{{Requirements Engineering}}
+      \field{year}{2018}
+    \endentry
+    \entry{LocalStorage}{misc}{}
+      \list{publisher}{1}{%
+        {MDC Contributors}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MDN Web Docs}
+      \field{month}{8}
+      \field{title}{Window.localStorage}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+      \endverb
+    \endentry
+    \entry{MaterialUI}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c31c335ef37283c451b18ba0dd317de1}{%
+           family={Angular},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c31c335ef37283c451b18ba0dd317de1}
+      \strng{fullhash}{c31c335ef37283c451b18ba0dd317de1}
+      \strng{bibnamehash}{c31c335ef37283c451b18ba0dd317de1}
+      \strng{authorbibnamehash}{c31c335ef37283c451b18ba0dd317de1}
+      \strng{authornamehash}{c31c335ef37283c451b18ba0dd317de1}
+      \strng{authorfullhash}{c31c335ef37283c451b18ba0dd317de1}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Angular Material}
+      \field{title}{Angular Material}
+      \verb{urlraw}
+      \verb https://material.angular.io/
+      \endverb
+      \verb{url}
+      \verb https://material.angular.io/
+      \endverb
+    \endentry
+    \entry{AndroidStorage}{manual}{}
+      \list{organization}{1}{%
+        {Google, Inc.}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{12}
+      \field{title}{{Data and file storage overview}}
+      \field{titleaddon}{{Android Developer Documentation}}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/training/data-storage
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/training/data-storage
+      \endverb
+    \endentry
+    \entry{AppleDesign}{manual}{}
+      \list{organization}{1}{%
+        {Apple, Inc.}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labeltitlesource}{title}
+      \field{title}{{Human Interface Guidelines}}
+      \field{titleaddon}{{Apple Developer Documentation}}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.apple.com/design/human-interface-guidelines/
+      \endverb
+      \verb{url}
+      \verb https://developer.apple.com/design/human-interface-guidelines/
+      \endverb
+    \endentry
+    \entry{AndroidDesign}{manual}{}
+      \list{organization}{1}{%
+        {Google, Inc.}%
+      }
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{12}
+      \field{title}{{Design for Android}}
+      \field{titleaddon}{{Android Developer Documentation}}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/design
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/design
+      \endverb
+    \endentry
+    \entry{MozillaHandlingCommonHTMLCSSProblems}{misc}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{MDN Web Docs}
+      \field{title}{Handling common HTML and CSS problems}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+      \endverb
+    \endentry
+    \entry{CocoaPods}{manual}{}
+      \list{organization}{1}{%
+        {CocoaPods.org}%
+      }
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{labeltitlesource}{title}
+      \field{title}{{Get on with building your app, not duplicating code}}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cocoapods.org/about
+      \endverb
+      \verb{url}
+      \verb https://cocoapods.org/about
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -1,0 +1,16 @@
+\textbf{Wertung native App}: $+$ \\
+\textbf{Wertung \ac{pwa}}: $-$
+
+\subsubsection{Bewertung native App}
+Die Abhängigkeit gegenüber der geschlossenen Plattform iOS erlaubt es der Entwicklungsoberfläche und auch Apple selbst, bestimmte Richtlinien für ein konsistentes und konformes Design einzuführen und zu erzwingen \cite{AppleDesign}. Durch die Suggestion bestimmter, bereits vordefinierter, Komponenten während der Entwicklung wird dem Entwickler ein großer Teil der Gestaltungsarbeit abgenommen. Animationen, der vordefinierte Aufbau komplexer Komponenten, etc., benötigen nur wenige Quellcodezeilen für die Umsetzung und können teilweise auch komplett visuell über einen Interface Builder angelegt werden. Die teils erzwungene Konsistenz lässt sich zwar positiv für das Gesamtbild werten, stellt jedoch Hürden bezüglich der Kreativität des Entwicklers dar; für den Fall, dass eigene Animationen oder Komponentenstrukturen gewünscht sind, müssen diese sehr aufwändig definiert und umgesetzt werden. Dies kommt unter der Android-Entwicklung nicht anders zur Geltung (vgl. \cite{AndroidDesign})
+
+Die Plattformabhängigkeit erlaubt aufgrund weniger, unterschiedlicher Bildschirmgrößen eine übersichtliche Möglichkeit, die Skalierung der Komponenten auf verschiedenen Geräten dynamisch zu gestalten. Durch die Vielzahl an unterstützten Android-Geräten lässt sich interpretieren, dass sich die Einhaltung einer solchen Konsistenz dort schwieriger gestaltet.
+
+Die Designumsetzbarkeit stellt sich v.a. im Vergleich zu \acp{pwa} deutlich aufwandsfreier dar, jedoch bringen vor allem Kreativitätshürden durch Design-Suggestionen und die evtl. komplexe Dynamisierung der Komponentenposition unter Android nicht vernachlässigbare Schwächen mit, weswegen das Kriterium insgesamt mit eher gut bewertet wird.
+
+\subsubsection{Bewertung \ac{pwa}}
+Das Aussehen der Anwendung wird maßgeblich durch die Browserengine bestimmt, welche \ac{html} und \ac{css} rendert. Es ist seither ein bekanntes Problem, dass \ac{css} von verschiedenen Browsern unterschiedlich interpretiert wird und es für viele Features keine einheitliche Unterstützung gibt \cite{MozillaHandlingCommonHTMLCSSProblems}.
+
+Nicht zuletzt liegt es aber am Entwickler, der große Teile des Implementierungsaufwands für das Design an Frameworks und Bibliotheken abgeben kann, um ein konsistentes Design zu erzeugen.  Schließlich gibt es Webanwendungen und Designanforderungen bereits seit einigen Jahren, sodass für die meisten trivialen Probleme bereits Lösungen bestehen.
+
+Dieses Kriterium wird als negativ bewertet, da das Stylen mit \ac{css} zwar mit großen Freiheiten aber auch deutlichen Konsistenzproblemen einhergeht.

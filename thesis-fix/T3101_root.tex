@@ -28,6 +28,11 @@
 	\thispagestyle{empty}
 	
 	\clearpage
+	\chapter*{Haftungsausschluss}
+		\input{front-matter/disclaimer.tex}
+	\thispagestyle{empty}
+	
+	\clearpage
 	\input{front-matter/2_Zusammenfassung.tex}
 		\addtocontents{toc}{\protect\thispagestyle{empty}}
 	\thispagestyle{empty}
@@ -72,16 +77,18 @@
 		
 	\chapter{Evaluation}
 		\label{chap:evaluation}
+		\input{main-matter/6_Evaluation/6_Evaluation}
 		
 	\chapter{Reflexion}
 		\label{chap:reflexion}
+		\input{main-matter/7-Reflexion/7_Reflexion.tex}
 
 %===========================================================================
 %	BACK MATTER
 %===========================================================================
 
-	\pagestyle{plain}
 	\clearpage
+	\pagestyle{plain}
 	\pagenumbering{alph}
 	\printbibliography
 
