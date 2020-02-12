@@ -1,18 +1,18 @@
 Die Datenbank muss auf eine Weise angelegt werden, dass ihre Daten (d.\ h. To-Do-Einträge) einem bestimmten Schema folgen. Konkret werden folgende Attribute für die Entität \texttt{ToDo} festgelegt, welche in Tabelle \ref{tab:entity} dargestellt sind.
 
 % TODO Tabellarische Darstellung der Attribute
-
 \begin{table}[h!]
-\centering
-\begin{tabular}{r|l|l}
-\textbf{Attribut} & \multicolumn{1}{l|}{\textbf{Beschreibung}} & \multicolumn{1}{r}{\textbf{Datentyp}} \\ \hline
-\texttt{id}          & (alpha-)numerische Zeichenfolge, welche einen Eintrag eindeutig erkennbar macht                    & String                                \\
-\texttt{name}            & anzuzeigender Text, welcher den eigentlichen Eintrag darstellt und beschreibt                   & String                              \\
-\texttt{done}   & Status über die Erledigung des entsprechenden Eintrages                    & Boole'scher Wert \\
-\texttt{priority}   & Status über die Priorität des entsprechenden Eintrages                    & Boole'scher Wert \\                                  
-\end{tabular}
-\caption{Attribute der \texttt{ToDo}-Entität} \label{tab:entity}
+	\centering
+	\begin{tabular}{r|p{9cm}|l}
+		\textbf{Attribut} & \multicolumn{1}{l|}{\textbf{Beschreibung}} & \multicolumn{1}{r}{\textbf{Datentyp}} \\ \hline
+		\texttt{id}          & (alpha-)numerische Zeichenfolge, welche einen Eintrag eindeutig erkennbar macht                    & String                                \\
+		\texttt{name}            & anzuzeigender Text, welcher den eigentlichen Eintrag darstellt und beschreibt                   & String                              \\
+		\texttt{done}   & Status über die Erledigung des entsprechenden Eintrages                    & Boole'scher Wert \\
+		\texttt{priority}   & Status über die Priorität des entsprechenden Eintrages                    & Boole'scher Wert \\                                  
+	\end{tabular}
+	\caption{Attribute der \texttt{ToDo}-Entität} \label{tab:entity}
 \end{table}
+
 
 % TODO Beispiel der idealisierten Datenbankeinträge
 Unabhängig von der individuellen Architektur der jeweiligen Apps folgt dieses triviale Schema dem Konzept relationaler Datenbanken und könnte somit in einer einfachen Tabelle dargestellt werden.
