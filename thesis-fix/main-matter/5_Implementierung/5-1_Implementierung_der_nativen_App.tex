@@ -5,7 +5,7 @@ Dieses Kapitel stellt im Folgenden den gesamten Entwicklungsprozess der To-Do-An
 Grundsätzlich ist es sinnvoll, mit der Gestaltung der visuellen Ansicht zu beginnen, da die erstellten Komponenten im Nachhinein explizit im Quellcode referenziert werden können, um ihnen Funktionalität zu verleihen.
 
 \subsection{Gestaltung des \acl{ui}} \label{subsec:ios_ui}
-\subsubsection{Einbinden von \ac{ui}-Komponenten}
+\subsubsection{Einbinden von \acs{ui}-Komponenten}
 Initial beinhaltet das \texttt{Main.storyboard} eine Ansicht, welche bereits mit dem automatisch generierten \texttt{ViewController} verknüpft ist. Diese muss nun mit den in Kapitel \ref{chap:architektur} beschriebenen Komponenten gefüllt werden. Die Listenansicht wird über einen \texttt{UITableView} realisiert. Dieser füllt einen großen Teil der Ansicht aus. Der untere Rand der Ansicht wird mit einem \texttt{UITextField} sowie mit einem \texttt{UIButton} versehen, welcher als \texttt{+}-Symbol konfiguriert wird. Somit ist die hierarchisch höchste Stufe der Ansicht fertiggestellt.
 
 Bislang existiert noch keine Konfiguration der unteren Hierarchiestufe, welche aus den einzelnen Zellen des \texttt{UITableView} besteht. Da diese dem gleichen Aufbau folgen sollen, ist die Definition \textit{einer} \texttt{UITableViewCell} genügend, sodass diese dann für die gesamte Liste verwendet und repliziert werden kann. Diese Zelle beinhaltet erneut ein \texttt{UITextField}, sowie drei \texttt{UIButton}s, welche jeweils mit einem Kreuz-, Häkchen-, und Stern-Symbol konfiguriert werden.
@@ -17,7 +17,7 @@ Das finale \ac{ui} der To-Do-Anwendung, wie es im Interface Builder dargestellt 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{img/fig/5-1-1_IB_App}
-	\caption{\ac{ui} im Interface Builder von Xcode}
+	\caption{\acs{ui} im Interface Builder von Xcode}
 	\label{fig:ib-app}
 \end{figure}
 
@@ -46,9 +46,11 @@ Die notwendigen Komponenten des Persistent Service liegen im \texttt{AppDelegate
 Der Aufbau der Funktion, welche für das Anlegen der To-Do-Elemente innerhalb des Persistent Service zuständig ist, wird hinsichtlich des zugrunde liegenden Quellcode-Ausschnitts beschrieben.
 
 \begin{listing}[H]
-	\inputminted{swift}{src/5-1-1_ios_createToDo.swift}	
+	\inputminted{swift}{src/5-1-1_ios_createToDo.swift}
+	\vspace{-0.5cm}
 	\caption{Funktion zur Erstellung von To-Do-Elementen (Swift)}
 \end{listing}
+\vspace{-0.5cm}
 
 Es werden die Entitätsinformationen aus der Konfiguration der Datei \texttt{to\_do.xcdatamodeld} entnommen (Z. 2), sodass ein neues Objekt nach dieser Entität erstellt und dem Speicher zugeordnet werden kann (Z. 3). Daraufhin werden die initialen Werte der einzelnen Attribute gesetzt (Zz. 6--9), wobei der beschreibende Text hier direkt aus dem Funktionsparameter entnommen wird. Zuletzt wird der Kontext (vereinfacht also der Speicher) aktualisiert und das neue Objekt wird in Form einer sog. \textit{Completion} zurückgegeben (Z. 1, Z. 13). Dieses kann in einer sog. \textit{Callback}-Funktion verwendet werden, welche nach erfolgreichem Durchlaufen der Ausgangsfunktion ausgeführt wird.
 
@@ -56,11 +58,13 @@ Es werden die Entitätsinformationen aus der Konfiguration der Datei \texttt{to\
 Der Aufbau der Funktion, welche für das Laden der To-Do-Elemente aus dem Persistent Service zuständig ist, wird hinsichtlich des zugrunde liegenden Quellcode-Ausschnitts beschrieben.
 
 \begin{listing}[H]
-	\inputminted{swift}{src/5-1-2_ios_loadToDos.swift}	
+	\inputminted{swift}{src/5-1-2_ios_loadToDos.swift}
+	\vspace{-0.5cm}
 	\caption{Funktion zum Laden von To-Do-Elementen (Swift)}
 \end{listing}
+\vspace{-0.5cm}
 
-Zunächst wird der Datenabgriff vorbereitet, welcher auf die zuvor exportierte Klasse der \texttt{ToDo}-Entität zugreift (Z. 2). Auf Basis dieser Anfrage (Z. 5) wird ein Array vom Datentyp \texttt{ToDo} in gleicher Completion-Form wie zuvor zurückgegeben (Z. 6). Da dieser Vorgang \textit{Exceptions} schmeißen kann, muss dieser Vorgang entsprechend kontrolliert (d.\ h. mit \textit{Error Handling} versehen) ablaufen.
+Zunächst wird der Datenabgriff vorbereitet, welcher auf die zuvor exportierte Klasse der \texttt{ToDo}-Entität zugreift (Z. 2). Auf Basis dieser Anfrage (Z. 5) wird ein Array vom Datentyp \texttt{ToDo} in gleicher Completion-Form wie zuvor zurückgegeben (Z. 6). Da dieser Vorgang \textit{Exceptions} schmeißen kann, muss dieser Vorgang entsprechend kontrolliert (d.h. mit \textit{Error Handling} versehen) ablaufen.
 
 \subsubsection{Bearbeiten von Attributswerten von To-Do-Elementen}
 Da das \ac{ui} mehrere Bedienelemente für das Bearbeiten eines Eintrags aufweist (d.\ h. das Ändern des Textes, der Priorität sowie des Status über Abschluss der Aufgabe), müssen entsprechend viele Funktionen für das Bearbeiten dieser Eigenschaften angelegt werden. In jeder der Funktionen wird das zu bearbeitende To-Do-Objekt mitgegeben und das zu ändernde Attribut wird mit dem neuen, ebenfalls mitgegebenen, Wert überschrieben. Das abschließende Ausführen von \texttt{saveContext()} sorgt für die Konsistenz des Objekts.
@@ -68,12 +72,12 @@ Da das \ac{ui} mehrere Bedienelemente für das Bearbeiten eines Eintrags aufweis
 \subsubsection{\texttt{deleteToDo(...)}: Löschen von To-Do-Elementen}
 Das mitgegebene To-Do-Objekt wird über die Kontext-Löschfunktion entfernt und der Stand des Kontexts mit \texttt{saveContext()} gespeichert.
 
-\subsection{Entwicklung der \ac{ui}-Funktionalität}
+\subsection{Entwicklung der \acs{ui}-Funktionalität}
 In Abs. \ref{subsec:ios_ui} sind die verschiedenen \texttt{UIButton}-Komponenten zum \ac{ui} hinzugefügt worden, besitzen bislang jedoch keinerlei Funktionalität. Durch die in \ref{subsec:ios_persistent_service} implementierten \ac{crud}-Funktionen ist es nun möglich, diese mit den \texttt{UIButton}s zu verknüpfen, um diese durch entsprechenden Knopfdruck auszulösen. Eine Ausnahme bildet die Funktion \texttt{loadToDos(...)} (vgl. Abs. \ref{chap:ios_load_todos}), welche bei Initialisierung der App aufgerufen wird. Zusätzlich soll eine Folge von Abschlussoperationen durchgeführt werden, welche die Darstellung der Anwendung analog zum Zustand des Speichers korrigiert.
 
 Im Quellcode wird die Verknüpfung über die Kombination aus sog. \texttt{IBOutlet}-Variablen und \texttt{IBAction}-Funktionen realisiert. Um die statischen Zustände der Komponenten erkennen, editieren und nutzen zu können, werden diese in Form von \texttt{IBOutlet}-Variablen den zuständigen Klassen hinzugefügt. Dies wird sich bei der Initialisierung der Anwendung zunutze gemacht, da so die Zustände der Zellenbuttons anhand der bereits vorhandenen und zu Start der Anwendung geladenen Einträge korrekt gesetzt werden können. Sollen Aktionen, wie vorhin beschrieben, durch die Komponenten ausgelöst werden (bspw., wenn ein Button angetippt wird), nutzt man \texttt{IBAction}-Funktionen, welche immer zu einer bestimmten Komponente gehören, und ihre Anweisungen ausführen, sobald der definierte Aktionszustand erreicht ist.
 
-\subsubsection{Verknüpfung der \ac{crud}-Funktionen}
+\subsubsection{Verknüpfung der \acs{crud}-Funktionen}
 
 Die Funktion \texttt{createToDo(...)} soll dem globalen \texttt{+}-Button zugewiesen werden. Das Bearbeiten (d.h. als erledigt markieren resp. priorisieren) und Löschen der bereits vorhandenen Einträge wird über die Verknüpfung mit den Buttons realisiert, welche pro Zelle jeweils einmal auftauchen. Das Bearbeiten der Eintragsbeschreibung nimmt an dieser Stelle eine Sonderrolle ein. Der Text nicht als statisches \texttt{UILabel} definiert ist, welcher sonst nur indirekt editierbar wäre. Es handelt sich, genau wie beim Textfeld für die Erstellung von To-Do-Einträgen, um ein \texttt{UITextField}, welches vom Nutzer direkt angetippt werden kann, um Änderungen vorzunehmen. Dieses kann ebenfalls sog. \textit{Actions} ausführen, wenn ein bestimmter Zustand des Komponenten erreicht ist. Im Falle der individuellen Textfelder für die Eintragsbeschreibung wird die entsprechende \ac{crud}-Funktion für die Änderung und Speicherung des Textes ausgeführt, sobald die aktive Nutzung des jeweiligen Textfeldes abgeschlossen ist, sich anschaulich also kein Cursor mehr in diesem Textfeld befindet.
 

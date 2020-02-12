@@ -38,7 +38,7 @@ Diese Arbeit betrachtet die \ac{pwa}, da sie (wie auch eine native Anwendung) lo
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\linewidth]{img/fig/2-4-1_Install_PWA_Wireframe}
-	\caption{Browserdialog zur Installation einer \ac{pwa} \cite{PWAAddToHomeScreenPrompt}}
+	\caption[Browserdialog zur Installation einer \ac{pwa}]{Browserdialog zur Installation einer \ac{pwa} \cite{PWAAddToHomeScreenPrompt}}
 	\label{fig:pwainstallationprompt}
 \end{figure}
 % -------------------------------------------------------------------------
@@ -59,23 +59,25 @@ Um die \ac{pwa} auf einem Gerät installieren zu können, muss ein sog. \textit{
 % - SOURCE CODE ----------------------------------------------------------------
 \begin{listing}[H]
     \inputminted{json}{src/2-1_manifest_sample.json}
-    \caption{Manifest-Datei einer \ac{pwa}}
+    \vspace{-0.5cm}
+    \caption{Manifest-Datei einer \acs{pwa} (\acs{json})}
       \label{sourcecode:manifest_sample}
 \end{listing}
 % ------------------------------------------------------------------------------
-
+\vspace{-0.5cm}
 Quellcode-Auschnitt \ref{sourcecode:manifest_sample} zeigt den Inhalt einer Manifest-Datei. Neben diversen Icons (Zz. 4-15) werden auch \textit{Name} (Z. 3), \textit{Farbschema} (Z. 20) und \textit{Anzeigeeinstellungen} (Z. 18) festgelegt.
 Die Manifest-Datei wird im \acs{html} der Webanwendung eingebunden, siehe Quellcode-Ausschnitt \ref{sourcecode:manifest_include}. 
-
+\vspace{0.25cm}
 % - SOURCE CODE ----------------------------------------------------------------
 \begin{listing}[h!]
     \inputminted{xml}{src/2-2_include_manifest.html}
-    \caption{Einbinden der Manifest-Datei}
+    \vspace{-0.5cm}
+    \caption{Einbinden der Manifest-Datei (\acs{html})}
       \label{sourcecode:manifest_include}
               %https://developers.google.com/web/fundamentals/web-app-manifest?hl=en
 \end{listing}
 % ------------------------------------------------------------------------------
-
+\newpage
 Es ist die Einfachheit dieses Prozesses hervorzuheben: Das Hinzufügen einer (wenige Zeilen langer) \ac{json}-Datei macht die gesamte Webanwendung installierbar. Es wird kein App-Store, manueller Dateidownload oder Installer benötigt.
 %
 % ==============================================================================================
@@ -94,7 +96,7 @@ Ein Service-Worker ist ein vom \ac{ui} separiert laufendes Hintergrundskript der
 \begin{figure}[h!]
         \includegraphics[width=\linewidth]{img/fig/2-4-2_Service_Worker_Concept.png}
         \centering
-        \caption{Konzept des Service Workers \cite{ServiceWorkerDiagramm}}
+        \caption[Konzept des Service-Workers]{Konzept des Service-Workers \cite{ServiceWorkerDiagramm}}
         \label{fig:serviceWorker}
 \end{figure}
 % -------------------------------------------------------------------------
@@ -157,11 +159,10 @@ Das Framework arbeitet auf Basis von Komponenten. Ein Eingabefeld, eine Seite od
 \begin{figure}[h!]
 	\includegraphics[width=\linewidth]{img/fig/2-4-3_Angular_MVC_Concept.jpg}
 	\centering
-	\caption{MVC Konzept von Angular \cite[S. 35, Abbildung 3-4]{ProAngular}}
+	\caption[\acs{mvc}-Konzept von Angular]{\acs{mvc}-Konzept von Angular \cite[S. 35, Abbildung 3-4]{ProAngular}}
 	\label{fig:angularmvc}
 \end{figure}
 % -------------------------------------------------------------------------
-\newpage
 Eine Angular-Anwendung ist wie folgt in drei Einheiten gegliedert:
 
 \begin{description}

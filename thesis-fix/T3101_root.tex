@@ -37,7 +37,7 @@
 		\addtocontents{toc}{\protect\thispagestyle{empty}}
 	\thispagestyle{empty}
 	
-	{\small\tableofcontents}
+	\tableofcontents
 	\thispagestyle{empty}
 	
 	\chapter*{Abkürzungsverzeichnis}
@@ -59,10 +59,11 @@
 		\label{chap:einleitung}
 		\input{main-matter/1_Einleitung/1_Einleitung}
 	
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 	\chapter{Grundlagen}
 		\label{chap:grundlagen}
 		\input{main-matter/2_Grundlagen/2_Grundlagen}
-		
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
 	\chapter{Wissenschaftliches Framework}
 		\label{chap:wissenschaftliches_framework}
 		\input{main-matter/3_Wissenschaftliches_Framework/3_Wissenschaftliches_Framework}

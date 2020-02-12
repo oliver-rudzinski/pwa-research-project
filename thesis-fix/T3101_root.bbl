@@ -20,11 +20,15 @@
 \refsection{0}
   \datalist[entry]{none/global//global/global}
     \entry{StatistaSmartphonesWorldwide}{misc}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Statista}
       \field{title}{Number of smartphone users worldwide 2014-2020}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.statista.com/statistics/330695/number-of-smartphone-users-worldwide/
       \endverb
@@ -33,11 +37,15 @@
       \endverb
     \endentry
     \entry{StatistaWorldPopulation}{misc}{}
-      \field{sortinit}{7}
-      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Statista}
       \field{title}{Development of the world population until 2050}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.statista.com/statistics/262875/development-of-the-world-population/
       \endverb
@@ -46,11 +54,15 @@
       \endverb
     \endentry
     \entry{StatistaMobileBrowserMarketShare}{misc}{}
-      \field{sortinit}{8}
-      \field{sortinithash}{07edf88d4ea82509b9c4b4d13f41c452}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Statista}
       \field{title}{Mobile browser market share worldwide 2012-2019}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.statista.com/statistics/263517/market-share-held-by-mobile-internet-browsers-worldwide/
       \endverb
@@ -62,11 +74,15 @@
       \list{publisher}{1}{%
         {Google}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{1dd72ab054147731c9d824b49aba0534}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Google}
       \field{title}{Show Cases (2016) | Web | Google Developers}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developers.google.com/web/showcase/2016
       \endverb
@@ -78,11 +94,15 @@
       \list{publisher}{1}{%
         {Bibliographisches Institut GmbH}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Duden}
       \field{title}{Duden: App}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.duden.de/rechtschreibung/App
       \endverb
@@ -107,12 +127,16 @@
       \strng{authorbibnamehash}{bbf2f2b3d110edd4c50780925a482d2d}
       \strng{authornamehash}{bbf2f2b3d110edd4c50780925a482d2d}
       \strng{authorfullhash}{bbf2f2b3d110edd4c50780925a482d2d}
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{6}
+      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Gabler Banklexikon}
       \field{title}{Definition: App}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.gabler-banklexikon.de/definition/app-70646/version-336971
       \endverb
@@ -124,8 +148,8 @@
       \list{organization}{1}{%
         {Apple, Inc.}%
       }
-      \field{sortinit}{1}
-      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{sortinit}{7}
+      \field{sortinithash}{c818dd9105a2852444fc9f5e145c294e}
       \field{labeltitlesource}{title}
       \field{title}{{Swift}}
       \field{urlday}{11}
@@ -250,8 +274,8 @@
       \list{organization}{1}{%
         {raywenderlich.com}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
       \field{day}{15}
       \field{month}{4}
@@ -273,8 +297,8 @@
       \list{organization}{1}{%
         {Apple, Inc.}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
       \field{labeltitlesource}{title}
       \field{day}{12}
       \field{month}{9}
@@ -322,6 +346,10 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Android Developers}
       \field{title}{Kotlin and Android : Android Developers}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developer.android.com/kotlin
       \endverb
@@ -335,6 +363,10 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Android Developers}
       \field{title}{Android Studio and SDK tools}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developer.android.com/studio
       \endverb
@@ -412,8 +444,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{Progressive Web Apps | Google Developers}}
@@ -446,12 +478,16 @@
       \strng{authornamehash}{496bca72317153bb4dd6936afe2c40cb}
       \strng{authorfullhash}{496bca72317153bb4dd6936afe2c40cb}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{The mini-info bar}
       \field{title}{The mini-info bar}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developers.google.com/web/updates/images/2018/06/a2hs-infobar-cropped.png
       \endverb
@@ -477,12 +513,16 @@
       \strng{authornamehash}{496bca72317153bb4dd6936afe2c40cb}
       \strng{authorfullhash}{496bca72317153bb4dd6936afe2c40cb}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Web Fundamentals}
       \field{title}{Add to Home Screen | Web Fundamentals | Google Developers}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developers.google.com/web/fundamentals/app-install-banners
       \endverb
@@ -509,8 +549,8 @@
       \strng{authorbibnamehash}{aa6f4c51149972fd4fa6cf7d95d84b01}
       \strng{authornamehash}{aa6f4c51149972fd4fa6cf7d95d84b01}
       \strng{authorfullhash}{aa6f4c51149972fd4fa6cf7d95d84b01}
-      \field{sortinit}{3}
-      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
+      \field{sortinit}{2}
+      \field{sortinithash}{cbff857e587bcb4635511624d773949e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{The Web App Manifest | Web Fundamentals | Google Developers}}
@@ -573,7 +613,11 @@
       \field{journaltitle}{Heise}
       \field{month}{6}
       \field{title}{Funktionsweise eines Service Workers}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
       \field{year}{2017}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://www.heise.de/developer/imgs/06/2/2/1/9/1/4/9/ServiceWorker-8a0968f1b295f1ff.png
       \endverb
@@ -595,12 +639,16 @@
       \strng{authorbibnamehash}{218be821569c281650668ed44b18439c}
       \strng{authornamehash}{218be821569c281650668ed44b18439c}
       \strng{authorfullhash}{218be821569c281650668ed44b18439c}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Support tables for HTML5, CSS3, etc}
       \field{title}{Can I use... Support tables for HTML5, CSS3, etc}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://caniuse.com/#search=web manifest
       \endverb
@@ -626,12 +674,16 @@
       \strng{authornamehash}{496bca72317153bb4dd6936afe2c40cb}
       \strng{authorfullhash}{496bca72317153bb4dd6936afe2c40cb}
       \field{extraname}{3}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Google}
-      \field{title}{Progressive Web Apps on Desktop | Google Developers}
+      \field{journaltitle}{Google Developers}
+      \field{title}{Progressive Web Apps on Desktop}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developers.google.com/web/progressive-web-apps/desktop
       \endverb
@@ -640,24 +692,17 @@
       \endverb
     \endentry
     \entry{NodeJSWebsiteAbout}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=804b6bedb1db2b625197202b6c72a6db}{%
-           family={Foundation},
-           familyi={F\bibinitperiod},
-           given={Node.js},
-           giveni={N\bibinitperiod}}}%
+      \list{publisher}{1}{%
+        {OpenJS Foundation}%
       }
-      \strng{namehash}{804b6bedb1db2b625197202b6c72a6db}
-      \strng{fullhash}{804b6bedb1db2b625197202b6c72a6db}
-      \strng{bibnamehash}{804b6bedb1db2b625197202b6c72a6db}
-      \strng{authorbibnamehash}{804b6bedb1db2b625197202b6c72a6db}
-      \strng{authornamehash}{804b6bedb1db2b625197202b6c72a6db}
-      \strng{authorfullhash}{804b6bedb1db2b625197202b6c72a6db}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
-      \field{labelnamesource}{author}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labeltitlesource}{title}
       \field{title}{About}
+      \field{urlday}{10}
+      \field{urlmonth}{10}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://nodejs.org/en/about/
       \endverb
@@ -682,8 +727,8 @@
       \strng{authorbibnamehash}{2848f04a7847a6fe08b0163d47b0603b}
       \strng{authornamehash}{2848f04a7847a6fe08b0163d47b0603b}
       \strng{authorfullhash}{2848f04a7847a6fe08b0163d47b0603b}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Node A Problem-Solution Approach}
@@ -709,8 +754,8 @@
       \strng{authorbibnamehash}{15e1045706ba0f923763122f975d4964}
       \strng{authornamehash}{15e1045706ba0f923763122f975d4964}
       \strng{authorfullhash}{15e1045706ba0f923763122f975d4964}
-      \field{sortinit}{4}
-      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
+      \field{sortinit}{3}
+      \field{sortinithash}{a4b52e5432884761f50fb9571273b93e}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Practical Node.js Building Real-World Scalable Web Apps}
@@ -725,7 +770,11 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{The State of the Octoverse}
       \field{title}{Projects}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
       \field{year}{2019}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://octoverse.github.com/projects
       \endverb
@@ -774,14 +823,18 @@
       \strng{authorbibnamehash}{f508f8ff22f456b2c8cef697136c83a9}
       \strng{authornamehash}{f508f8ff22f456b2c8cef697136c83a9}
       \strng{authorfullhash}{f508f8ff22f456b2c8cef697136c83a9}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Apple Developer}
       \field{month}{2}
       \field{title}{Now Accepting Larger Binaries - News}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
       \field{year}{2015}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developer.apple.com/news/?id=02122015a
       \endverb
@@ -793,11 +846,15 @@
       \list{publisher}{1}{%
         {Google}%
       }
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Google}
       \field{title}{Upload an app - Play Console Help}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://support.google.com/googleplay/android-developer/answer/113469
       \endverb
@@ -825,8 +882,8 @@
       \strng{authorbibnamehash}{2ba2d400910fd2037bd3760816c77d03}
       \strng{authornamehash}{2ba2d400910fd2037bd3760816c77d03}
       \strng{authorfullhash}{2ba2d400910fd2037bd3760816c77d03}
-      \field{sortinit}{5}
-      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
+      \field{sortinit}{4}
+      \field{sortinithash}{11cdaee3b18e01d77f3f428b13c1fc76}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{{Software Engineering I (Lecture Slides)}}
@@ -843,7 +900,11 @@
       \field{journaltitle}{MDN Web Docs}
       \field{month}{8}
       \field{title}{Window.localStorage}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
       \field{year}{2019}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
       \endverb
@@ -869,6 +930,10 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Angular Material}
       \field{title}{Angular Material}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://material.angular.io/
       \endverb
@@ -945,11 +1010,15 @@
       \endverb
     \endentry
     \entry{MozillaHandlingCommonHTMLCSSProblems}{misc}{}
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labeltitlesource}{title}
       \field{journaltitle}{MDN Web Docs}
       \field{title}{Handling common HTML and CSS problems}
+      \field{urlday}{12}
+      \field{urlmonth}{2}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
       \verb{urlraw}
       \verb https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
       \endverb
@@ -961,8 +1030,8 @@
       \list{organization}{1}{%
         {CocoaPods.org}%
       }
-      \field{sortinit}{6}
-      \field{sortinithash}{57e57fb8451e7fcfa45d1e069f6d3136}
+      \field{sortinit}{5}
+      \field{sortinithash}{3c19c3776b658b3558e9e2e4840c01e2}
       \field{labeltitlesource}{title}
       \field{title}{{Get on with building your app, not duplicating code}}
       \field{urlday}{12}

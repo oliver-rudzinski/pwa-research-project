@@ -23,7 +23,7 @@ Xcode unterstützt neben Swift auch die abwärtskompatiblen Programmiersprachen 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=\linewidth]{img/fig/2-3-1-interface-builder}
-	\caption{Interface Builder in Xcode \cite{AppleIB}}
+	\caption[Interface Builder in Xcode]{Interface Builder in Xcode \cite{AppleIB}}
 	\label{fig:xcode-ib}
 \end{figure}
 
@@ -45,7 +45,7 @@ Die Kooperation der einzelnen Komponenten dieses Musters lässt sich anhand der 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.5\linewidth]{img/fig/2-3-2_MVC}
-	\caption{Zusammenspiel des \ac{mvc}-Musters \cite{RayMVC}}
+	\caption[Zusammenspiel des \acs{mvc}-Musters]{Zusammenspiel des \acs{mvc}-Musters \cite{RayMVC}}
 \end{figure}
 
 Technisch wird dieses Muster durch die Verknüpfung der einzelnen (durch den Interface Builder bereitgestellten oder erstellten) Views mit spezifischen, sog. \textit{View Controllern} realisiert \cite{AppleMVC}. Durch eine Aktion des Nutzers auf dem View wird die entsprechende Funktionalität über den View Controller bereitgestellt. Dieser kann dann ebenfalls Funktionen ausführen, welche durch das Modell bereitgestellt werden, falls die Aktion dies bedarf. Die entsprechenden Klassen der View Controller sind Unterklassen der einzelnen, spezifischen Views, welche deren vorgesetzte Basisfunktionalitäten um die gewünschten Funktionen des Entwicklers erweitern.

@@ -9,7 +9,7 @@ Mit dem Befehl \texttt{ng new todoapp} wird die Angular \ac{cli} (in der Konsole
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=0.58\textwidth]{img/angular_cli_css.PNG}
-	\caption{Stylesheetformate beim Erstellen der Angularanwendung}
+	\caption{Stylesheet-Formate beim Erstellen der Angular-Anwendung}
 	\label{fig:stylesheet_formate_cli}
 \end{figure}
 
@@ -25,9 +25,11 @@ Die Komponenten tauschen untereinander Daten aus. Damit diese einer einheitliche
 
 \begin{listing}[h!]
 	\inputminted{TypeScript}{sourcecode/pwa_todoitem_klasse.js}
+	\vspace{-0.5cm}
 	\caption{\texttt{TodoItem}-Klasse zur Datenspeicherung (TypeScript)}
 	\label{sourcecode:todoitem_klasse}
 \end{listing}
+\vspace{-0.5cm}
 
 Wie im Quellcode-Ausschnitt \ref{sourcecode:todoitem_klasse} zu sehen, hat ein To-Do-Element eine Aufgabenbeschreibung (Z. 2), eine eindeutige ID (Z. 3) sowie zwei boole'sche Werte, die speichern, ob das Element als priorisiert oder abgeschlossen markiert worden ist (Zz. 4--5). Die ID hilft später, ein bestimmtes To-Do-Element zu modifizieren.
 
@@ -36,9 +38,11 @@ Alle To-Do-Einträge sollen persistent auf dem Gerät gespeichert werden. Dafür
 
 \begin{listing}[h!]
 	\inputminted{TypeScript}{sourcecode/pwa_todo_service.ts}
+	\vspace{-0.5cm}
 	\caption{Klasse \texttt{TodoService} (TypeScript)}
 	\label{sourcecode:pwa_todo_service}
 \end{listing}
+\vspace{-0.5cm}
 
 In Quellcode-Ausschnitt \ref{sourcecode:pwa_todo_service} sind die Kernfunktionen des Services abgebildet. Der Service speichert ein Array von \texttt{TodoItem}-Objekten. Wenn der Nutzer ein Element hinzufügt, erstellt der Service ein neues Datenobjekt und speichert dieses im Array und dem Browserspeicher (Zz. 16-18). Die Funktionsweise der übrigen \ac{crud}-Operationen ist analog dazu.
 
@@ -59,7 +63,7 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 \begin{figure}[h!]
 	\includegraphics[width=0.6\textwidth]{img/pwa_dateistruktur.png}
 	\centering
-	\caption{Dateistruktur der Angularanwendung}
+	\caption{Datei-Struktur der Angular-Anwendung}
 	\label{fig:pwa_dateistruktur}
 \end{figure}
 
@@ -68,11 +72,13 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 	
 	\begin{minipage}{\linewidth}
 		\inputminted{ng2}{sourcecode/pwa_app_component.html}
-		\captionof{listing}{\ac{html}-Template des \texttt{app-component} (Angular \ac{html})}
+		\vspace{-0.5cm}
+		\captionof{listing}{\acs{html}-Template des \texttt{app-component} (Angular \acs{html})}
 		\label{sourcecode:pwa_app_component_html}
 	\end{minipage}
-
-	Ausschnitt \ref{sourcecode:pwa_app_component_html} (Zz. 1--3), zeigt, wie die Daten aus dem \texttt{todoService} in \ac{html}-Code dargestellt werden. Wie in einer \texttt{for}-Schleife wird jedes item des \texttt{todoService} einer neu erstellten \texttt{todo-item}-Komponente übergeben.
+	
+	\vspace{0.5cm}
+	Quellcode-Ausschnitt \ref{sourcecode:pwa_app_component_html} (Zz. 1--3), zeigt, wie die Daten aus dem \texttt{todoService} in \ac{html}-Code dargestellt werden. Wie in einer \texttt{for}-Schleife wird jedes item des \texttt{todoService} einer neu erstellten \texttt{todo-item}-Komponente übergeben.
 	Angular wird das \ac{html}-Template automatisch neu rendern, wenn sich die Elemente im \texttt{todoService} ändern.	
 	
 	\item[To-Do-Element] 
@@ -85,14 +91,17 @@ Nach dem im Vorangegangenen beschrieben worden ist, wie das Projekt erstellt wor
 		\label{fig:pwa_todo_item_screenshot}
 	\end{minipage}
 	
+	\vspace{0.5cm}
 	Es ist sinnvoll, jedes Listenelement in einer mehrfach instanziierten Komponente zu repräsentieren. Dies kapselt die Daten des Listenelements und die Kommunikation mit dem \texttt{todoService} von anderen Listenelementen ab. Wie bereits erwähnt, bekommt jede \texttt{todo-item}-Komponente genau ein Objekt der Klasse \texttt{TodoItem} übergeben.
 	
 	\begin{minipage}{\linewidth}
 		\inputminted{ng2}{sourcecode/pwa_todo_item.html}
-		\captionof{listing}{HTML Template der \texttt{todo-item} (gekürzt)}
+		\vspace{-0.5cm}
+		\captionof{listing}{\acs{html}-Template des \texttt{todo-item} (Angular \acs{html})}
 		\label{sourcecode:pwa_todo_item_html}
 	\end{minipage}
-
+	
+	\vspace{0.5cm}
 	Quellcode-Ausschnitt \ref{sourcecode:pwa_todo_item_html} zeigt das \ac{html}-Template des \texttt{todo-item}s. Die ersten drei Input-Elemente werden durch \texttt{[(ngModel)]} mit einer \textit{Property} (dt. \textit{Eigenschaft}) des \texttt{TodoItem}s verknüpft, welche in der \texttt{todo-item}-Komponente gespeichert wird. Dies bewirkt folgenden Mechanismus: Wird das Input-Element verändert, ändert sich auch das gespeicherte \texttt{TodoItem}. Wird das \texttt{TodoItem} im Code modifiziert, aktualisiert sich das Input-Element entsprechend.
 	
 	Um modifizierte Daten auch in der Datenquelle zu speichern, wird das modifizierte \texttt{TodoItem} bei jeder Änderung dem \texttt{todoService} übergeben.
@@ -105,7 +114,7 @@ Abb. \ref{fig:pwa_todo_service} fasst die Architektur der Angular-Anwendung zusa
 \begin{figure}[h!]
 	\includegraphics[width=\textwidth]{img/pwa_components.png}
 	\centering
-	\caption{Interaktion des Todo-service mit den Komponenten}
+	\caption{Interaktion des \texttt{todoService} mit den Komponenten}
 	\label{fig:pwa_todo_service}
 \end{figure}
 
